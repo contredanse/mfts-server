@@ -11,6 +11,17 @@
             color: white;
         }
     </style>
+    {% if ga_enabled %}
+        <script async src="https://www.googletagmanager.com/gtag/js?id={{ ga_tracking }}"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '{{ ga_tracking }}');
+        </script>
+    {% endif %}
+
+
     {% block stylesheets %}{% endblock %}
 </head>
 <body class="app">
