@@ -17,37 +17,20 @@ use Zend\Expressive\ZendView\ZendViewRenderer;
 
 class HomePageHandler implements RequestHandlerInterface
 {
-    private $router;
-
     private $template;
 
-    public function __construct(Router\RouterInterface $router, Template\TemplateRendererInterface $template = null)
+    public function __construct(TwigRenderer $template)
     {
-        $this->router   = $router;
         $this->template = $template;
     }
 
     public function handle(ServerRequestInterface $request) : ResponseInterface
     {
-        if (! $this->template) {
-            return new JsonResponse([
-                'welcome' => 'Congratulations! You have installed the zend-expressive skeleton application.',
-                'docsUrl' => 'https://docs.zendframework.com/zend-expressive/',
-            ]);
-        }
 
-        $data = [];
+        $data = [
+            'content' => file_get_contents('./data/content/temp-home.html')
+        ];
 
-        if ($this->router instanceof Router\FastRouteRouter) {
-            $data['routerName'] = 'Fast route';
-            $data['routerDocs'] = 'https://docs.zendframework.com/zend-router/';
-        }
-
-        if ($this->template instanceof TwigRenderer) {
-            $data['templateName'] = 'Twig';
-            $data['templateDocs'] = 'http://twig.sensiolabs.org/documentation';
-        }
-
-        return new HtmlResponse($this->template->render('app::home-page', $data));
+        return new HtmlResponse($this->template->render('app::static-content', $data));
     }
 }
