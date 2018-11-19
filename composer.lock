@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "630ee317ccd22e77a729f1246accd7f1",
+    "content-hash": "b95fc8ea693bd1ad173b735524f88d9c",
     "packages": [
         {
             "name": "cocur/slugify",
@@ -1015,6 +1015,75 @@
             ],
             "description": "Prevents installation of composer packages with known security vulnerabilities: no API, simply require it",
             "time": "2018-11-16T03:31:38+00:00"
+        },
+        {
+            "name": "soluble/mediatools",
+            "version": "0.7.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/soluble-io/soluble-mediatools.git",
+                "reference": "4e2f190de3aaa042269f0b61426a405a379371a3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/soluble-io/soluble-mediatools/zipball/4e2f190de3aaa042269f0b61426a405a379371a3",
+                "reference": "4e2f190de3aaa042269f0b61426a405a379371a3",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "php": "^7.1",
+                "psr/container": "^1.0",
+                "psr/log": "^1.0",
+                "symfony/polyfill-mbstring": "^1.9",
+                "symfony/process": "^4.0"
+            },
+            "require-dev": {
+                "consistence/coding-standard": "^3.1",
+                "fig/http-message-util": "^1.1.2",
+                "friendsofphp/php-cs-fixer": "^2.11.1",
+                "guzzlehttp/guzzle": "^6.2.3",
+                "infection/infection": "^0.9.0",
+                "monolog/monolog": "^1.23.0",
+                "phpspec/prophecy": "^1.7",
+                "phpstan/phpstan": "^0.10.1",
+                "phpstan/phpstan-phpunit": "^0.10",
+                "phpstan/phpstan-strict-rules": "^0.10",
+                "phpunit/phpunit": "^7.1",
+                "psr/http-message": "^1.0.1",
+                "roave/security-advisories": "dev-master",
+                "sebastianfeldmann/captainhook": "^2.1",
+                "slevomat/coding-standard": "^4.6.3",
+                "squizlabs/php_codesniffer": "^3.1",
+                "zendframework/zend-servicemanager": "^3.3"
+            },
+            "suggest": {
+                "monolog/monolog": "PSR-3 compatible logger"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Soluble\\MediaTools\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sébastien Vanvelthem",
+                    "homepage": "https://github.com/belgattitude"
+                }
+            ],
+            "description": "mediatools",
+            "homepage": "https://github.com/soluble-io/soluble-mediatools",
+            "keywords": [
+                "ffmpeg",
+                "transcode",
+                "video"
+            ],
+            "time": "2018-08-19T14:30:04+00:00"
         },
         {
             "name": "spatie/array-to-xml",
@@ -5358,75 +5427,6 @@
             "time": "2016-10-03T07:35:21+00:00"
         },
         {
-            "name": "soluble/mediatools",
-            "version": "0.7.7",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/soluble-io/soluble-mediatools.git",
-                "reference": "4e2f190de3aaa042269f0b61426a405a379371a3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/soluble-io/soluble-mediatools/zipball/4e2f190de3aaa042269f0b61426a405a379371a3",
-                "reference": "4e2f190de3aaa042269f0b61426a405a379371a3",
-                "shasum": ""
-            },
-            "require": {
-                "ext-json": "*",
-                "php": "^7.1",
-                "psr/container": "^1.0",
-                "psr/log": "^1.0",
-                "symfony/polyfill-mbstring": "^1.9",
-                "symfony/process": "^4.0"
-            },
-            "require-dev": {
-                "consistence/coding-standard": "^3.1",
-                "fig/http-message-util": "^1.1.2",
-                "friendsofphp/php-cs-fixer": "^2.11.1",
-                "guzzlehttp/guzzle": "^6.2.3",
-                "infection/infection": "^0.9.0",
-                "monolog/monolog": "^1.23.0",
-                "phpspec/prophecy": "^1.7",
-                "phpstan/phpstan": "^0.10.1",
-                "phpstan/phpstan-phpunit": "^0.10",
-                "phpstan/phpstan-strict-rules": "^0.10",
-                "phpunit/phpunit": "^7.1",
-                "psr/http-message": "^1.0.1",
-                "roave/security-advisories": "dev-master",
-                "sebastianfeldmann/captainhook": "^2.1",
-                "slevomat/coding-standard": "^4.6.3",
-                "squizlabs/php_codesniffer": "^3.1",
-                "zendframework/zend-servicemanager": "^3.3"
-            },
-            "suggest": {
-                "monolog/monolog": "PSR-3 compatible logger"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Soluble\\MediaTools\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Sébastien Vanvelthem",
-                    "homepage": "https://github.com/belgattitude"
-                }
-            ],
-            "description": "mediatools",
-            "homepage": "https://github.com/soluble-io/soluble-mediatools",
-            "keywords": [
-                "ffmpeg",
-                "transcode",
-                "video"
-            ],
-            "time": "2018-08-19T14:30:04+00:00"
-        },
-        {
             "name": "squizlabs/php_codesniffer",
             "version": "3.3.2",
             "source": {
@@ -5911,7 +5911,7 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": "^7.1",
+        "php": "^7.2",
         "ext-pdo": "*"
     },
     "platform-dev": []
