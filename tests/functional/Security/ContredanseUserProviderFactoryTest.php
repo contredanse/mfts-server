@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace AppTest\Security;
+namespace AppTest\Functional\Security;
 
 use App\Exception\ConfigException;
 use App\Exception\ConnectionException;
 use App\Security\ContredanseUserProviderFactory;
-use AppTest\ContainerFactory;
+use AppTest\Util\ContainerFactory;
 use PHPUnit\Framework\TestCase;
 use Psr\Container\ContainerInterface;
 
@@ -38,10 +38,8 @@ class ContredanseUserProviderFactoryTest extends TestCase
             ->willReturn([
                 'contredanse' => [
                     'db' => [
-                        'driver' => 'mysql',
-                        'hostname' => 'localhost',
+                        'dsn' => 'mysql:host=localhost;dbname=mfts-db;port=3306',
                         'username' => 'cool',
-                        'database' => 'test',
                         'password' => 'invalid'
                      ]
                 ]

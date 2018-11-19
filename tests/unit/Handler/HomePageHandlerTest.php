@@ -12,35 +12,25 @@ use Zend\Diactoros\Response\HtmlResponse;
 use Zend\Diactoros\Response\JsonResponse;
 use Zend\Expressive\Router\RouterInterface;
 use Zend\Expressive\Template\TemplateRendererInterface;
+use Zend\Expressive\Twig\TwigRenderer;
 
 class HomePageHandlerTest extends TestCase
 {
-    /** @var \Prophecy\Prophecy\ObjectProphecy<RouterInterface>  */
-    protected $router;
+    /** @var \Prophecy\Prophecy\ObjectProphecy<TwigRenderer>  */
+    protected $template;
 
     protected function setUp()
     {
-        $this->router = $this->prophesize(RouterInterface::class);
-    }
-
-    public function testReturnsJsonResponseWhenNoTemplateRendererProvided()
-    {
-        $homePage = new HomePageHandler($this->router->reveal(), null);
-        $response = $homePage->handle(
-            $this->prophesize(ServerRequestInterface::class)->reveal()
-        );
-
-        $this->assertInstanceOf(JsonResponse::class, $response);
+        $this->template = $this->prophesize(TwigRenderer::class);
     }
 
     public function testReturnsHtmlResponseWhenTemplateRendererProvided()
     {
-        $renderer = $this->prophesize(TemplateRendererInterface::class);
-        $renderer
-            ->render('app::home-page', Argument::type('array'))
+        $this->template
+            ->render('app::static-content', Argument::type('array'))
             ->willReturn('');
 
-        $homePage = new HomePageHandler($this->router->reveal(), $renderer->reveal());
+        $homePage = new HomePageHandler($this->template->reveal());
 
         $response = $homePage->handle(
             $this->prophesize(ServerRequestInterface::class)->reveal()

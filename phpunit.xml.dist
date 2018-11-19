@@ -1,17 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:noNamespaceSchemaLocation="vendor/phpunit/phpunit/phpunit.xsd"
-         bootstrap="vendor/autoload.php"
-         colors="true">
+         bootstrap="tests/bootstrap.php"
+         colors="true"
+         verbose="true"
+         beStrictAboutOutputDuringTests="true"
+         beStrictAboutTodoAnnotatedTests="true"
+         beStrictAboutChangesToGlobalState="true"
+         beStrictAboutCoversAnnotation="true"
+         beStrictAboutResourceUsageDuringSmallTests="true">
+
     <testsuites>
-        <testsuite name="App\\Tests">
-            <directory>./test</directory>
+        <testsuite name="unit">
+            <directory>./tests/unit</directory>
+        </testsuite>
+        <testsuite name="functional">
+            <directory>./tests/functional</directory>
         </testsuite>
     </testsuites>
 
+    <php>
+        <const name="FFMPEG_BINARY_PATH" value="ffmpeg" />
+    </php>
+
     <filter>
-        <whitelist processUncoveredFilesFromWhitelist="true">
-            <directory suffix=".php">./src</directory>
+        <whitelist>
+            <directory>./src</directory>
         </whitelist>
     </filter>
+
+
+    <logging>
+        <log type="coverage-clover" target="build/logs/clover.xml"/>
+    </logging>
+
 </phpunit>

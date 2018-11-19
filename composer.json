@@ -64,7 +64,9 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "AppTest\\": "test/AppTest/"
+            "AppTest\\": "tests/unit",
+            "AppTest\\Util\\": "tests/util",
+            "AppTest\\Functional\\": "tests/functional"
         }
     },
     "extra": {

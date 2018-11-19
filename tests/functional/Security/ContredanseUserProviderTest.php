@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace AppTest\Security;
+namespace AppTest\Functional\Security;
 
 use App\Security\ContredanseUserProvider;
 use App\Security\ContredanseUserProviderFactory;
-use AppTest\ContainerFactory;
+use AppTest\Util\ContainerFactory;
 use PHPUnit\Framework\TestCase;
 
 class ContredanseUserProviderTest extends TestCase
