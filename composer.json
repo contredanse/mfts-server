@@ -1,24 +1,12 @@
 {
     "name": "contredanse/mfts-server",
-    "description": "Materia for the spine application backend",
+    "description": "Material for the spine application backend",
     "type": "project",
     "homepage": "https://github.com/contredanse/mfts-server",
     "license": "GPL-3.0-or-later",
     "config": {
         "optimize-autoloader": true,
         "sort-packages": true
-    },
-    "extra": {
-        "zf": {
-            "component-whitelist": [
-                "zendframework/zend-expressive",
-                "zendframework/zend-expressive-helpers",
-                "zendframework/zend-expressive-router",
-                "zendframework/zend-httphandlerrunner",
-                "zendframework/zend-expressive-fastroute",
-                "zendframework/zend-expressive-twigrenderer"
-            ]
-        }
     },
     "require": {
         "php": "^7.2",
@@ -73,6 +61,18 @@
             "AppTest\\": "test/AppTest/"
         }
     },
+    "extra": {
+        "zf": {
+            "component-whitelist": [
+                "zendframework/zend-expressive",
+                "zendframework/zend-expressive-helpers",
+                "zendframework/zend-expressive-router",
+                "zendframework/zend-httphandlerrunner",
+                "zendframework/zend-expressive-fastroute",
+                "zendframework/zend-expressive-twigrenderer"
+            ]
+        }
+    },
     "scripts": {
         "development-disable": "zf-development-mode disable",
         "development-enable": "zf-development-mode enable",
@@ -88,6 +88,7 @@
         "phpstan": "vendor/bin/phpstan analyse -l max -c phpstan.neon src test bin config",
         "serve": "php -S 0.0.0.0:8085 -t public/",
         "test": "phpunit --colors=always",
-        "test-coverage": "phpunit --colors=always --coverage-clover clover.xml"
+        "test-coverage": "phpunit --colors=always --coverage-clover clover.xml",
+        "deploy:production": "dep deploy production -p"
     }
 }
