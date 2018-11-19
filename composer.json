@@ -3,6 +3,12 @@
     "description": "Material for the spine application backend",
     "type": "project",
     "homepage": "https://github.com/contredanse/mfts-server",
+    "authors": [
+        {
+            "name": "Sébastien Vanvelthem",
+            "homepage": "https://github.com/belgattitude"
+        }
+    ],
     "license": "GPL-3.0-or-later",
     "config": {
         "optimize-autoloader": true,
