@@ -82,7 +82,7 @@ task('deploy', [
 
 // In order to reload php-fpm, add the following line into /etc/sudoers
 //
-// > username ALL = NOPASSWD: /etc/init.d/php7.2
+// > deployer ALL = NOPASSWD: /bin/systemctl reload php7.2-fpm
 //
 task('reload:php-fpm', function () {
     run(getenv('DEPLOY_CMD_OPCACHE_RESET'));

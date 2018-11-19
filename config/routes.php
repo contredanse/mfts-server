@@ -35,5 +35,5 @@ use Zend\Expressive\MiddlewareFactory;
 return function (Application $app, MiddlewareFactory $factory, ContainerInterface $container) : void {
     $app->get('/', App\Handler\HomePageHandler::class, 'home');
     $app->get('/api/ping', App\Handler\PingHandler::class, 'api.ping');
-    $app->post('/api/auth/{action:token|validate}', App\Handler\AuthTokenHandler::class, 'api.auth.token');
+    $app->route('/api/auth/{action:token|validate}', App\Handler\AuthTokenHandler::class, ['POST'],'api.auth.token');
 };

@@ -10,6 +10,7 @@ use Zend\Expressive\Helper\UrlHelperMiddleware;
 use Zend\Expressive\MiddlewareFactory;
 use Zend\Expressive\Router\Middleware\DispatchMiddleware;
 use Zend\Expressive\Router\Middleware\ImplicitHeadMiddleware;
+use Zend\Expressive\Router\Middleware\ImplicitOptionsMiddleware;
 use Zend\Expressive\Router\Middleware\MethodNotAllowedMiddleware;
 use Zend\Expressive\Router\Middleware\RouteMiddleware;
 use Zend\ProblemDetails\ProblemDetailsMiddleware;
@@ -56,10 +57,10 @@ return function (Application $app, MiddlewareFactory $factory, ContainerInterfac
     $app->pipe(ImplicitHeadMiddleware::class);
 
 
-    // CORS middleware, standard implicitmiddleware must be disabled
-    //$app->pipe(ImplicitOptionsMiddleware::class);
-    $app->pipe(CorsMiddleware::class);
-
+    // CORS middleware, standard implicitmiddleware must be set after CORS
+    // or disabled if not segregated on path
+    $app->pipe('/api', CorsMiddleware::class);
+    $app->pipe(ImplicitOptionsMiddleware::class);
 
     $app->pipe(MethodNotAllowedMiddleware::class);
 
