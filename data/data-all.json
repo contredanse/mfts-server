@@ -1,0 +1,6296 @@
+{
+    "menu": [
+        {
+            "type": "section",
+            "id": "sensation-and-senses",
+            "title_en": "Sensation and senses",
+            "title_fr": "Sensation et sens",
+            "content": [
+                {
+                    "type": "page",
+                    "page_id": "sensation-and-senses.weight-of-sensation",
+                    "title_en": "Weight of sensation",
+                    "title_fr": "Le poids de la sensation"
+                },
+                {
+                    "type": "section",
+                    "id": "sensation-and-senses.gravity",
+                    "title_en": "Gravity",
+                    "title_fr": "La pesanteur",
+                    "content": [
+                        {
+                            "type": "page",
+                            "page_id": "sensation-and-senses.gravity.the-flat-the-round",
+                            "title_en": "The flat & the round",
+                            "title_fr": "Le plat et le rond"
+                        },
+                        {
+                            "type": "page",
+                            "page_id": "sensation-and-senses.gravity.falls",
+                            "title_en": "Falls",
+                            "title_fr": "Chutes"
+                        },
+                        {
+                            "type": "page",
+                            "page_id": "sensation-and-senses.gravity.water-gravity",
+                            "title_en": "Water gravity",
+                            "title_fr": "La pesanteur dans l'eau"
+                        },
+                        {
+                            "type": "page",
+                            "page_id": "sensation-and-senses.gravity.adjusting",
+                            "title_en": "Adjusting",
+                            "title_fr": "Ajuster"
+                        }
+                    ]
+                },
+                {
+                    "type": "section",
+                    "id": "sensation-and-senses.basics",
+                    "title_en": "Basics",
+                    "title_fr": "à la base",
+                    "content": [
+                        {
+                            "type": "page",
+                            "page_id": "sensation-and-senses.basics.an-approach-to-breathing",
+                            "title_en": "An approach to breathing",
+                            "title_fr": "Respirer, une approche"
+                        },
+                        {
+                            "type": "page",
+                            "page_id": "sensation-and-senses.basics.an-approach-to-the-small-dance",
+                            "title_en": "An approach to the small dance",
+                            "title_fr": "La petite danse, une approche"
+                        }
+                    ]
+                },
+                {
+                    "type": "section",
+                    "id": "sensation-and-senses.pointing",
+                    "title_en": "Pointing",
+                    "title_fr": "Pointer",
+                    "content": [
+                        {
+                            "type": "page",
+                            "page_id": "sensation-and-senses.pointing.parts-of-pointing",
+                            "title_en": "Parts of pointing",
+                            "title_fr": "Pointer, les différentes parties"
+                        },
+                        {
+                            "type": "page",
+                            "page_id": "sensation-and-senses.pointing.relation-to-scapula",
+                            "title_en": "Relation to scapula",
+                            "title_fr": "La relation à l'omoplate"
+                        }
+                    ]
+                },
+                {
+                    "type": "section",
+                    "id": "sensation-and-senses.pelvis",
+                    "title_en": "Pelvis",
+                    "title_fr": "Le bassin",
+                    "content": [
+                        {
+                            "type": "page",
+                            "page_id": "sensation-and-senses.pelvis.pelvis-as-an-initiator",
+                            "title_en": "Pelvis as an initiator",
+                            "title_fr": "Initier par le bassin"
+                        },
+                        {
+                            "type": "page",
+                            "page_id": "sensation-and-senses.pelvis.exercise-ischia-to-heels",
+                            "title_en": "Exercise ischia to heels",
+                            "title_fr": "Exercice: les ischions vers les talons"
+                        }
+                    ]
+                },
+                {
+                    "type": "section",
+                    "id": "sensation-and-senses.walk",
+                    "title_en": "Walk",
+                    "title_fr": "La marche",
+                    "content": [
+                        {
+                            "type": "page",
+                            "page_id": "sensation-and-senses.walk.walk-as-foundation",
+                            "title_en": "Walk as foundation",
+                            "title_fr": "La marche comme fondement"
+                        },
+                        {
+                            "type": "page",
+                            "page_id": "sensation-and-senses.walk.birds-walk",
+                            "title_en": "Birds walk",
+                            "title_fr": "La marche des oiseaux"
+                        },
+                        {
+                            "type": "page",
+                            "page_id": "sensation-and-senses.walk.slow-walk",
+                            "title_en": "Slow walk",
+                            "title_fr": "La marche lente"
+                        },
+                        {
+                            "type": "page",
+                            "page_id": "sensation-and-senses.walk.twist",
+                            "title_en": "Twist",
+                            "title_fr": "La torsion"
+                        }
+                    ]
+                },
+                {
+                    "type": "section",
+                    "id": "sensation-and-senses.the-back",
+                    "title_en": "The back",
+                    "title_fr": "Le dos",
+                    "content": [
+                        {
+                            "type": "page",
+                            "page_id": "sensation-and-senses.the-back.choosing-to-focus-on-the-back",
+                            "title_en": "Choosing to focus on the back",
+                            "title_fr": "Choisir de se concentrer sur le dos"
+                        },
+                        {
+                            "type": "page",
+                            "page_id": "sensation-and-senses.the-back.passage",
+                            "title_en": "Passage",
+                            "title_fr": "Passage"
+                        }
+                    ]
+                },
+                {
+                    "type": "section",
+                    "id": "sensation-and-senses.space",
+                    "title_en": "Space",
+                    "title_fr": "L'espace",
+                    "content": [
+                        {
+                            "type": "page",
+                            "page_id": "sensation-and-senses.space.spherical-space",
+                            "title_en": "Spherical space",
+                            "title_fr": "L'espace sphérique"
+                        }
+                    ]
+                },
+                {
+                    "type": "section",
+                    "id": "sensation-and-senses.mfs-as-base-for-improvisation",
+                    "title_en": "Mfs as base for improvisation",
+                    "title_fr": "Mfs comme base pour l'improvisation",
+                    "content": [
+                        {
+                            "type": "page",
+                            "page_id": "sensation-and-senses.mfs-as-base-for-improvisation.looking-at-goldberg-variations",
+                            "title_en": "Looking at goldberg variations",
+                            "title_fr": "Introduction aux goldberg variations"
+                        },
+                        {
+                            "type": "page",
+                            "page_id": "sensation-and-senses.mfs-as-base-for-improvisation.goldberg-variations-extracts",
+                            "title_en": "Goldberg variations (extracts)",
+                            "title_fr": "Goldberg variations (extraits)"
+                        },
+                        {
+                            "type": "page",
+                            "page_id": "sensation-and-senses.mfs-as-base-for-improvisation.looking-at-english-suites",
+                            "title_en": "Looking at english suites",
+                            "title_fr": "Introduction aux english suites"
+                        },
+                        {
+                            "type": "page",
+                            "page_id": "sensation-and-senses.mfs-as-base-for-improvisation.english-suites",
+                            "title_en": "English suites",
+                            "title_fr": "English suites"
+                        },
+                        {
+                            "type": "page",
+                            "page_id": "sensation-and-senses.mfs-as-base-for-improvisation.a-technique-for-improvisation",
+                            "title_en": "A technique for improvisation",
+                            "title_fr": "Une technique pour l'improvisation"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "section",
+            "id": "forms",
+            "title_en": "Forms",
+            "title_fr": "Les formes",
+            "content": [
+                {
+                    "type": "page",
+                    "page_id": "forms.introduction",
+                    "title_en": "Introduction",
+                    "title_fr": "Introduction"
+                },
+                {
+                    "type": "section",
+                    "id": "forms.crescent-roll",
+                    "title_en": "Crescent roll",
+                    "title_fr": "Le roulé en croissant",
+                    "content": [
+                        {
+                            "type": "page",
+                            "page_id": "forms.crescent-roll.crescent-led-by-feet-and-hands",
+                            "title_en": "Crescent led by feet and hands",
+                            "title_fr": "Initié par les mains et les pieds"
+                        },
+                        {
+                            "type": "page",
+                            "page_id": "forms.crescent-roll.crescent-led-by-center",
+                            "title_en": "Crescent led by center",
+                            "title_fr": "Initié par le centre"
+                        },
+                        {
+                            "type": "page",
+                            "page_id": "forms.crescent-roll.head-up",
+                            "title_en": "Head up",
+                            "title_fr": "Tête dégagée"
+                        },
+                        {
+                            "type": "page",
+                            "page_id": "forms.crescent-roll.head-and-feet-up",
+                            "title_en": "Head and feet up",
+                            "title_fr": "Tête et pieds vers le haut"
+                        },
+                        {
+                            "type": "page",
+                            "page_id": "forms.crescent-roll.in-water",
+                            "title_en": "In water",
+                            "title_fr": "Dans l'eau"
+                        },
+                        {
+                            "type": "page",
+                            "page_id": "forms.crescent-roll.comparison",
+                            "title_en": "Comparison",
+                            "title_fr": "Comparaison"
+                        }
+                    ]
+                },
+                {
+                    "type": "section",
+                    "id": "forms.helix-roll",
+                    "title_en": "Helix roll",
+                    "title_fr": "Le roulé en hélice",
+                    "content": [
+                        {
+                            "type": "page",
+                            "page_id": "forms.helix-roll.led-by-feet",
+                            "title_en": "Led by feet",
+                            "title_fr": "Initié par les pieds"
+                        },
+                        {
+                            "type": "page",
+                            "page_id": "forms.helix-roll.led-by-hands",
+                            "title_en": "Led by hands",
+                            "title_fr": "Initié par les mains"
+                        },
+                        {
+                            "type": "page",
+                            "page_id": "forms.helix-roll.in-water",
+                            "title_en": "In water",
+                            "title_fr": "Dans l'eau"
+                        },
+                        {
+                            "type": "page",
+                            "page_id": "forms.helix-roll.comparison",
+                            "title_en": "Comparison",
+                            "title_fr": "Comparaison"
+                        }
+                    ]
+                },
+                {
+                    "type": "section",
+                    "id": "forms.puzzles",
+                    "title_en": "Puzzles",
+                    "title_fr": "Les puzzles",
+                    "content": [
+                        {
+                            "type": "page",
+                            "page_id": "forms.puzzles.puzzle-1",
+                            "title_en": "Puzzle 1",
+                            "title_fr": "Puzzle 1"
+                        },
+                        {
+                            "type": "page",
+                            "page_id": "forms.puzzles.puzzle-2",
+                            "title_en": "Puzzle 2",
+                            "title_fr": "Puzzle 2"
+                        },
+                        {
+                            "type": "page",
+                            "page_id": "forms.puzzles.puzzle-3",
+                            "title_en": "Puzzle 3",
+                            "title_fr": "Puzzle 3"
+                        },
+                        {
+                            "type": "page",
+                            "page_id": "forms.puzzles.puzzle-4",
+                            "title_en": "Puzzle 4",
+                            "title_fr": "Puzzle 4"
+                        }
+                    ]
+                },
+                {
+                    "type": "section",
+                    "id": "forms.undulation",
+                    "title_en": "Undulation",
+                    "title_fr": "L'ondulation",
+                    "content": [
+                        {
+                            "type": "page",
+                            "page_id": "forms.undulation.frontal-initiated-by-the-head",
+                            "title_en": "Frontal initiated by the head",
+                            "title_fr": "Frontale initiée par la tête"
+                        },
+                        {
+                            "type": "page",
+                            "page_id": "forms.undulation.frontal-initiated-by-the-pelvis",
+                            "title_en": "Frontal initiated by the pelvis",
+                            "title_fr": "Frontale initiée par le bassin"
+                        },
+                        {
+                            "type": "page",
+                            "page_id": "forms.undulation.lateral-initiated-by-the-head",
+                            "title_en": "Lateral initiated by the head",
+                            "title_fr": "Latérale initiée par la tête"
+                        },
+                        {
+                            "type": "page",
+                            "page_id": "forms.undulation.lateral-initiated-by-the-pelvis",
+                            "title_en": "Lateral initiated by the pelvis",
+                            "title_fr": "Latérale initiée par le bassin"
+                        },
+                        {
+                            "type": "page",
+                            "page_id": "forms.undulation.dolphin",
+                            "title_en": "Dolphin",
+                            "title_fr": "Le dauphin"
+                        }
+                    ]
+                },
+                {
+                    "type": "section",
+                    "id": "forms.aikido-roll",
+                    "title_en": "Aikido roll",
+                    "title_fr": "La chute roulée de l'aïkido",
+                    "content": [
+                        {
+                            "type": "page",
+                            "page_id": "forms.aikido-roll.principle",
+                            "title_en": "Principle",
+                            "title_fr": "Le principe"
+                        },
+                        {
+                            "type": "page",
+                            "page_id": "forms.aikido-roll.3-directions",
+                            "title_en": "3 directions",
+                            "title_fr": "Les 3 directions"
+                        }
+                    ]
+                },
+                {
+                    "type": "section",
+                    "id": "forms.looking-at-the-forms",
+                    "title_en": "Looking at the forms",
+                    "title_fr": "Regarder les formes",
+                    "content": [
+                        {
+                            "type": "page",
+                            "page_id": "forms.looking-at-the-forms.crescent-roll-head-up-in-workshop",
+                            "title_en": "Crescent roll head up in workshop",
+                            "title_fr": "Démonstration du roulé en croissant tête dégagée"
+                        },
+                        {
+                            "type": "page",
+                            "page_id": "forms.looking-at-the-forms.helix-roll-led-by-feet-in-workshop",
+                            "title_en": "Helix roll led by feet in workshop",
+                            "title_fr": "Démonstration du roulé en hélice par les pieds"
+                        },
+                        {
+                            "type": "page",
+                            "page_id": "forms.looking-at-the-forms.helix-roll-led-by-hands-in-workshop",
+                            "title_en": "Helix roll led by hands in workshop",
+                            "title_fr": "Démonstration du roulé en hélice par les mains"
+                        },
+                        {
+                            "type": "page",
+                            "page_id": "forms.looking-at-the-forms.puzzle-1-analyse",
+                            "title_en": "Puzzle 1, analyse",
+                            "title_fr": "Puzzle 1, l'analyse"
+                        },
+                        {
+                            "type": "page",
+                            "page_id": "forms.looking-at-the-forms.comments-on-crescent-roll-feet-and-hands",
+                            "title_en": "Comments on crescent roll - feet and hands",
+                            "title_fr": "Le roulé en croissant par pieds et mains, commentaires"
+                        },
+                        {
+                            "type": "page",
+                            "page_id": "forms.looking-at-the-forms.comments-on-crescent-roll-center",
+                            "title_en": "Comments on crescent roll - center",
+                            "title_fr": "Le roulé en croissant par le centre, commentaires"
+                        },
+                        {
+                            "type": "page",
+                            "page_id": "forms.looking-at-the-forms.comments-on-helix-roll-feet",
+                            "title_en": "Comments on helix roll - feet",
+                            "title_fr": "Le roulé en hélice par les pieds, commentaires"
+                        },
+                        {
+                            "type": "page",
+                            "page_id": "forms.looking-at-the-forms.comments-on-helix-roll-hands",
+                            "title_en": "Comments on helix roll - hands",
+                            "title_fr": "Le roulé en hélice par les mains, commentaires"
+                        },
+                        {
+                            "type": "page",
+                            "page_id": "forms.looking-at-the-forms.conclusion-on-rolls",
+                            "title_en": "Conclusion on rolls",
+                            "title_fr": "Conclusion sur les roulés"
+                        }
+                    ]
+                },
+                {
+                    "type": "section",
+                    "id": "forms.warm-ups",
+                    "title_en": "Warm ups",
+                    "title_fr": "Les échauffements",
+                    "content": [
+                        {
+                            "type": "page",
+                            "page_id": "forms.warm-ups.fingers",
+                            "title_en": "Fingers",
+                            "title_fr": "Les doigts"
+                        },
+                        {
+                            "type": "page",
+                            "page_id": "forms.warm-ups.the-wrist",
+                            "title_en": "The wrist",
+                            "title_fr": "Le poignet"
+                        },
+                        {
+                            "type": "page",
+                            "page_id": "forms.warm-ups.hands",
+                            "title_en": "Hands",
+                            "title_fr": "Les mains"
+                        },
+                        {
+                            "type": "page",
+                            "page_id": "forms.warm-ups.arms",
+                            "title_en": "Arms",
+                            "title_fr": "Les bras"
+                        },
+                        {
+                            "type": "page",
+                            "page_id": "forms.warm-ups.spine-and-arms",
+                            "title_en": "Spine and arms",
+                            "title_fr": "Les bras et la colonne"
+                        },
+                        {
+                            "type": "page",
+                            "page_id": "forms.warm-ups.bending-bone",
+                            "title_en": "Bending bone",
+                            "title_fr": "Courber l'os"
+                        },
+                        {
+                            "type": "page",
+                            "page_id": "forms.warm-ups.aikido-step",
+                            "title_en": "Aikido step",
+                            "title_fr": "Le pas aïkido"
+                        },
+                        {
+                            "type": "page",
+                            "page_id": "forms.warm-ups.the-twist",
+                            "title_en": "The twist",
+                            "title_fr": "La torsion"
+                        },
+                        {
+                            "type": "page",
+                            "page_id": "forms.warm-ups.legs-twist",
+                            "title_en": "Legs twist",
+                            "title_fr": "Torsion des jambes"
+                        },
+                        {
+                            "type": "page",
+                            "page_id": "forms.warm-ups.legs-resistance",
+                            "title_en": "Legs resistance",
+                            "title_fr": "Résistance des jambes"
+                        },
+                        {
+                            "type": "page",
+                            "page_id": "forms.warm-ups.trochanter",
+                            "title_en": "Trochanter",
+                            "title_fr": "Trochanter"
+                        },
+                        {
+                            "type": "page",
+                            "page_id": "forms.warm-ups.psoas",
+                            "title_en": "Psoas",
+                            "title_fr": "Psoas"
+                        },
+                        {
+                            "type": "page",
+                            "page_id": "forms.warm-ups.wave",
+                            "title_en": "Wave",
+                            "title_fr": "Ondulation"
+                        },
+                        {
+                            "type": "page",
+                            "page_id": "forms.warm-ups.wave-on-the-floor",
+                            "title_en": "Wave on the floor",
+                            "title_fr": "Ondulation au sol"
+                        },
+                        {
+                            "type": "page",
+                            "page_id": "forms.warm-ups.asanas",
+                            "title_en": "Asanas",
+                            "title_fr": "Asanas"
+                        },
+                        {
+                            "type": "page",
+                            "page_id": "forms.warm-ups.napping",
+                            "title_en": "Napping",
+                            "title_fr": "La sieste"
+                        },
+                        {
+                            "type": "page",
+                            "page_id": "forms.warm-ups.and-play",
+                            "title_en": "And play",
+                            "title_fr": "Et jouer"
+                        }
+                    ]
+                },
+                {
+                    "type": "section",
+                    "id": "forms.cultivating",
+                    "title_en": "Cultivating",
+                    "title_fr": "Cultiver",
+                    "content": [
+                        {
+                            "type": "page",
+                            "page_id": "forms.cultivating.dance-culture",
+                            "title_en": "Dance & culture",
+                            "title_fr": "La danse & la culture"
+                        },
+                        {
+                            "type": "page",
+                            "page_id": "forms.cultivating.kindling-scythe",
+                            "title_en": "Kindling & scythe",
+                            "title_fr": "Le petit bois & la faux"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "pages": [
+        {
+            "page_id": "sensation-and-senses.weight-of-sensation",
+            "title": {
+                "en": "Weight of sensation",
+                "fr": "Le poids de la sensation"
+            },
+            "sort_idx": 100,
+            "cover": "hello.jpg",
+            "keywords": {
+                "en": [
+                    "sensation",
+                    "senses",
+                    "weight"
+                ],
+                "fr": [
+                    "sensation",
+                    "sens",
+                    "poids"
+                ]
+            },
+            "content": {
+                "layout": "single-video",
+                "videos": [
+                    {
+                        "lang_video_id": {
+                            "en": "hello"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "page_id": "sensation-and-senses.gravity.the-flat-the-round",
+            "title": {
+                "en": "The flat & the round",
+                "fr": "Le plat et le rond"
+            },
+            "sort_idx": 200,
+            "cover": "lemmon_en.jpg",
+            "keywords": {
+                "en": [
+                    "sensation",
+                    "senses",
+                    "gravity",
+                    "flat",
+                    "round"
+                ],
+                "fr": [
+                    "sensation",
+                    "sens",
+                    "pesanteur",
+                    "plat",
+                    "rond"
+                ]
+            },
+            "content": {
+                "layout": "single-video",
+                "videos": [
+                    {
+                        "lang_video_id": {
+                            "en": "lemmon_en",
+                            "fr": "lemmon_fr"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "page_id": "sensation-and-senses.gravity.falls",
+            "title": {
+                "en": "Falls",
+                "fr": "Chutes"
+            },
+            "sort_idx": 300,
+            "cover": "falls.jpg",
+            "keywords": {
+                "en": [
+                    "sensation",
+                    "senses",
+                    "gravity",
+                    "falls"
+                ],
+                "fr": [
+                    "sensation",
+                    "sens",
+                    "pesanteur",
+                    "chutes"
+                ]
+            },
+            "content": {
+                "layout": "single-video",
+                "videos": [
+                    {
+                        "lang_video_id": {
+                            "en": "falls"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "page_id": "sensation-and-senses.gravity.water-gravity",
+            "title": {
+                "en": "Water gravity",
+                "fr": "La pesanteur dans l'eau"
+            },
+            "sort_idx": 400,
+            "cover": "watergravity.jpg",
+            "keywords": {
+                "en": [
+                    "sensation",
+                    "senses",
+                    "gravity",
+                    "water"
+                ],
+                "fr": [
+                    "sensation",
+                    "sens",
+                    "pesanteur",
+                    "dans",
+                    "l'eau"
+                ]
+            },
+            "content": {
+                "layout": "single-video",
+                "videos": [
+                    {
+                        "lang_video_id": {
+                            "en": "watergravity"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "page_id": "sensation-and-senses.gravity.adjusting",
+            "title": {
+                "en": "Adjusting",
+                "fr": "Ajuster"
+            },
+            "sort_idx": 500,
+            "cover": "adjusting_birds.jpg",
+            "keywords": {
+                "en": [
+                    "sensation",
+                    "senses",
+                    "gravity",
+                    "adjusting"
+                ],
+                "fr": [
+                    "sensation",
+                    "sens",
+                    "pesanteur",
+                    "ajuster"
+                ]
+            },
+            "content": {
+                "layout": "single-video",
+                "videos": [
+                    {
+                        "lang_video_id": {
+                            "en": "adjusting_birds"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "page_id": "sensation-and-senses.basics.an-approach-to-breathing",
+            "title": {
+                "en": "An approach to breathing",
+                "fr": "Respirer, une approche"
+            },
+            "sort_idx": 600,
+            "cover": "breathing_en.jpg",
+            "keywords": {
+                "en": [
+                    "sensation",
+                    "senses",
+                    "basics",
+                    "approach",
+                    "breathing"
+                ],
+                "fr": [
+                    "sensation",
+                    "sens",
+                    "base",
+                    "respirer,",
+                    "approche"
+                ]
+            },
+            "content": {
+                "layout": "single-video",
+                "videos": [
+                    {
+                        "lang_video_id": {
+                            "en": "breathing_en",
+                            "fr": "breathing_fr"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "page_id": "sensation-and-senses.basics.an-approach-to-the-small-dance",
+            "title": {
+                "en": "An approach to the small dance",
+                "fr": "La petite danse, une approche"
+            },
+            "sort_idx": 700,
+            "cover": "smalldance_full.jpg",
+            "keywords": {
+                "en": [
+                    "sensation",
+                    "senses",
+                    "basics",
+                    "approach",
+                    "small",
+                    "dance"
+                ],
+                "fr": [
+                    "sensation",
+                    "sens",
+                    "base",
+                    "petite",
+                    "danse,",
+                    "approche"
+                ]
+            },
+            "content": {
+                "layout": "single-video-audio",
+                "videos": [
+                    {
+                        "lang_video_id": {
+                            "en": "smalldance_full"
+                        }
+                    }
+                ],
+                "audio": {
+                    "src": {
+                        "en": "small_dance_en.mp3",
+                        "fr": "small_dance_fr.mp3"
+                    }
+                }
+            }
+        },
+        {
+            "page_id": "sensation-and-senses.pointing.parts-of-pointing",
+            "title": {
+                "en": "Parts of pointing",
+                "fr": "Pointer, les différentes parties"
+            },
+            "sort_idx": 800,
+            "cover": "pointing.jpg",
+            "keywords": {
+                "en": [
+                    "sensation",
+                    "senses",
+                    "pointing",
+                    "parts"
+                ],
+                "fr": [
+                    "sensation",
+                    "sens",
+                    "pointer",
+                    "pointer,",
+                    "différentes",
+                    "parties"
+                ]
+            },
+            "content": {
+                "layout": "single-video",
+                "videos": [
+                    {
+                        "lang_video_id": {
+                            "en": "pointing"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "page_id": "sensation-and-senses.pointing.relation-to-scapula",
+            "title": {
+                "en": "Relation to scapula",
+                "fr": "La relation à l'omoplate"
+            },
+            "sort_idx": 900,
+            "cover": "pointing_scapula.jpg",
+            "keywords": {
+                "en": [
+                    "sensation",
+                    "senses",
+                    "pointing",
+                    "relation",
+                    "scapula"
+                ],
+                "fr": [
+                    "sensation",
+                    "sens",
+                    "pointer",
+                    "relation",
+                    "l'omoplate"
+                ]
+            },
+            "content": {
+                "layout": "single-video",
+                "videos": [
+                    {
+                        "lang_video_id": {
+                            "en": "pointing_scapula"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "page_id": "sensation-and-senses.pelvis.pelvis-as-an-initiator",
+            "title": {
+                "en": "Pelvis as an initiator",
+                "fr": "Initier par le bassin"
+            },
+            "sort_idx": 1000,
+            "cover": "pelvis.jpg",
+            "keywords": {
+                "en": [
+                    "sensation",
+                    "senses",
+                    "pelvis",
+                    "initiator"
+                ],
+                "fr": [
+                    "sensation",
+                    "sens",
+                    "bassin",
+                    "initier"
+                ]
+            },
+            "content": {
+                "layout": "single-video",
+                "videos": [
+                    {
+                        "lang_video_id": {
+                            "en": "pelvis"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "page_id": "sensation-and-senses.pelvis.exercise-ischia-to-heels",
+            "title": {
+                "en": "Exercise ischia to heels",
+                "fr": "Exercice: les ischions vers les talons"
+            },
+            "sort_idx": 1100,
+            "cover": "pointing_heel.jpg",
+            "keywords": {
+                "en": [
+                    "sensation",
+                    "senses",
+                    "pelvis",
+                    "exercise",
+                    "ischia",
+                    "heels"
+                ],
+                "fr": [
+                    "sensation",
+                    "sens",
+                    "bassin",
+                    "exercice:",
+                    "ischions",
+                    "vers",
+                    "talons"
+                ]
+            },
+            "content": {
+                "layout": "single-video",
+                "videos": [
+                    {
+                        "lang_video_id": {
+                            "en": "pointing_heel"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "page_id": "sensation-and-senses.walk.walk-as-foundation",
+            "title": {
+                "en": "Walk as foundation",
+                "fr": "La marche comme fondement"
+            },
+            "sort_idx": 1200,
+            "cover": "walkasfondation.jpg",
+            "keywords": {
+                "en": [
+                    "sensation",
+                    "senses",
+                    "walk",
+                    "foundation"
+                ],
+                "fr": [
+                    "sensation",
+                    "sens",
+                    "marche",
+                    "fondement"
+                ]
+            },
+            "content": {
+                "layout": "single-video",
+                "videos": [
+                    {
+                        "lang_video_id": {
+                            "en": "walkasfondation"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "page_id": "sensation-and-senses.walk.birds-walk",
+            "title": {
+                "en": "Birds walk",
+                "fr": "La marche des oiseaux"
+            },
+            "sort_idx": 1300,
+            "cover": "birdswalk.jpg",
+            "keywords": {
+                "en": [
+                    "sensation",
+                    "senses",
+                    "walk",
+                    "birds"
+                ],
+                "fr": [
+                    "sensation",
+                    "sens",
+                    "marche",
+                    "oiseaux"
+                ]
+            },
+            "content": {
+                "layout": "single-video",
+                "videos": [
+                    {
+                        "lang_video_id": {
+                            "en": "birdswalk"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "page_id": "sensation-and-senses.walk.slow-walk",
+            "title": {
+                "en": "Slow walk",
+                "fr": "La marche lente"
+            },
+            "sort_idx": 1400,
+            "cover": "slowwalk.jpg",
+            "keywords": {
+                "en": [
+                    "sensation",
+                    "senses",
+                    "walk",
+                    "slow"
+                ],
+                "fr": [
+                    "sensation",
+                    "sens",
+                    "marche",
+                    "lente"
+                ]
+            },
+            "content": {
+                "layout": "single-video",
+                "videos": [
+                    {
+                        "lang_video_id": {
+                            "en": "slowwalk"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "page_id": "sensation-and-senses.walk.twist",
+            "title": {
+                "en": "Twist",
+                "fr": "La torsion"
+            },
+            "sort_idx": 1500,
+            "cover": "twist.jpg",
+            "keywords": {
+                "en": [
+                    "sensation",
+                    "senses",
+                    "walk",
+                    "twist"
+                ],
+                "fr": [
+                    "sensation",
+                    "sens",
+                    "marche",
+                    "torsion"
+                ]
+            },
+            "content": {
+                "layout": "single-video",
+                "videos": [
+                    {
+                        "lang_video_id": {
+                            "en": "twist"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "page_id": "sensation-and-senses.the-back.choosing-to-focus-on-the-back",
+            "title": {
+                "en": "Choosing to focus on the Back",
+                "fr": "Choisir de se concentrer sur le dos"
+            },
+            "sort_idx": 1600,
+            "cover": "focus_back.jpg",
+            "keywords": {
+                "en": [
+                    "sensation",
+                    "senses",
+                    "back",
+                    "choosing",
+                    "focus"
+                ],
+                "fr": [
+                    "sensation",
+                    "sens",
+                    "dos",
+                    "choisir",
+                    "concentrer"
+                ]
+            },
+            "content": {
+                "layout": "single-video",
+                "videos": [
+                    {
+                        "lang_video_id": {
+                            "en": "focus_back"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "page_id": "sensation-and-senses.the-back.passage",
+            "title": {
+                "en": "Passage",
+                "fr": "Passage"
+            },
+            "sort_idx": 1700,
+            "cover": "passage.jpg",
+            "keywords": {
+                "en": [
+                    "sensation",
+                    "senses",
+                    "back",
+                    "passage"
+                ],
+                "fr": [
+                    "sensation",
+                    "sens",
+                    "dos",
+                    "passage"
+                ]
+            },
+            "content": {
+                "layout": "single-video",
+                "videos": [
+                    {
+                        "lang_video_id": {
+                            "en": "passage"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "page_id": "sensation-and-senses.space.spherical-space",
+            "title": {
+                "en": "Spherical space",
+                "fr": "L'espace sphérique"
+            },
+            "sort_idx": 1800,
+            "cover": "sphericalspace.jpg",
+            "keywords": {
+                "en": [
+                    "sensation",
+                    "senses",
+                    "space",
+                    "spherical"
+                ],
+                "fr": [
+                    "sensation",
+                    "sens",
+                    "l'espace",
+                    "sphérique"
+                ]
+            },
+            "content": {
+                "layout": "single-video",
+                "videos": [
+                    {
+                        "lang_video_id": {
+                            "en": "sphericalspace"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "page_id": "sensation-and-senses.mfs-as-base-for-improvisation.looking-at-goldberg-variations",
+            "title": {
+                "en": "Looking at Goldberg Variations",
+                "fr": "Introduction aux Goldberg Variations"
+            },
+            "sort_idx": 1900,
+            "cover": "perf_comments_goldberg.jpg",
+            "keywords": {
+                "en": [
+                    "sensation",
+                    "senses",
+                    "mfs",
+                    "base",
+                    "improvisation",
+                    "looking",
+                    "goldberg",
+                    "variations"
+                ],
+                "fr": [
+                    "sensation",
+                    "sens",
+                    "mfs",
+                    "base",
+                    "l'improvisation",
+                    "introduction",
+                    "goldberg",
+                    "variations"
+                ]
+            },
+            "content": {
+                "layout": "single-video",
+                "videos": [
+                    {
+                        "lang_video_id": {
+                            "en": "perf_comments_goldberg"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "page_id": "sensation-and-senses.mfs-as-base-for-improvisation.goldberg-variations-extracts",
+            "title": {
+                "en": "Goldberg Variations (extracts)",
+                "fr": "Goldberg Variations (extraits)"
+            },
+            "sort_idx": 2000,
+            "cover": "goldberg.jpg",
+            "keywords": {
+                "en": [
+                    "sensation",
+                    "senses",
+                    "mfs",
+                    "base",
+                    "improvisation",
+                    "goldberg",
+                    "variations"
+                ],
+                "fr": [
+                    "sensation",
+                    "sens",
+                    "mfs",
+                    "base",
+                    "l'improvisation",
+                    "goldberg",
+                    "variations"
+                ]
+            },
+            "content": {
+                "layout": "single-video",
+                "videos": [
+                    {
+                        "lang_video_id": {
+                            "en": "goldberg"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "page_id": "sensation-and-senses.mfs-as-base-for-improvisation.looking-at-english-suites",
+            "title": {
+                "en": "Looking at English Suites",
+                "fr": "Introduction aux English Suites"
+            },
+            "sort_idx": 2100,
+            "cover": "perf_comments_english.jpg",
+            "keywords": {
+                "en": [
+                    "sensation",
+                    "senses",
+                    "mfs",
+                    "base",
+                    "improvisation",
+                    "looking",
+                    "suites"
+                ],
+                "fr": [
+                    "sensation",
+                    "sens",
+                    "mfs",
+                    "base",
+                    "l'improvisation",
+                    "introduction",
+                    "suites"
+                ]
+            },
+            "content": {
+                "layout": "single-video",
+                "videos": [
+                    {
+                        "lang_video_id": {
+                            "en": "perf_comments_english"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "page_id": "sensation-and-senses.mfs-as-base-for-improvisation.english-suites",
+            "title": {
+                "en": "English Suites",
+                "fr": "English Suites"
+            },
+            "sort_idx": 2200,
+            "cover": "english.jpg",
+            "keywords": {
+                "en": [
+                    "sensation",
+                    "senses",
+                    "mfs",
+                    "base",
+                    "improvisation",
+                    "suites"
+                ],
+                "fr": [
+                    "sensation",
+                    "sens",
+                    "mfs",
+                    "base",
+                    "l'improvisation",
+                    "suites"
+                ]
+            },
+            "content": {
+                "layout": "single-video",
+                "videos": [
+                    {
+                        "lang_video_id": {
+                            "en": "english"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "page_id": "sensation-and-senses.mfs-as-base-for-improvisation.a-technique-for-improvisation",
+            "title": {
+                "en": "A technique for improvisation",
+                "fr": "Une technique pour l'improvisation"
+            },
+            "sort_idx": 2300,
+            "cover": "perf_techimpro.jpg",
+            "keywords": {
+                "en": [
+                    "sensation",
+                    "senses",
+                    "mfs",
+                    "base",
+                    "improvisation",
+                    "technique"
+                ],
+                "fr": [
+                    "sensation",
+                    "sens",
+                    "mfs",
+                    "base",
+                    "l'improvisation",
+                    "technique"
+                ]
+            },
+            "content": {
+                "layout": "single-video",
+                "videos": [
+                    {
+                        "lang_video_id": {
+                            "en": "perf_techimpro"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "page_id": "forms.introduction",
+            "title": {
+                "en": "Introduction",
+                "fr": "Introduction"
+            },
+            "sort_idx": 2400,
+            "cover": "new_intro.jpg",
+            "keywords": {
+                "en": [
+                    "forms",
+                    "introduction"
+                ],
+                "fr": [
+                    "formes",
+                    "introduction"
+                ]
+            },
+            "content": {
+                "layout": "single-video",
+                "videos": [
+                    {
+                        "lang_video_id": {
+                            "en": "new_intro"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "page_id": "forms.crescent-roll.crescent-led-by-feet-and-hands",
+            "title": {
+                "en": "Crescent led by feet and hands",
+                "fr": "Initié par les mains et les pieds"
+            },
+            "sort_idx": 2500,
+            "cover": "cbhf_fromside.jpg",
+            "keywords": {
+                "en": [
+                    "forms",
+                    "crescent",
+                    "roll",
+                    "led",
+                    "feet",
+                    "hands"
+                ],
+                "fr": [
+                    "formes",
+                    "roulé",
+                    "croissant",
+                    "initié",
+                    "mains",
+                    "pieds"
+                ]
+            },
+            "content": {
+                "layout": "three-videos-audio-subs",
+                "videos": [
+                    {
+                        "lang_video_id": {
+                            "en": "cbhf_fromside"
+                        },
+                        "video_detail": {
+                            "lang_video_id": {
+                                "en": "cbhf_fromside"
+                            },
+                            "muted": true,
+                            "desc": {
+                                "en": "-- led by feet and hands - detail from side",
+                                "fr": "-- initié par le les mains et les pieds - détail - depuis le côté"
+                            }
+                        }
+                    },
+                    {
+                        "lang_video_id": {
+                            "en": "cbhf_fromtop"
+                        },
+                        "video_detail": {
+                            "lang_video_id": {
+                                "en": "cbfh_top"
+                            },
+                            "muted": true,
+                            "desc": {
+                                "en": "-- led by feet and hands - detail from top",
+                                "fr": "-- initié par le les mains et les pieds - détail - depuis le haut"
+                            }
+                        }
+                    },
+                    {
+                        "lang_video_id": {
+                            "en": "cbhf_fromhead"
+                        },
+                        "video_detail": {
+                            "lang_video_id": {
+                                "en": "cbhf_fromhead"
+                            },
+                            "muted": true,
+                            "desc": {
+                                "en": "-- led by feet and hands - detail from head",
+                                "fr": "-- initié par le les mains et les pieds - détail - depuis la tête"
+                            }
+                        }
+                    }
+                ],
+                "audio": {
+                    "src": {
+                        "en": "comments_crescent.mp3"
+                    },
+                    "tracks": [
+                        {
+                            "lang": "en",
+                            "src": "comments_crescent.en.vtt"
+                        },
+                        {
+                            "lang": "fr",
+                            "src": "comments_crescent.fr.vtt"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "page_id": "forms.crescent-roll.crescent-led-by-center",
+            "title": {
+                "en": "Crescent led by center",
+                "fr": "Initié par le centre"
+            },
+            "sort_idx": 2600,
+            "cover": "cbc_fromhead.jpg",
+            "keywords": {
+                "en": [
+                    "forms",
+                    "crescent",
+                    "roll",
+                    "led",
+                    "center"
+                ],
+                "fr": [
+                    "formes",
+                    "roulé",
+                    "croissant",
+                    "initié",
+                    "centre"
+                ]
+            },
+            "content": {
+                "layout": "two-videos-only",
+                "videos": [
+                    {
+                        "lang_video_id": {
+                            "en": "cbc_fromhead"
+                        },
+                        "video_detail": {
+                            "lang_video_id": {
+                                "en": "cbc_fromhead"
+                            },
+                            "muted": true,
+                            "desc": {
+                                "en": "-- led by center - detail from head",
+                                "fr": "-- initié par le centre - détail - depuis la tête"
+                            }
+                        }
+                    },
+                    {
+                        "lang_video_id": {
+                            "en": "cbc_fromtop"
+                        },
+                        "video_detail": {
+                            "lang_video_id": {
+                                "en": "cbc_top"
+                            },
+                            "muted": true,
+                            "desc": {
+                                "en": "-- led by center - detail from top",
+                                "fr": "-- initié par le centre - détail - depuis le haut"
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "page_id": "forms.crescent-roll.head-up",
+            "title": {
+                "en": "Head up",
+                "fr": "Tête dégagée"
+            },
+            "sort_idx": 2700,
+            "cover": "chu_fromfeet.jpg",
+            "keywords": {
+                "en": [
+                    "forms",
+                    "crescent",
+                    "roll",
+                    "head"
+                ],
+                "fr": [
+                    "formes",
+                    "roulé",
+                    "croissant",
+                    "tête",
+                    "dégagée"
+                ]
+            },
+            "content": {
+                "layout": "two-videos-only",
+                "videos": [
+                    {
+                        "lang_video_id": {
+                            "en": "chu_fromfeet"
+                        },
+                        "video_detail": {
+                            "lang_video_id": {
+                                "en": "chu_fromfeet"
+                            },
+                            "muted": true,
+                            "desc": {
+                                "en": "-- head up - detail from feet",
+                                "fr": "-- la tête haute - détail - depuis les pieds"
+                            }
+                        }
+                    },
+                    {
+                        "lang_video_id": {
+                            "en": "chu_fromside"
+                        },
+                        "video_detail": {
+                            "lang_video_id": {
+                                "en": "cbhu_side"
+                            },
+                            "muted": true,
+                            "desc": {
+                                "en": "-- head up - detail from side",
+                                "fr": "-- la tête haute - détail - depuis le côté"
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "page_id": "forms.crescent-roll.head-and-feet-up",
+            "title": {
+                "en": "Head and feet up",
+                "fr": "Tête et pieds vers le haut"
+            },
+            "sort_idx": 2800,
+            "cover": "cbfhu.jpg",
+            "keywords": {
+                "en": [
+                    "forms",
+                    "crescent",
+                    "roll",
+                    "head",
+                    "feet"
+                ],
+                "fr": [
+                    "formes",
+                    "roulé",
+                    "croissant",
+                    "tête",
+                    "pieds",
+                    "vers",
+                    "haut"
+                ]
+            },
+            "content": {
+                "layout": "single-video",
+                "videos": [
+                    {
+                        "lang_video_id": {
+                            "en": "cbfhu"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "page_id": "forms.crescent-roll.in-water",
+            "title": {
+                "en": "In water",
+                "fr": "Dans l'eau"
+            },
+            "sort_idx": 2900,
+            "cover": "crescent_water.jpg",
+            "keywords": {
+                "en": [
+                    "forms",
+                    "crescent",
+                    "roll",
+                    "water"
+                ],
+                "fr": [
+                    "formes",
+                    "roulé",
+                    "croissant",
+                    "dans",
+                    "l'eau"
+                ]
+            },
+            "content": {
+                "layout": "single-video",
+                "videos": [
+                    {
+                        "lang_video_id": {
+                            "en": "crescent_water"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "page_id": "forms.crescent-roll.comparison",
+            "title": {
+                "en": "Comparison",
+                "fr": "Comparaison"
+            },
+            "sort_idx": 3000,
+            "cover": "c_comparing.jpg",
+            "keywords": {
+                "en": [
+                    "forms",
+                    "crescent",
+                    "roll",
+                    "comparison"
+                ],
+                "fr": [
+                    "formes",
+                    "roulé",
+                    "croissant",
+                    "comparaison"
+                ]
+            },
+            "content": {
+                "layout": "single-video",
+                "videos": [
+                    {
+                        "lang_video_id": {
+                            "en": "c_comparing"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "page_id": "forms.helix-roll.led-by-feet",
+            "title": {
+                "en": "Led by feet",
+                "fr": "Initié par les pieds"
+            },
+            "sort_idx": 3100,
+            "cover": "sbf_fromfeet.jpg",
+            "keywords": {
+                "en": [
+                    "forms",
+                    "helix",
+                    "roll",
+                    "led",
+                    "feet"
+                ],
+                "fr": [
+                    "formes",
+                    "roulé",
+                    "hélice",
+                    "initié",
+                    "pieds"
+                ]
+            },
+            "content": {
+                "layout": "three-videos-audio-subs",
+                "videos": [
+                    {
+                        "lang_video_id": {
+                            "en": "sbf_fromfeet"
+                        },
+                        "video_detail": {
+                            "lang_video_id": {
+                                "en": "sbf_feet"
+                            },
+                            "muted": true,
+                            "desc": {
+                                "en": "-- led by feet - detail from feet",
+                                "fr": "-- initié par les pieds - détail - depuis les pieds"
+                            }
+                        }
+                    },
+                    {
+                        "lang_video_id": {
+                            "en": "sbf_side"
+                        },
+                        "video_detail": {
+                            "lang_video_id": {
+                                "en": "sbf_fromside"
+                            },
+                            "muted": true,
+                            "desc": {
+                                "en": "-- led by feet - detail from side",
+                                "fr": "-- initié par les pieds - détail - depuis le côté"
+                            }
+                        }
+                    },
+                    {
+                        "lang_video_id": {
+                            "en": "sbf_fromhead"
+                        },
+                        "video_detail": {
+                            "lang_video_id": {
+                                "en": "sbf_fromhead"
+                            },
+                            "muted": true,
+                            "desc": {
+                                "en": "-- led by feet - detail from head",
+                                "fr": "-- initié par les pieds - détail - depuis la tête"
+                            }
+                        }
+                    }
+                ],
+                "audio": {
+                    "src": {
+                        "en": "mfs_sbf.mp3"
+                    },
+                    "tracks": [
+                        {
+                            "lang": "en",
+                            "src": "mfs_sbf.en.vtt"
+                        },
+                        {
+                            "lang": "fr",
+                            "src": "mfs_sbf.fr.vtt"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "page_id": "forms.helix-roll.led-by-hands",
+            "title": {
+                "en": "Led by hands",
+                "fr": "Initié par les mains"
+            },
+            "sort_idx": 3200,
+            "cover": "sbh_fromhead.jpg",
+            "keywords": {
+                "en": [
+                    "forms",
+                    "helix",
+                    "roll",
+                    "led",
+                    "hands"
+                ],
+                "fr": [
+                    "formes",
+                    "roulé",
+                    "hélice",
+                    "initié",
+                    "mains"
+                ]
+            },
+            "content": {
+                "layout": "two-videos-audio-subs",
+                "videos": [
+                    {
+                        "lang_video_id": {
+                            "en": "sbh_fromhead"
+                        },
+                        "video_detail": {
+                            "lang_video_id": {
+                                "en": "sbh_head"
+                            },
+                            "muted": true,
+                            "desc": {
+                                "en": "-- led by hands - detail from head",
+                                "fr": "-- initié par les mains - détail - depuis la tête"
+                            }
+                        }
+                    },
+                    {
+                        "lang_video_id": {
+                            "en": "sbh_side"
+                        },
+                        "video_detail": {
+                            "lang_video_id": {
+                                "en": "sbh_fromside"
+                            },
+                            "muted": true,
+                            "desc": {
+                                "en": "-- led by hands - detail from side",
+                                "fr": "-- initié par les mains - détail - depuis le côté"
+                            }
+                        }
+                    }
+                ],
+                "audio": {
+                    "src": {
+                        "en": "mfs_sbh.mp3"
+                    },
+                    "tracks": [
+                        {
+                            "lang": "en",
+                            "src": "mfs_sbh.en.vtt"
+                        },
+                        {
+                            "lang": "fr",
+                            "src": "mfs_sbh.fr.vtt"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "page_id": "forms.helix-roll.in-water",
+            "title": {
+                "en": "In water",
+                "fr": "Dans l'eau"
+            },
+            "sort_idx": 3300,
+            "cover": "helixinwater.jpg",
+            "keywords": {
+                "en": [
+                    "forms",
+                    "helix",
+                    "roll",
+                    "water"
+                ],
+                "fr": [
+                    "formes",
+                    "roulé",
+                    "hélice",
+                    "dans",
+                    "l'eau"
+                ]
+            },
+            "content": {
+                "layout": "single-video",
+                "videos": [
+                    {
+                        "lang_video_id": {
+                            "en": "helixinwater"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "page_id": "forms.helix-roll.comparison",
+            "title": {
+                "en": "Comparison",
+                "fr": "Comparaison"
+            },
+            "sort_idx": 3400,
+            "cover": "h_comparing.jpg",
+            "keywords": {
+                "en": [
+                    "forms",
+                    "helix",
+                    "roll",
+                    "comparison"
+                ],
+                "fr": [
+                    "formes",
+                    "roulé",
+                    "hélice",
+                    "comparaison"
+                ]
+            },
+            "content": {
+                "layout": "single-video",
+                "videos": [
+                    {
+                        "lang_video_id": {
+                            "en": "h_comparing"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "page_id": "forms.puzzles.puzzle-1",
+            "title": {
+                "en": "Puzzle 1",
+                "fr": "Puzzle 1"
+            },
+            "sort_idx": 3500,
+            "cover": "puzzle1.jpg",
+            "keywords": {
+                "en": [
+                    "forms",
+                    "puzzles",
+                    "puzzle"
+                ],
+                "fr": [
+                    "formes",
+                    "puzzles",
+                    "puzzle"
+                ]
+            },
+            "content": {
+                "layout": "single-video",
+                "videos": [
+                    {
+                        "lang_video_id": {
+                            "en": "puzzle1"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "page_id": "forms.puzzles.puzzle-2",
+            "title": {
+                "en": "Puzzle 2",
+                "fr": "Puzzle 2"
+            },
+            "sort_idx": 3600,
+            "cover": "puzzle2.jpg",
+            "keywords": {
+                "en": [
+                    "forms",
+                    "puzzles",
+                    "puzzle"
+                ],
+                "fr": [
+                    "formes",
+                    "puzzles",
+                    "puzzle"
+                ]
+            },
+            "content": {
+                "layout": "single-video",
+                "videos": [
+                    {
+                        "lang_video_id": {
+                            "en": "puzzle2"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "page_id": "forms.puzzles.puzzle-3",
+            "title": {
+                "en": "Puzzle 3",
+                "fr": "Puzzle 3"
+            },
+            "sort_idx": 3700,
+            "cover": "puzzle3.jpg",
+            "keywords": {
+                "en": [
+                    "forms",
+                    "puzzles",
+                    "puzzle"
+                ],
+                "fr": [
+                    "formes",
+                    "puzzles",
+                    "puzzle"
+                ]
+            },
+            "content": {
+                "layout": "single-video",
+                "videos": [
+                    {
+                        "lang_video_id": {
+                            "en": "puzzle3"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "page_id": "forms.puzzles.puzzle-4",
+            "title": {
+                "en": "Puzzle 4",
+                "fr": "Puzzle 4"
+            },
+            "sort_idx": 3800,
+            "cover": "puzzle4.jpg",
+            "keywords": {
+                "en": [
+                    "forms",
+                    "puzzles",
+                    "puzzle"
+                ],
+                "fr": [
+                    "formes",
+                    "puzzles",
+                    "puzzle"
+                ]
+            },
+            "content": {
+                "layout": "single-video",
+                "videos": [
+                    {
+                        "lang_video_id": {
+                            "en": "puzzle4"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "page_id": "forms.undulation.frontal-initiated-by-the-head",
+            "title": {
+                "en": "Frontal initiated by the head",
+                "fr": "Frontale initiée par la tête"
+            },
+            "sort_idx": 3900,
+            "cover": "frontal_head_top.jpg",
+            "keywords": {
+                "en": [
+                    "forms",
+                    "undulation",
+                    "frontal",
+                    "initiated",
+                    "head"
+                ],
+                "fr": [
+                    "formes",
+                    "l'ondulation",
+                    "frontale",
+                    "initiée",
+                    "tête"
+                ]
+            },
+            "content": {
+                "layout": "three-videos-audio-subs",
+                "videos": [
+                    {
+                        "lang_video_id": {
+                            "en": "frontal_head_top"
+                        },
+                        "video_detail": {
+                            "lang_video_id": {
+                                "en": "frontal_head_top"
+                            },
+                            "muted": true,
+                            "desc": {
+                                "en": "-- detail from top",
+                                "fr": "-- détail vu d'en haut"
+                            }
+                        }
+                    },
+                    {
+                        "lang_video_id": {
+                            "en": "frontal_head_side"
+                        },
+                        "video_detail": {
+                            "lang_video_id": {
+                                "en": "frontal_head_side"
+                            },
+                            "muted": true,
+                            "desc": {
+                                "en": "-- detail from side",
+                                "fr": "-- détail vu de côté"
+                            }
+                        }
+                    },
+                    {
+                        "lang_video_id": {
+                            "en": "frontal_head_bottom"
+                        },
+                        "video_detail": {
+                            "lang_video_id": {
+                                "en": "frontal_head_bottom"
+                            },
+                            "muted": true,
+                            "desc": {
+                                "en": "-- detail from bottom",
+                                "fr": "-- détail vu d'en bas"
+                            }
+                        }
+                    }
+                ],
+                "audio": {
+                    "src": {
+                        "en": "comment_undulation.mp3"
+                    },
+                    "tracks": [
+                        {
+                            "lang": "en",
+                            "src": "comment_undulation.en.vtt"
+                        },
+                        {
+                            "lang": "fr",
+                            "src": "comment_undulation.fr.vtt"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "page_id": "forms.undulation.frontal-initiated-by-the-pelvis",
+            "title": {
+                "en": "Frontal initiated by the pelvis",
+                "fr": "Frontale initiée par le bassin"
+            },
+            "sort_idx": 4000,
+            "cover": "frontal_pelvis_top.jpg",
+            "keywords": {
+                "en": [
+                    "forms",
+                    "undulation",
+                    "frontal",
+                    "initiated",
+                    "pelvis"
+                ],
+                "fr": [
+                    "formes",
+                    "l'ondulation",
+                    "frontale",
+                    "initiée",
+                    "bassin"
+                ]
+            },
+            "content": {
+                "layout": "three-videos-only",
+                "videos": [
+                    {
+                        "lang_video_id": {
+                            "en": "frontal_pelvis_top"
+                        },
+                        "video_detail": {
+                            "lang_video_id": {
+                                "en": "frontal_pelvis_top"
+                            },
+                            "muted": true,
+                            "desc": {
+                                "en": "-- detail from top",
+                                "fr": "-- détail vu d'en haut"
+                            }
+                        }
+                    },
+                    {
+                        "lang_video_id": {
+                            "en": "frontal_pelvis_side"
+                        },
+                        "video_detail": {
+                            "lang_video_id": {
+                                "en": "frontal_pelvis_side"
+                            },
+                            "muted": true,
+                            "desc": {
+                                "en": "-- detail from side",
+                                "fr": "-- détail vu de côté"
+                            }
+                        }
+                    },
+                    {
+                        "lang_video_id": {
+                            "en": "frontal_pelvis_bottom"
+                        },
+                        "video_detail": {
+                            "lang_video_id": {
+                                "en": "frontal_pelvis_bottom"
+                            },
+                            "muted": true,
+                            "desc": {
+                                "en": "-- detail from bottom",
+                                "fr": "-- détail vu d'en bas"
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "page_id": "forms.undulation.lateral-initiated-by-the-head",
+            "title": {
+                "en": "Lateral initiated by the head",
+                "fr": "Latérale initiée par la tête"
+            },
+            "sort_idx": 4100,
+            "cover": "lateral_head_front.jpg",
+            "keywords": {
+                "en": [
+                    "forms",
+                    "undulation",
+                    "lateral",
+                    "initiated",
+                    "head"
+                ],
+                "fr": [
+                    "formes",
+                    "l'ondulation",
+                    "latérale",
+                    "initiée",
+                    "tête"
+                ]
+            },
+            "content": {
+                "layout": "two-videos-only",
+                "videos": [
+                    {
+                        "lang_video_id": {
+                            "en": "lateral_head_front"
+                        },
+                        "video_detail": {
+                            "lang_video_id": {
+                                "en": "lateral_head_front"
+                            },
+                            "muted": true,
+                            "desc": {
+                                "en": "-- detail from front",
+                                "fr": "-- détail vu de face"
+                            }
+                        }
+                    },
+                    {
+                        "lang_video_id": {
+                            "en": "lateral_head_top"
+                        },
+                        "video_detail": {
+                            "lang_video_id": {
+                                "en": "lateral_head_top"
+                            },
+                            "muted": true,
+                            "desc": {
+                                "en": "-- detail from top",
+                                "fr": "-- détail vu d'en haut"
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "page_id": "forms.undulation.lateral-initiated-by-the-pelvis",
+            "title": {
+                "en": "Lateral initiated by the pelvis",
+                "fr": "Latérale initiée par le bassin"
+            },
+            "sort_idx": 4200,
+            "cover": "lateral_pelvis_top.jpg",
+            "keywords": {
+                "en": [
+                    "forms",
+                    "undulation",
+                    "lateral",
+                    "initiated",
+                    "pelvis"
+                ],
+                "fr": [
+                    "formes",
+                    "l'ondulation",
+                    "latérale",
+                    "initiée",
+                    "bassin"
+                ]
+            },
+            "content": {
+                "layout": "two-videos-only",
+                "videos": [
+                    {
+                        "lang_video_id": {
+                            "en": "lateral_pelvis_top"
+                        },
+                        "video_detail": {
+                            "lang_video_id": {
+                                "en": "lateral_pelvis_top"
+                            },
+                            "muted": true,
+                            "desc": {
+                                "en": "-- detail from top",
+                                "fr": "-- détail vu d'en haut"
+                            }
+                        }
+                    },
+                    {
+                        "lang_video_id": {
+                            "en": "lateral_pelvis_front"
+                        },
+                        "video_detail": {
+                            "lang_video_id": {
+                                "en": "lateral_pelvis_front"
+                            },
+                            "muted": true,
+                            "desc": {
+                                "en": "-- detail from front",
+                                "fr": "-- détail vu de face"
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "page_id": "forms.undulation.dolphin",
+            "title": {
+                "en": "Dolphin",
+                "fr": "Le dauphin"
+            },
+            "sort_idx": 4300,
+            "cover": "dolphininwater.jpg",
+            "keywords": {
+                "en": [
+                    "forms",
+                    "undulation",
+                    "dolphin"
+                ],
+                "fr": [
+                    "formes",
+                    "l'ondulation",
+                    "dauphin"
+                ]
+            },
+            "content": {
+                "layout": "single-video",
+                "videos": [
+                    {
+                        "lang_video_id": {
+                            "en": "dolphininwater"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "page_id": "forms.aikido-roll.principle",
+            "title": {
+                "en": "Principle",
+                "fr": "Le principe"
+            },
+            "sort_idx": 4400,
+            "cover": "aikido_principle.jpg",
+            "keywords": {
+                "en": [
+                    "forms",
+                    "aikido",
+                    "roll",
+                    "principle"
+                ],
+                "fr": [
+                    "formes",
+                    "chute",
+                    "roulée",
+                    "l'aïkido",
+                    "principe"
+                ]
+            },
+            "content": {
+                "layout": "single-video",
+                "videos": [
+                    {
+                        "lang_video_id": {
+                            "en": "aikido_principle"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "page_id": "forms.aikido-roll.3-directions",
+            "title": {
+                "en": "3 directions",
+                "fr": "Les 3 directions"
+            },
+            "sort_idx": 4500,
+            "cover": "aikido_3D_side.jpg",
+            "keywords": {
+                "en": [
+                    "forms",
+                    "aikido",
+                    "roll",
+                    "directions"
+                ],
+                "fr": [
+                    "formes",
+                    "chute",
+                    "roulée",
+                    "l'aïkido",
+                    "directions"
+                ]
+            },
+            "content": {
+                "layout": "three-videos-audio-subs",
+                "videos": [
+                    {
+                        "lang_video_id": {
+                            "en": "aikido_3D_side"
+                        },
+                        "video_detail": {
+                            "lang_video_id": {
+                                "en": "aikido_side"
+                            },
+                            "muted": true,
+                            "desc": {
+                                "en": "-- aikido roll from side",
+                                "fr": "-- rouler aikido vu de côté "
+                            }
+                        }
+                    },
+                    {
+                        "lang_video_id": {
+                            "en": "aikido_3D_top"
+                        },
+                        "video_detail": {
+                            "lang_video_id": {
+                                "en": "aikido_top"
+                            },
+                            "muted": true,
+                            "desc": {
+                                "en": "-- aikido roll from top",
+                                "fr": "-- rouler aikido vu d'en haut "
+                            }
+                        }
+                    },
+                    {
+                        "lang_video_id": {
+                            "en": "aikido_3D_front"
+                        },
+                        "video_detail": {
+                            "lang_video_id": {
+                                "en": "aikido_front"
+                            },
+                            "muted": true,
+                            "desc": {
+                                "en": "-- aikido roll from front",
+                                "fr": "-- rouler aikido vu de face "
+                            }
+                        }
+                    }
+                ],
+                "audio": {
+                    "src": {
+                        "en": "aikidoform.mp3"
+                    },
+                    "tracks": [
+                        {
+                            "lang": "en",
+                            "src": "aikidoform.en.vtt"
+                        },
+                        {
+                            "lang": "fr",
+                            "src": "aikidoform.fr.vtt"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "page_id": "forms.looking-at-the-forms.crescent-roll-head-up-in-workshop",
+            "title": {
+                "en": "Crescent roll head up in workshop",
+                "fr": "Démonstration du roulé en croissant tête dégagée"
+            },
+            "sort_idx": 4600,
+            "cover": "crescent_head_up.jpg",
+            "keywords": {
+                "en": [
+                    "forms",
+                    "looking",
+                    "crescent",
+                    "roll",
+                    "head",
+                    "workshop"
+                ],
+                "fr": [
+                    "formes",
+                    "regarder",
+                    "démonstration",
+                    "roulé",
+                    "croissant",
+                    "tête",
+                    "dégagée"
+                ]
+            },
+            "content": {
+                "layout": "single-video",
+                "videos": [
+                    {
+                        "lang_video_id": {
+                            "en": "crescent_head_up"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "page_id": "forms.looking-at-the-forms.helix-roll-led-by-feet-in-workshop",
+            "title": {
+                "en": "Helix roll led by feet in workshop",
+                "fr": "Démonstration du roulé en hélice par les pieds"
+            },
+            "sort_idx": 4700,
+            "cover": "mfs_sbf_seattle.jpg",
+            "keywords": {
+                "en": [
+                    "forms",
+                    "looking",
+                    "helix",
+                    "roll",
+                    "led",
+                    "feet",
+                    "workshop"
+                ],
+                "fr": [
+                    "formes",
+                    "regarder",
+                    "démonstration",
+                    "roulé",
+                    "hélice",
+                    "pieds"
+                ]
+            },
+            "content": {
+                "layout": "single-video",
+                "videos": [
+                    {
+                        "lang_video_id": {
+                            "en": "mfs_sbf_seattle"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "page_id": "forms.looking-at-the-forms.helix-roll-led-by-hands-in-workshop",
+            "title": {
+                "en": "Helix roll led by hands in workshop",
+                "fr": "Démonstration du roulé en hélice par les mains"
+            },
+            "sort_idx": 4800,
+            "cover": "mfs_sbh_seattle.jpg",
+            "keywords": {
+                "en": [
+                    "forms",
+                    "looking",
+                    "helix",
+                    "roll",
+                    "led",
+                    "hands",
+                    "workshop"
+                ],
+                "fr": [
+                    "formes",
+                    "regarder",
+                    "démonstration",
+                    "roulé",
+                    "hélice",
+                    "mains"
+                ]
+            },
+            "content": {
+                "layout": "single-video",
+                "videos": [
+                    {
+                        "lang_video_id": {
+                            "en": "mfs_sbh_seattle"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "page_id": "forms.looking-at-the-forms.puzzle-1-analyse",
+            "title": {
+                "en": "Puzzle 1, analyse",
+                "fr": "Puzzle 1, l'analyse"
+            },
+            "sort_idx": 4900,
+            "cover": "puzzle1_demo_graph.jpg",
+            "keywords": {
+                "en": [
+                    "forms",
+                    "looking",
+                    "puzzle",
+                    "analyse"
+                ],
+                "fr": [
+                    "formes",
+                    "regarder",
+                    "puzzle",
+                    "l'analyse"
+                ]
+            },
+            "content": {
+                "layout": "single-video",
+                "videos": [
+                    {
+                        "lang_video_id": {
+                            "en": "puzzle1_demo_graph"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "page_id": "forms.looking-at-the-forms.comments-on-crescent-roll-feet-and-hands",
+            "title": {
+                "en": "Comments on crescent roll - feet and hands",
+                "fr": "Le roulé en croissant par pieds et mains, commentaires"
+            },
+            "sort_idx": 5000,
+            "cover": "correction_crescent_handsfeet.jpg",
+            "keywords": {
+                "en": [
+                    "forms",
+                    "looking",
+                    "comments",
+                    "crescent",
+                    "roll",
+                    "feet",
+                    "hands"
+                ],
+                "fr": [
+                    "formes",
+                    "regarder",
+                    "roulé",
+                    "croissant",
+                    "pieds",
+                    "mains,",
+                    "commentaires"
+                ]
+            },
+            "content": {
+                "layout": "single-video",
+                "videos": [
+                    {
+                        "lang_video_id": {
+                            "en": "correction_crescent_handsfeet"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "page_id": "forms.looking-at-the-forms.comments-on-crescent-roll-center",
+            "title": {
+                "en": "Comments on crescent roll - center",
+                "fr": "Le roulé en croissant par le centre, commentaires"
+            },
+            "sort_idx": 5100,
+            "cover": "correction_crescent_center.jpg",
+            "keywords": {
+                "en": [
+                    "forms",
+                    "looking",
+                    "comments",
+                    "crescent",
+                    "roll",
+                    "center"
+                ],
+                "fr": [
+                    "formes",
+                    "regarder",
+                    "roulé",
+                    "croissant",
+                    "centre,",
+                    "commentaires"
+                ]
+            },
+            "content": {
+                "layout": "single-video",
+                "videos": [
+                    {
+                        "lang_video_id": {
+                            "en": "correction_crescent_center"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "page_id": "forms.looking-at-the-forms.comments-on-helix-roll-feet",
+            "title": {
+                "en": "Comments on helix roll - feet",
+                "fr": "Le roulé en hélice par les pieds, commentaires"
+            },
+            "sort_idx": 5200,
+            "cover": "correction_helix_feet.jpg",
+            "keywords": {
+                "en": [
+                    "forms",
+                    "looking",
+                    "comments",
+                    "helix",
+                    "roll",
+                    "feet"
+                ],
+                "fr": [
+                    "formes",
+                    "regarder",
+                    "roulé",
+                    "hélice",
+                    "pieds,",
+                    "commentaires"
+                ]
+            },
+            "content": {
+                "layout": "single-video",
+                "videos": [
+                    {
+                        "lang_video_id": {
+                            "en": "correction_helix_feet"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "page_id": "forms.looking-at-the-forms.comments-on-helix-roll-hands",
+            "title": {
+                "en": "Comments on helix roll - hands",
+                "fr": "Le roulé en hélice par les mains, commentaires"
+            },
+            "sort_idx": 5300,
+            "cover": "correction_helix_hands.jpg",
+            "keywords": {
+                "en": [
+                    "forms",
+                    "looking",
+                    "comments",
+                    "helix",
+                    "roll",
+                    "hands"
+                ],
+                "fr": [
+                    "formes",
+                    "regarder",
+                    "roulé",
+                    "hélice",
+                    "mains,",
+                    "commentaires"
+                ]
+            },
+            "content": {
+                "layout": "single-video",
+                "videos": [
+                    {
+                        "lang_video_id": {
+                            "en": "correction_helix_hands"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "page_id": "forms.looking-at-the-forms.conclusion-on-rolls",
+            "title": {
+                "en": "Conclusion on rolls",
+                "fr": "Conclusion sur les roulés"
+            },
+            "sort_idx": 5400,
+            "cover": "correction_conclusion.jpg",
+            "keywords": {
+                "en": [
+                    "forms",
+                    "looking",
+                    "conclusion",
+                    "rolls"
+                ],
+                "fr": [
+                    "formes",
+                    "regarder",
+                    "conclusion",
+                    "roulés"
+                ]
+            },
+            "content": {
+                "layout": "single-video",
+                "videos": [
+                    {
+                        "lang_video_id": {
+                            "en": "correction_conclusion"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "page_id": "forms.warm-ups.fingers",
+            "title": {
+                "en": "Fingers",
+                "fr": "Les doigts"
+            },
+            "sort_idx": 5500,
+            "cover": "wu_fingers.jpg",
+            "keywords": {
+                "en": [
+                    "forms",
+                    "warm",
+                    "ups",
+                    "fingers"
+                ],
+                "fr": [
+                    "formes",
+                    "échauffements",
+                    "doigts"
+                ]
+            },
+            "content": {
+                "layout": "single-video",
+                "videos": [
+                    {
+                        "lang_video_id": {
+                            "en": "wu_fingers"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "page_id": "forms.warm-ups.the-wrist",
+            "title": {
+                "en": "The wrist",
+                "fr": "Le poignet"
+            },
+            "sort_idx": 5600,
+            "cover": "wu_wrist.jpg",
+            "keywords": {
+                "en": [
+                    "forms",
+                    "warm",
+                    "ups",
+                    "wrist"
+                ],
+                "fr": [
+                    "formes",
+                    "échauffements",
+                    "poignet"
+                ]
+            },
+            "content": {
+                "layout": "single-video",
+                "videos": [
+                    {
+                        "lang_video_id": {
+                            "en": "wu_wrist"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "page_id": "forms.warm-ups.hands",
+            "title": {
+                "en": "Hands",
+                "fr": "Les mains"
+            },
+            "sort_idx": 5700,
+            "cover": "wu_hands.jpg",
+            "keywords": {
+                "en": [
+                    "forms",
+                    "warm",
+                    "ups",
+                    "hands"
+                ],
+                "fr": [
+                    "formes",
+                    "échauffements",
+                    "mains"
+                ]
+            },
+            "content": {
+                "layout": "single-video",
+                "videos": [
+                    {
+                        "lang_video_id": {
+                            "en": "wu_hands"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "page_id": "forms.warm-ups.arms",
+            "title": {
+                "en": "Arms",
+                "fr": "Les bras"
+            },
+            "sort_idx": 5800,
+            "cover": "wu_arms.jpg",
+            "keywords": {
+                "en": [
+                    "forms",
+                    "warm",
+                    "ups",
+                    "arms"
+                ],
+                "fr": [
+                    "formes",
+                    "échauffements",
+                    "bras"
+                ]
+            },
+            "content": {
+                "layout": "single-video",
+                "videos": [
+                    {
+                        "lang_video_id": {
+                            "en": "wu_arms"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "page_id": "forms.warm-ups.spine-and-arms",
+            "title": {
+                "en": "Spine and arms",
+                "fr": "Les bras et la colonne"
+            },
+            "sort_idx": 5900,
+            "cover": "wu_spine_and_arms.jpg",
+            "keywords": {
+                "en": [
+                    "forms",
+                    "warm",
+                    "ups",
+                    "spine",
+                    "arms"
+                ],
+                "fr": [
+                    "formes",
+                    "échauffements",
+                    "bras",
+                    "colonne"
+                ]
+            },
+            "content": {
+                "layout": "single-video",
+                "videos": [
+                    {
+                        "lang_video_id": {
+                            "en": "wu_spine_and_arms"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "page_id": "forms.warm-ups.bending-bone",
+            "title": {
+                "en": "Bending bone",
+                "fr": "Courber l'os"
+            },
+            "sort_idx": 6000,
+            "cover": "wu_bendingbone.jpg",
+            "keywords": {
+                "en": [
+                    "forms",
+                    "warm",
+                    "ups",
+                    "bending",
+                    "bone"
+                ],
+                "fr": [
+                    "formes",
+                    "échauffements",
+                    "courber",
+                    "l'os"
+                ]
+            },
+            "content": {
+                "layout": "single-video",
+                "videos": [
+                    {
+                        "lang_video_id": {
+                            "en": "wu_bendingbone"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "page_id": "forms.warm-ups.aikido-step",
+            "title": {
+                "en": "Aikido step",
+                "fr": "Le pas aïkido"
+            },
+            "sort_idx": 6100,
+            "cover": "wu_aikidostep.jpg",
+            "keywords": {
+                "en": [
+                    "forms",
+                    "warm",
+                    "ups",
+                    "aikido",
+                    "step"
+                ],
+                "fr": [
+                    "formes",
+                    "échauffements",
+                    "pas",
+                    "aïkido"
+                ]
+            },
+            "content": {
+                "layout": "single-video",
+                "videos": [
+                    {
+                        "lang_video_id": {
+                            "en": "wu_aikidostep"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "page_id": "forms.warm-ups.the-twist",
+            "title": {
+                "en": "The twist",
+                "fr": "La torsion"
+            },
+            "sort_idx": 6200,
+            "cover": "wu_twist.jpg",
+            "keywords": {
+                "en": [
+                    "forms",
+                    "warm",
+                    "ups",
+                    "twist"
+                ],
+                "fr": [
+                    "formes",
+                    "échauffements",
+                    "torsion"
+                ]
+            },
+            "content": {
+                "layout": "single-video",
+                "videos": [
+                    {
+                        "lang_video_id": {
+                            "en": "wu_twist"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "page_id": "forms.warm-ups.legs-twist",
+            "title": {
+                "en": "Legs twist",
+                "fr": "Torsion des jambes"
+            },
+            "sort_idx": 6300,
+            "cover": "wu_twistlegs.jpg",
+            "keywords": {
+                "en": [
+                    "forms",
+                    "warm",
+                    "ups",
+                    "legs",
+                    "twist"
+                ],
+                "fr": [
+                    "formes",
+                    "échauffements",
+                    "torsion",
+                    "jambes"
+                ]
+            },
+            "content": {
+                "layout": "single-video",
+                "videos": [
+                    {
+                        "lang_video_id": {
+                            "en": "wu_twistlegs"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "page_id": "forms.warm-ups.legs-resistance",
+            "title": {
+                "en": "Legs resistance",
+                "fr": "Résistance des jambes"
+            },
+            "sort_idx": 6400,
+            "cover": "wu_legsresistance.jpg",
+            "keywords": {
+                "en": [
+                    "forms",
+                    "warm",
+                    "ups",
+                    "legs",
+                    "resistance"
+                ],
+                "fr": [
+                    "formes",
+                    "échauffements",
+                    "résistance",
+                    "jambes"
+                ]
+            },
+            "content": {
+                "layout": "single-video",
+                "videos": [
+                    {
+                        "lang_video_id": {
+                            "en": "wu_legsresistance"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "page_id": "forms.warm-ups.trochanter",
+            "title": {
+                "en": "Trochanter",
+                "fr": "Trochanter"
+            },
+            "sort_idx": 6500,
+            "cover": "wu_trocantere.jpg",
+            "keywords": {
+                "en": [
+                    "forms",
+                    "warm",
+                    "ups",
+                    "trochanter"
+                ],
+                "fr": [
+                    "formes",
+                    "échauffements",
+                    "trochanter"
+                ]
+            },
+            "content": {
+                "layout": "single-video",
+                "videos": [
+                    {
+                        "lang_video_id": {
+                            "en": "wu_trocantere"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "page_id": "forms.warm-ups.psoas",
+            "title": {
+                "en": "Psoas",
+                "fr": "Psoas"
+            },
+            "sort_idx": 6600,
+            "cover": "wu_psoas.jpg",
+            "keywords": {
+                "en": [
+                    "forms",
+                    "warm",
+                    "ups",
+                    "psoas"
+                ],
+                "fr": [
+                    "formes",
+                    "échauffements",
+                    "psoas"
+                ]
+            },
+            "content": {
+                "layout": "single-video",
+                "videos": [
+                    {
+                        "lang_video_id": {
+                            "en": "wu_psoas"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "page_id": "forms.warm-ups.wave",
+            "title": {
+                "en": "Wave",
+                "fr": "Ondulation"
+            },
+            "sort_idx": 6700,
+            "cover": "wu_wave.jpg",
+            "keywords": {
+                "en": [
+                    "forms",
+                    "warm",
+                    "ups",
+                    "wave"
+                ],
+                "fr": [
+                    "formes",
+                    "échauffements",
+                    "ondulation"
+                ]
+            },
+            "content": {
+                "layout": "single-video",
+                "videos": [
+                    {
+                        "lang_video_id": {
+                            "en": "wu_wave"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "page_id": "forms.warm-ups.wave-on-the-floor",
+            "title": {
+                "en": "Wave on the floor",
+                "fr": "Ondulation au sol"
+            },
+            "sort_idx": 6800,
+            "cover": "wu_wavefloor.jpg",
+            "keywords": {
+                "en": [
+                    "forms",
+                    "warm",
+                    "ups",
+                    "wave",
+                    "floor"
+                ],
+                "fr": [
+                    "formes",
+                    "échauffements",
+                    "ondulation",
+                    "sol"
+                ]
+            },
+            "content": {
+                "layout": "single-video",
+                "videos": [
+                    {
+                        "lang_video_id": {
+                            "en": "wu_wavefloor"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "page_id": "forms.warm-ups.asanas",
+            "title": {
+                "en": "Asanas",
+                "fr": "Asanas"
+            },
+            "sort_idx": 6900,
+            "cover": "wu_asanas.jpg",
+            "keywords": {
+                "en": [
+                    "forms",
+                    "warm",
+                    "ups",
+                    "asanas"
+                ],
+                "fr": [
+                    "formes",
+                    "échauffements",
+                    "asanas"
+                ]
+            },
+            "content": {
+                "layout": "single-video",
+                "videos": [
+                    {
+                        "lang_video_id": {
+                            "en": "wu_asanas"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "page_id": "forms.warm-ups.napping",
+            "title": {
+                "en": "Napping",
+                "fr": "La sieste"
+            },
+            "sort_idx": 7000,
+            "cover": "napp.jpg",
+            "keywords": {
+                "en": [
+                    "forms",
+                    "warm",
+                    "ups",
+                    "napping"
+                ],
+                "fr": [
+                    "formes",
+                    "échauffements",
+                    "sieste"
+                ]
+            },
+            "content": {
+                "layout": "single-video",
+                "videos": [
+                    {
+                        "lang_video_id": {
+                            "en": "napp"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "page_id": "forms.warm-ups.and-play",
+            "title": {
+                "en": "And play",
+                "fr": "Et jouer"
+            },
+            "sort_idx": 7100,
+            "cover": "wu_play.jpg",
+            "keywords": {
+                "en": [
+                    "forms",
+                    "warm",
+                    "ups",
+                    "play"
+                ],
+                "fr": [
+                    "formes",
+                    "échauffements",
+                    "jouer"
+                ]
+            },
+            "content": {
+                "layout": "single-video",
+                "videos": [
+                    {
+                        "lang_video_id": {
+                            "en": "wu_play"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "page_id": "forms.cultivating.dance-culture",
+            "title": {
+                "en": "Dance & culture",
+                "fr": "La danse & la culture"
+            },
+            "sort_idx": 7200,
+            "cover": "dance_culture.jpg",
+            "keywords": {
+                "en": [
+                    "forms",
+                    "cultivating",
+                    "dance",
+                    "culture"
+                ],
+                "fr": [
+                    "formes",
+                    "cultiver",
+                    "danse",
+                    "culture"
+                ]
+            },
+            "content": {
+                "layout": "single-video",
+                "videos": [
+                    {
+                        "lang_video_id": {
+                            "en": "dance_culture"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "page_id": "forms.cultivating.kindling-scythe",
+            "title": {
+                "en": "Kindling & scythe",
+                "fr": "Le petit bois & la faux"
+            },
+            "sort_idx": 7300,
+            "cover": "cultivating2.jpg",
+            "keywords": {
+                "en": [
+                    "forms",
+                    "cultivating",
+                    "kindling",
+                    "scythe"
+                ],
+                "fr": [
+                    "formes",
+                    "cultiver",
+                    "petit",
+                    "bois",
+                    "faux"
+                ]
+            },
+            "content": {
+                "layout": "single-video",
+                "videos": [
+                    {
+                        "lang_video_id": {
+                            "en": "cultivating2"
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "videos": [
+        {
+            "video_id": "hello",
+            "sources": [
+                {
+                    "src": "hello.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "hello.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "hello.jpg"
+            ],
+            "meta": {
+                "duration": 568.5,
+                "size": "720x576"
+            },
+            "tracks": [
+                {
+                    "lang": "en",
+                    "src": "hello.en.vtt"
+                },
+                {
+                    "lang": "fr",
+                    "src": "hello.fr.vtt"
+                }
+            ]
+        },
+        {
+            "video_id": "lemmon_en",
+            "sources": [
+                {
+                    "src": "lemmon_en.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "lemmon_en.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "lemmon_en.jpg"
+            ],
+            "meta": {
+                "duration": 37.3,
+                "size": "720x576"
+            }
+        },
+        {
+            "video_id": "lemmon_fr",
+            "sources": [
+                {
+                    "src": "lemmon_fr.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "lemmon_fr.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "lemmon_fr.jpg"
+            ],
+            "meta": {
+                "duration": 37.3,
+                "size": "720x576"
+            }
+        },
+        {
+            "video_id": "falls",
+            "sources": [
+                {
+                    "src": "falls.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "falls.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "falls.jpg"
+            ],
+            "meta": {
+                "duration": 101.4,
+                "size": "720x576"
+            }
+        },
+        {
+            "video_id": "watergravity",
+            "sources": [
+                {
+                    "src": "watergravity.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "watergravity.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "watergravity.jpg"
+            ],
+            "meta": {
+                "duration": 73.3,
+                "size": "720x576"
+            }
+        },
+        {
+            "video_id": "adjusting_birds",
+            "sources": [
+                {
+                    "src": "adjusting_birds.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "adjusting_birds.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "adjusting_birds.jpg"
+            ],
+            "meta": {
+                "duration": 318.8,
+                "size": "720x576"
+            }
+        },
+        {
+            "video_id": "breathing_en",
+            "sources": [
+                {
+                    "src": "breathing_en.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "breathing_en.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "breathing_en.jpg"
+            ],
+            "meta": {
+                "duration": 980.8,
+                "size": "720x576"
+            }
+        },
+        {
+            "video_id": "breathing_fr",
+            "sources": [
+                {
+                    "src": "breathing_fr.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "breathing_fr.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "breathing_fr.jpg"
+            ],
+            "meta": {
+                "duration": 980.8,
+                "size": "720x576"
+            }
+        },
+        {
+            "video_id": "smalldance_full",
+            "sources": [
+                {
+                    "src": "smalldance_full.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "smalldance_full.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "smalldance_full.jpg"
+            ],
+            "meta": {
+                "duration": 609.4,
+                "size": "720x576"
+            }
+        },
+        {
+            "video_id": "pointing",
+            "sources": [
+                {
+                    "src": "pointing.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "pointing.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "pointing.jpg"
+            ],
+            "meta": {
+                "duration": 661.1,
+                "size": "720x576"
+            },
+            "tracks": [
+                {
+                    "lang": "en",
+                    "src": "pointing.en.vtt"
+                },
+                {
+                    "lang": "fr",
+                    "src": "pointing.fr.vtt"
+                }
+            ]
+        },
+        {
+            "video_id": "pointing_scapula",
+            "sources": [
+                {
+                    "src": "pointing_scapula.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "pointing_scapula.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "pointing_scapula.jpg"
+            ],
+            "meta": {
+                "duration": 77.5,
+                "size": "720x576"
+            },
+            "tracks": [
+                {
+                    "lang": "en",
+                    "src": "pointing_scapula.en.vtt"
+                },
+                {
+                    "lang": "fr",
+                    "src": "pointing_scapula.fr.vtt"
+                }
+            ]
+        },
+        {
+            "video_id": "pelvis",
+            "sources": [
+                {
+                    "src": "pelvis.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "pelvis.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "pelvis.jpg"
+            ],
+            "meta": {
+                "duration": 519.3,
+                "size": "720x576"
+            },
+            "tracks": [
+                {
+                    "lang": "en",
+                    "src": "pelvis.en.vtt"
+                },
+                {
+                    "lang": "fr",
+                    "src": "pelvis.fr.vtt"
+                }
+            ]
+        },
+        {
+            "video_id": "pointing_heel",
+            "sources": [
+                {
+                    "src": "pointing_heel.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "pointing_heel.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "pointing_heel.jpg"
+            ],
+            "meta": {
+                "duration": 74.4,
+                "size": "720x576"
+            },
+            "tracks": [
+                {
+                    "lang": "en",
+                    "src": "pointing_heel.en.vtt"
+                },
+                {
+                    "lang": "fr",
+                    "src": "pointing_heel.fr.vtt"
+                }
+            ]
+        },
+        {
+            "video_id": "walkasfondation",
+            "sources": [
+                {
+                    "src": "walkasfondation.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "walkasfondation.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "walkasfondation.jpg"
+            ],
+            "meta": {
+                "duration": 126.8,
+                "size": "720x576"
+            },
+            "tracks": [
+                {
+                    "lang": "en",
+                    "src": "walkasfondation.en.vtt"
+                },
+                {
+                    "lang": "fr",
+                    "src": "walkasfondation.fr.vtt"
+                }
+            ]
+        },
+        {
+            "video_id": "birdswalk",
+            "sources": [
+                {
+                    "src": "birdswalk.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "birdswalk.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "birdswalk.jpg"
+            ],
+            "meta": {
+                "duration": 520.2,
+                "size": "720x576"
+            },
+            "tracks": [
+                {
+                    "lang": "en",
+                    "src": "birdswalk.en.vtt"
+                },
+                {
+                    "lang": "fr",
+                    "src": "birdswalk.fr.vtt"
+                }
+            ]
+        },
+        {
+            "video_id": "slowwalk",
+            "sources": [
+                {
+                    "src": "slowwalk.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "slowwalk.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "slowwalk.jpg"
+            ],
+            "meta": {
+                "duration": 12,
+                "size": "1000x576",
+                "no_audio": true
+            }
+        },
+        {
+            "video_id": "twist",
+            "sources": [
+                {
+                    "src": "twist.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "twist.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "twist.jpg"
+            ],
+            "meta": {
+                "duration": 121.2,
+                "size": "720x576"
+            }
+        },
+        {
+            "video_id": "focus_back",
+            "sources": [
+                {
+                    "src": "focus_back.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "focus_back.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "focus_back.jpg"
+            ],
+            "meta": {
+                "duration": 187.5,
+                "size": "720x576"
+            },
+            "tracks": [
+                {
+                    "lang": "en",
+                    "src": "focus_back.en.vtt"
+                },
+                {
+                    "lang": "fr",
+                    "src": "focus_back.fr.vtt"
+                }
+            ]
+        },
+        {
+            "video_id": "passage",
+            "sources": [
+                {
+                    "src": "passage.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "passage.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "passage.jpg"
+            ],
+            "meta": {
+                "duration": 289.3,
+                "size": "720x576"
+            }
+        },
+        {
+            "video_id": "sphericalspace",
+            "sources": [
+                {
+                    "src": "sphericalspace.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "sphericalspace.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "sphericalspace.jpg"
+            ],
+            "meta": {
+                "duration": 1119.3,
+                "size": "720x576"
+            },
+            "tracks": [
+                {
+                    "lang": "en",
+                    "src": "sphericalspace.en.vtt"
+                },
+                {
+                    "lang": "fr",
+                    "src": "sphericalspace.fr.vtt"
+                }
+            ]
+        },
+        {
+            "video_id": "perf_comments_goldberg",
+            "sources": [
+                {
+                    "src": "perf_comments_goldberg.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "perf_comments_goldberg.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "perf_comments_goldberg.jpg"
+            ],
+            "meta": {
+                "duration": 316.1,
+                "size": "720x576"
+            },
+            "tracks": [
+                {
+                    "lang": "en",
+                    "src": "perf_comments_goldberg.en.vtt"
+                },
+                {
+                    "lang": "fr",
+                    "src": "perf_comments_goldberg.fr.vtt"
+                }
+            ]
+        },
+        {
+            "video_id": "goldberg",
+            "sources": [
+                {
+                    "src": "goldberg.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "goldberg.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "goldberg.jpg"
+            ],
+            "meta": {
+                "duration": 303.5,
+                "size": "720x480"
+            }
+        },
+        {
+            "video_id": "perf_comments_english",
+            "sources": [
+                {
+                    "src": "perf_comments_english.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "perf_comments_english.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "perf_comments_english.jpg"
+            ],
+            "meta": {
+                "duration": 172.8,
+                "size": "720x576"
+            },
+            "tracks": [
+                {
+                    "lang": "en",
+                    "src": "perf_comments_english.en.vtt"
+                },
+                {
+                    "lang": "fr",
+                    "src": "perf_comments_english.fr.vtt"
+                }
+            ]
+        },
+        {
+            "video_id": "english",
+            "sources": [
+                {
+                    "src": "english.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "english.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "english.jpg"
+            ],
+            "meta": {
+                "duration": 441.2,
+                "size": "720x480"
+            }
+        },
+        {
+            "video_id": "perf_techimpro",
+            "sources": [
+                {
+                    "src": "perf_techimpro.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "perf_techimpro.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "perf_techimpro.jpg"
+            ],
+            "meta": {
+                "duration": 366.7,
+                "size": "720x576"
+            },
+            "tracks": [
+                {
+                    "lang": "en",
+                    "src": "perf_techimpro.en.vtt"
+                },
+                {
+                    "lang": "fr",
+                    "src": "perf_techimpro.fr.vtt"
+                }
+            ]
+        },
+        {
+            "video_id": "new_intro",
+            "sources": [
+                {
+                    "src": "new_intro.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "new_intro.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "new_intro.jpg"
+            ],
+            "meta": {
+                "duration": 690.4,
+                "size": "720x576"
+            },
+            "tracks": [
+                {
+                    "lang": "en",
+                    "src": "new_intro.en.vtt"
+                },
+                {
+                    "lang": "fr",
+                    "src": "new_intro.fr.vtt"
+                }
+            ]
+        },
+        {
+            "video_id": "cbhf_fromside",
+            "sources": [
+                {
+                    "src": "cbhf_fromside.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "cbhf_fromside.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "cbhf_fromside.jpg"
+            ],
+            "meta": {
+                "duration": 25.6,
+                "size": "720x576"
+            }
+        },
+        {
+            "video_id": "cbhf_fromtop",
+            "sources": [
+                {
+                    "src": "cbhf_fromtop.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "cbhf_fromtop.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "cbhf_fromtop.jpg"
+            ],
+            "meta": {
+                "duration": 25.6,
+                "size": "720x576"
+            }
+        },
+        {
+            "video_id": "cbhf_fromhead",
+            "sources": [
+                {
+                    "src": "cbhf_fromhead.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "cbhf_fromhead.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "cbhf_fromhead.jpg"
+            ],
+            "meta": {
+                "duration": 25.6,
+                "size": "720x576"
+            }
+        },
+        {
+            "video_id": "cbc_fromhead",
+            "sources": [
+                {
+                    "src": "cbc_fromhead.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "cbc_fromhead.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "cbc_fromhead.jpg"
+            ],
+            "meta": {
+                "duration": 31.6,
+                "size": "720x576"
+            }
+        },
+        {
+            "video_id": "cbc_fromtop",
+            "sources": [
+                {
+                    "src": "cbc_fromtop.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "cbc_fromtop.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "cbc_fromtop.jpg"
+            ],
+            "meta": {
+                "duration": 31.6,
+                "size": "720x576"
+            }
+        },
+        {
+            "video_id": "chu_fromfeet",
+            "sources": [
+                {
+                    "src": "chu_fromfeet.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "chu_fromfeet.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "chu_fromfeet.jpg"
+            ],
+            "meta": {
+                "duration": 10.2,
+                "size": "720x576"
+            }
+        },
+        {
+            "video_id": "chu_fromside",
+            "sources": [
+                {
+                    "src": "chu_fromside.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "chu_fromside.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "chu_fromside.jpg"
+            ],
+            "meta": {
+                "duration": 10.2,
+                "size": "720x576"
+            }
+        },
+        {
+            "video_id": "cbfhu",
+            "sources": [
+                {
+                    "src": "cbfhu.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "cbfhu.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "cbfhu.jpg"
+            ],
+            "meta": {
+                "duration": 68.1,
+                "size": "720x576"
+            }
+        },
+        {
+            "video_id": "crescent_water",
+            "sources": [
+                {
+                    "src": "crescent_water.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "crescent_water.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "crescent_water.jpg"
+            ],
+            "meta": {
+                "duration": 6.4,
+                "size": "720x576"
+            }
+        },
+        {
+            "video_id": "c_comparing",
+            "sources": [
+                {
+                    "src": "c_comparing.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "c_comparing.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "c_comparing.jpg"
+            ],
+            "meta": {
+                "duration": 13.8,
+                "size": "720x576"
+            }
+        },
+        {
+            "video_id": "sbf_fromfeet",
+            "sources": [
+                {
+                    "src": "sbf_fromfeet.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "sbf_fromfeet.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "sbf_fromfeet.jpg"
+            ],
+            "meta": {
+                "duration": 5,
+                "size": "720x576"
+            }
+        },
+        {
+            "video_id": "sbf_side",
+            "sources": [
+                {
+                    "src": "sbf_side.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "sbf_side.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "sbf_side.jpg"
+            ],
+            "meta": {
+                "duration": 5,
+                "size": "720x576"
+            }
+        },
+        {
+            "video_id": "sbf_fromhead",
+            "sources": [
+                {
+                    "src": "sbf_fromhead.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "sbf_fromhead.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "sbf_fromhead.jpg"
+            ],
+            "meta": {
+                "duration": 5,
+                "size": "720x576"
+            }
+        },
+        {
+            "video_id": "sbh_fromhead",
+            "sources": [
+                {
+                    "src": "sbh_fromhead.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "sbh_fromhead.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "sbh_fromhead.jpg"
+            ],
+            "meta": {
+                "duration": 8.8,
+                "size": "720x576"
+            }
+        },
+        {
+            "video_id": "sbh_side",
+            "sources": [
+                {
+                    "src": "sbh_side.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "sbh_side.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "sbh_side.jpg"
+            ],
+            "meta": {
+                "duration": 8.8,
+                "size": "720x576"
+            }
+        },
+        {
+            "video_id": "helixinwater",
+            "sources": [
+                {
+                    "src": "helixinwater.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "helixinwater.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "helixinwater.jpg"
+            ],
+            "meta": {
+                "duration": 16.5,
+                "size": "720x576"
+            }
+        },
+        {
+            "video_id": "h_comparing",
+            "sources": [
+                {
+                    "src": "h_comparing.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "h_comparing.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "h_comparing.jpg"
+            ],
+            "meta": {
+                "duration": 7.8,
+                "size": "720x576"
+            }
+        },
+        {
+            "video_id": "puzzle1",
+            "sources": [
+                {
+                    "src": "puzzle1.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "puzzle1.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "puzzle1.jpg"
+            ],
+            "meta": {
+                "duration": 10.8,
+                "size": "720x576"
+            }
+        },
+        {
+            "video_id": "puzzle2",
+            "sources": [
+                {
+                    "src": "puzzle2.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "puzzle2.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "puzzle2.jpg"
+            ],
+            "meta": {
+                "duration": 15,
+                "size": "720x576"
+            }
+        },
+        {
+            "video_id": "puzzle3",
+            "sources": [
+                {
+                    "src": "puzzle3.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "puzzle3.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "puzzle3.jpg"
+            ],
+            "meta": {
+                "duration": 19.5,
+                "size": "720x576"
+            }
+        },
+        {
+            "video_id": "puzzle4",
+            "sources": [
+                {
+                    "src": "puzzle4.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "puzzle4.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "puzzle4.jpg"
+            ],
+            "meta": {
+                "duration": 11.3,
+                "size": "720x576"
+            }
+        },
+        {
+            "video_id": "frontal_head_top",
+            "sources": [
+                {
+                    "src": "frontal_head_top.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "frontal_head_top.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "frontal_head_top.jpg"
+            ],
+            "meta": {
+                "duration": 71.1,
+                "size": "720x576"
+            }
+        },
+        {
+            "video_id": "frontal_head_side",
+            "sources": [
+                {
+                    "src": "frontal_head_side.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "frontal_head_side.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "frontal_head_side.jpg"
+            ],
+            "meta": {
+                "duration": 80,
+                "size": "720x576",
+                "no_audio": true
+            }
+        },
+        {
+            "video_id": "frontal_head_bottom",
+            "sources": [
+                {
+                    "src": "frontal_head_bottom.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "frontal_head_bottom.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "frontal_head_bottom.jpg"
+            ],
+            "meta": {
+                "duration": 23.6,
+                "size": "720x576",
+                "no_audio": true
+            }
+        },
+        {
+            "video_id": "frontal_pelvis_top",
+            "sources": [
+                {
+                    "src": "frontal_pelvis_top.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "frontal_pelvis_top.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "frontal_pelvis_top.jpg"
+            ],
+            "meta": {
+                "duration": 43.4,
+                "size": "720x576",
+                "no_audio": true
+            }
+        },
+        {
+            "video_id": "frontal_pelvis_side",
+            "sources": [
+                {
+                    "src": "frontal_pelvis_side.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "frontal_pelvis_side.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "frontal_pelvis_side.jpg"
+            ],
+            "meta": {
+                "duration": 48.9,
+                "size": "720x576",
+                "no_audio": true
+            }
+        },
+        {
+            "video_id": "frontal_pelvis_bottom",
+            "sources": [
+                {
+                    "src": "frontal_pelvis_bottom.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "frontal_pelvis_bottom.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "frontal_pelvis_bottom.jpg"
+            ],
+            "meta": {
+                "duration": 41.7,
+                "size": "720x576",
+                "no_audio": true
+            }
+        },
+        {
+            "video_id": "lateral_head_front",
+            "sources": [
+                {
+                    "src": "lateral_head_front.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "lateral_head_front.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "lateral_head_front.jpg"
+            ],
+            "meta": {
+                "duration": 51,
+                "size": "720x576",
+                "no_audio": true
+            }
+        },
+        {
+            "video_id": "lateral_head_top",
+            "sources": [
+                {
+                    "src": "lateral_head_top.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "lateral_head_top.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "lateral_head_top.jpg"
+            ],
+            "meta": {
+                "duration": 30.4,
+                "size": "720x576",
+                "no_audio": true
+            }
+        },
+        {
+            "video_id": "lateral_pelvis_top",
+            "sources": [
+                {
+                    "src": "lateral_pelvis_top.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "lateral_pelvis_top.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "lateral_pelvis_top.jpg"
+            ],
+            "meta": {
+                "duration": 25.7,
+                "size": "720x576",
+                "no_audio": true
+            }
+        },
+        {
+            "video_id": "lateral_pelvis_front",
+            "sources": [
+                {
+                    "src": "lateral_pelvis_front.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "lateral_pelvis_front.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "lateral_pelvis_front.jpg"
+            ],
+            "meta": {
+                "duration": 45.2,
+                "size": "720x576",
+                "no_audio": true
+            }
+        },
+        {
+            "video_id": "dolphininwater",
+            "sources": [
+                {
+                    "src": "dolphininwater.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "dolphininwater.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "dolphininwater.jpg"
+            ],
+            "meta": {
+                "duration": 6.6,
+                "size": "720x576"
+            }
+        },
+        {
+            "video_id": "aikido_principle",
+            "sources": [
+                {
+                    "src": "aikido_principle.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "aikido_principle.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "aikido_principle.jpg"
+            ],
+            "meta": {
+                "duration": 185.1,
+                "size": "720x576"
+            },
+            "tracks": [
+                {
+                    "lang": "en",
+                    "src": "aikido_principle.en.vtt"
+                },
+                {
+                    "lang": "fr",
+                    "src": "aikido_principle.fr.vtt"
+                }
+            ]
+        },
+        {
+            "video_id": "aikido_3D_side",
+            "sources": [
+                {
+                    "src": "aikido_3D_side.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "aikido_3D_side.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "aikido_3D_side.jpg"
+            ],
+            "meta": {
+                "duration": 19.1,
+                "size": "720x576"
+            }
+        },
+        {
+            "video_id": "aikido_3D_top",
+            "sources": [
+                {
+                    "src": "aikido_3D_top.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "aikido_3D_top.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "aikido_3D_top.jpg"
+            ],
+            "meta": {
+                "duration": 19.1,
+                "size": "720x576"
+            }
+        },
+        {
+            "video_id": "aikido_3D_front",
+            "sources": [
+                {
+                    "src": "aikido_3D_front.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "aikido_3D_front.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "aikido_3D_front.jpg"
+            ],
+            "meta": {
+                "duration": 19.1,
+                "size": "720x576"
+            }
+        },
+        {
+            "video_id": "crescent_head_up",
+            "sources": [
+                {
+                    "src": "crescent_head_up.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "crescent_head_up.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "crescent_head_up.jpg"
+            ],
+            "meta": {
+                "duration": 73,
+                "size": "720x576"
+            },
+            "tracks": [
+                {
+                    "lang": "en",
+                    "src": "crescent_head_up.en.vtt"
+                },
+                {
+                    "lang": "fr",
+                    "src": "crescent_head_up.fr.vtt"
+                }
+            ]
+        },
+        {
+            "video_id": "mfs_sbf_seattle",
+            "sources": [
+                {
+                    "src": "mfs_sbf_seattle.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "mfs_sbf_seattle.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "mfs_sbf_seattle.jpg"
+            ],
+            "meta": {
+                "duration": 100.9,
+                "size": "720x576"
+            },
+            "tracks": [
+                {
+                    "lang": "en",
+                    "src": "mfs_sbf_seattle.en.vtt"
+                },
+                {
+                    "lang": "fr",
+                    "src": "mfs_sbf_seattle.fr.vtt"
+                }
+            ]
+        },
+        {
+            "video_id": "mfs_sbh_seattle",
+            "sources": [
+                {
+                    "src": "mfs_sbh_seattle.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "mfs_sbh_seattle.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "mfs_sbh_seattle.jpg"
+            ],
+            "meta": {
+                "duration": 63.1,
+                "size": "720x576"
+            },
+            "tracks": [
+                {
+                    "lang": "en",
+                    "src": "mfs_sbh_seattle.en.vtt"
+                },
+                {
+                    "lang": "fr",
+                    "src": "mfs_sbh_seattle.fr.vtt"
+                }
+            ]
+        },
+        {
+            "video_id": "puzzle1_demo_graph",
+            "sources": [
+                {
+                    "src": "puzzle1_demo_graph.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "puzzle1_demo_graph.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "puzzle1_demo_graph.jpg"
+            ],
+            "meta": {
+                "duration": 37.4,
+                "size": "720x576"
+            },
+            "tracks": [
+                {
+                    "lang": "en",
+                    "src": "puzzle1_demo_graph.en.vtt"
+                },
+                {
+                    "lang": "fr",
+                    "src": "puzzle1_demo_graph.fr.vtt"
+                }
+            ]
+        },
+        {
+            "video_id": "correction_crescent_handsfeet",
+            "sources": [
+                {
+                    "src": "correction_crescent_handsfeet.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "correction_crescent_handsfeet.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "correction_crescent_handsfeet.jpg"
+            ],
+            "meta": {
+                "duration": 139.5,
+                "size": "720x576"
+            },
+            "tracks": [
+                {
+                    "lang": "en",
+                    "src": "correction_crescent_handsfeet.en.vtt"
+                },
+                {
+                    "lang": "fr",
+                    "src": "correction_crescent_handsfeet.fr.vtt"
+                }
+            ]
+        },
+        {
+            "video_id": "correction_crescent_center",
+            "sources": [
+                {
+                    "src": "correction_crescent_center.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "correction_crescent_center.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "correction_crescent_center.jpg"
+            ],
+            "meta": {
+                "duration": 194,
+                "size": "720x576"
+            },
+            "tracks": [
+                {
+                    "lang": "en",
+                    "src": "correction_crescent_center.en.vtt"
+                },
+                {
+                    "lang": "fr",
+                    "src": "correction_crescent_center.fr.vtt"
+                }
+            ]
+        },
+        {
+            "video_id": "correction_helix_feet",
+            "sources": [
+                {
+                    "src": "correction_helix_feet.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "correction_helix_feet.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "correction_helix_feet.jpg"
+            ],
+            "meta": {
+                "duration": 318.2,
+                "size": "720x576"
+            },
+            "tracks": [
+                {
+                    "lang": "en",
+                    "src": "correction_helix_feet.en.vtt"
+                },
+                {
+                    "lang": "fr",
+                    "src": "correction_helix_feet.fr.vtt"
+                }
+            ]
+        },
+        {
+            "video_id": "correction_helix_hands",
+            "sources": [
+                {
+                    "src": "correction_helix_hands.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "correction_helix_hands.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "correction_helix_hands.jpg"
+            ],
+            "meta": {
+                "duration": 281.6,
+                "size": "720x576"
+            },
+            "tracks": [
+                {
+                    "lang": "en",
+                    "src": "correction_helix_hands.en.vtt"
+                },
+                {
+                    "lang": "fr",
+                    "src": "correction_helix_hands.fr.vtt"
+                }
+            ]
+        },
+        {
+            "video_id": "correction_conclusion",
+            "sources": [
+                {
+                    "src": "correction_conclusion.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "correction_conclusion.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "correction_conclusion.jpg"
+            ],
+            "meta": {
+                "duration": 94.3,
+                "size": "720x576"
+            },
+            "tracks": [
+                {
+                    "lang": "en",
+                    "src": "correction_conclusion.en.vtt"
+                },
+                {
+                    "lang": "fr",
+                    "src": "correction_conclusion.fr.vtt"
+                }
+            ]
+        },
+        {
+            "video_id": "wu_fingers",
+            "sources": [
+                {
+                    "src": "wu_fingers.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "wu_fingers.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "wu_fingers.jpg"
+            ],
+            "meta": {
+                "duration": 46.2,
+                "size": "720x576"
+            }
+        },
+        {
+            "video_id": "wu_wrist",
+            "sources": [
+                {
+                    "src": "wu_wrist.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "wu_wrist.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "wu_wrist.jpg"
+            ],
+            "meta": {
+                "duration": 127,
+                "size": "720x576",
+                "no_audio": true
+            }
+        },
+        {
+            "video_id": "wu_hands",
+            "sources": [
+                {
+                    "src": "wu_hands.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "wu_hands.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "wu_hands.jpg"
+            ],
+            "meta": {
+                "duration": 101.4,
+                "size": "720x576"
+            }
+        },
+        {
+            "video_id": "wu_arms",
+            "sources": [
+                {
+                    "src": "wu_arms.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "wu_arms.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "wu_arms.jpg"
+            ],
+            "meta": {
+                "duration": 77.2,
+                "size": "720x576",
+                "no_audio": true
+            }
+        },
+        {
+            "video_id": "wu_spine_and_arms",
+            "sources": [
+                {
+                    "src": "wu_spine_and_arms.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "wu_spine_and_arms.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "wu_spine_and_arms.jpg"
+            ],
+            "meta": {
+                "duration": 51.8,
+                "size": "720x576",
+                "no_audio": true
+            }
+        },
+        {
+            "video_id": "wu_bendingbone",
+            "sources": [
+                {
+                    "src": "wu_bendingbone.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "wu_bendingbone.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "wu_bendingbone.jpg"
+            ],
+            "meta": {
+                "duration": 171.8,
+                "size": "720x576"
+            },
+            "tracks": [
+                {
+                    "lang": "en",
+                    "src": "wu_bendingbone.en.vtt"
+                },
+                {
+                    "lang": "fr",
+                    "src": "wu_bendingbone.fr.vtt"
+                }
+            ]
+        },
+        {
+            "video_id": "wu_aikidostep",
+            "sources": [
+                {
+                    "src": "wu_aikidostep.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "wu_aikidostep.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "wu_aikidostep.jpg"
+            ],
+            "meta": {
+                "duration": 87.5,
+                "size": "720x576"
+            }
+        },
+        {
+            "video_id": "wu_twist",
+            "sources": [
+                {
+                    "src": "wu_twist.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "wu_twist.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "wu_twist.jpg"
+            ],
+            "meta": {
+                "duration": 144.3,
+                "size": "720x576",
+                "no_audio": true
+            }
+        },
+        {
+            "video_id": "wu_twistlegs",
+            "sources": [
+                {
+                    "src": "wu_twistlegs.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "wu_twistlegs.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "wu_twistlegs.jpg"
+            ],
+            "meta": {
+                "duration": 81.2,
+                "size": "720x576"
+            },
+            "tracks": [
+                {
+                    "lang": "en",
+                    "src": "wu_twistlegs.en.vtt"
+                },
+                {
+                    "lang": "fr",
+                    "src": "wu_twistlegs.fr.vtt"
+                }
+            ]
+        },
+        {
+            "video_id": "wu_legsresistance",
+            "sources": [
+                {
+                    "src": "wu_legsresistance.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "wu_legsresistance.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "wu_legsresistance.jpg"
+            ],
+            "meta": {
+                "duration": 418,
+                "size": "720x576"
+            },
+            "tracks": [
+                {
+                    "lang": "en",
+                    "src": "wu_legsresistance.en.vtt"
+                },
+                {
+                    "lang": "fr",
+                    "src": "wu_legsresistance.fr.vtt"
+                }
+            ]
+        },
+        {
+            "video_id": "wu_trocantere",
+            "sources": [
+                {
+                    "src": "wu_trocantere.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "wu_trocantere.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "wu_trocantere.jpg"
+            ],
+            "meta": {
+                "duration": 147.5,
+                "size": "720x576"
+            },
+            "tracks": [
+                {
+                    "lang": "en",
+                    "src": "wu_trocantere.en.vtt"
+                },
+                {
+                    "lang": "fr",
+                    "src": "wu_trocantere.fr.vtt"
+                }
+            ]
+        },
+        {
+            "video_id": "wu_psoas",
+            "sources": [
+                {
+                    "src": "wu_psoas.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "wu_psoas.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "wu_psoas.jpg"
+            ],
+            "meta": {
+                "duration": 222.3,
+                "size": "720x576"
+            },
+            "tracks": [
+                {
+                    "lang": "en",
+                    "src": "wu_psoas.en.vtt"
+                },
+                {
+                    "lang": "fr",
+                    "src": "wu_psoas.fr.vtt"
+                }
+            ]
+        },
+        {
+            "video_id": "wu_wave",
+            "sources": [
+                {
+                    "src": "wu_wave.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "wu_wave.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "wu_wave.jpg"
+            ],
+            "meta": {
+                "duration": 112.7,
+                "size": "720x576"
+            },
+            "tracks": [
+                {
+                    "lang": "en",
+                    "src": "wu_wave.en.vtt"
+                },
+                {
+                    "lang": "fr",
+                    "src": "wu_wave.fr.vtt"
+                }
+            ]
+        },
+        {
+            "video_id": "wu_wavefloor",
+            "sources": [
+                {
+                    "src": "wu_wavefloor.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "wu_wavefloor.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "wu_wavefloor.jpg"
+            ],
+            "meta": {
+                "duration": 119.8,
+                "size": "720x576"
+            },
+            "tracks": [
+                {
+                    "lang": "en",
+                    "src": "wu_wavefloor.en.vtt"
+                },
+                {
+                    "lang": "fr",
+                    "src": "wu_wavefloor.fr.vtt"
+                }
+            ]
+        },
+        {
+            "video_id": "wu_asanas",
+            "sources": [
+                {
+                    "src": "wu_asanas.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "wu_asanas.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "wu_asanas.jpg"
+            ],
+            "meta": {
+                "duration": 248.3,
+                "size": "720x576"
+            },
+            "tracks": [
+                {
+                    "lang": "en",
+                    "src": "wu_asanas.en.vtt"
+                },
+                {
+                    "lang": "fr",
+                    "src": "wu_asanas.fr.vtt"
+                }
+            ]
+        },
+        {
+            "video_id": "napp",
+            "sources": [
+                {
+                    "src": "napp.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "napp.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "napp.jpg"
+            ],
+            "meta": {
+                "duration": 96.2,
+                "size": "720x576"
+            },
+            "tracks": [
+                {
+                    "lang": "en",
+                    "src": "napp.en.vtt"
+                },
+                {
+                    "lang": "fr",
+                    "src": "napp.fr.vtt"
+                }
+            ]
+        },
+        {
+            "video_id": "wu_play",
+            "sources": [
+                {
+                    "src": "wu_play.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "wu_play.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "wu_play.jpg"
+            ],
+            "meta": {
+                "duration": 119.8,
+                "size": "720x576"
+            }
+        },
+        {
+            "video_id": "dance_culture",
+            "sources": [
+                {
+                    "src": "dance_culture.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "dance_culture.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "dance_culture.jpg"
+            ],
+            "meta": {
+                "duration": 260.5,
+                "size": "720x576"
+            },
+            "tracks": [
+                {
+                    "lang": "en",
+                    "src": "dance_culture.en.vtt"
+                },
+                {
+                    "lang": "fr",
+                    "src": "dance_culture.fr.vtt"
+                }
+            ]
+        },
+        {
+            "video_id": "cultivating2",
+            "sources": [
+                {
+                    "src": "cultivating2.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "cultivating2.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "cultivating2.jpg"
+            ],
+            "meta": {
+                "duration": 448.6,
+                "size": "720x576"
+            }
+        },
+        {
+            "video_id": "cbhf_fromside",
+            "sources": [
+                {
+                    "src": "cbhf_fromside.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "cbhf_fromside.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "cbhf_fromside.jpg"
+            ],
+            "meta": {
+                "duration": 25.6,
+                "size": "720x576"
+            }
+        },
+        {
+            "video_id": "cbfh_top",
+            "sources": [
+                {
+                    "src": "cbfh_top.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "cbfh_top.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "cbfh_top.jpg"
+            ],
+            "meta": {
+                "duration": 25.6,
+                "size": "720x576",
+                "no_audio": true
+            }
+        },
+        {
+            "video_id": "cbhf_fromhead",
+            "sources": [
+                {
+                    "src": "cbhf_fromhead.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "cbhf_fromhead.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "cbhf_fromhead.jpg"
+            ],
+            "meta": {
+                "duration": 25.6,
+                "size": "720x576"
+            }
+        },
+        {
+            "video_id": "cbc_fromhead",
+            "sources": [
+                {
+                    "src": "cbc_fromhead.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "cbc_fromhead.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "cbc_fromhead.jpg"
+            ],
+            "meta": {
+                "duration": 31.6,
+                "size": "720x576"
+            }
+        },
+        {
+            "video_id": "cbc_top",
+            "sources": [
+                {
+                    "src": "cbc_top.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "cbc_top.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "cbc_top.jpg"
+            ],
+            "meta": {
+                "duration": 31.6,
+                "size": "720x576",
+                "no_audio": true
+            }
+        },
+        {
+            "video_id": "chu_fromfeet",
+            "sources": [
+                {
+                    "src": "chu_fromfeet.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "chu_fromfeet.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "chu_fromfeet.jpg"
+            ],
+            "meta": {
+                "duration": 10.2,
+                "size": "720x576"
+            }
+        },
+        {
+            "video_id": "cbhu_side",
+            "sources": [
+                {
+                    "src": "cbhu_side.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "cbhu_side.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "cbhu_side.jpg"
+            ],
+            "meta": {
+                "duration": 20.5,
+                "size": "720x576",
+                "no_audio": true
+            }
+        },
+        {
+            "video_id": "sbf_feet",
+            "sources": [
+                {
+                    "src": "sbf_feet.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "sbf_feet.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "sbf_feet.jpg"
+            ],
+            "meta": {
+                "duration": 20,
+                "size": "720x576",
+                "no_audio": true
+            }
+        },
+        {
+            "video_id": "sbf_fromside",
+            "sources": [
+                {
+                    "src": "sbf_fromside.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "sbf_fromside.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "sbf_fromside.jpg"
+            ],
+            "meta": {
+                "duration": 20,
+                "size": "720x576",
+                "no_audio": true
+            }
+        },
+        {
+            "video_id": "sbf_fromhead",
+            "sources": [
+                {
+                    "src": "sbf_fromhead.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "sbf_fromhead.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "sbf_fromhead.jpg"
+            ],
+            "meta": {
+                "duration": 5,
+                "size": "720x576"
+            }
+        },
+        {
+            "video_id": "sbh_head",
+            "sources": [
+                {
+                    "src": "sbh_head.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "sbh_head.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "sbh_head.jpg"
+            ],
+            "meta": {
+                "duration": 35.2,
+                "size": "720x576",
+                "no_audio": true
+            }
+        },
+        {
+            "video_id": "sbh_fromside",
+            "sources": [
+                {
+                    "src": "sbh_fromside.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "sbh_fromside.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "sbh_fromside.jpg"
+            ],
+            "meta": {
+                "duration": 35.2,
+                "size": "720x576",
+                "no_audio": true
+            }
+        },
+        {
+            "video_id": "frontal_head_top",
+            "sources": [
+                {
+                    "src": "frontal_head_top.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "frontal_head_top.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "frontal_head_top.jpg"
+            ],
+            "meta": {
+                "duration": 71.1,
+                "size": "720x576"
+            }
+        },
+        {
+            "video_id": "frontal_head_side",
+            "sources": [
+                {
+                    "src": "frontal_head_side.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "frontal_head_side.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "frontal_head_side.jpg"
+            ],
+            "meta": {
+                "duration": 80,
+                "size": "720x576",
+                "no_audio": true
+            }
+        },
+        {
+            "video_id": "frontal_head_bottom",
+            "sources": [
+                {
+                    "src": "frontal_head_bottom.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "frontal_head_bottom.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "frontal_head_bottom.jpg"
+            ],
+            "meta": {
+                "duration": 23.6,
+                "size": "720x576",
+                "no_audio": true
+            }
+        },
+        {
+            "video_id": "frontal_pelvis_top",
+            "sources": [
+                {
+                    "src": "frontal_pelvis_top.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "frontal_pelvis_top.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "frontal_pelvis_top.jpg"
+            ],
+            "meta": {
+                "duration": 43.4,
+                "size": "720x576",
+                "no_audio": true
+            }
+        },
+        {
+            "video_id": "frontal_pelvis_side",
+            "sources": [
+                {
+                    "src": "frontal_pelvis_side.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "frontal_pelvis_side.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "frontal_pelvis_side.jpg"
+            ],
+            "meta": {
+                "duration": 48.9,
+                "size": "720x576",
+                "no_audio": true
+            }
+        },
+        {
+            "video_id": "frontal_pelvis_bottom",
+            "sources": [
+                {
+                    "src": "frontal_pelvis_bottom.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "frontal_pelvis_bottom.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "frontal_pelvis_bottom.jpg"
+            ],
+            "meta": {
+                "duration": 41.7,
+                "size": "720x576",
+                "no_audio": true
+            }
+        },
+        {
+            "video_id": "lateral_head_front",
+            "sources": [
+                {
+                    "src": "lateral_head_front.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "lateral_head_front.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "lateral_head_front.jpg"
+            ],
+            "meta": {
+                "duration": 51,
+                "size": "720x576",
+                "no_audio": true
+            }
+        },
+        {
+            "video_id": "lateral_head_top",
+            "sources": [
+                {
+                    "src": "lateral_head_top.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "lateral_head_top.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "lateral_head_top.jpg"
+            ],
+            "meta": {
+                "duration": 30.4,
+                "size": "720x576",
+                "no_audio": true
+            }
+        },
+        {
+            "video_id": "lateral_pelvis_top",
+            "sources": [
+                {
+                    "src": "lateral_pelvis_top.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "lateral_pelvis_top.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "lateral_pelvis_top.jpg"
+            ],
+            "meta": {
+                "duration": 25.7,
+                "size": "720x576",
+                "no_audio": true
+            }
+        },
+        {
+            "video_id": "lateral_pelvis_front",
+            "sources": [
+                {
+                    "src": "lateral_pelvis_front.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "lateral_pelvis_front.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "lateral_pelvis_front.jpg"
+            ],
+            "meta": {
+                "duration": 45.2,
+                "size": "720x576",
+                "no_audio": true
+            }
+        },
+        {
+            "video_id": "aikido_side",
+            "sources": [
+                {
+                    "src": "aikido_side.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "aikido_side.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "aikido_side.jpg"
+            ],
+            "meta": {
+                "duration": 5.3,
+                "size": "720x576"
+            }
+        },
+        {
+            "video_id": "aikido_top",
+            "sources": [
+                {
+                    "src": "aikido_top.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "aikido_top.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "aikido_top.jpg"
+            ],
+            "meta": {
+                "duration": 9.6,
+                "size": "720x576"
+            }
+        },
+        {
+            "video_id": "aikido_front",
+            "sources": [
+                {
+                    "src": "aikido_front.webm",
+                    "priority": 10,
+                    "codecs": "vp9"
+                },
+                {
+                    "src": "aikido_front.mp4",
+                    "priority": 20
+                }
+            ],
+            "covers": [
+                "aikido_front.jpg"
+            ],
+            "meta": {
+                "duration": 5.3,
+                "size": "720x576"
+            }
+        }
+    ],
+    "audios": [
+        {
+            "audio_id": "small_dance_en",
+            "legacy_path": "mp3\/small_dance_en.mp3"
+        },
+        {
+            "audio_id": "comments_crescent",
+            "legacy_path": "mp3\/comments_crescent.mp3"
+        },
+        {
+            "audio_id": "mfs_sbf",
+            "legacy_path": "mp3\/mfs_sbf.mp3"
+        },
+        {
+            "audio_id": "mfs_sbh",
+            "legacy_path": "mp3\/mfs_sbh.mp3"
+        },
+        {
+            "audio_id": "comment_undulation",
+            "legacy_path": "mp3\/comment_undulation.mp3"
+        },
+        {
+            "audio_id": "aikidoform",
+            "legacy_path": "mp3\/aikidoform.mp3"
+        }
+    ]
+}

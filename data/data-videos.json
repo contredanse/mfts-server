@@ -1,0 +1,2777 @@
+[
+    {
+        "video_id": "hello",
+        "sources": [
+            {
+                "src": "hello.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "hello.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "hello.jpg"
+        ],
+        "meta": {
+            "duration": 568.5,
+            "size": "720x576"
+        },
+        "tracks": [
+            {
+                "lang": "en",
+                "src": "hello.en.vtt"
+            },
+            {
+                "lang": "fr",
+                "src": "hello.fr.vtt"
+            }
+        ]
+    },
+    {
+        "video_id": "lemmon_en",
+        "sources": [
+            {
+                "src": "lemmon_en.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "lemmon_en.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "lemmon_en.jpg"
+        ],
+        "meta": {
+            "duration": 37.3,
+            "size": "720x576"
+        }
+    },
+    {
+        "video_id": "lemmon_fr",
+        "sources": [
+            {
+                "src": "lemmon_fr.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "lemmon_fr.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "lemmon_fr.jpg"
+        ],
+        "meta": {
+            "duration": 37.3,
+            "size": "720x576"
+        }
+    },
+    {
+        "video_id": "falls",
+        "sources": [
+            {
+                "src": "falls.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "falls.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "falls.jpg"
+        ],
+        "meta": {
+            "duration": 101.4,
+            "size": "720x576"
+        }
+    },
+    {
+        "video_id": "watergravity",
+        "sources": [
+            {
+                "src": "watergravity.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "watergravity.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "watergravity.jpg"
+        ],
+        "meta": {
+            "duration": 73.3,
+            "size": "720x576"
+        }
+    },
+    {
+        "video_id": "adjusting_birds",
+        "sources": [
+            {
+                "src": "adjusting_birds.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "adjusting_birds.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "adjusting_birds.jpg"
+        ],
+        "meta": {
+            "duration": 318.8,
+            "size": "720x576"
+        }
+    },
+    {
+        "video_id": "breathing_en",
+        "sources": [
+            {
+                "src": "breathing_en.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "breathing_en.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "breathing_en.jpg"
+        ],
+        "meta": {
+            "duration": 980.8,
+            "size": "720x576"
+        }
+    },
+    {
+        "video_id": "breathing_fr",
+        "sources": [
+            {
+                "src": "breathing_fr.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "breathing_fr.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "breathing_fr.jpg"
+        ],
+        "meta": {
+            "duration": 980.8,
+            "size": "720x576"
+        }
+    },
+    {
+        "video_id": "smalldance_full",
+        "sources": [
+            {
+                "src": "smalldance_full.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "smalldance_full.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "smalldance_full.jpg"
+        ],
+        "meta": {
+            "duration": 609.4,
+            "size": "720x576"
+        }
+    },
+    {
+        "video_id": "pointing",
+        "sources": [
+            {
+                "src": "pointing.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "pointing.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "pointing.jpg"
+        ],
+        "meta": {
+            "duration": 661.1,
+            "size": "720x576"
+        },
+        "tracks": [
+            {
+                "lang": "en",
+                "src": "pointing.en.vtt"
+            },
+            {
+                "lang": "fr",
+                "src": "pointing.fr.vtt"
+            }
+        ]
+    },
+    {
+        "video_id": "pointing_scapula",
+        "sources": [
+            {
+                "src": "pointing_scapula.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "pointing_scapula.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "pointing_scapula.jpg"
+        ],
+        "meta": {
+            "duration": 77.5,
+            "size": "720x576"
+        },
+        "tracks": [
+            {
+                "lang": "en",
+                "src": "pointing_scapula.en.vtt"
+            },
+            {
+                "lang": "fr",
+                "src": "pointing_scapula.fr.vtt"
+            }
+        ]
+    },
+    {
+        "video_id": "pelvis",
+        "sources": [
+            {
+                "src": "pelvis.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "pelvis.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "pelvis.jpg"
+        ],
+        "meta": {
+            "duration": 519.3,
+            "size": "720x576"
+        },
+        "tracks": [
+            {
+                "lang": "en",
+                "src": "pelvis.en.vtt"
+            },
+            {
+                "lang": "fr",
+                "src": "pelvis.fr.vtt"
+            }
+        ]
+    },
+    {
+        "video_id": "pointing_heel",
+        "sources": [
+            {
+                "src": "pointing_heel.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "pointing_heel.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "pointing_heel.jpg"
+        ],
+        "meta": {
+            "duration": 74.4,
+            "size": "720x576"
+        },
+        "tracks": [
+            {
+                "lang": "en",
+                "src": "pointing_heel.en.vtt"
+            },
+            {
+                "lang": "fr",
+                "src": "pointing_heel.fr.vtt"
+            }
+        ]
+    },
+    {
+        "video_id": "walkasfondation",
+        "sources": [
+            {
+                "src": "walkasfondation.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "walkasfondation.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "walkasfondation.jpg"
+        ],
+        "meta": {
+            "duration": 126.8,
+            "size": "720x576"
+        },
+        "tracks": [
+            {
+                "lang": "en",
+                "src": "walkasfondation.en.vtt"
+            },
+            {
+                "lang": "fr",
+                "src": "walkasfondation.fr.vtt"
+            }
+        ]
+    },
+    {
+        "video_id": "birdswalk",
+        "sources": [
+            {
+                "src": "birdswalk.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "birdswalk.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "birdswalk.jpg"
+        ],
+        "meta": {
+            "duration": 520.2,
+            "size": "720x576"
+        },
+        "tracks": [
+            {
+                "lang": "en",
+                "src": "birdswalk.en.vtt"
+            },
+            {
+                "lang": "fr",
+                "src": "birdswalk.fr.vtt"
+            }
+        ]
+    },
+    {
+        "video_id": "slowwalk",
+        "sources": [
+            {
+                "src": "slowwalk.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "slowwalk.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "slowwalk.jpg"
+        ],
+        "meta": {
+            "duration": 12,
+            "size": "1000x576",
+            "no_audio": true
+        }
+    },
+    {
+        "video_id": "twist",
+        "sources": [
+            {
+                "src": "twist.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "twist.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "twist.jpg"
+        ],
+        "meta": {
+            "duration": 121.2,
+            "size": "720x576"
+        }
+    },
+    {
+        "video_id": "focus_back",
+        "sources": [
+            {
+                "src": "focus_back.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "focus_back.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "focus_back.jpg"
+        ],
+        "meta": {
+            "duration": 187.5,
+            "size": "720x576"
+        },
+        "tracks": [
+            {
+                "lang": "en",
+                "src": "focus_back.en.vtt"
+            },
+            {
+                "lang": "fr",
+                "src": "focus_back.fr.vtt"
+            }
+        ]
+    },
+    {
+        "video_id": "passage",
+        "sources": [
+            {
+                "src": "passage.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "passage.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "passage.jpg"
+        ],
+        "meta": {
+            "duration": 289.3,
+            "size": "720x576"
+        }
+    },
+    {
+        "video_id": "sphericalspace",
+        "sources": [
+            {
+                "src": "sphericalspace.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "sphericalspace.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "sphericalspace.jpg"
+        ],
+        "meta": {
+            "duration": 1119.3,
+            "size": "720x576"
+        },
+        "tracks": [
+            {
+                "lang": "en",
+                "src": "sphericalspace.en.vtt"
+            },
+            {
+                "lang": "fr",
+                "src": "sphericalspace.fr.vtt"
+            }
+        ]
+    },
+    {
+        "video_id": "perf_comments_goldberg",
+        "sources": [
+            {
+                "src": "perf_comments_goldberg.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "perf_comments_goldberg.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "perf_comments_goldberg.jpg"
+        ],
+        "meta": {
+            "duration": 316.1,
+            "size": "720x576"
+        },
+        "tracks": [
+            {
+                "lang": "en",
+                "src": "perf_comments_goldberg.en.vtt"
+            },
+            {
+                "lang": "fr",
+                "src": "perf_comments_goldberg.fr.vtt"
+            }
+        ]
+    },
+    {
+        "video_id": "goldberg",
+        "sources": [
+            {
+                "src": "goldberg.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "goldberg.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "goldberg.jpg"
+        ],
+        "meta": {
+            "duration": 303.5,
+            "size": "720x480"
+        }
+    },
+    {
+        "video_id": "perf_comments_english",
+        "sources": [
+            {
+                "src": "perf_comments_english.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "perf_comments_english.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "perf_comments_english.jpg"
+        ],
+        "meta": {
+            "duration": 172.8,
+            "size": "720x576"
+        },
+        "tracks": [
+            {
+                "lang": "en",
+                "src": "perf_comments_english.en.vtt"
+            },
+            {
+                "lang": "fr",
+                "src": "perf_comments_english.fr.vtt"
+            }
+        ]
+    },
+    {
+        "video_id": "english",
+        "sources": [
+            {
+                "src": "english.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "english.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "english.jpg"
+        ],
+        "meta": {
+            "duration": 441.2,
+            "size": "720x480"
+        }
+    },
+    {
+        "video_id": "perf_techimpro",
+        "sources": [
+            {
+                "src": "perf_techimpro.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "perf_techimpro.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "perf_techimpro.jpg"
+        ],
+        "meta": {
+            "duration": 366.7,
+            "size": "720x576"
+        },
+        "tracks": [
+            {
+                "lang": "en",
+                "src": "perf_techimpro.en.vtt"
+            },
+            {
+                "lang": "fr",
+                "src": "perf_techimpro.fr.vtt"
+            }
+        ]
+    },
+    {
+        "video_id": "new_intro",
+        "sources": [
+            {
+                "src": "new_intro.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "new_intro.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "new_intro.jpg"
+        ],
+        "meta": {
+            "duration": 690.4,
+            "size": "720x576"
+        },
+        "tracks": [
+            {
+                "lang": "en",
+                "src": "new_intro.en.vtt"
+            },
+            {
+                "lang": "fr",
+                "src": "new_intro.fr.vtt"
+            }
+        ]
+    },
+    {
+        "video_id": "cbhf_fromside",
+        "sources": [
+            {
+                "src": "cbhf_fromside.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "cbhf_fromside.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "cbhf_fromside.jpg"
+        ],
+        "meta": {
+            "duration": 25.6,
+            "size": "720x576"
+        }
+    },
+    {
+        "video_id": "cbhf_fromtop",
+        "sources": [
+            {
+                "src": "cbhf_fromtop.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "cbhf_fromtop.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "cbhf_fromtop.jpg"
+        ],
+        "meta": {
+            "duration": 25.6,
+            "size": "720x576"
+        }
+    },
+    {
+        "video_id": "cbhf_fromhead",
+        "sources": [
+            {
+                "src": "cbhf_fromhead.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "cbhf_fromhead.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "cbhf_fromhead.jpg"
+        ],
+        "meta": {
+            "duration": 25.6,
+            "size": "720x576"
+        }
+    },
+    {
+        "video_id": "cbc_fromhead",
+        "sources": [
+            {
+                "src": "cbc_fromhead.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "cbc_fromhead.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "cbc_fromhead.jpg"
+        ],
+        "meta": {
+            "duration": 31.6,
+            "size": "720x576"
+        }
+    },
+    {
+        "video_id": "cbc_fromtop",
+        "sources": [
+            {
+                "src": "cbc_fromtop.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "cbc_fromtop.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "cbc_fromtop.jpg"
+        ],
+        "meta": {
+            "duration": 31.6,
+            "size": "720x576"
+        }
+    },
+    {
+        "video_id": "chu_fromfeet",
+        "sources": [
+            {
+                "src": "chu_fromfeet.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "chu_fromfeet.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "chu_fromfeet.jpg"
+        ],
+        "meta": {
+            "duration": 10.2,
+            "size": "720x576"
+        }
+    },
+    {
+        "video_id": "chu_fromside",
+        "sources": [
+            {
+                "src": "chu_fromside.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "chu_fromside.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "chu_fromside.jpg"
+        ],
+        "meta": {
+            "duration": 10.2,
+            "size": "720x576"
+        }
+    },
+    {
+        "video_id": "cbfhu",
+        "sources": [
+            {
+                "src": "cbfhu.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "cbfhu.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "cbfhu.jpg"
+        ],
+        "meta": {
+            "duration": 68.1,
+            "size": "720x576"
+        }
+    },
+    {
+        "video_id": "crescent_water",
+        "sources": [
+            {
+                "src": "crescent_water.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "crescent_water.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "crescent_water.jpg"
+        ],
+        "meta": {
+            "duration": 6.4,
+            "size": "720x576"
+        }
+    },
+    {
+        "video_id": "c_comparing",
+        "sources": [
+            {
+                "src": "c_comparing.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "c_comparing.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "c_comparing.jpg"
+        ],
+        "meta": {
+            "duration": 13.8,
+            "size": "720x576"
+        }
+    },
+    {
+        "video_id": "sbf_fromfeet",
+        "sources": [
+            {
+                "src": "sbf_fromfeet.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "sbf_fromfeet.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "sbf_fromfeet.jpg"
+        ],
+        "meta": {
+            "duration": 5,
+            "size": "720x576"
+        }
+    },
+    {
+        "video_id": "sbf_side",
+        "sources": [
+            {
+                "src": "sbf_side.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "sbf_side.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "sbf_side.jpg"
+        ],
+        "meta": {
+            "duration": 5,
+            "size": "720x576"
+        }
+    },
+    {
+        "video_id": "sbf_fromhead",
+        "sources": [
+            {
+                "src": "sbf_fromhead.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "sbf_fromhead.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "sbf_fromhead.jpg"
+        ],
+        "meta": {
+            "duration": 5,
+            "size": "720x576"
+        }
+    },
+    {
+        "video_id": "sbh_fromhead",
+        "sources": [
+            {
+                "src": "sbh_fromhead.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "sbh_fromhead.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "sbh_fromhead.jpg"
+        ],
+        "meta": {
+            "duration": 8.8,
+            "size": "720x576"
+        }
+    },
+    {
+        "video_id": "sbh_side",
+        "sources": [
+            {
+                "src": "sbh_side.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "sbh_side.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "sbh_side.jpg"
+        ],
+        "meta": {
+            "duration": 8.8,
+            "size": "720x576"
+        }
+    },
+    {
+        "video_id": "helixinwater",
+        "sources": [
+            {
+                "src": "helixinwater.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "helixinwater.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "helixinwater.jpg"
+        ],
+        "meta": {
+            "duration": 16.5,
+            "size": "720x576"
+        }
+    },
+    {
+        "video_id": "h_comparing",
+        "sources": [
+            {
+                "src": "h_comparing.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "h_comparing.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "h_comparing.jpg"
+        ],
+        "meta": {
+            "duration": 7.8,
+            "size": "720x576"
+        }
+    },
+    {
+        "video_id": "puzzle1",
+        "sources": [
+            {
+                "src": "puzzle1.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "puzzle1.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "puzzle1.jpg"
+        ],
+        "meta": {
+            "duration": 10.8,
+            "size": "720x576"
+        }
+    },
+    {
+        "video_id": "puzzle2",
+        "sources": [
+            {
+                "src": "puzzle2.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "puzzle2.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "puzzle2.jpg"
+        ],
+        "meta": {
+            "duration": 15,
+            "size": "720x576"
+        }
+    },
+    {
+        "video_id": "puzzle3",
+        "sources": [
+            {
+                "src": "puzzle3.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "puzzle3.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "puzzle3.jpg"
+        ],
+        "meta": {
+            "duration": 19.5,
+            "size": "720x576"
+        }
+    },
+    {
+        "video_id": "puzzle4",
+        "sources": [
+            {
+                "src": "puzzle4.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "puzzle4.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "puzzle4.jpg"
+        ],
+        "meta": {
+            "duration": 11.3,
+            "size": "720x576"
+        }
+    },
+    {
+        "video_id": "frontal_head_top",
+        "sources": [
+            {
+                "src": "frontal_head_top.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "frontal_head_top.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "frontal_head_top.jpg"
+        ],
+        "meta": {
+            "duration": 71.1,
+            "size": "720x576"
+        }
+    },
+    {
+        "video_id": "frontal_head_side",
+        "sources": [
+            {
+                "src": "frontal_head_side.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "frontal_head_side.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "frontal_head_side.jpg"
+        ],
+        "meta": {
+            "duration": 80,
+            "size": "720x576",
+            "no_audio": true
+        }
+    },
+    {
+        "video_id": "frontal_head_bottom",
+        "sources": [
+            {
+                "src": "frontal_head_bottom.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "frontal_head_bottom.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "frontal_head_bottom.jpg"
+        ],
+        "meta": {
+            "duration": 23.6,
+            "size": "720x576",
+            "no_audio": true
+        }
+    },
+    {
+        "video_id": "frontal_pelvis_top",
+        "sources": [
+            {
+                "src": "frontal_pelvis_top.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "frontal_pelvis_top.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "frontal_pelvis_top.jpg"
+        ],
+        "meta": {
+            "duration": 43.4,
+            "size": "720x576",
+            "no_audio": true
+        }
+    },
+    {
+        "video_id": "frontal_pelvis_side",
+        "sources": [
+            {
+                "src": "frontal_pelvis_side.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "frontal_pelvis_side.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "frontal_pelvis_side.jpg"
+        ],
+        "meta": {
+            "duration": 48.9,
+            "size": "720x576",
+            "no_audio": true
+        }
+    },
+    {
+        "video_id": "frontal_pelvis_bottom",
+        "sources": [
+            {
+                "src": "frontal_pelvis_bottom.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "frontal_pelvis_bottom.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "frontal_pelvis_bottom.jpg"
+        ],
+        "meta": {
+            "duration": 41.7,
+            "size": "720x576",
+            "no_audio": true
+        }
+    },
+    {
+        "video_id": "lateral_head_front",
+        "sources": [
+            {
+                "src": "lateral_head_front.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "lateral_head_front.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "lateral_head_front.jpg"
+        ],
+        "meta": {
+            "duration": 51,
+            "size": "720x576",
+            "no_audio": true
+        }
+    },
+    {
+        "video_id": "lateral_head_top",
+        "sources": [
+            {
+                "src": "lateral_head_top.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "lateral_head_top.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "lateral_head_top.jpg"
+        ],
+        "meta": {
+            "duration": 30.4,
+            "size": "720x576",
+            "no_audio": true
+        }
+    },
+    {
+        "video_id": "lateral_pelvis_top",
+        "sources": [
+            {
+                "src": "lateral_pelvis_top.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "lateral_pelvis_top.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "lateral_pelvis_top.jpg"
+        ],
+        "meta": {
+            "duration": 25.7,
+            "size": "720x576",
+            "no_audio": true
+        }
+    },
+    {
+        "video_id": "lateral_pelvis_front",
+        "sources": [
+            {
+                "src": "lateral_pelvis_front.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "lateral_pelvis_front.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "lateral_pelvis_front.jpg"
+        ],
+        "meta": {
+            "duration": 45.2,
+            "size": "720x576",
+            "no_audio": true
+        }
+    },
+    {
+        "video_id": "dolphininwater",
+        "sources": [
+            {
+                "src": "dolphininwater.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "dolphininwater.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "dolphininwater.jpg"
+        ],
+        "meta": {
+            "duration": 6.6,
+            "size": "720x576"
+        }
+    },
+    {
+        "video_id": "aikido_principle",
+        "sources": [
+            {
+                "src": "aikido_principle.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "aikido_principle.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "aikido_principle.jpg"
+        ],
+        "meta": {
+            "duration": 185.1,
+            "size": "720x576"
+        },
+        "tracks": [
+            {
+                "lang": "en",
+                "src": "aikido_principle.en.vtt"
+            },
+            {
+                "lang": "fr",
+                "src": "aikido_principle.fr.vtt"
+            }
+        ]
+    },
+    {
+        "video_id": "aikido_3D_side",
+        "sources": [
+            {
+                "src": "aikido_3D_side.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "aikido_3D_side.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "aikido_3D_side.jpg"
+        ],
+        "meta": {
+            "duration": 19.1,
+            "size": "720x576"
+        }
+    },
+    {
+        "video_id": "aikido_3D_top",
+        "sources": [
+            {
+                "src": "aikido_3D_top.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "aikido_3D_top.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "aikido_3D_top.jpg"
+        ],
+        "meta": {
+            "duration": 19.1,
+            "size": "720x576"
+        }
+    },
+    {
+        "video_id": "aikido_3D_front",
+        "sources": [
+            {
+                "src": "aikido_3D_front.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "aikido_3D_front.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "aikido_3D_front.jpg"
+        ],
+        "meta": {
+            "duration": 19.1,
+            "size": "720x576"
+        }
+    },
+    {
+        "video_id": "crescent_head_up",
+        "sources": [
+            {
+                "src": "crescent_head_up.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "crescent_head_up.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "crescent_head_up.jpg"
+        ],
+        "meta": {
+            "duration": 73,
+            "size": "720x576"
+        },
+        "tracks": [
+            {
+                "lang": "en",
+                "src": "crescent_head_up.en.vtt"
+            },
+            {
+                "lang": "fr",
+                "src": "crescent_head_up.fr.vtt"
+            }
+        ]
+    },
+    {
+        "video_id": "mfs_sbf_seattle",
+        "sources": [
+            {
+                "src": "mfs_sbf_seattle.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "mfs_sbf_seattle.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "mfs_sbf_seattle.jpg"
+        ],
+        "meta": {
+            "duration": 100.9,
+            "size": "720x576"
+        },
+        "tracks": [
+            {
+                "lang": "en",
+                "src": "mfs_sbf_seattle.en.vtt"
+            },
+            {
+                "lang": "fr",
+                "src": "mfs_sbf_seattle.fr.vtt"
+            }
+        ]
+    },
+    {
+        "video_id": "mfs_sbh_seattle",
+        "sources": [
+            {
+                "src": "mfs_sbh_seattle.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "mfs_sbh_seattle.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "mfs_sbh_seattle.jpg"
+        ],
+        "meta": {
+            "duration": 63.1,
+            "size": "720x576"
+        },
+        "tracks": [
+            {
+                "lang": "en",
+                "src": "mfs_sbh_seattle.en.vtt"
+            },
+            {
+                "lang": "fr",
+                "src": "mfs_sbh_seattle.fr.vtt"
+            }
+        ]
+    },
+    {
+        "video_id": "puzzle1_demo_graph",
+        "sources": [
+            {
+                "src": "puzzle1_demo_graph.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "puzzle1_demo_graph.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "puzzle1_demo_graph.jpg"
+        ],
+        "meta": {
+            "duration": 37.4,
+            "size": "720x576"
+        },
+        "tracks": [
+            {
+                "lang": "en",
+                "src": "puzzle1_demo_graph.en.vtt"
+            },
+            {
+                "lang": "fr",
+                "src": "puzzle1_demo_graph.fr.vtt"
+            }
+        ]
+    },
+    {
+        "video_id": "correction_crescent_handsfeet",
+        "sources": [
+            {
+                "src": "correction_crescent_handsfeet.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "correction_crescent_handsfeet.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "correction_crescent_handsfeet.jpg"
+        ],
+        "meta": {
+            "duration": 139.5,
+            "size": "720x576"
+        },
+        "tracks": [
+            {
+                "lang": "en",
+                "src": "correction_crescent_handsfeet.en.vtt"
+            },
+            {
+                "lang": "fr",
+                "src": "correction_crescent_handsfeet.fr.vtt"
+            }
+        ]
+    },
+    {
+        "video_id": "correction_crescent_center",
+        "sources": [
+            {
+                "src": "correction_crescent_center.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "correction_crescent_center.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "correction_crescent_center.jpg"
+        ],
+        "meta": {
+            "duration": 194,
+            "size": "720x576"
+        },
+        "tracks": [
+            {
+                "lang": "en",
+                "src": "correction_crescent_center.en.vtt"
+            },
+            {
+                "lang": "fr",
+                "src": "correction_crescent_center.fr.vtt"
+            }
+        ]
+    },
+    {
+        "video_id": "correction_helix_feet",
+        "sources": [
+            {
+                "src": "correction_helix_feet.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "correction_helix_feet.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "correction_helix_feet.jpg"
+        ],
+        "meta": {
+            "duration": 318.2,
+            "size": "720x576"
+        },
+        "tracks": [
+            {
+                "lang": "en",
+                "src": "correction_helix_feet.en.vtt"
+            },
+            {
+                "lang": "fr",
+                "src": "correction_helix_feet.fr.vtt"
+            }
+        ]
+    },
+    {
+        "video_id": "correction_helix_hands",
+        "sources": [
+            {
+                "src": "correction_helix_hands.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "correction_helix_hands.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "correction_helix_hands.jpg"
+        ],
+        "meta": {
+            "duration": 281.6,
+            "size": "720x576"
+        },
+        "tracks": [
+            {
+                "lang": "en",
+                "src": "correction_helix_hands.en.vtt"
+            },
+            {
+                "lang": "fr",
+                "src": "correction_helix_hands.fr.vtt"
+            }
+        ]
+    },
+    {
+        "video_id": "correction_conclusion",
+        "sources": [
+            {
+                "src": "correction_conclusion.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "correction_conclusion.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "correction_conclusion.jpg"
+        ],
+        "meta": {
+            "duration": 94.3,
+            "size": "720x576"
+        },
+        "tracks": [
+            {
+                "lang": "en",
+                "src": "correction_conclusion.en.vtt"
+            },
+            {
+                "lang": "fr",
+                "src": "correction_conclusion.fr.vtt"
+            }
+        ]
+    },
+    {
+        "video_id": "wu_fingers",
+        "sources": [
+            {
+                "src": "wu_fingers.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "wu_fingers.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "wu_fingers.jpg"
+        ],
+        "meta": {
+            "duration": 46.2,
+            "size": "720x576"
+        }
+    },
+    {
+        "video_id": "wu_wrist",
+        "sources": [
+            {
+                "src": "wu_wrist.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "wu_wrist.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "wu_wrist.jpg"
+        ],
+        "meta": {
+            "duration": 127,
+            "size": "720x576",
+            "no_audio": true
+        }
+    },
+    {
+        "video_id": "wu_hands",
+        "sources": [
+            {
+                "src": "wu_hands.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "wu_hands.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "wu_hands.jpg"
+        ],
+        "meta": {
+            "duration": 101.4,
+            "size": "720x576"
+        }
+    },
+    {
+        "video_id": "wu_arms",
+        "sources": [
+            {
+                "src": "wu_arms.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "wu_arms.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "wu_arms.jpg"
+        ],
+        "meta": {
+            "duration": 77.2,
+            "size": "720x576",
+            "no_audio": true
+        }
+    },
+    {
+        "video_id": "wu_spine_and_arms",
+        "sources": [
+            {
+                "src": "wu_spine_and_arms.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "wu_spine_and_arms.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "wu_spine_and_arms.jpg"
+        ],
+        "meta": {
+            "duration": 51.8,
+            "size": "720x576",
+            "no_audio": true
+        }
+    },
+    {
+        "video_id": "wu_bendingbone",
+        "sources": [
+            {
+                "src": "wu_bendingbone.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "wu_bendingbone.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "wu_bendingbone.jpg"
+        ],
+        "meta": {
+            "duration": 171.8,
+            "size": "720x576"
+        },
+        "tracks": [
+            {
+                "lang": "en",
+                "src": "wu_bendingbone.en.vtt"
+            },
+            {
+                "lang": "fr",
+                "src": "wu_bendingbone.fr.vtt"
+            }
+        ]
+    },
+    {
+        "video_id": "wu_aikidostep",
+        "sources": [
+            {
+                "src": "wu_aikidostep.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "wu_aikidostep.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "wu_aikidostep.jpg"
+        ],
+        "meta": {
+            "duration": 87.5,
+            "size": "720x576"
+        }
+    },
+    {
+        "video_id": "wu_twist",
+        "sources": [
+            {
+                "src": "wu_twist.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "wu_twist.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "wu_twist.jpg"
+        ],
+        "meta": {
+            "duration": 144.3,
+            "size": "720x576",
+            "no_audio": true
+        }
+    },
+    {
+        "video_id": "wu_twistlegs",
+        "sources": [
+            {
+                "src": "wu_twistlegs.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "wu_twistlegs.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "wu_twistlegs.jpg"
+        ],
+        "meta": {
+            "duration": 81.2,
+            "size": "720x576"
+        },
+        "tracks": [
+            {
+                "lang": "en",
+                "src": "wu_twistlegs.en.vtt"
+            },
+            {
+                "lang": "fr",
+                "src": "wu_twistlegs.fr.vtt"
+            }
+        ]
+    },
+    {
+        "video_id": "wu_legsresistance",
+        "sources": [
+            {
+                "src": "wu_legsresistance.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "wu_legsresistance.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "wu_legsresistance.jpg"
+        ],
+        "meta": {
+            "duration": 418,
+            "size": "720x576"
+        },
+        "tracks": [
+            {
+                "lang": "en",
+                "src": "wu_legsresistance.en.vtt"
+            },
+            {
+                "lang": "fr",
+                "src": "wu_legsresistance.fr.vtt"
+            }
+        ]
+    },
+    {
+        "video_id": "wu_trocantere",
+        "sources": [
+            {
+                "src": "wu_trocantere.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "wu_trocantere.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "wu_trocantere.jpg"
+        ],
+        "meta": {
+            "duration": 147.5,
+            "size": "720x576"
+        },
+        "tracks": [
+            {
+                "lang": "en",
+                "src": "wu_trocantere.en.vtt"
+            },
+            {
+                "lang": "fr",
+                "src": "wu_trocantere.fr.vtt"
+            }
+        ]
+    },
+    {
+        "video_id": "wu_psoas",
+        "sources": [
+            {
+                "src": "wu_psoas.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "wu_psoas.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "wu_psoas.jpg"
+        ],
+        "meta": {
+            "duration": 222.3,
+            "size": "720x576"
+        },
+        "tracks": [
+            {
+                "lang": "en",
+                "src": "wu_psoas.en.vtt"
+            },
+            {
+                "lang": "fr",
+                "src": "wu_psoas.fr.vtt"
+            }
+        ]
+    },
+    {
+        "video_id": "wu_wave",
+        "sources": [
+            {
+                "src": "wu_wave.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "wu_wave.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "wu_wave.jpg"
+        ],
+        "meta": {
+            "duration": 112.7,
+            "size": "720x576"
+        },
+        "tracks": [
+            {
+                "lang": "en",
+                "src": "wu_wave.en.vtt"
+            },
+            {
+                "lang": "fr",
+                "src": "wu_wave.fr.vtt"
+            }
+        ]
+    },
+    {
+        "video_id": "wu_wavefloor",
+        "sources": [
+            {
+                "src": "wu_wavefloor.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "wu_wavefloor.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "wu_wavefloor.jpg"
+        ],
+        "meta": {
+            "duration": 119.8,
+            "size": "720x576"
+        },
+        "tracks": [
+            {
+                "lang": "en",
+                "src": "wu_wavefloor.en.vtt"
+            },
+            {
+                "lang": "fr",
+                "src": "wu_wavefloor.fr.vtt"
+            }
+        ]
+    },
+    {
+        "video_id": "wu_asanas",
+        "sources": [
+            {
+                "src": "wu_asanas.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "wu_asanas.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "wu_asanas.jpg"
+        ],
+        "meta": {
+            "duration": 248.3,
+            "size": "720x576"
+        },
+        "tracks": [
+            {
+                "lang": "en",
+                "src": "wu_asanas.en.vtt"
+            },
+            {
+                "lang": "fr",
+                "src": "wu_asanas.fr.vtt"
+            }
+        ]
+    },
+    {
+        "video_id": "napp",
+        "sources": [
+            {
+                "src": "napp.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "napp.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "napp.jpg"
+        ],
+        "meta": {
+            "duration": 96.2,
+            "size": "720x576"
+        },
+        "tracks": [
+            {
+                "lang": "en",
+                "src": "napp.en.vtt"
+            },
+            {
+                "lang": "fr",
+                "src": "napp.fr.vtt"
+            }
+        ]
+    },
+    {
+        "video_id": "wu_play",
+        "sources": [
+            {
+                "src": "wu_play.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "wu_play.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "wu_play.jpg"
+        ],
+        "meta": {
+            "duration": 119.8,
+            "size": "720x576"
+        }
+    },
+    {
+        "video_id": "dance_culture",
+        "sources": [
+            {
+                "src": "dance_culture.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "dance_culture.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "dance_culture.jpg"
+        ],
+        "meta": {
+            "duration": 260.5,
+            "size": "720x576"
+        },
+        "tracks": [
+            {
+                "lang": "en",
+                "src": "dance_culture.en.vtt"
+            },
+            {
+                "lang": "fr",
+                "src": "dance_culture.fr.vtt"
+            }
+        ]
+    },
+    {
+        "video_id": "cultivating2",
+        "sources": [
+            {
+                "src": "cultivating2.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "cultivating2.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "cultivating2.jpg"
+        ],
+        "meta": {
+            "duration": 448.6,
+            "size": "720x576"
+        }
+    },
+    {
+        "video_id": "cbhf_fromside",
+        "sources": [
+            {
+                "src": "cbhf_fromside.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "cbhf_fromside.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "cbhf_fromside.jpg"
+        ],
+        "meta": {
+            "duration": 25.6,
+            "size": "720x576"
+        }
+    },
+    {
+        "video_id": "cbfh_top",
+        "sources": [
+            {
+                "src": "cbfh_top.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "cbfh_top.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "cbfh_top.jpg"
+        ],
+        "meta": {
+            "duration": 25.6,
+            "size": "720x576",
+            "no_audio": true
+        }
+    },
+    {
+        "video_id": "cbhf_fromhead",
+        "sources": [
+            {
+                "src": "cbhf_fromhead.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "cbhf_fromhead.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "cbhf_fromhead.jpg"
+        ],
+        "meta": {
+            "duration": 25.6,
+            "size": "720x576"
+        }
+    },
+    {
+        "video_id": "cbc_fromhead",
+        "sources": [
+            {
+                "src": "cbc_fromhead.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "cbc_fromhead.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "cbc_fromhead.jpg"
+        ],
+        "meta": {
+            "duration": 31.6,
+            "size": "720x576"
+        }
+    },
+    {
+        "video_id": "cbc_top",
+        "sources": [
+            {
+                "src": "cbc_top.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "cbc_top.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "cbc_top.jpg"
+        ],
+        "meta": {
+            "duration": 31.6,
+            "size": "720x576",
+            "no_audio": true
+        }
+    },
+    {
+        "video_id": "chu_fromfeet",
+        "sources": [
+            {
+                "src": "chu_fromfeet.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "chu_fromfeet.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "chu_fromfeet.jpg"
+        ],
+        "meta": {
+            "duration": 10.2,
+            "size": "720x576"
+        }
+    },
+    {
+        "video_id": "cbhu_side",
+        "sources": [
+            {
+                "src": "cbhu_side.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "cbhu_side.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "cbhu_side.jpg"
+        ],
+        "meta": {
+            "duration": 20.5,
+            "size": "720x576",
+            "no_audio": true
+        }
+    },
+    {
+        "video_id": "sbf_feet",
+        "sources": [
+            {
+                "src": "sbf_feet.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "sbf_feet.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "sbf_feet.jpg"
+        ],
+        "meta": {
+            "duration": 20,
+            "size": "720x576",
+            "no_audio": true
+        }
+    },
+    {
+        "video_id": "sbf_fromside",
+        "sources": [
+            {
+                "src": "sbf_fromside.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "sbf_fromside.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "sbf_fromside.jpg"
+        ],
+        "meta": {
+            "duration": 20,
+            "size": "720x576",
+            "no_audio": true
+        }
+    },
+    {
+        "video_id": "sbf_fromhead",
+        "sources": [
+            {
+                "src": "sbf_fromhead.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "sbf_fromhead.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "sbf_fromhead.jpg"
+        ],
+        "meta": {
+            "duration": 5,
+            "size": "720x576"
+        }
+    },
+    {
+        "video_id": "sbh_head",
+        "sources": [
+            {
+                "src": "sbh_head.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "sbh_head.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "sbh_head.jpg"
+        ],
+        "meta": {
+            "duration": 35.2,
+            "size": "720x576",
+            "no_audio": true
+        }
+    },
+    {
+        "video_id": "sbh_fromside",
+        "sources": [
+            {
+                "src": "sbh_fromside.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "sbh_fromside.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "sbh_fromside.jpg"
+        ],
+        "meta": {
+            "duration": 35.2,
+            "size": "720x576",
+            "no_audio": true
+        }
+    },
+    {
+        "video_id": "frontal_head_top",
+        "sources": [
+            {
+                "src": "frontal_head_top.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "frontal_head_top.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "frontal_head_top.jpg"
+        ],
+        "meta": {
+            "duration": 71.1,
+            "size": "720x576"
+        }
+    },
+    {
+        "video_id": "frontal_head_side",
+        "sources": [
+            {
+                "src": "frontal_head_side.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "frontal_head_side.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "frontal_head_side.jpg"
+        ],
+        "meta": {
+            "duration": 80,
+            "size": "720x576",
+            "no_audio": true
+        }
+    },
+    {
+        "video_id": "frontal_head_bottom",
+        "sources": [
+            {
+                "src": "frontal_head_bottom.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "frontal_head_bottom.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "frontal_head_bottom.jpg"
+        ],
+        "meta": {
+            "duration": 23.6,
+            "size": "720x576",
+            "no_audio": true
+        }
+    },
+    {
+        "video_id": "frontal_pelvis_top",
+        "sources": [
+            {
+                "src": "frontal_pelvis_top.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "frontal_pelvis_top.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "frontal_pelvis_top.jpg"
+        ],
+        "meta": {
+            "duration": 43.4,
+            "size": "720x576",
+            "no_audio": true
+        }
+    },
+    {
+        "video_id": "frontal_pelvis_side",
+        "sources": [
+            {
+                "src": "frontal_pelvis_side.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "frontal_pelvis_side.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "frontal_pelvis_side.jpg"
+        ],
+        "meta": {
+            "duration": 48.9,
+            "size": "720x576",
+            "no_audio": true
+        }
+    },
+    {
+        "video_id": "frontal_pelvis_bottom",
+        "sources": [
+            {
+                "src": "frontal_pelvis_bottom.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "frontal_pelvis_bottom.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "frontal_pelvis_bottom.jpg"
+        ],
+        "meta": {
+            "duration": 41.7,
+            "size": "720x576",
+            "no_audio": true
+        }
+    },
+    {
+        "video_id": "lateral_head_front",
+        "sources": [
+            {
+                "src": "lateral_head_front.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "lateral_head_front.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "lateral_head_front.jpg"
+        ],
+        "meta": {
+            "duration": 51,
+            "size": "720x576",
+            "no_audio": true
+        }
+    },
+    {
+        "video_id": "lateral_head_top",
+        "sources": [
+            {
+                "src": "lateral_head_top.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "lateral_head_top.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "lateral_head_top.jpg"
+        ],
+        "meta": {
+            "duration": 30.4,
+            "size": "720x576",
+            "no_audio": true
+        }
+    },
+    {
+        "video_id": "lateral_pelvis_top",
+        "sources": [
+            {
+                "src": "lateral_pelvis_top.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "lateral_pelvis_top.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "lateral_pelvis_top.jpg"
+        ],
+        "meta": {
+            "duration": 25.7,
+            "size": "720x576",
+            "no_audio": true
+        }
+    },
+    {
+        "video_id": "lateral_pelvis_front",
+        "sources": [
+            {
+                "src": "lateral_pelvis_front.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "lateral_pelvis_front.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "lateral_pelvis_front.jpg"
+        ],
+        "meta": {
+            "duration": 45.2,
+            "size": "720x576",
+            "no_audio": true
+        }
+    },
+    {
+        "video_id": "aikido_side",
+        "sources": [
+            {
+                "src": "aikido_side.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "aikido_side.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "aikido_side.jpg"
+        ],
+        "meta": {
+            "duration": 5.3,
+            "size": "720x576"
+        }
+    },
+    {
+        "video_id": "aikido_top",
+        "sources": [
+            {
+                "src": "aikido_top.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "aikido_top.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "aikido_top.jpg"
+        ],
+        "meta": {
+            "duration": 9.6,
+            "size": "720x576"
+        }
+    },
+    {
+        "video_id": "aikido_front",
+        "sources": [
+            {
+                "src": "aikido_front.webm",
+                "priority": 10,
+                "codecs": "vp9"
+            },
+            {
+                "src": "aikido_front.mp4",
+                "priority": 20
+            }
+        ],
+        "covers": [
+            "aikido_front.jpg"
+        ],
+        "meta": {
+            "duration": 5.3,
+            "size": "720x576"
+        }
+    }
+]
