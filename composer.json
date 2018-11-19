@@ -53,7 +53,7 @@
         "deployer/recipes": "^6.1",
         "filp/whoops": "^2.3",
         "jangregor/phpstan-prophecy": "^0.2",
-        "phpunit/phpunit": "^7.1",
+        "phpunit/phpunit": "^7.3",
         "phpstan/phpstan-strict-rules": "^0.10",
         "phpstan/phpstan": "^0.10",
         "phpstan/phpstan-phpunit": "^0.10",
