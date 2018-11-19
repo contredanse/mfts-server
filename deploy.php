@@ -50,7 +50,6 @@ host(getenv('DEPLOY_HOST'))
     ->identityFile(getenv('DEPLOY_IDENTITY_FILE'))
     ->set('deploy_path', getenv('DEPLOY_PATH'));
 
-
 task('deploy:create_cache_dir', function () {
     // set cache dir
     set('cache_dir', '{{release_path}}/data/cache');
