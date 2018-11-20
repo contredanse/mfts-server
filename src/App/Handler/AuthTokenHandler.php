@@ -89,7 +89,6 @@ class AuthTokenHandler implements RequestHandlerInterface
             if ($user !== null) {
                 $dbPassword = $user->getDetail('password');
                 if ($dbPassword === $password) {
-
                     $token = $this->tokenManager->createNewToken([
                         'user_id'  => $user->getIdentity(),
                         'email' => $email
@@ -114,9 +113,5 @@ class AuthTokenHandler implements RequestHandlerInterface
             'success' => false,
             'reason' => 'Missing parameter'
         ]))->withStatus(StatusCodeInterface::STATUS_BAD_REQUEST);
-
     }
-
-
-
 }
