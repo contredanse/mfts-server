@@ -6,7 +6,9 @@ use Zend\Expressive\Authentication\UserInterface;
 
 class ContredanseUserProvider implements UserProviderInterface
 {
-
+    /**
+     * @var \Pdo
+     */
     private $adapter;
 
     function __construct(\Pdo $adapter)
@@ -14,24 +16,6 @@ class ContredanseUserProvider implements UserProviderInterface
         $this->adapter = $adapter;
     }
 
-    /**
-     * @return Array<string, mixed>
-     */
-    function getAllUsers(): array
-    {
-        $sql = $this->getBaseSql();
-        $stmt = $this->adapter->prepare(
-            $sql,
-            [\PDO::ATTR_CURSOR => \PDO::CURSOR_FWDONLY]
-        );
-        $stmt->execute();
-        $rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
-        return $rows;
-    }
-
-    /**
-     * @param string $email
-     */
     function getUserByEmail(string $email): ?UserInterface
     {
         $sql = sprintf(
@@ -55,6 +39,22 @@ class ContredanseUserProvider implements UserProviderInterface
             $rows[0]
         );
     }
+
+    /**
+     * Return all users
+     * @return Array<Array<string, mixed>>
+     */
+    public function getAllUsers(): array
+    {
+        $sql = $this->getBaseSql();
+        $stmt = $this->adapter->prepare(
+            $sql,
+            [\PDO::ATTR_CURSOR => \PDO::CURSOR_FWDONLY]
+        );
+        $stmt->execute();
+        return $stmt->fetchAll(\PDO::FETCH_ASSOC);
+    }
+
 
     private function getBaseSql(): string
     {
