@@ -63,14 +63,16 @@ class GenerateVideoCoversCommand extends Command
     /**
      * Executes the current command
      */
-    protected function execute(InputInterface $input, OutputInterface $output)
+    protected function execute(InputInterface $input, OutputInterface $output): void
     {
         if (!$input->hasOption('dir')) {
             throw new \Exception('Missing dir argument, use <command> <dir>');
         }
-        $videoPath = $input->getOption('dir');
-        if (!$videoPath || !is_dir($videoPath)) {
-            throw new \Exception(sprintf("Video dir %s does not exists", $videoPath));
+        $videoPath = $input->hasOption('dir') ? $input->getOption('dir') : '';
+        if (!is_string($videoPath) || !is_dir($videoPath)) {
+            throw new \Exception(sprintf("Video dir %s does not exists",
+                is_string($videoPath) ? $videoPath : ''
+            ));
         }
 
         $output->writeln("Processing covers...");
