@@ -42,6 +42,9 @@ class ConfigProvider
                 Handler\AuthTokenHandler::class => Handler\AuthTokenHandlerFactory::class,
                 Security\ContredanseUserProvider::class => Security\ContredanseUserProviderFactory::class,
 
+                // Token Service
+                Service\TokenManager::class => Service\TokenManagerFactory::class,
+
                 // Cors
                 \Tuupola\Middleware\CorsMiddleware::class => Security\ApiCorsMiddlewareFactory::class,
             ],
