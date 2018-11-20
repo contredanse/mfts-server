@@ -372,7 +372,7 @@ class TranscodeVideosCommand extends Command
             ->withOutputFormat('webm')
             ->withSpeed(4)
             ->withPass(1)
-            ->withPassLogFile($logFile);
+            ->withPassLogFile($logFile ?: '/tmp/ffmpeg-log');
 
         try {
             $pass1Process = $this->videoConverter->getSymfonyProcess(
@@ -385,7 +385,7 @@ class TranscodeVideosCommand extends Command
             //die();
             $pass1Process->mustRun();
         } catch (\Throwable $e) {
-            if (file_exists($logFile)) {
+            if ($logFile && file_exists($logFile)) {
                 unlink($logFile);
             }
             throw $e;

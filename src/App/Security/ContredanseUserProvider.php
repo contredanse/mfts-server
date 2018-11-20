@@ -7,11 +7,11 @@ use Zend\Expressive\Authentication\UserInterface;
 class ContredanseUserProvider implements UserProviderInterface
 {
     /**
-     * @var \Pdo
+     * @var \PDO
      */
     private $adapter;
 
-    function __construct(\Pdo $adapter)
+    function __construct(\PDO $adapter)
     {
         $this->adapter = $adapter;
     }
@@ -29,7 +29,7 @@ class ContredanseUserProvider implements UserProviderInterface
         );
         $stmt->execute([':email' => $email]);
         $rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
-        if (count($rows) !== 1) {
+        if (!$rows || count($rows) !== 1) {
             return null;
         }
 
@@ -42,9 +42,9 @@ class ContredanseUserProvider implements UserProviderInterface
 
     /**
      * Return all users
-     * @return Array<Array<string, mixed>>
+     * @return array|false
      */
-    public function getAllUsers(): array
+    public function getAllUsers()
     {
         $sql = $this->getBaseSql();
         $stmt = $this->adapter->prepare(

@@ -8,16 +8,13 @@ use App\Security\UserProviderInterface;
 use App\Service\TokenManager;
 use Fig\Http\Message\StatusCodeInterface;
 use Lcobucci\JWT\Parser;
-use Lcobucci\JWT\Token;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\RequestHandlerInterface;
-use Ramsey\Uuid\Uuid;
-use Zend\Diactoros\Response\JsonResponse;
 
-use Lcobucci\JWT\Builder;
-use Lcobucci\JWT\Signer\Hmac\Sha256;
+use Zend\Diactoros\Response\JsonResponse;
 use Zend\Diactoros\Response\TextResponse;
+
 
 class AuthTokenHandler implements RequestHandlerInterface
 {
@@ -49,7 +46,7 @@ class AuthTokenHandler implements RequestHandlerInterface
         }
     }
 
-    function validateAction(ServerRequestInterface $request): JsonResponse
+    function validateAction(ServerRequestInterface $request): ResponseInterface
     {
         $method = $request->getMethod();
         if ($method !== 'POST') {
@@ -71,7 +68,7 @@ class AuthTokenHandler implements RequestHandlerInterface
         //$token->validate()
     }
 
-    function loginAction(ServerRequestInterface $request): JsonResponse
+    function loginAction(ServerRequestInterface $request): ResponseInterface
     {
 
         //$users  = $this->userProvider->getAllUsers();

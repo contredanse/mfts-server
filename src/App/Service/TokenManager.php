@@ -29,7 +29,7 @@ class TokenManager
         $builder = (new Builder())
             ->setIssuer($this->issuer) // Configures the issuer (iss claim)
             ->setAudience($this->audience) // Configures the audience (aud claim)
-            ->setId(Uuid::uuid1(), true) // Configures the id (jti claim), replicating as a header item
+            ->setId(Uuid::uuid1()->toString(), true) // Configures the id (jti claim), replicating as a header item
             ->setIssuedAt(time()) // Configures the time that the token was issue (iat claim)
             ->setNotBefore(time() + 0) // Configures the time that the token can be used (nbf claim)
             ->setExpiration(time() + $expiration); // Configures the expiration time of the token (exp claim)
@@ -41,8 +41,7 @@ class TokenManager
         if ($autoSign) {
             return $this->signToken($builder);
         }
-
-        return $token;
+        return $builder->getToken();
     }
 
     function signToken(Builder $builder): Token

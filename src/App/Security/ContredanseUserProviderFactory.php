@@ -21,7 +21,6 @@ class ContredanseUserProviderFactory
             throw new ConfigException("['contredanse']['db'] config key is missing.");
         }
 
-
         return new ContredanseUserProvider(
             $this->getPdoConnection($config['db'])
         );
@@ -33,8 +32,8 @@ class ContredanseUserProviderFactory
      */
     function getPdoConnection(array $config): \PDO
     {
-
         $dsn = $config['dsn'];
+		/** @var string[] $options */
         $options = $config['driver_options'] ?? null;
         try {
             $pdo = new \PDO($dsn, $config['username'], $config['password'], $options);
