@@ -5,9 +5,11 @@ namespace App\Service;
 use App\Exception\ConfigException;
 use Psr\Container\ContainerInterface;
 
-class TokenManagerFactory {
+class TokenManagerFactory
+{
 
-    function __invoke(ContainerInterface $container): TokenManager {
+    function __invoke(ContainerInterface $container): TokenManager
+    {
 
         $config = $container->get('config')['token_manager'] ?? null;
         if ($config === null) {

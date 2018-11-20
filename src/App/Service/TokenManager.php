@@ -2,29 +2,29 @@
 
 namespace App\Service;
 
-
 use Lcobucci\JWT\Builder;
 use Lcobucci\JWT\Signer\Hmac\Sha256;
 use Lcobucci\JWT\Token;
 use Ramsey\Uuid\Uuid;
 
-class TokenManager {
+class TokenManager
+{
 
     private $signer;
     private $issuer;
     private $audience;
     private $privateKey;
 
-    function __construct(string $privateKey) {
+    function __construct(string $privateKey)
+    {
 
         $this->signer = new Sha256();
         $this->issuer = $_SERVER['SERVER_NAME'];
         $this->audience = $_SERVER['SERVER_NAME'];
         $this->privateKey = $privateKey;
-
     }
 
-    function createNewToken(array $customClaims = [], int $expiration=3600, bool $autoSign=true): Token
+    function createNewToken(array $customClaims = [], int $expiration = 3600, bool $autoSign = true): Token
     {
         $builder = (new Builder())
             ->setIssuer($this->issuer) // Configures the issuer (iss claim)
@@ -45,7 +45,8 @@ class TokenManager {
         return $token;
     }
 
-    function signToken(Builder $builder): Token {
+    function signToken(Builder $builder): Token
+    {
         return $builder->sign($this->signer, $this->privateKey)
             ->getToken(); // Retrieves the generated token
     }
