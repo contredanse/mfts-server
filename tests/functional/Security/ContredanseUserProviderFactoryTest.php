@@ -13,10 +13,10 @@ use Psr\Container\ContainerInterface;
 
 class ContredanseUserProviderFactoryTest extends TestCase
 {
-    /** @var \Prophecy\Prophecy\ObjectProphecy<ContainerInterface>  */
+    /** @var \Prophecy\Prophecy\ObjectProphecy<ContainerInterface> */
     protected $container;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->container = $this->prophesize(ContainerInterface::class);
     }

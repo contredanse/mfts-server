@@ -16,15 +16,15 @@ use Zend\Expressive\Twig\TwigRenderer;
 
 class HomePageHandlerTest extends TestCase
 {
-    /** @var \Prophecy\Prophecy\ObjectProphecy<TwigRenderer>  */
+    /** @var \Prophecy\Prophecy\ObjectProphecy & TwigRenderer  */
     protected $template;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->template = $this->prophesize(TwigRenderer::class);
     }
 
-    public function testReturnsHtmlResponseWhenTemplateRendererProvided()
+    public function testReturnsHtmlResponseWhenTemplateRendererProvided(): void
     {
         $this->template
             ->render('app::static-content', Argument::type('array'))
@@ -36,6 +36,6 @@ class HomePageHandlerTest extends TestCase
             $this->prophesize(ServerRequestInterface::class)->reveal()
         );
 
-        $this->assertInstanceOf(HtmlResponse::class, $response);
+        self::assertInstanceOf(HtmlResponse::class, $response);
     }
 }

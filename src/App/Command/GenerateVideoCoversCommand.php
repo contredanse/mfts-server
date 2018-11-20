@@ -48,7 +48,7 @@ class GenerateVideoCoversCommand extends Command
     /**
      * Configures the command
      */
-    protected function configure()
+    protected function configure(): void
     {
         $this
             ->setName('generate:video:covers')

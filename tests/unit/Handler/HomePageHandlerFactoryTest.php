@@ -14,17 +14,15 @@ use Zend\Expressive\Twig\TwigRenderer;
 
 class HomePageHandlerFactoryTest extends TestCase
 {
-    /** @var \Prophecy\Prophecy\ObjectProphecy<ContainerInterface>  */
+    /** @var \Prophecy\Prophecy\ObjectProphecy<ContainerInterface> */
     protected $container;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->container = $this->prophesize(ContainerInterface::class);
     }
 
-
-
-    public function testFactory()
+    public function testFactory(): void
     {
         //$this->container->has(TwigRenderer::class)->willReturn(true);
         $this->container
@@ -35,6 +33,6 @@ class HomePageHandlerFactoryTest extends TestCase
 
         $homePage = $factory($this->container->reveal());
 
-        $this->assertInstanceOf(HomePageHandler::class, $homePage);
+        self::assertInstanceOf(HomePageHandler::class, $homePage);
     }
 }

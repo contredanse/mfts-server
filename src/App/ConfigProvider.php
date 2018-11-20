@@ -36,8 +36,6 @@ class ConfigProvider
                 Handler\PingHandler::class => Handler\PingHandler::class,
             ],
             'factories'  => [
-                Util\MenuConvert::class => Util\MenuConvertFactory::class,
-                Util\SubsFormatConvert::class => Util\SubsFormatConvertFactory::class,
                 Handler\HomePageHandler::class => Handler\HomePageHandlerFactory::class,
                 Handler\AuthTokenHandler::class => Handler\AuthTokenHandlerFactory::class,
                 Security\ContredanseUserProvider::class => Security\ContredanseUserProviderFactory::class,

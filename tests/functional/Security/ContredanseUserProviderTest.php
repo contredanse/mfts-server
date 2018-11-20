@@ -16,7 +16,7 @@ class ContredanseUserProviderTest extends TestCase
      */
     private $provider;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $container = ContainerFactory::getContainer();
         $this->provider = (new ContredanseUserProviderFactory())($container);

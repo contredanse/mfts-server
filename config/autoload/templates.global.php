@@ -24,7 +24,7 @@ return [
         'globals' => [
             // Global variables passed to twig templates
             'ga_tracking' => getenv('GA_CODE'),
-            'ga_enabled' => strtoupper(getenv('GA_ENABLED') ?? '') === 'ON',
+            'ga_enabled' => strtoupper(getenv('GA_ENABLED') ?: '') === 'ON',
         ],
         //'timezone' => 'default timezone identifier, e.g.: America/New_York',
         //'optimizations' => -1, // -1: Enable all (default), 0: disable optimizations
