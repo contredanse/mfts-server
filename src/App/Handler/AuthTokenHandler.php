@@ -73,11 +73,14 @@ class AuthTokenHandler implements RequestHandlerInterface
             throw new \RuntimeException('TODO - Handle error your way ;)');
         }
 
+
         $body = $request->getParsedBody();
-        $login = $body['login'] ?? '';
+        $login = $body['login'] ?? null;
+        $email = $body['email'] ?? null;
         $password = $body['password'] ?? '';
 
-        $user = $this->userProvider->getUserByEmail($login);
+
+        $user = $this->userProvider->getUserByEmail($email);
 
         if ($user === null || $user->getDetail('password') !== $password) {
             return (new JsonResponse([
