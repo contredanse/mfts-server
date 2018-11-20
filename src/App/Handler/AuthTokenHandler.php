@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Handler;
 
 use App\Security\UserProviderInterface;
+use App\Service\TokenManager;
 use Fig\Http\Message\StatusCodeInterface;
 use Lcobucci\JWT\Parser;
 use Lcobucci\JWT\Token;
@@ -25,9 +26,15 @@ class AuthTokenHandler implements RequestHandlerInterface
      */
     private $userProvider;
 
-    public function __construct(UserProviderInterface $userProvider)
+    /**
+     * @var TokenManager
+     */
+    private $tokenManager;
+
+    public function __construct(UserProviderInterface $userProvider, TokenManager $tokenManager)
     {
         $this->userProvider = $userProvider;
+        $this->tokenManager = $tokenManager;
     }
 
     public function handle(ServerRequestInterface $request) : ResponseInterface
@@ -73,16 +80,28 @@ class AuthTokenHandler implements RequestHandlerInterface
             throw new \RuntimeException('TODO - Handle error your way ;)');
         }
 
-
         $body = $request->getParsedBody();
-        $login = $body['login'] ?? null;
-        $email = $body['email'] ?? null;
-        $password = $body['password'] ?? '';
+        $email = trim($body['email'] ?? '');
+        $password = trim($body['password'] ?? '');
 
+        if ($email !== '' && $password !== '') {
+            $user = $this->userProvider->getUserByEmail($email);
+            if ($user !== null) {
+                $dbPassword = $user->getDetail('password');
+                if ($dbPassword === $password) {
 
-        $user = $this->userProvider->getUserByEmail($email);
+                    $token = $this->tokenManager->createNewToken([
+                        'user_id'  => $user->getIdentity(),
+                        'email' => $email
+                    ], 3600);
 
-        if ($user === null || $user->getDetail('password') !== $password) {
+                    return new JsonResponse([
+                        'access_token' => (string) $token,
+                        'token_type'   => 'api_auth',
+                    ]);
+                }
+            }
+
             return (new JsonResponse([
                 'success' => false,
                 'reason' => $user === null ?
@@ -90,37 +109,14 @@ class AuthTokenHandler implements RequestHandlerInterface
                     'Password invalid'
             ]))->withStatus(StatusCodeInterface::STATUS_UNAUTHORIZED);
         }
-        $token = $this->createToken([
-            'login'  => $login
-        ]);
-        return new JsonResponse([
-            'access_token' => (string) $token,
-            'token_type'   => 'api_auth',
-        ]);
+
+        return (new JsonResponse([
+            'success' => false,
+            'reason' => 'Missing parameter'
+        ]))->withStatus(StatusCodeInterface::STATUS_BAD_REQUEST);
+
     }
 
 
-    function createToken(array $customClaims = []): Token
-    {
-        $issuer = $_SERVER['SERVER_NAME'];
-        $audience = $_SERVER['SERVER_NAME'];
 
-        $signer = new Sha256();
-        $builder = (new Builder())
-            ->setIssuer($issuer) // Configures the issuer (iss claim)
-            ->setAudience($audience) // Configures the audience (aud claim)
-            ->setId(Uuid::uuid1(), true) // Configures the id (jti claim), replicating as a header item
-            ->setIssuedAt(time()) // Configures the time that the token was issue (iat claim)
-            ->setNotBefore(time() + 0) // Configures the time that the token can be used (nbf claim)
-            ->setExpiration(time() + 3600); // Configures the expiration time of the token (exp claim)
-
-        foreach ($customClaims as $key => $value) {
-            $builder->set($key, $value);
-        }
-
-        $token = $builder->sign($signer, 'testing') // creates a signature using "testing" as key
-                ->getToken(); // Retrieves the generated token
-
-        return $token;
-    }
 }
