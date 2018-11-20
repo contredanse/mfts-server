@@ -26,6 +26,9 @@ It assumes you have a 'deployer' user set up (see [here](https://www.digitalocea
 $ sudo adduser deployer
 $ sudo usermod -aG www-data deployer
 $ sudo chfn -o umask=022 deployer
+```
+
+```bash
 $ sudo chown deployer:www-data /var/www/www.domain.org
 $ sudo chmod g+s /var/www/html /var/www/www.domain.org
 ```
