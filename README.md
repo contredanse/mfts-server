@@ -2,6 +2,7 @@
 
 [![PHP 7.1+](https://img.shields.io/badge/php-7.1+-ff69b4.svg)](https://packagist.org/packages/soluble/mediatools)
 [![Build Status](https://travis-ci.org/contredanse/mfts-server.svg?branch=master)](https://travis-ci.org/contredanse/mfts-server)
+[![Coverage](https://codecov.io/gh/contredanse/mfts-server/branch/master/graph/badge.svg)](https://codecov.io/gh/contredanse/mfts-server)
 
 Backend server for materforthespine application.
 
