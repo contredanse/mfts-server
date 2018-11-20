@@ -24,12 +24,24 @@ use Symfony\Component\Finder\Finder;
 class TranscodeVideosCommand extends Command
 {
 
+    /**
+     * @var VideoInfoReaderInterface
+     */
     protected $videoInfoReader;
 
+    /**
+     * @var VideoAnalyzerInterface
+     */
     protected $videoAnalyzer;
 
+    /**
+     * @var VideoConverterInterface
+     */
     protected $videoConverter;
 
+    /**
+     * @var string[]
+     */
     protected $supportedVideoExtensions = [
         'mov', 'mp4', 'mkv', 'flv', 'webm'
     ];
@@ -46,7 +58,7 @@ class TranscodeVideosCommand extends Command
     /**
      * Configures the command
      */
-    protected function configure()
+    protected function configure(): void
     {
         $this
             ->setName('transcode:videos')
@@ -61,14 +73,16 @@ class TranscodeVideosCommand extends Command
     /**
      * Executes the current command
      */
-    protected function execute(InputInterface $input, OutputInterface $output)
+    protected function execute(InputInterface $input, OutputInterface $output): void
     {
         if (!$input->hasOption('dir')) {
             throw new \Exception('Missing dir argument, use <command> <dir>');
         }
-        $videoPath = $input->getOption('dir');
-        if (!$videoPath || !is_dir($videoPath)) {
-            throw new \Exception(sprintf("Video dir %s does not exists", $videoPath));
+        $videoPath = $input->hasOption('dir') ? $input->getOption('dir') : '';
+        if (!is_string($videoPath) || !is_dir($videoPath)) {
+            throw new \Exception(sprintf("Video dir %s does not exists",
+                is_string($videoPath) ? $videoPath : ''
+            ));
         }
 
         $convertVP9 = true;
@@ -88,8 +102,9 @@ class TranscodeVideosCommand extends Command
             throw new \Exception('Output path does not exists');
         }
 
-        /** @var \SplFileInfo $video */
+        $rows = [];
 
+        /** @var \SplFileInfo $video */
         foreach ($videos as $video) {
             $videoFile = $video->getPathname();
 
