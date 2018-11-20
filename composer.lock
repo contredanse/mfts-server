@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b95fc8ea693bd1ad173b735524f88d9c",
+    "content-hash": "07f72bd04bf59b7aab8470caf05ae7ab",
     "packages": [
         {
             "name": "cocur/slugify",
@@ -104,16 +104,16 @@
         },
         {
             "name": "fig/http-message-util",
-            "version": "1.1.2",
+            "version": "1.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/http-message-util.git",
-                "reference": "20b2c280cb6914b7b83089720df44e490f4b42f0"
+                "reference": "35b19404371b31b3a43823c755398c48c9966db4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/http-message-util/zipball/20b2c280cb6914b7b83089720df44e490f4b42f0",
-                "reference": "20b2c280cb6914b7b83089720df44e490f4b42f0",
+                "url": "https://api.github.com/repos/php-fig/http-message-util/zipball/35b19404371b31b3a43823c755398c48c9966db4",
+                "reference": "35b19404371b31b3a43823c755398c48c9966db4",
                 "shasum": ""
             },
             "require": {
@@ -150,7 +150,7 @@
                 "request",
                 "response"
             ],
-            "time": "2017-02-09T16:10:21+00:00"
+            "time": "2018-11-19T16:19:58+00:00"
         },
         {
             "name": "lcobucci/jwt",
@@ -1018,20 +1018,21 @@
         },
         {
             "name": "soluble/mediatools",
-            "version": "0.7.7",
+            "version": "0.8.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/soluble-io/soluble-mediatools.git",
-                "reference": "4e2f190de3aaa042269f0b61426a405a379371a3"
+                "reference": "2b08d8102158028d5f9e49e6a06797f8b69e5e29"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/soluble-io/soluble-mediatools/zipball/4e2f190de3aaa042269f0b61426a405a379371a3",
-                "reference": "4e2f190de3aaa042269f0b61426a405a379371a3",
+                "url": "https://api.github.com/repos/soluble-io/soluble-mediatools/zipball/2b08d8102158028d5f9e49e6a06797f8b69e5e29",
+                "reference": "2b08d8102158028d5f9e49e6a06797f8b69e5e29",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
+                "ext-pcre": "*",
                 "php": "^7.1",
                 "psr/container": "^1.0",
                 "psr/log": "^1.0",
@@ -1039,22 +1040,23 @@
                 "symfony/process": "^4.0"
             },
             "require-dev": {
-                "consistence/coding-standard": "^3.1",
+                "consistence/coding-standard": "^3.5",
                 "fig/http-message-util": "^1.1.2",
-                "friendsofphp/php-cs-fixer": "^2.11.1",
-                "guzzlehttp/guzzle": "^6.2.3",
-                "infection/infection": "^0.9.0",
-                "monolog/monolog": "^1.23.0",
-                "phpspec/prophecy": "^1.7",
-                "phpstan/phpstan": "^0.10.1",
+                "friendsofphp/php-cs-fixer": "^2.13",
+                "guzzlehttp/guzzle": "^6.2",
+                "infection/infection": "^0.10",
+                "jangregor/phpstan-prophecy": "^0.2",
+                "monolog/monolog": "^1.23",
+                "phpspec/prophecy": "^1.8",
+                "phpstan/phpstan": "^0.10",
                 "phpstan/phpstan-phpunit": "^0.10",
                 "phpstan/phpstan-strict-rules": "^0.10",
-                "phpunit/phpunit": "^7.1",
+                "phpunit/phpunit": "^7.3",
                 "psr/http-message": "^1.0.1",
                 "roave/security-advisories": "dev-master",
                 "sebastianfeldmann/captainhook": "^2.1",
-                "slevomat/coding-standard": "^4.6.3",
-                "squizlabs/php_codesniffer": "^3.1",
+                "slevomat/coding-standard": "^4.8",
+                "squizlabs/php_codesniffer": "^3.3",
                 "zendframework/zend-servicemanager": "^3.3"
             },
             "suggest": {
@@ -1083,7 +1085,7 @@
                 "transcode",
                 "video"
             ],
-            "time": "2018-08-19T14:30:04+00:00"
+            "time": "2018-10-25T21:45:15+00:00"
         },
         {
             "name": "spatie/array-to-xml",
@@ -2562,22 +2564,22 @@
         },
         {
             "name": "zendframework/zend-expressive-twigrenderer",
-            "version": "2.1.0",
+            "version": "2.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-expressive-twigrenderer.git",
-                "reference": "9e54c7727b282c02bea7138850f4bfbd4649a2b4"
+                "reference": "1579d78e8de265574d2f0401207c3b436e826e55"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-expressive-twigrenderer/zipball/9e54c7727b282c02bea7138850f4bfbd4649a2b4",
-                "reference": "9e54c7727b282c02bea7138850f4bfbd4649a2b4",
+                "url": "https://api.github.com/repos/zendframework/zend-expressive-twigrenderer/zipball/1579d78e8de265574d2f0401207c3b436e826e55",
+                "reference": "1579d78e8de265574d2f0401207c3b436e826e55",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.1",
                 "psr/container": "^1.0",
-                "twig/twig": "^1.32 || ^2.1",
+                "twig/twig": "^1.34 | ^2.4",
                 "zendframework/zend-expressive-helpers": "^5.0",
                 "zendframework/zend-expressive-router": "^3.0",
                 "zendframework/zend-expressive-template": "^2.0"
@@ -2593,8 +2595,8 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.1.x-dev",
-                    "dev-develop": "2.2.x-dev"
+                    "dev-master": "2.2.x-dev",
+                    "dev-develop": "2.3.x-dev"
                 },
                 "zf": {
                     "config-provider": "Zend\\Expressive\\Twig\\ConfigProvider"
@@ -2621,7 +2623,7 @@
                 "zend-expressive",
                 "zf"
             ],
-            "time": "2018-04-09T20:47:56+00:00"
+            "time": "2018-11-19T17:38:37+00:00"
         },
         {
             "name": "zendframework/zend-httphandlerrunner",
@@ -5735,16 +5737,16 @@
         },
         {
             "name": "zendframework/zend-expressive-tooling",
-            "version": "1.0.1",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-expressive-tooling.git",
-                "reference": "0e5b030961cd980323dd48965d13d5cb904b51de"
+                "reference": "104e669805af385400fe9436b96e8eddd7194f2f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-expressive-tooling/zipball/0e5b030961cd980323dd48965d13d5cb904b51de",
-                "reference": "0e5b030961cd980323dd48965d13d5cb904b51de",
+                "url": "https://api.github.com/repos/zendframework/zend-expressive-tooling/zipball/104e669805af385400fe9436b96e8eddd7194f2f",
+                "reference": "104e669805af385400fe9436b96e8eddd7194f2f",
                 "shasum": ""
             },
             "require": {
@@ -5796,7 +5798,7 @@
                 "zend-expressive",
                 "zf"
             ],
-            "time": "2018-03-27T19:29:07+00:00"
+            "time": "2018-11-19T16:36:07+00:00"
         },
         {
             "name": "zfcampus/zf-composer-autoloading",

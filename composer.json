@@ -22,7 +22,7 @@
         "monolog/monolog": "^1.23",
         "ramsey/uuid": "^3.8",
         "roave/security-advisories": "dev-master",
-        "soluble/mediatools": "^0.7.2",
+        "soluble/mediatools": "^0.8.2",
         "symfony/console": "^4.1",
         "symfony/finder": "^4.1",
         "symfony/process": "^4.1",
@@ -54,7 +54,7 @@
         "phpstan/phpstan-phpunit": "^0.10",
         "spatie/array-to-xml": "^2.7",
         "squizlabs/php_codesniffer": "^3.2.3",
-        "zendframework/zend-expressive-tooling": "^1.0.0",
+        "zendframework/zend-expressive-tooling": "^1.0",
         "zfcampus/zf-development-mode": "^3.1"
     },
     "autoload": {
