@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace App\Command;
 
@@ -14,7 +16,6 @@ use Soluble\MediaTools\Video\VideoInfoReaderInterface;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Helper\ProgressBar;
 use Symfony\Component\Console\Helper\Table;
-use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputDefinition;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
@@ -23,7 +24,6 @@ use Symfony\Component\Finder\Finder;
 
 class TranscodeVideosCommand extends Command
 {
-
     /**
      * @var VideoInfoReaderInterface
      */
@@ -49,14 +49,13 @@ class TranscodeVideosCommand extends Command
     public function __construct(VideoInfoReaderInterface $videoInfoReader, VideoAnalyzerInterface $videoAnalyzer, VideoConverterInterface $videoConverter)
     {
         $this->videoInfoReader = $videoInfoReader;
-        $this->videoAnalyzer = $videoAnalyzer;
-        $this->videoConverter = $videoConverter;
+        $this->videoAnalyzer   = $videoAnalyzer;
+        $this->videoConverter  = $videoConverter;
         parent::__construct();
     }
 
-
     /**
-     * Configures the command
+     * Configures the command.
      */
     protected function configure(): void
     {
@@ -71,7 +70,7 @@ class TranscodeVideosCommand extends Command
     }
 
     /**
-     * Executes the current command
+     * Executes the current command.
      */
     protected function execute(InputInterface $input, OutputInterface $output): void
     {
@@ -80,15 +79,16 @@ class TranscodeVideosCommand extends Command
         }
         $videoPath = $input->hasOption('dir') ? $input->getOption('dir') : '';
         if (!is_string($videoPath) || !is_dir($videoPath)) {
-            throw new \Exception(sprintf("Video dir %s does not exists",
+            throw new \Exception(sprintf(
+                'Video dir %s does not exists',
                 is_string($videoPath) ? $videoPath : ''
             ));
         }
 
-        $convertVP9 = true;
+        $convertVP9  = true;
         $convertH264 = true;
 
-        $output->writeln("Getting information");
+        $output->writeln('Getting information');
 
         // Get the videos in path
 
@@ -124,7 +124,7 @@ class TranscodeVideosCommand extends Command
 
             $rows[] = [
                 $video->getBasename(),
-                sprintf("%sx%s", $info->getWidth(), $info->getHeight()),
+                sprintf('%sx%s', $info->getWidth(), $info->getHeight()),
                 $info->getDuration(),
                 $info->getBitrate(),
                 $info->getVideoStreamInfo()['codec_name'],
@@ -165,7 +165,6 @@ class TranscodeVideosCommand extends Command
                     $extraParams
                 );
 
-
                 /*
                 $this->convertVP9Multipass(
                     $videoFile,
@@ -175,10 +174,8 @@ class TranscodeVideosCommand extends Command
                 sleep(60);
             }
 
-
-
             // H264 conversion
-            $h264Output =  sprintf(
+            $h264Output = sprintf(
                 '%s/%s%s',
                 $outputPath,
                 basename($videoFile, pathinfo($videoFile, PATHINFO_EXTENSION)),
@@ -193,8 +190,6 @@ class TranscodeVideosCommand extends Command
                 );
                 sleep(60);
             }
-
-
 
             $progressBar->advance();
         }
@@ -235,11 +230,11 @@ class TranscodeVideosCommand extends Command
 
     /**
      * @param string $videoPath
+     *
      * @return array<\SplFileInfo>
      */
     public function getVideoFiles(string $videoPath): array
     {
-
         $files = (new Finder())->files()
             ->in($videoPath)
             ->name(sprintf(
@@ -263,7 +258,6 @@ class TranscodeVideosCommand extends Command
 
     public function convertH264(string $input, string $output, VideoConvertParamsInterface $extraParams): void
     {
-
         $params = $this->getH264PresetParams(4);
         $params = $params->withConvertParams($extraParams);
 
@@ -277,7 +271,7 @@ class TranscodeVideosCommand extends Command
 
         if (!file_exists($tmpOutput)) {
             throw new \Exception(sprintf(
-                "Temp file %s does not exists",
+                'Temp file %s does not exists',
                 $tmpOutput
             ));
         }
@@ -287,7 +281,6 @@ class TranscodeVideosCommand extends Command
 
     public function getH264PresetParams(int $threads): VideoConvertParams
     {
-
         return (new VideoConvertParams())
             ->withVideoCodec('h264')
             ->withAudioCodec('aac')
@@ -299,10 +292,8 @@ class TranscodeVideosCommand extends Command
             ->withOutputFormat('mp4');
     }
 
-
     public function convertVP9SinglePass(string $input, string $output, VideoConvertParamsInterface $extraParams): void
     {
-
         $params = (new VideoConvertParams())
             ->withVideoCodec('libvpx-vp9')
             ->withVideoBitrate('850k')
@@ -330,7 +321,7 @@ class TranscodeVideosCommand extends Command
 
         if (!file_exists($tmpOutput)) {
             throw new \Exception(sprintf(
-                "Temp file %s does not exists",
+                'Temp file %s does not exists',
                 $tmpOutput
             ));
         }
@@ -340,19 +331,16 @@ class TranscodeVideosCommand extends Command
 
     public function convertVP9Multipass(string $input, string $output, VideoConvertParamsInterface $extraParams): void
     {
-
         /**
-        /opt/ffmpeg/ffmpeg -i '/web/material-for-the-spine/latest_sources/goldberg.mov' -vf yadif,hqdn3d -b:v 1024k \
-        -minrate 512k -maxrate 1485k -tile-columns 2 -g 240 -threads 8 \
-        -quality good -crf 32 -c:v libvpx-vp9 -an \
-        -pass 1 -passlogfile /tmp/ffmpeg-passlog-goldberg.log -speed 4 -f webm -y /dev/null && \
-        /opt/ffmpeg/ffmpeg -i '/web/material-for-the-spine/latest_sources/goldberg.mov' -vf yadif,hqdn3d -b:v 1024k \
-        -minrate 512k -maxrate 1485k -tile-columns 2 -g 240 -threads 8 \
-        -quality good -crf 32 -auto-alt-ref 1 -lag-in-frames 25 -c:v libvpx-vp9 -c:a libopus \
-        -pass 2 -passlogfile /tmp/ffmpeg-passlog-goldberg.log -speed 2 -y /tmp/goldberg.multipass.new.webm
+         * /opt/ffmpeg/ffmpeg -i '/web/material-for-the-spine/latest_sources/goldberg.mov' -vf yadif,hqdn3d -b:v 1024k \
+         * -minrate 512k -maxrate 1485k -tile-columns 2 -g 240 -threads 8 \
+         * -quality good -crf 32 -c:v libvpx-vp9 -an \
+         * -pass 1 -passlogfile /tmp/ffmpeg-passlog-goldberg.log -speed 4 -f webm -y /dev/null && \
+         * /opt/ffmpeg/ffmpeg -i '/web/material-for-the-spine/latest_sources/goldberg.mov' -vf yadif,hqdn3d -b:v 1024k \
+         * -minrate 512k -maxrate 1485k -tile-columns 2 -g 240 -threads 8 \
+         * -quality good -crf 32 -auto-alt-ref 1 -lag-in-frames 25 -c:v libvpx-vp9 -c:a libopus \
+         * -pass 2 -passlogfile /tmp/ffmpeg-passlog-goldberg.log -speed 2 -y /tmp/goldberg.multipass.new.webm
          */
-
-
         $logFile = tempnam(sys_get_temp_dir(), 'ffmpeg-log');
 
         $firstPassParams = (new VideoConvertParams())
@@ -413,7 +401,7 @@ class TranscodeVideosCommand extends Command
 
         if (!file_exists($tmpOutput)) {
             throw new \Exception(sprintf(
-                "Temp file %s does not exists",
+                'Temp file %s does not exists',
                 $tmpOutput
             ));
         }

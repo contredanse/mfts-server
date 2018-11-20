@@ -1,7 +1,9 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace App\Exception;
 
 class ConfigException extends \RuntimeException
 {
-};
+}

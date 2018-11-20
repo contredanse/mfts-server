@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace App\Security;
 
@@ -11,7 +13,7 @@ class ContredanseUserProviderFactory
     /**
      * @throws ConfigException
      */
-    function __invoke(ContainerInterface $container): ContredanseUserProvider
+    public function __invoke(ContainerInterface $container): ContredanseUserProvider
     {
         $config = $container->get('config')['contredanse'] ?? null;
         if ($config === null) {
@@ -28,12 +30,13 @@ class ContredanseUserProviderFactory
 
     /**
      * @param string[] $config
+     *
      * @throws ConnectionException
      */
-    function getPdoConnection(array $config): \PDO
+    public function getPdoConnection(array $config): \PDO
     {
         $dsn = $config['dsn'];
-		/** @var string[] $options */
+        /** @var string[] $options */
         $options = $config['driver_options'] ?? null;
         try {
             $pdo = new \PDO($dsn, $config['username'], $config['password'], $options);
@@ -43,6 +46,7 @@ class ContredanseUserProviderFactory
                 $e->getMessage()
             ));
         }
+
         return $pdo;
     }
 }

@@ -18,11 +18,12 @@ class ContredanseUserProviderTest extends TestCase
 
     protected function setUp(): void
     {
-        $container = ContainerFactory::getContainer();
+        $container      = ContainerFactory::getContainer();
         $this->provider = (new ContredanseUserProviderFactory())($container);
     }
 
-    public function testGetAllUsers(): void {
+    public function testGetAllUsers(): void
+    {
         $users = $this->provider->getAllUsers();
         self::assertInternalType('array', $users);
     }

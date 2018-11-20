@@ -1,11 +1,11 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace App\Command;
 
-use App\Util\MenuConvert;
 use Psr\Container\ContainerInterface;
 use Soluble\MediaTools\Video\VideoInfoReaderInterface;
-use Soluble\MediaTools\Video\VideoThumbGenerator;
 use Soluble\MediaTools\Video\VideoThumbGeneratorInterface;
 
 class GenerateVideoCoversCommandFactory

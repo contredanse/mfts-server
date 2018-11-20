@@ -5,20 +5,19 @@ declare(strict_types=1);
 namespace App;
 
 /**
- * The configuration provider for the App module
+ * The configuration provider for the App module.
  *
  * @see https://docs.zendframework.com/zend-component-installer/
  */
 class ConfigProvider
 {
     /**
-     * Returns the configuration array
+     * Returns the configuration array.
      *
      * To add a bit of a structure, each section is defined in a separate
      * method which returns an array with its configuration.
-     *
      */
-    public function __invoke() : array
+    public function __invoke(): array
     {
         return [
             'dependencies' => $this->getDependencies(),
@@ -27,17 +26,17 @@ class ConfigProvider
     }
 
     /**
-     * Returns the container dependencies
+     * Returns the container dependencies.
      */
-    public function getDependencies() : array
+    public function getDependencies(): array
     {
         return [
             'invokables' => [
                 Handler\PingHandler::class => Handler\PingHandler::class,
             ],
             'factories'  => [
-                Handler\HomePageHandler::class => Handler\HomePageHandlerFactory::class,
-                Handler\AuthTokenHandler::class => Handler\AuthTokenHandlerFactory::class,
+                Handler\HomePageHandler::class          => Handler\HomePageHandlerFactory::class,
+                Handler\AuthTokenHandler::class         => Handler\AuthTokenHandlerFactory::class,
                 Security\ContredanseUserProvider::class => Security\ContredanseUserProviderFactory::class,
 
                 // Token Service
@@ -50,9 +49,9 @@ class ConfigProvider
     }
 
     /**
-     * Returns the templates configuration
+     * Returns the templates configuration.
      */
-    public function getTemplates() : array
+    public function getTemplates(): array
     {
         return [
             'paths' => [

@@ -9,14 +9,11 @@ use PHPUnit\Framework\TestCase;
 use Prophecy\Argument;
 use Psr\Http\Message\ServerRequestInterface;
 use Zend\Diactoros\Response\HtmlResponse;
-use Zend\Diactoros\Response\JsonResponse;
-use Zend\Expressive\Router\RouterInterface;
-use Zend\Expressive\Template\TemplateRendererInterface;
 use Zend\Expressive\Twig\TwigRenderer;
 
 class HomePageHandlerTest extends TestCase
 {
-    /** @var \Prophecy\Prophecy\ObjectProphecy & TwigRenderer  */
+    /** @var \Prophecy\Prophecy\ObjectProphecy & TwigRenderer */
     protected $template;
 
     protected function setUp(): void

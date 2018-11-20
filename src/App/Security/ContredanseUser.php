@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace App\Security;
 
@@ -6,24 +8,22 @@ use Zend\Expressive\Authentication\UserInterface;
 
 class ContredanseUser implements UserInterface
 {
-
     private $identity;
     private $details;
     private $roles;
-
 
     /**
      * @param string[] $roles
      * @param string[] $details
      */
-    function __construct(string $identity, array $roles = [], array $details = [])
+    public function __construct(string $identity, array $roles = [], array $details = [])
     {
         $this->identity = $identity;
-        $this->details = $details;
-        $this->roles = $roles;
+        $this->details  = $details;
+        $this->roles    = $roles;
     }
 
-    public function getIdentity() : string
+    public function getIdentity(): string
     {
         return $this->identity;
     }
@@ -31,7 +31,7 @@ class ContredanseUser implements UserInterface
     /**
      * @return string[]
      */
-    public function getRoles() : array
+    public function getRoles(): array
     {
         return $this->roles;
     }
@@ -44,7 +44,7 @@ class ContredanseUser implements UserInterface
     /**
      * Get all additional user details, if any.
      */
-    public function getDetails() : array
+    public function getDetails(): array
     {
         return $this->details;
     }

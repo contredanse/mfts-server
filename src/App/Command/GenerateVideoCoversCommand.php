@@ -1,15 +1,15 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace App\Command;
 
 use Soluble\MediaTools\Video\Filter\NlmeansVideoFilter;
-use Soluble\MediaTools\Video\Filter\ScaleFilter;
 use Soluble\MediaTools\Video\SeekTime;
 use Soluble\MediaTools\Video\VideoInfoReaderInterface;
 use Soluble\MediaTools\Video\VideoThumbGeneratorInterface;
 use Soluble\MediaTools\Video\VideoThumbParams;
 use Symfony\Component\Console\Command\Command;
-use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputDefinition;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
@@ -18,7 +18,6 @@ use Symfony\Component\Finder\Finder;
 
 class GenerateVideoCoversCommand extends Command
 {
-
     /**
      * @var VideoThumbGeneratorInterface
      */
@@ -36,17 +35,15 @@ class GenerateVideoCoversCommand extends Command
         'webm', 'mov', 'mkv'
     ];
 
-
     public function __construct(VideoThumbGeneratorInterface $thumbGenerator, VideoInfoReaderInterface $infoReader)
     {
         $this->thumbGenerator = $thumbGenerator;
-        $this->infoReader = $infoReader;
+        $this->infoReader     = $infoReader;
         parent::__construct();
     }
 
-
     /**
-     * Configures the command
+     * Configures the command.
      */
     protected function configure(): void
     {
@@ -61,7 +58,7 @@ class GenerateVideoCoversCommand extends Command
     }
 
     /**
-     * Executes the current command
+     * Executes the current command.
      */
     protected function execute(InputInterface $input, OutputInterface $output): void
     {
@@ -70,14 +67,14 @@ class GenerateVideoCoversCommand extends Command
         }
         $videoPath = $input->hasOption('dir') ? $input->getOption('dir') : '';
         if (!is_string($videoPath) || !is_dir($videoPath)) {
-            throw new \Exception(sprintf("Video dir %s does not exists",
+            throw new \Exception(sprintf(
+                'Video dir %s does not exists',
                 is_string($videoPath) ? $videoPath : ''
             ));
         }
 
-        $output->writeln("Processing covers...");
+        $output->writeln('Processing covers...');
         $output->writeln('');
-
 
         $extraCoversPath = $videoPath . '/covers';
         if (!is_dir($extraCoversPath)) {
@@ -112,13 +109,11 @@ class GenerateVideoCoversCommand extends Command
             $output->writeln($video);
         }
 
-
         $output->writeln("\nFinished");
     }
 
-    public function makeCover(string $videoFile, string $outputFile, ?SeekTime $seekTime = null):void
+    public function makeCover(string $videoFile, string $outputFile, ?SeekTime $seekTime = null): void
     {
-
         if ($seekTime !== null) {
             $videoInfo = $this->infoReader->getInfo($videoFile);
 
@@ -137,13 +132,12 @@ class GenerateVideoCoversCommand extends Command
 
     public function makeCovers(string $videoFile, string $outputPath, string $format, int $numberOfThumbs): void
     {
-
         $videoInfo = $this->infoReader->getInfo($videoFile);
-        $duration = $videoInfo->getDuration();
+        $duration  = $videoInfo->getDuration();
 
         $videoBaseName = basename($videoFile, '.' . pathinfo($videoFile, PATHINFO_EXTENSION));
 
-        for ($i = 0; $i < $numberOfThumbs; $i++) {
+        for ($i = 0; $i < $numberOfThumbs; ++$i) {
             $outputFile = sprintf(
                 '%s/%s-%02d.%s',
                 $outputPath,
@@ -164,15 +158,13 @@ class GenerateVideoCoversCommand extends Command
         }
     }
 
-
-
     /**
      * @param string $videoPath
+     *
      * @return string[]
      */
     public function getVideoFiles(string $videoPath): array
     {
-
         $files = (new Finder())->files()
             ->in($videoPath)
             ->name(sprintf(

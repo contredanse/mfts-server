@@ -6,3 +6,4 @@ coveralls-upload.json
 vendor/
 *.log
 .env
+*.cache

@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace App\Service;
 
@@ -9,22 +11,20 @@ use Ramsey\Uuid\Uuid;
 
 class TokenManager
 {
-
     private $signer;
     private $issuer;
     private $audience;
     private $privateKey;
 
-    function __construct(string $privateKey)
+    public function __construct(string $privateKey)
     {
-
-        $this->signer = new Sha256();
-        $this->issuer = $_SERVER['SERVER_NAME'];
-        $this->audience = $_SERVER['SERVER_NAME'];
+        $this->signer     = new Sha256();
+        $this->issuer     = $_SERVER['SERVER_NAME'];
+        $this->audience   = $_SERVER['SERVER_NAME'];
         $this->privateKey = $privateKey;
     }
 
-    function createNewToken(array $customClaims = [], int $expiration = 3600, bool $autoSign = true): Token
+    public function createNewToken(array $customClaims = [], int $expiration = 3600, bool $autoSign = true): Token
     {
         $builder = (new Builder())
             ->setIssuer($this->issuer) // Configures the issuer (iss claim)
@@ -41,10 +41,11 @@ class TokenManager
         if ($autoSign) {
             return $this->signToken($builder);
         }
+
         return $builder->getToken();
     }
 
-    function signToken(Builder $builder): Token
+    public function signToken(Builder $builder): Token
     {
         return $builder->sign($this->signer, $this->privateKey)
             ->getToken(); // Retrieves the generated token

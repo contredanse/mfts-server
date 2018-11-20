@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace App\Security;
 
@@ -11,12 +13,12 @@ class ContredanseUserProvider implements UserProviderInterface
      */
     private $adapter;
 
-    function __construct(\PDO $adapter)
+    public function __construct(\PDO $adapter)
     {
         $this->adapter = $adapter;
     }
 
-    function getUserByEmail(string $email): ?UserInterface
+    public function getUserByEmail(string $email): ?UserInterface
     {
         $sql = sprintf(
             "%s\n%s",
@@ -41,20 +43,21 @@ class ContredanseUserProvider implements UserProviderInterface
     }
 
     /**
-     * Return all users
+     * Return all users.
+     *
      * @return array|false
      */
     public function getAllUsers()
     {
-        $sql = $this->getBaseSql();
+        $sql  = $this->getBaseSql();
         $stmt = $this->adapter->prepare(
             $sql,
             [\PDO::ATTR_CURSOR => \PDO::CURSOR_FWDONLY]
         );
         $stmt->execute();
+
         return $stmt->fetchAll(\PDO::FETCH_ASSOC);
     }
-
 
     private function getBaseSql(): string
     {
@@ -74,6 +77,7 @@ class ContredanseUserProvider implements UserProviderInterface
                   from `usr_login` as `l` inner join `sujet` as `s` 
                   on `s`.`suj_id` = `l`.`suj_id`  
                ';
+
         return $sql;
     }
 }

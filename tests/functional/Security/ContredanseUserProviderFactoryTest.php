@@ -21,24 +21,27 @@ class ContredanseUserProviderFactoryTest extends TestCase
         $this->container = $this->prophesize(ContainerInterface::class);
     }
 
-    public function testShouldWorkWithRegisteredContainer(): void {
-        $container = ContainerFactory::getContainer();
+    public function testShouldWorkWithRegisteredContainer(): void
+    {
+        $container    = ContainerFactory::getContainer();
         $userProvider = (new ContredanseUserProviderFactory())($container);
         self::assertNotNull($userProvider);
     }
 
-    public function testMustThrowConfigException(): void {
+    public function testMustThrowConfigException(): void
+    {
         self::expectException(ConfigException::class);
         (new ContredanseUserProviderFactory())($this->container->reveal());
     }
 
-    public function testMustThrowConnectionException(): void {
+    public function testMustThrowConnectionException(): void
+    {
         self::expectException(ConnectionException::class);
         $this->container->get('config')
             ->willReturn([
                 'contredanse' => [
                     'db' => [
-                        'dsn' => 'mysql:host=localhost;dbname=mfts-db;port=3306',
+                        'dsn'      => 'mysql:host=localhost;dbname=mfts-db;port=3306',
                         'username' => 'cool',
                         'password' => 'invalid'
                      ]
@@ -48,5 +51,4 @@ class ContredanseUserProviderFactoryTest extends TestCase
         (new ContredanseUserProviderFactory())($this->
         container->reveal());
     }
-
 }

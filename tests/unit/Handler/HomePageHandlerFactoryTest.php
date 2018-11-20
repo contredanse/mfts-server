@@ -4,12 +4,10 @@ declare(strict_types=1);
 
 namespace AppTest\Handler;
 
-use App\Handler\HomePageHandlerFactory;
 use App\Handler\HomePageHandler;
+use App\Handler\HomePageHandlerFactory;
 use PHPUnit\Framework\TestCase;
 use Psr\Container\ContainerInterface;
-use Zend\Expressive\Router\RouterInterface;
-use Zend\Expressive\Template\TemplateRendererInterface;
 use Zend\Expressive\Twig\TwigRenderer;
 
 class HomePageHandlerFactoryTest extends TestCase
