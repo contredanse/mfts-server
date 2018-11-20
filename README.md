@@ -1,6 +1,17 @@
 # contredanse/mfts-server
 
-Backend server for materforthespine application. 
+[![PHP 7.1+](https://img.shields.io/badge/php-7.1+-ff69b4.svg)](https://packagist.org/packages/soluble/mediatools)
+[![Build Status](https://travis-ci.org/contredanse/mfts-server.svg?branch=master)](https://travis-ci.org/contredanse/mfts-server)
+
+Backend server for materforthespine application.
+
+``` 
+           _           _     _    ___            _   _                  _         
+ _____ ___| |_ ___ ___|_|___| |  |  _|___ ___   | |_| |_ ___    ___ ___|_|___ ___ 
+|     | .'|  _| -_|  _| | .'| |  |  _| . |  _|  |  _|   | -_|  |_ -| . | |   | -_|
+|_|_|_|__,|_| |___|_| |_|__,|_|  |_| |___|_|    |_| |_|_|___|  |___|  _|_|_|_|___|
+                                                                   |_|            
+```    
 
 ## Installation
 
