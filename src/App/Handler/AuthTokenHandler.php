@@ -5,9 +5,9 @@ declare(strict_types=1);
 namespace App\Handler;
 
 use App\Security\UserProviderInterface;
+use App\Service\Exception\InvalidTokenException;
 use App\Service\TokenManager;
 use Fig\Http\Message\StatusCodeInterface;
-use Lcobucci\JWT\Parser;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\RequestHandlerInterface;
@@ -54,14 +54,33 @@ class AuthTokenHandler implements RequestHandlerInterface
         $body        = $request->getParsedBody();
         $tokenString = $body['token'] ?? '';
 
-        $tokenParser = new Parser();
         try {
-            $token = $tokenParser->parse($tokenString);
-        } catch (\Throwable $invalidToken) {
-            throw new \RuntimeException('Cannot parse the JWT token', 1, $invalidToken);
+            $token = $this->tokenManager->parseToken($tokenString);
+        } catch (InvalidTokenException $e) {
+            return new JsonResponse([
+                'success' => false,
+                'reason'  => $e->getMessage()
+            ]);
         }
 
-        //$token->validate()
+        if (!$this->tokenManager->verifySignature($token)) {
+            return new JsonResponse([
+                'success' => false,
+                'reason'  => 'Signature invalid,'
+            ]);
+        }
+
+        if (!$this->tokenManager->isExpired($token)) {
+            return new JsonResponse([
+                'success' => false,
+                'reason'  => 'Token expired'
+            ]);
+        }
+
+        return new JsonResponse([
+            'success' => true,
+            'data'    => $token->getClaims()
+        ]);
     }
 
     public function loginAction(ServerRequestInterface $request): ResponseInterface

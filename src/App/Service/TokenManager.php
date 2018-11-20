@@ -4,7 +4,9 @@ declare(strict_types=1);
 
 namespace App\Service;
 
+use App\Service\Exception\InvalidTokenException;
 use Lcobucci\JWT\Builder;
+use Lcobucci\JWT\Parser;
 use Lcobucci\JWT\Signer\Hmac\Sha256;
 use Lcobucci\JWT\Token;
 use Ramsey\Uuid\Uuid;
@@ -49,5 +51,28 @@ class TokenManager
     {
         return $builder->sign($this->signer, $this->privateKey)
             ->getToken(); // Retrieves the generated token
+    }
+
+    /**
+     * @throws InvalidTokenException
+     */
+    public function parseToken(string $token): Token
+    {
+        $tokenParser = new Parser();
+        try {
+            return $tokenParser->parse($token);
+        } catch (\Throwable $e) {
+            throw new InvalidTokenException($e->getMessage());
+        }
+    }
+
+    public function verifySignature(Token $token): bool
+    {
+        return $token->verify($this->signer, $this->privateKey);
+    }
+
+    public function isExpired(Token $token): bool
+    {
+        return $token->isExpired();
     }
 }
