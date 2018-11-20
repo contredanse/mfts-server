@@ -54,6 +54,7 @@
         "phpstan/phpstan": "^0.10",
         "phpstan/phpstan-phpunit": "^0.10",
         "spatie/array-to-xml": "^2.7",
+        "sebastianfeldmann/captainhook": "^2.1",
         "zendframework/zend-expressive-tooling": "^1.0",
         "zfcampus/zf-development-mode": "^3.1"
     },
@@ -82,6 +83,7 @@
         }
     },
     "scripts": {
+        "post-install-cmd": "\\SebastianFeldmann\\CaptainHook\\Composer\\Cmd::install",
         "development-disable": "zf-development-mode disable",
         "development-enable": "zf-development-mode enable",
         "development-status": "zf-development-mode status",

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8e6eedd749eac190ce239bf064cd785e",
+    "content-hash": "e7c6f8c963c81313dcaf28de475ba5f0",
     "packages": [
         {
             "name": "cocur/slugify",
@@ -5753,6 +5753,153 @@
             "description": "Library that helps with managing the version number of Git-hosted PHP projects",
             "homepage": "https://github.com/sebastianbergmann/version",
             "time": "2016-10-03T07:35:21+00:00"
+        },
+        {
+            "name": "sebastianfeldmann/captainhook",
+            "version": "2.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sebastianfeldmann/captainhook.git",
+                "reference": "8b391a4c0704fcf8e3f5f5477378fc5629db9ba0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sebastianfeldmann/captainhook/zipball/8b391a4c0704fcf8e3f5f5477378fc5629db9ba0",
+                "reference": "8b391a4c0704fcf8e3f5f5477378fc5629db9ba0",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "ext-spl": "*",
+                "php": ">=7.0.0",
+                "sebastianfeldmann/cli": "^2.1",
+                "sebastianfeldmann/git": "^1.0.7",
+                "symfony/console": ">=2.7"
+            },
+            "require-dev": {
+                "composer/composer": "~1",
+                "phpunit/phpunit": "^6.5"
+            },
+            "suggest": {
+                "your git hooks": "run 'vendor/bin/captainhook configure' to set up your hook configuration"
+            },
+            "bin": [
+                "captainhook"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.9.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "SebastianFeldmann\\CaptainHook\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastian Feldmann",
+                    "email": "sf@sebastian-feldmann.info"
+                }
+            ],
+            "description": "PHP git hook manager",
+            "homepage": "https://github.com/sebastianfeldmann/captainhook",
+            "keywords": [
+                "commit-msg",
+                "git",
+                "hooks",
+                "pre-commit",
+                "pre-push"
+            ],
+            "time": "2018-11-09T16:29:14+00:00"
+        },
+        {
+            "name": "sebastianfeldmann/cli",
+            "version": "2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sebastianfeldmann/cli.git",
+                "reference": "3645f84732a593e496b8c2d76d10517150912c87"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sebastianfeldmann/cli/zipball/3645f84732a593e496b8c2d76d10517150912c87",
+                "reference": "3645f84732a593e496b8c2d76d10517150912c87",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "SebastianFeldmann\\Cli\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastian Feldmann",
+                    "email": "sf@sebastian-feldmann.info"
+                }
+            ],
+            "description": "PHP cli helper classes",
+            "homepage": "https://github.com/sebastianfeldmann/cli",
+            "keywords": [
+                "cli"
+            ],
+            "time": "2017-12-01T10:25:42+00:00"
+        },
+        {
+            "name": "sebastianfeldmann/git",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sebastianfeldmann/git.git",
+                "reference": "cbda810d8e1a6b7b608011d5587cc2086e2825ad"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sebastianfeldmann/git/zipball/cbda810d8e1a6b7b608011d5587cc2086e2825ad",
+                "reference": "cbda810d8e1a6b7b608011d5587cc2086e2825ad",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0.0",
+                "sebastianfeldmann/cli": "^2.0.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.9.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "SebastianFeldmann\\Git\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastian Feldmann",
+                    "email": "sf@sebastian-feldmann.info"
+                }
+            ],
+            "description": "PHP git wrapper",
+            "homepage": "https://github.com/sebastianfeldmann/git",
+            "keywords": [
+                "git"
+            ],
+            "time": "2018-08-15T11:30:38+00:00"
         },
         {
             "name": "symfony/event-dispatcher",
