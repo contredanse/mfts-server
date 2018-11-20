@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace App\Security;
 
@@ -6,6 +8,7 @@ use Zend\Expressive\Authentication\UserInterface;
 
 interface UserProviderInterface
 {
-    function getAllUsers();
-    function getUserByEmail(string $email): ?UserInterface;
+    public function getAllUsers();
+
+    public function getUserByEmail(string $email): ?UserInterface;
 }
