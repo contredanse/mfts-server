@@ -50,7 +50,7 @@ class ContredanseUserProvider implements UserProviderInterface
         }
 
         return new ContredanseUser(
-            $rows[0]['email'],
+            $rows[0]['user_id'],
             explode(' ', $rows[0]['role'] ?? ''),
             $rows[0]
         );
