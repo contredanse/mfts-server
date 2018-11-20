@@ -2,7 +2,7 @@
 composer.phar
 clover.xml
 coveralls-upload.json
-phpunit.xml
+./phpunit.xml
 vendor/
 *.log
 .env

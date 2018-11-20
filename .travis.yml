@@ -1,0 +1,45 @@
+language: php
+sudo: required
+
+cache:
+    directories:
+        - vendor
+        - $HOME/.composer/cache
+
+before_install:
+  - |
+    if [ "x$XDEBUG" != "xyes" ]; then
+      mv ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/xdebug.ini{,.disabled} || true
+    fi
+
+install:
+  - |
+    if [ "x$IGNORE_PLATFORM_REQS" != "xyes" ]; then
+      travis_retry composer -n update --prefer-dist --no-interaction
+    else
+      travis_retry composer -n update --prefer-dist --no-interaction --ignore-platform-reqs
+    fi
+
+jobs:
+  allow_failures:
+    - php: nightly
+
+  include:
+    - stage: Tests and Coverage (PHP 7.2)
+      php: 7.2
+      env: XDEBUG=yes
+      script:
+        - ./vendor/bin/phpunit -v -c .travis/phpunit.xml --coverage-clover=coverage.xml
+        - wget https://scrutinizer-ci.com/ocular.phar
+        - php ocular.phar code-coverage:upload --format=php-clover coverage.xml
+        - bash <(curl -s https://codecov.io/bash)
+    - stage: PHPStan and Code style
+      php: 7.2
+      script:
+        - composer phpstan
+        - composer cs-check
+    - stage: Test PHP Nightly (unit tests only)
+      php: nightly
+      env: IGNORE_PLATFORM_REQS=yes
+      script:
+        - ./vendor/bin/phpunit --testsuite unit -v -c .travis/phpunit.xml
