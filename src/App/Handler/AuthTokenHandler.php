@@ -70,7 +70,7 @@ class AuthTokenHandler implements RequestHandlerInterface
             ]);
         }
 
-        if (!$this->tokenManager->isExpired($token)) {
+        if ($this->tokenManager->isExpired($token)) {
             return new JsonResponse([
                 'success' => false,
                 'reason'  => 'Token expired'
