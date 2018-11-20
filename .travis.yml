@@ -25,12 +25,12 @@ jobs:
     - php: nightly
 
   include:
-    - stage: Tests and Coverage (PHP 7.2)
-      php: 7.2
+    - stage: Tests and Coverage (PHP 7.1)
+      php: 7.1
       env: XDEBUG=yes
       script:
         - cp .env.example .env
-        - ./vendor/bin/phpunit -v -c .travis/phpunit.xml --coverage-clover=coverage.xml
+        - ./vendor/bin/phpunit --testsuite unit -v -c .travis/phpunit.xml --coverage-clover=coverage.xml
         - wget https://scrutinizer-ci.com/ocular.phar
         - php ocular.phar code-coverage:upload --format=php-clover coverage.xml
         - bash <(curl -s https://codecov.io/bash)
