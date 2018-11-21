@@ -107,7 +107,7 @@ class ApiAuthTokenHandler implements RequestHandlerInterface
                     return (new JsonResponse([
                         'access_token' => (string) $token,
                         'token_type'   => 'api_auth',
-						'success' => true,
+                        'success'      => true,
                     ]))->withStatus(StatusCodeInterface::STATUS_OK);
                 }
             }
