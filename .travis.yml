@@ -23,8 +23,6 @@ install:
 jobs:
   allow_failures:
     - php: nightly
-    - stage: Code style
-
   include:
     - stage: Tests and Coverage (PHP 7.2)
       php: 7.2
@@ -39,9 +37,6 @@ jobs:
       php: 7.2
       script:
         - composer phpstan
-    - stage: Code style
-      php: 7.2
-      script:
         - composer cs-fix
     - stage: Test PHP Nightly (unit tests only)
       php: nightly
