@@ -64,9 +64,9 @@ class ApiAuthTokenHandler implements RequestHandlerInterface
             return (new JsonResponse([
                 'valid' => true,
                 'data'  => [
-                    'user_id'    => $token->getClaim('user_id'),
-                    'expires_at' => $token->getClaim('exp'),
-					'remaining_time' => $token->getClaim('exp') - time(),
+                    'user_id'        => $token->getClaim('user_id'),
+                    'expires_at'     => $token->getClaim('exp'),
+                    'remaining_time' => $token->getClaim('exp') - time(),
                 ]
             ]))->withStatus(StatusCodeInterface::STATUS_OK);
         } catch (TokenValidationExceptionInterface $e) {
@@ -104,10 +104,11 @@ class ApiAuthTokenHandler implements RequestHandlerInterface
                         'email'    => $email
                     ], 3600);
 
-                    return new JsonResponse([
+                    return (new JsonResponse([
                         'access_token' => (string) $token,
                         'token_type'   => 'api_auth',
-                    ]);
+						'success' => true,
+                    ]))->withStatus(StatusCodeInterface::STATUS_OK);
                 }
             }
 
