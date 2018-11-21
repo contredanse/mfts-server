@@ -8,8 +8,17 @@ use Zend\Expressive\Authentication\UserInterface;
 
 class ContredanseUser implements UserInterface
 {
+	/**
+	 * @var string
+	 */
     private $identity;
+	/**
+	 * @var array|string[]
+	 */
     private $details;
+	/**
+	 * @var array|string[]
+	 */
     private $roles;
 
     /**
@@ -36,6 +45,10 @@ class ContredanseUser implements UserInterface
         return $this->roles;
     }
 
+	/**
+	 * @param mixed $default
+	 * @return mixed|null|string
+	 */
     public function getDetail(string $name, $default = null)
     {
         return $this->details[$name] ?? $default;

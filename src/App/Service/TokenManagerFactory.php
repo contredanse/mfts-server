@@ -15,10 +15,20 @@ class TokenManagerFactory
         if ($config === null) {
             throw new ConfigException("['token_manager'] config key is missing.");
         }
-        if (mb_strlen($config['privateKey'] ?? '') < 32) {
-            throw new ConfigException("['tokenManager']['privateKey'] config key is must be at least 32 chars long.");
+        if (mb_strlen($config['private_key'] ?: '') < 32) {
+            throw new ConfigException("['tokenManager']['private_key'] config key is must be at least 32 chars long.");
         }
 
-        return new TokenManager($config['privateKey']);
+        $defaultExpiry = TokenManager::DEFAULT_EXPIRY;
+
+		if (isset($config['default_expiry']) && (
+				!is_numeric($config['default_expiry']) || $config['default_expiry'] < 0)) {
+			throw new ConfigException("['tokenManager']['default_expiry'] must be numeric > 0");
+		} else {
+			$defaultExpiry = (int) $config['default_expiry'];
+		}
+
+
+        return new TokenManager($config['private_key'], $defaultExpiry);
     }
 }

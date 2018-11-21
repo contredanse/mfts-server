@@ -43,7 +43,7 @@ class ApiContredanseProfileHandler implements RequestHandlerInterface
             ]))->withStatus(StatusCodeInterface::STATUS_INTERNAL_SERVER_ERROR);
         }
 
-        $user_id = $token->getClaim('user_id');
+        $user_id = $token->getClaim('user_id', '');
 
         try {
             $userData = $this->userProvider->findUser($user_id);

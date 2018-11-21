@@ -13,7 +13,7 @@ class ContredanseUserProviderFactory
     /**
      * @throws ConfigException
      */
-    public function __invoke(ContainerInterface $container): ContredanseUserProvider
+    public function __invoke(ContainerInterface $container): UserProviderInterface
     {
         $config = $container->get('config')['contredanse'] ?? null;
         if ($config === null) {

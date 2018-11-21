@@ -6,6 +6,7 @@ namespace AppTest\Functional\Security;
 
 use App\Exception\ConfigException;
 use App\Exception\ConnectionException;
+use App\Security\ContredanseUserProvider;
 use App\Security\ContredanseUserProviderFactory;
 use AppTest\Util\ContainerFactory;
 use PHPUnit\Framework\TestCase;
@@ -25,7 +26,8 @@ class ContredanseUserProviderFactoryTest extends TestCase
     {
         $container    = ContainerFactory::getContainer();
         $userProvider = (new ContredanseUserProviderFactory())($container);
-        self::assertNotNull($userProvider);
+        self::assertInstanceOf(ContredanseUserProvider::class, $userProvider);
+
     }
 
     public function testMustThrowConfigException(): void

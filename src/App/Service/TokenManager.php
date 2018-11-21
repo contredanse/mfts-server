@@ -12,24 +12,46 @@ use App\Service\Exception\TokenSignatureException;
 use App\Service\Exception\TokenValidationExceptionInterface;
 use Lcobucci\JWT\Builder;
 use Lcobucci\JWT\Parser;
+use Lcobucci\JWT\Signer\BaseSigner;
 use Lcobucci\JWT\Signer\Hmac\Sha256;
 use Lcobucci\JWT\Token;
 use Lcobucci\JWT\ValidationData;
 use Ramsey\Uuid\Uuid;
+use SebastianFeldmann\Git\Command\Base;
 
 class TokenManager
 {
+	const DEFAULT_EXPIRY = 3600;
+
+	/**
+	 * @var BaseSigner
+	 */
     private $signer;
+	/**
+	 * @var string
+	 */
     private $issuer;
+	/**
+	 * @var string
+	 */
     private $audience;
+	/**
+	 * @var string
+	 */
     private $privateKey;
 
-    public function __construct(string $privateKey)
+	/**
+	 * @var int
+	 */
+    private $defaultExpiry;
+
+    public function __construct(string $privateKey, int $defaultExpiry = self::DEFAULT_EXPIRY)
     {
-        $this->signer     = new Sha256();
+        $this->signer     = $this->getSigner();
         $this->issuer     = $_SERVER['SERVER_NAME'];
         $this->audience   = $_SERVER['SERVER_NAME'];
         $this->privateKey = $privateKey;
+        $this->defaultExpiry = $defaultExpiry;
     }
 
     public function createNewToken(array $customClaims = [], int $expiration = 3600, bool $autoSign = true): Token
@@ -141,6 +163,10 @@ class TokenManager
 
         return $token;
     }
+
+    public function getSigner(): BaseSigner {
+    	return new Sha256();
+	}
 
     public function verifySignature(Token $token): bool
     {

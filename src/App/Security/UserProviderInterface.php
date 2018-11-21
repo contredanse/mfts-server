@@ -4,13 +4,22 @@ declare(strict_types=1);
 
 namespace App\Security;
 
+use App\Security\Exception\QueryErrorException;
+use App\Security\Exception\UserNotFoundException;
 use Zend\Expressive\Authentication\UserInterface;
 
 interface UserProviderInterface
 {
-    public function getAllUsers();
+	/**
+	 * @throws QueryErrorException
+	 */
+    public function getAllUsers(): array;
 
     public function getUserByEmail(string $email): ?UserInterface;
 
-    public function findUser(string $user_id);
+	/**
+	 * @throws QueryErrorException
+	 * @throws UserNotFoundException
+	 */
+    public function findUser(string $user_id): array;
 }

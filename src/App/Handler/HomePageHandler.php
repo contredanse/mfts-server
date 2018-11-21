@@ -8,13 +8,17 @@ use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\RequestHandlerInterface;
 use Zend\Diactoros\Response\HtmlResponse;
+use Zend\Expressive\Template\TemplateRendererInterface;
 use Zend\Expressive\Twig\TwigRenderer;
 
 class HomePageHandler implements RequestHandlerInterface
 {
+	/**
+	 * @var TemplateRendererInterface
+	 */
     private $template;
 
-    public function __construct(TwigRenderer $template)
+    public function __construct(TemplateRendererInterface $template)
     {
         $this->template = $template;
     }

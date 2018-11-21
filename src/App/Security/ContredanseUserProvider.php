@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Security;
 
+use App\Security\Exception\QueryErrorException;
 use App\Security\Exception\UserNotFoundException;
 use Zend\Expressive\Authentication\UserInterface;
 
@@ -32,7 +33,7 @@ class ContredanseUserProvider implements UserProviderInterface
         );
         $stmt->execute([':email' => $email]);
         $rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
-        if (!$rows || count($rows) !== 1) {
+        if ($rows === false || count($rows) !== 1) {
             return null;
         }
 
@@ -46,9 +47,9 @@ class ContredanseUserProvider implements UserProviderInterface
     /**
      * Return all users.
      *
-     * @return array|false
+	 * @throws QueryErrorException
      */
-    public function getAllUsers()
+    public function getAllUsers(): array
     {
         $sql  = $this->getBaseSql();
         $stmt = $this->adapter->prepare(
@@ -56,16 +57,20 @@ class ContredanseUserProvider implements UserProviderInterface
             [\PDO::ATTR_CURSOR => \PDO::CURSOR_FWDONLY]
         );
         $stmt->execute();
-
-        return $stmt->fetchAll(\PDO::FETCH_ASSOC);
+        $rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
+        if ($rows === false) {
+        	throw new QueryErrorException('Cannot get users');
+		}
+		return $rows;
     }
 
     /**
      * Return a specific user.
      *
-     * @return array|false
+	 * @throws QueryErrorException
+     * @throws UserNotFoundException
      */
-    public function findUser(string $user_id)
+    public function findUser(string $user_id): array
     {
         $sql = sprintf(
             "%s\n%s",
@@ -78,13 +83,15 @@ class ContredanseUserProvider implements UserProviderInterface
         );
         $stmt->execute([':user_id' => $user_id]);
         $rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
-        if (!$rows || count($rows) !== 1) {
+        if ($rows === false) {
+			throw new QueryErrorException('Cannot find user, query error');
+		}
+        if (count($rows) !== 1) {
             throw new UserNotFoundException(sprintf(
                 'User \'%d\' not found',
                 $user_id
             ));
         }
-
         return $rows[0];
     }
 
