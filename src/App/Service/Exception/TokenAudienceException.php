@@ -6,8 +6,8 @@ namespace App\Service\Exception;
 
 class TokenAudienceException extends TokenValidationException
 {
-	public function getReason(): string
-	{
-		return 'audience';
-	}
+    public function getReason(): string
+    {
+        return 'audience';
+    }
 }

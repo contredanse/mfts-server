@@ -6,8 +6,8 @@ namespace App\Service\Exception;
 
 class TokenExpiredException extends TokenValidationException
 {
-	public function getReason(): string
-	{
-		return 'expired';
-	}
+    public function getReason(): string
+    {
+        return 'expired';
+    }
 }

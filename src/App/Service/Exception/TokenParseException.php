@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace App\Service\Exception;
 
-class TokenParseException  extends TokenValidationException
+class TokenParseException extends TokenValidationException
 {
-	public function getReason(): string
-	{
-		return 'parse';
-	}
+    public function getReason(): string
+    {
+        return 'parse';
+    }
 }

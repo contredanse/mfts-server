@@ -5,12 +5,6 @@ declare(strict_types=1);
 namespace App\Handler;
 
 use App\Security\UserProviderInterface;
-use App\Service\Exception\InvalidTokenException;
-use App\Service\Exception\TokenAudienceException;
-use App\Service\Exception\TokenExpiredException;
-use App\Service\Exception\TokenIssuerException;
-use App\Service\Exception\TokenParseException;
-use App\Service\Exception\TokenSignatureException;
 use App\Service\Exception\TokenValidationExceptionInterface;
 use App\Service\TokenManager;
 use Fig\Http\Message\StatusCodeInterface;
@@ -47,14 +41,15 @@ class AuthTokenHandler implements RequestHandlerInterface
                 return $this->validateAction($request);
             default:
                 return (new TextResponse('Not found'))
-					->withStatus(StatusCodeInterface::STATUS_NOT_FOUND);
+                    ->withStatus(StatusCodeInterface::STATUS_NOT_FOUND);
         }
     }
 
-	/**
-	 * @param ServerRequestInterface $request
-	 * @return ResponseInterface
-	 */
+    /**
+     * @param ServerRequestInterface $request
+     *
+     * @return ResponseInterface
+     */
     public function validateAction(ServerRequestInterface $request): ResponseInterface
     {
         $method = $request->getMethod();
@@ -64,24 +59,26 @@ class AuthTokenHandler implements RequestHandlerInterface
         $body        = $request->getParsedBody();
         $tokenString = $body['token'] ?? '';
         try {
-        	$token = $this->tokenManager->getValidatedToken($tokenString);
-			return (new JsonResponse([
-				'valid' => true,
-				'data' => [
-					'user_id'  => $token->getClaim('user_id'),
-				]
-			]))->withStatus(StatusCodeInterface::STATUS_OK);
-		} catch (TokenValidationExceptionInterface $e) {
-			return (new JsonResponse([
-				'valid' => false,
-				'reason' => $e->getReason(),
-			]))->withStatus($e->getStatusCode());
+            $token = $this->tokenManager->getValidatedToken($tokenString);
+
+            return (new JsonResponse([
+                'valid' => true,
+                'data'  => [
+                    'user_id'    => $token->getClaim('user_id'),
+                    'expires_at' => $token->getClaim('exp')
+                ]
+            ]))->withStatus(StatusCodeInterface::STATUS_OK);
+        } catch (TokenValidationExceptionInterface $e) {
+            return (new JsonResponse([
+                'valid'  => false,
+                'reason' => $e->getReason(),
+            ]))->withStatus($e->getStatusCode());
         } catch (\Throwable $e) {
-			return (new JsonResponse([
-				'valid' => false,
-				'reason' => "Unknown reason",
-			]))->withStatus(StatusCodeInterface::STATUS_UNAUTHORIZED);
-		}
+            return (new JsonResponse([
+                'valid'  => false,
+                'reason' => 'Unknown reason',
+            ]))->withStatus(StatusCodeInterface::STATUS_UNAUTHORIZED);
+        }
     }
 
     public function loginAction(ServerRequestInterface $request): ResponseInterface

@@ -6,6 +6,7 @@ namespace App\Service\Exception;
 
 interface TokenValidationExceptionInterface extends \Throwable
 {
-	public function getReason(): string;
-	public function getStatusCode(): int;
+    public function getReason(): string;
+
+    public function getStatusCode(): int;
 }

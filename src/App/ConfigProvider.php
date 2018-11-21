@@ -39,6 +39,9 @@ class ConfigProvider
                 Handler\AuthTokenHandler::class         => Handler\AuthTokenHandlerFactory::class,
                 Security\ContredanseUserProvider::class => Security\ContredanseUserProviderFactory::class,
 
+                // Middleware
+                Middleware\AuthTokenMiddleware::class   => Middleware\AuthTokenMiddlewareFactory::class,
+
                 // Token Service
                 Service\TokenManager::class => Service\TokenManagerFactory::class,
 

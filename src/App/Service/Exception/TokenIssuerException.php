@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace App\Service\Exception;
 
-class TokenIssuerException  extends TokenValidationException
+class TokenIssuerException extends TokenValidationException
 {
-	public function getReason(): string
-	{
-		return 'issuer';
-	}
+    public function getReason(): string
+    {
+        return 'issuer';
+    }
 }

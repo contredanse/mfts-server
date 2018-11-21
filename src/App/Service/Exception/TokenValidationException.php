@@ -6,8 +6,10 @@ namespace App\Service\Exception;
 
 abstract class TokenValidationException extends \RuntimeException implements TokenValidationExceptionInterface
 {
-	abstract public function getReason(): string;
-	public function getStatusCode(): int {
-		return 401;
-	}
+    abstract public function getReason(): string;
+
+    public function getStatusCode(): int
+    {
+        return 401;
+    }
 }

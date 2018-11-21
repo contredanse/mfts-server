@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace App\Service;
 
-use App\Service\Exception\InvalidTokenException;
 use App\Service\Exception\TokenAudienceException;
 use App\Service\Exception\TokenExpiredException;
 use App\Service\Exception\TokenIssuerException;
@@ -54,9 +53,9 @@ class TokenManager
         return $builder->getToken();
     }
 
-	/**
-	 * Sign the token
-	 */
+    /**
+     * Sign the token.
+     */
     public function signToken(Builder $builder): Token
     {
         return $builder->sign($this->signer, $this->privateKey)
@@ -76,70 +75,72 @@ class TokenManager
         }
     }
 
-	/**
-	 * Ensure that the token signature is valid and
-	 * the token have not been tampered
-	 * @throws TokenSignatureException
-	 */
-    public function ensureValidSignature(Token $token): void {
-		if (!$this->verifySignature($token)) {
-			throw new TokenSignatureException(sprintf(
-				'Token failed signature verification.'
-			));
-		}
-	}
+    /**
+     * Ensure that the token signature is valid and
+     * the token have not been tampered.
+     *
+     * @throws TokenSignatureException
+     */
+    public function ensureValidSignature(Token $token): void
+    {
+        if (!$this->verifySignature($token)) {
+            throw new TokenSignatureException(sprintf(
+                'Token failed signature verification.'
+            ));
+        }
+    }
 
+    /**
+     * @throw TokenExpiredException
+     */
+    public function ensureNotExpired(Token $token): void
+    {
+        if ($this->isExpired($token)) {
+            throw new TokenExpiredException(sprintf(
+                'Token validity has expired.'
+            ));
+        }
+    }
 
-	/**
-	 * @throw TokenExpiredException
-	 */
-	public function ensureNotExpired(Token $token): void {
-		if ($this->isExpired($token)) {
-			throw new TokenExpiredException(sprintf(
-				'Token validity has expired.'
-			));
-		}
-	}
+    /**
+     * @throws TokenValidationExceptionInterface the main one
+     * @throws TokenParseException
+     * @throws TokenExpiredException
+     * @throws TokenSignatureException
+     * @throws TokenIssuerException
+     * @throws TokenAudienceException
+     */
+    public function getValidatedToken(string $tokenString): Token
+    {
+        $token = $this->parseToken($tokenString);
 
-	/**
-	 * @throws TokenValidationExceptionInterface the main one
-	 * @throws TokenParseException
-	 * @throws TokenExpiredException
-	 * @throws TokenSignatureException
-	 * @throws TokenIssuerException
-	 * @throws TokenAudienceException
-	 */
-	public function getValidatedToken(string $tokenString): Token {
+        $this->ensureValidSignature($token);
+        $this->ensureNotExpired($token);
 
-		$token = $this->parseToken($tokenString);
+        $data = new ValidationData(); // It will use the current time to validate (iat, nbf and exp)
+        $data->setIssuer($this->issuer);
+        $data->setAudience($this->audience);
 
-		$this->ensureValidSignature($token);
-		$this->ensureNotExpired($token);
+        if ($token->hasClaim('iss')) {
+            $issuer = $token->getClaim('iss', false);
+            if ($issuer !== $this->issuer) {
+                throw new TokenIssuerException(sprintf(
+                    'Token issuer does not match'
+                ));
+            }
+        }
 
-		$data = new ValidationData(); // It will use the current time to validate (iat, nbf and exp)
-		$data->setIssuer($this->issuer);
-		$data->setAudience($this->audience);
+        if ($token->hasClaim('aud')) {
+            $issuer = $token->getClaim('aud', false);
+            if ($issuer !== $this->issuer) {
+                throw new TokenAudienceException(sprintf(
+                    'Token audience does not match'
+                ));
+            }
+        }
 
-
-		if ($token->hasClaim('iss')) {
-			$issuer = $token->getClaim('iss', false);
-			if ($issuer !== $this->issuer) {
-				throw new TokenIssuerException(sprintf(
-					'Token issuer does not match'
-				));
-			}
-		}
-
-		if ($token->hasClaim('aud')) {
-			$issuer = $token->getClaim('aud', false);
-			if ($issuer !== $this->issuer) {
-				throw new TokenAudienceException(sprintf(
-					'Token audience does not match'
-				));
-			}
-		}
-		return $token;
-	}
+        return $token;
+    }
 
     public function verifySignature(Token $token): bool
     {
