@@ -7,13 +7,13 @@ namespace App\Handler;
 use App\Service\TokenManager;
 use Psr\Container\ContainerInterface;
 
-class AuthTokenHandlerFactory
+class ApiContredanseProfileHandlerFactory
 {
-    public function __invoke(ContainerInterface $container): AuthTokenHandler
+    public function __invoke(ContainerInterface $container): ApiContredanseProfileHandler
     {
         $userProvider = $container->get(\App\Security\ContredanseUserProvider::class);
         $tokenService = $container->get(TokenManager::class);
 
-        return new AuthTokenHandler($userProvider, $tokenService);
+        return new ApiContredanseProfileHandler($tokenService, $userProvider);
     }
 }

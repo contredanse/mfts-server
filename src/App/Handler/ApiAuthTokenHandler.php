@@ -14,7 +14,7 @@ use Psr\Http\Server\RequestHandlerInterface;
 use Zend\Diactoros\Response\JsonResponse;
 use Zend\Diactoros\Response\TextResponse;
 
-class AuthTokenHandler implements RequestHandlerInterface
+class ApiAuthTokenHandler implements RequestHandlerInterface
 {
     /**
      * @var UserProviderInterface

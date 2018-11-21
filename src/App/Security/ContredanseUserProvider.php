@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Security;
 
+use App\Security\Exception\UserNotFoundException;
 use Zend\Expressive\Authentication\UserInterface;
 
 class ContredanseUserProvider implements UserProviderInterface
@@ -57,6 +58,34 @@ class ContredanseUserProvider implements UserProviderInterface
         $stmt->execute();
 
         return $stmt->fetchAll(\PDO::FETCH_ASSOC);
+    }
+
+    /**
+     * Return a specific user.
+     *
+     * @return array|false
+     */
+    public function findUser(string $user_id)
+    {
+        $sql = sprintf(
+            "%s\n%s",
+            $this->getBaseSql(),
+            'where `l`.`user_id` = :user_id'
+        );
+        $stmt = $this->adapter->prepare(
+            $sql,
+            [\PDO::ATTR_CURSOR => \PDO::CURSOR_FWDONLY]
+        );
+        $stmt->execute([':user_id' => $user_id]);
+        $rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
+        if (!$rows || count($rows) !== 1) {
+            throw new UserNotFoundException(sprintf(
+                'User \'%d\' not found',
+                $user_id
+            ));
+        }
+
+        return $rows[0];
     }
 
     private function getBaseSql(): string

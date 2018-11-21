@@ -94,8 +94,6 @@ class AuthTokenMiddleware implements MiddlewareInterface
                     'reason' => 'Unknown reason',
                 ]))->withStatus(StatusCodeInterface::STATUS_UNAUTHORIZED);
             }
-        } else {
-            $message = 'No token provided';
         }
 
         return (new JsonResponse([

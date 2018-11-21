@@ -36,9 +36,21 @@ use Zend\Expressive\MiddlewareFactory;
 return function (Application $app, MiddlewareFactory $factory, ContainerInterface $container) : void {
     $app->get('/', App\Handler\HomePageHandler::class, 'home');
     $app->get('/api/ping', App\Handler\PingHandler::class, 'api.ping');
+
     $app->route('/api/auth/{action:token|validate}',
-        [BodyParamsMiddleware::class, App\Handler\AuthTokenHandler::class],
+        [BodyParamsMiddleware::class, App\Handler\ApiAuthTokenHandler::class],
         ['POST'],
         'api.auth.token'
     );
+
+    // All '/api below will be authenticated with AuthTokenMiddleware
+
+    $app->pipe('/api/v1', [
+    	\App\Middleware\AuthTokenMiddleware::class,
+		BodyParamsMiddleware::class,
+	]);
+    $app->get('/api/v1/profile',
+		[\App\Middleware\AuthTokenMiddleware::class, \App\Handler\ApiContredanseProfileHandler::class],
+		'api.v1.profile'
+	);
 };

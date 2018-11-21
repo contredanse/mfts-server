@@ -35,18 +35,19 @@ class ConfigProvider
                 Handler\PingHandler::class => Handler\PingHandler::class,
             ],
             'factories'  => [
-                Handler\HomePageHandler::class          => Handler\HomePageHandlerFactory::class,
-                Handler\AuthTokenHandler::class         => Handler\AuthTokenHandlerFactory::class,
-                Security\ContredanseUserProvider::class => Security\ContredanseUserProviderFactory::class,
+                Handler\HomePageHandler::class                  => Handler\HomePageHandlerFactory::class,
+                Handler\ApiAuthTokenHandler::class              => Handler\ApiAuthTokenHandlerFactory::class,
+                Handler\ApiContredanseProfileHandler::class		   => Handler\ApiContredanseProfileHandlerFactory::class,
 
                 // Middleware
                 Middleware\AuthTokenMiddleware::class   => Middleware\AuthTokenMiddlewareFactory::class,
 
+                // Security
+                Security\ContredanseUserProvider::class    => Security\ContredanseUserProviderFactory::class,
+                \Tuupola\Middleware\CorsMiddleware::class  => Security\ApiCorsMiddlewareFactory::class,
+
                 // Token Service
                 Service\TokenManager::class => Service\TokenManagerFactory::class,
-
-                // Cors
-                \Tuupola\Middleware\CorsMiddleware::class => Security\ApiCorsMiddlewareFactory::class,
             ],
         ];
     }
