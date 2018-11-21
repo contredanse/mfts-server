@@ -21,13 +21,13 @@ class TokenManagerFactory
 
         $defaultExpiry = TokenManager::DEFAULT_EXPIRY;
 
-		if (isset($config['default_expiry']) && (
-				!is_numeric($config['default_expiry']) || $config['default_expiry'] < 0)) {
-			throw new ConfigException("['tokenManager']['default_expiry'] must be numeric > 0");
-		} else {
-			$defaultExpiry = (int) $config['default_expiry'];
-		}
-
+        if (isset($config['default_expiry']) && (
+                !is_numeric($config['default_expiry']) || $config['default_expiry'] < 0
+        )) {
+            throw new ConfigException("['tokenManager']['default_expiry'] must be numeric > 0");
+        } else {
+            $defaultExpiry = (int) $config['default_expiry'];
+        }
 
         return new TokenManager($config['private_key'], $defaultExpiry);
     }

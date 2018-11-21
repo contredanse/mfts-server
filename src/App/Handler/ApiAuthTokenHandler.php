@@ -65,7 +65,8 @@ class ApiAuthTokenHandler implements RequestHandlerInterface
                 'valid' => true,
                 'data'  => [
                     'user_id'    => $token->getClaim('user_id'),
-                    'expires_at' => $token->getClaim('exp')
+                    'expires_at' => $token->getClaim('exp'),
+					'remaining_time' => $token->getClaim('exp') - time(),
                 ]
             ]))->withStatus(StatusCodeInterface::STATUS_OK);
         } catch (TokenValidationExceptionInterface $e) {

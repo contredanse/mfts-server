@@ -17,40 +17,39 @@ use Lcobucci\JWT\Signer\Hmac\Sha256;
 use Lcobucci\JWT\Token;
 use Lcobucci\JWT\ValidationData;
 use Ramsey\Uuid\Uuid;
-use SebastianFeldmann\Git\Command\Base;
 
 class TokenManager
 {
-	const DEFAULT_EXPIRY = 3600;
+    public const DEFAULT_EXPIRY = 3600;
 
-	/**
-	 * @var BaseSigner
-	 */
+    /**
+     * @var BaseSigner
+     */
     private $signer;
-	/**
-	 * @var string
-	 */
+    /**
+     * @var string
+     */
     private $issuer;
-	/**
-	 * @var string
-	 */
+    /**
+     * @var string
+     */
     private $audience;
-	/**
-	 * @var string
-	 */
+    /**
+     * @var string
+     */
     private $privateKey;
 
-	/**
-	 * @var int
-	 */
+    /**
+     * @var int
+     */
     private $defaultExpiry;
 
     public function __construct(string $privateKey, int $defaultExpiry = self::DEFAULT_EXPIRY)
     {
-        $this->signer     = $this->getSigner();
-        $this->issuer     = $_SERVER['SERVER_NAME'];
-        $this->audience   = $_SERVER['SERVER_NAME'];
-        $this->privateKey = $privateKey;
+        $this->signer        = $this->getSigner();
+        $this->issuer        = $_SERVER['SERVER_NAME'];
+        $this->audience      = $_SERVER['SERVER_NAME'];
+        $this->privateKey    = $privateKey;
         $this->defaultExpiry = $defaultExpiry;
     }
 
@@ -164,9 +163,10 @@ class TokenManager
         return $token;
     }
 
-    public function getSigner(): BaseSigner {
-    	return new Sha256();
-	}
+    public function getSigner(): BaseSigner
+    {
+        return new Sha256();
+    }
 
     public function verifySignature(Token $token): bool
     {

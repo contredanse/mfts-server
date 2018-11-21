@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace AppTest\Functional\Security;
 
-use App\Security\ContredanseUserProvider;
 use App\Security\ContredanseUserProviderFactory;
 use App\Security\UserProviderInterface;
 use AppTest\Util\ContainerFactory;
@@ -25,10 +24,8 @@ class ContredanseUserProviderTest extends TestCase
 
     public function testGetAllUsers(): void
     {
-		//self::doesNotPerformAssertions();
+        //self::doesNotPerformAssertions();
         $users = $this->provider->getAllUsers();
         self::assertTrue(true);
-
-
     }
 }

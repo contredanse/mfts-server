@@ -47,7 +47,7 @@ class ContredanseUserProvider implements UserProviderInterface
     /**
      * Return all users.
      *
-	 * @throws QueryErrorException
+     * @throws QueryErrorException
      */
     public function getAllUsers(): array
     {
@@ -59,15 +59,16 @@ class ContredanseUserProvider implements UserProviderInterface
         $stmt->execute();
         $rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
         if ($rows === false) {
-        	throw new QueryErrorException('Cannot get users');
-		}
-		return $rows;
+            throw new QueryErrorException('Cannot get users');
+        }
+
+        return $rows;
     }
 
     /**
      * Return a specific user.
      *
-	 * @throws QueryErrorException
+     * @throws QueryErrorException
      * @throws UserNotFoundException
      */
     public function findUser(string $user_id): array
@@ -84,14 +85,15 @@ class ContredanseUserProvider implements UserProviderInterface
         $stmt->execute([':user_id' => $user_id]);
         $rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
         if ($rows === false) {
-			throw new QueryErrorException('Cannot find user, query error');
-		}
+            throw new QueryErrorException('Cannot find user, query error');
+        }
         if (count($rows) !== 1) {
             throw new UserNotFoundException(sprintf(
                 'User \'%d\' not found',
                 $user_id
             ));
         }
+
         return $rows[0];
     }
 

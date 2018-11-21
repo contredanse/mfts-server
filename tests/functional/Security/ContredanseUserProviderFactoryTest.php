@@ -27,7 +27,6 @@ class ContredanseUserProviderFactoryTest extends TestCase
         $container    = ContainerFactory::getContainer();
         $userProvider = (new ContredanseUserProviderFactory())($container);
         self::assertInstanceOf(ContredanseUserProvider::class, $userProvider);
-
     }
 
     public function testMustThrowConfigException(): void
