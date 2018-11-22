@@ -56,7 +56,6 @@ Or a 400 (bad request = missing parameter) / 401 (Unauthorized) status code and 
 {"success": false, "reason": "a message"}
 ```
 
-
 ## CORS
 
 ### Ensure CORS Middleware does the job
