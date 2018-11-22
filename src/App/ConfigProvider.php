@@ -37,17 +37,23 @@ class ConfigProvider
             'factories'  => [
                 Handler\HomePageHandler::class                  => Handler\HomePageHandlerFactory::class,
                 Handler\ApiAuthTokenHandler::class              => Handler\ApiAuthTokenHandlerFactory::class,
+                Handler\ApiContredanseStatusHandler::class				  => Handler\ApiContredanseStatusHandlerFactory::class,
                 Handler\ApiContredanseProfileHandler::class		   => Handler\ApiContredanseProfileHandlerFactory::class,
 
                 // Middleware
                 Middleware\AuthTokenMiddleware::class   => Middleware\AuthTokenMiddlewareFactory::class,
 
                 // Security
+                // From configured interface
+                Security\UserProviderInterface::class      => Security\ContredanseUserProviderFactory::class,
+                // Explicit
                 Security\ContredanseUserProvider::class    => Security\ContredanseUserProviderFactory::class,
+
                 \Tuupola\Middleware\CorsMiddleware::class  => Security\ApiCorsMiddlewareFactory::class,
 
-                // Token Service
-                Service\TokenManager::class => Service\TokenManagerFactory::class,
+                // Service
+                Service\ContredanseDb::class => Service\ContredanseDbFactory::class,
+                Service\TokenManager::class  => Service\TokenManagerFactory::class,
             ],
         ];
     }
