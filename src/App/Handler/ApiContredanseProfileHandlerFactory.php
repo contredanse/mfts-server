@@ -11,7 +11,7 @@ class ApiContredanseProfileHandlerFactory
 {
     public function __invoke(ContainerInterface $container): ApiContredanseProfileHandler
     {
-        $userProvider = $container->get(\App\Security\ContredanseUserProvider::class);
+        $userProvider = $container->get(\App\Security\UserProviderInterface::class);
         $tokenService = $container->get(TokenManager::class);
 
         return new ApiContredanseProfileHandler($tokenService, $userProvider);

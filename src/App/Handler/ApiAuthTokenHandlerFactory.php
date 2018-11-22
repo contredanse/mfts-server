@@ -11,7 +11,7 @@ class ApiAuthTokenHandlerFactory
 {
     public function __invoke(ContainerInterface $container): ApiAuthTokenHandler
     {
-        $userProvider = $container->get(\App\Security\ContredanseUserProvider::class);
+        $userProvider = $container->get(\App\Security\UserProviderInterface::class);
         $tokenService = $container->get(TokenManager::class);
 
         return new ApiAuthTokenHandler($userProvider, $tokenService);
