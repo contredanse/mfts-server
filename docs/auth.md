@@ -2,7 +2,9 @@
 
 > replace https://site.org by the correct url
 
-## Be sure CORS is working
+## CORS
+
+### Ensure CORS Middleware does the job
 
 ```bash 
 $ curl https://site.org/api/auth/token \
@@ -22,7 +24,31 @@ Vary: Origin
 Access-Control-Allow-Headers: authorization, if-match, if-unmodified-since, content-type
 ```
 
-## Request a token
+## JWT Token
+
+The following endpoints can be used:
+
+
+| url                | Method   | Params                    | Return                                    |
+|--------------------|----------|---------------------------|-------------------------------------------|
+| /api/auth/token    | POST     | {email: '', password: ''} | {access_token?: '', success: bool}        |
+| /api/auth/validate | POST     | {token: ''}               | {valid: bool, expires_at, remaining_time} |
+
+Status monitoring route
+
+| url                       | Method   | Return                       |
+|---------------------------|----------|------------------------------|
+| /api/contredanse_status   | GET      | {up: bool, reason?: '' }     |  
+
+
+Example protected route
+
+| url                | Method   | Auth             | 
+|--------------------|----------|------------------| 
+| /api/v1/profile    | GET      | JWT auth bearer  | 
+
+
+## Request a token (login)
 
 > You mst post a valid login/password
 
