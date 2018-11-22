@@ -32,7 +32,7 @@ class ApiContredanseStatusHandler implements RequestHandlerInterface
         } catch (\Throwable $e) {
             return (new JsonResponse([
                 'up'      => false,
-				'ack'     => time(),
+                'ack'     => time(),
                 'reason'  => 'Database connection failure'
             ]))->withStatus(StatusCodeInterface::STATUS_INTERNAL_SERVER_ERROR);
         }
@@ -42,8 +42,8 @@ class ApiContredanseStatusHandler implements RequestHandlerInterface
             $userProvider->ensureAuthIsWorking();
 
             return (new JsonResponse([
-                'up' => true,
-				'ack'     => time(),
+                'up'      => true,
+                'ack'     => time(),
             ]))->withStatus(StatusCodeInterface::STATUS_OK);
         } catch (\Throwable $e) {
             return (new JsonResponse([
