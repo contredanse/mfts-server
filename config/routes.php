@@ -43,12 +43,16 @@ return function (Application $app, MiddlewareFactory $factory, ContainerInterfac
         'api.auth.token'
     );
 
-    // All '/api below will be authenticated with AuthTokenMiddleware
+	$app->get('/api/contredanse_status', App\Handler\ApiContredanseStatusHandler::class, 'api.contredanse.status');
 
+
+    // All '/api below will be authenticated with AuthTokenMiddleware
+/*
     $app->pipe('/api/v1', [
     	\App\Middleware\AuthTokenMiddleware::class,
 		BodyParamsMiddleware::class,
 	]);
+*/
     $app->get('/api/v1/profile',
 		[\App\Middleware\AuthTokenMiddleware::class, \App\Handler\ApiContredanseProfileHandler::class],
 		'api.v1.profile'
