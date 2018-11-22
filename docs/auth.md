@@ -36,9 +36,11 @@ The following endpoints can be used:
 
 Status monitoring route
 
-| url                       | Method   | Return                       |
-|---------------------------|----------|------------------------------|
-| /api/contredanse_status   | GET      | {up: bool, reason?: '' }     |  
+> Can be used to monitor if remote authentication with contredanse is up and running.
+
+| url                       | Method   | Return                                |
+|---------------------------|----------|---------------------------------------|
+| /api/contredanse_status   | GET      | {up: bool, ack: time(), reason?: '' } |  
 
 
 Example protected route
