@@ -9,7 +9,8 @@ return [
             'password'  => getenv('AUTH_DB_PWD'),
             'charset'   => 'utf8',
             'driver_options' => [
-                \PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES UTF8"
+                \PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES UTF8",
+				\PDO::ATTR_ERRMODE => \PDO::ERRMODE_EXCEPTION
             ],
         ]
     ]
