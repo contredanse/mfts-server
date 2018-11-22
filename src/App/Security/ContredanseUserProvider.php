@@ -97,6 +97,49 @@ class ContredanseUserProvider implements UserProviderInterface
         return $rows[0];
     }
 
+    public function ensureAuthIsWorking(): void
+    {
+        // Check query working
+        $sql = sprintf(
+            "%s\n%s",
+                $this->getBaseSql(),
+                'limit 1'
+            );
+
+        try {
+            $stmt = $this->adapter->prepare($sql);
+            $stmt->execute();
+            $rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
+        } catch (\Throwable $e) {
+            throw new QueryErrorException(
+                sprintf('Cannot query database, query error: %s', $e->getMessage())
+            );
+        }
+
+        if ($rows === false || count($rows) !== 1) {
+            throw new \RuntimeException('User database empty');
+        }
+
+        // Take first user email
+
+        $email  = $rows[0]['email'];
+        $userId = $rows[0]['user_id'];
+
+        $user = $this->getUserByEmail($email);
+
+        if ($user === null) {
+            throw new \RuntimeException(
+                'Cannot locate user'
+            );
+        }
+
+        if ($user->getDetail('user_id') !== $userId) {
+            throw new \RuntimeException(
+                sprintf('Users does no match: %s', '')
+            );
+        }
+    }
+
     private function getBaseSql(): string
     {
         $sql = '
