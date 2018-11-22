@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace AppTest\Functional\Security;
 
-use App\Exception\ConfigException;
 use App\Exception\ConnectionException;
 use App\Security\ContredanseUserProvider;
 use App\Security\ContredanseUserProviderFactory;
+use App\Service\ContredanseDb;
 use AppTest\Util\ContainerFactory;
 use PHPUnit\Framework\TestCase;
 use Psr\Container\ContainerInterface;
@@ -29,12 +29,6 @@ class ContredanseUserProviderFactoryTest extends TestCase
         self::assertInstanceOf(ContredanseUserProvider::class, $userProvider);
     }
 
-    public function testMustThrowConfigException(): void
-    {
-        self::expectException(ConfigException::class);
-        (new ContredanseUserProviderFactory())($this->container->reveal());
-    }
-
     public function testMustThrowConnectionException(): void
     {
         self::expectException(ConnectionException::class);
@@ -48,6 +42,14 @@ class ContredanseUserProviderFactoryTest extends TestCase
                      ]
                 ]
             ]);
+        $this->container->get(ContredanseDb::class)
+            ->willReturn(
+                new ContredanseDb([
+                    'dsn'      => 'mysql:host=localhost;dbname=mfts-db;port=3306',
+                    'username' => 'cool',
+                    'password' => 'invalid'
+                ])
+            );
 
         (new ContredanseUserProviderFactory())($this->
         container->reveal());
