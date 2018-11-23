@@ -10,6 +10,7 @@ abstract class TokenValidationException extends \RuntimeException implements Tok
 
     public function getStatusCode(): int
     {
+    	// Unauthorized
         return 401;
     }
 }
