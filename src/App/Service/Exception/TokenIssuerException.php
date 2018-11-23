@@ -11,10 +11,9 @@ class TokenIssuerException extends TokenValidationException
         return 'issuer';
     }
 
-	public function getStatusCode(): int
-	{
-		// Forbidden
-		return 403;
-	}
-
+    public function getStatusCode(): int
+    {
+        // Forbidden
+        return 403;
+    }
 }

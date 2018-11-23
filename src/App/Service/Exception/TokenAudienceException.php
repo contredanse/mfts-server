@@ -11,10 +11,9 @@ class TokenAudienceException extends TokenValidationException
         return 'audience';
     }
 
-	public function getStatusCode(): int
-	{
-		// Forbidden
-		return 403;
-	}
-
+    public function getStatusCode(): int
+    {
+        // Forbidden
+        return 403;
+    }
 }
