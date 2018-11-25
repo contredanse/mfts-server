@@ -13,8 +13,11 @@ build:
                 override: ['php-scrutinizer-run']
 
 filter:
+    paths: ["src/*"]
     excluded_paths:
-        - "tests/"
+        #- "tests/"
+        #- "config/"
+        - "./deploy.php"
         # Everything in a root level "tests" directory will be excluded
     dependency_paths:
         - "vendor/"
