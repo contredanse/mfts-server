@@ -23,10 +23,18 @@ class TokenManagerFactory
                 !is_numeric($config['default_expiry']) || $config['default_expiry'] < 0
         )) {
             throw new ConfigException("['tokenManager']['default_expiry'] must be numeric > 0");
-        } else {
-            $defaultExpiry = TokenManager::DEFAULT_EXPIRY;
         }
 
-        return new TokenManager($config['private_key'], $defaultExpiry);
+        $defaultExpiry = $config['default_expiry'] ?? TokenManager::DEFAULT_EXPIRY;
+
+        $issuer   = $config['default_issuer'] ?? $this->getDefaultIssuer();
+        $audience = $config['default_audience'] ?? $this->getDefaultIssuer();
+
+        return new TokenManager($config['private_key'], $defaultExpiry, $issuer, $audience);
+    }
+
+    public function getDefaultIssuer(): string
+    {
+        return $_SERVER['SERVER_NAME'] ?? 'localhost';
     }
 }

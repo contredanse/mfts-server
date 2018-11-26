@@ -44,13 +44,22 @@ class TokenManager
      */
     private $defaultExpiry;
 
-    public function __construct(string $privateKey, int $defaultExpiry = self::DEFAULT_EXPIRY)
-    {
+    public function __construct(
+        string $privateKey,
+                                int $defaultExpiry = self::DEFAULT_EXPIRY,
+                                string $issuer = '',
+                                string $audience = ''
+    ) {
         $this->signer        = $this->getSigner();
-        $this->issuer        = $_SERVER['SERVER_NAME'];
-        $this->audience      = $_SERVER['SERVER_NAME'];
+        $this->issuer        = $issuer;
+        $this->audience      = $audience;
         $this->privateKey    = $privateKey;
         $this->defaultExpiry = $defaultExpiry;
+    }
+
+    public function getDefaultExpiry(): int
+    {
+        return $this->defaultExpiry;
     }
 
     public function createNewToken(array $customClaims = [], int $expiration = 3600, bool $autoSign = true): Token
