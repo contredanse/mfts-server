@@ -18,7 +18,7 @@ class AuthTokenMiddleware implements MiddlewareInterface
     public const DEFAULT_OPTIONS = [
         self::OPTION_ALLOW_INSECURE_HTTP => false,
         self::OPTION_RELAXED_HOSTS       => [],
-        self::OPTION_HTTP_HEADER         => 'Authentication',
+        self::OPTION_HTTP_HEADER         => 'Authorization',
         self::OPTION_HTTP_HEADER_PREFIX  => 'Bearer',
     ];
 
