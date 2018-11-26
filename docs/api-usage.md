@@ -50,10 +50,24 @@ It will return the jwt token:
 {"success": true, "access_token":"<header>.<payload>.<hash>","token_type":"api_auth"}
 ```
 
-Or a 400 (bad request = missing parameter) / 401 (Unauthorized) status code and the folowing
+Or a 400 (bad request = missing parameter) / 401 (Unauthorized) status code and the following message:
 
 ```json
 {"success": false, "reason": "a message"}
+```
+
+### Accessing a protected route
+
+```bash
+$ curl https://site.org/api/v1/profile \
+       -H 'authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1N...' 
+       
+```
+
+Could for example return a 401:
+
+```json
+{"valid":false,"reason":"expired"}
 ```
 
 ## CORS
