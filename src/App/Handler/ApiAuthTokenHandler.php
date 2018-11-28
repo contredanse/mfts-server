@@ -26,10 +26,19 @@ class ApiAuthTokenHandler implements RequestHandlerInterface
      */
     private $tokenManager;
 
-    public function __construct(UserProviderInterface $userProvider, TokenManager $tokenManager)
+    /**
+     * @var array<string, mixed>
+     */
+    private $authParams;
+
+    /**
+     * @param array<string, mixed> $authParams
+     */
+    public function __construct(UserProviderInterface $userProvider, TokenManager $tokenManager, array $authParams = [])
     {
         $this->userProvider = $userProvider;
         $this->tokenManager = $tokenManager;
+        $this->authParams   = $authParams;
     }
 
     public function handle(ServerRequestInterface $request): ResponseInterface
@@ -84,6 +93,8 @@ class ApiAuthTokenHandler implements RequestHandlerInterface
 
     public function loginAction(ServerRequestInterface $request): ResponseInterface
     {
+        $authExpiry = $this->authParams['token_expiry'] ?? TokenManager::DEFAULT_EXPIRY;
+
         //$users  = $this->userProvider->getAllUsers();
         $method = $request->getMethod();
         if ($method !== 'POST') {
@@ -102,7 +113,7 @@ class ApiAuthTokenHandler implements RequestHandlerInterface
                     $token = $this->tokenManager->createNewToken([
                         'user_id'  => $user->getIdentity(),
                         'email'    => $email
-                    ], 3600);
+                    ], $authExpiry);
 
                     return (new JsonResponse([
                         'access_token' => (string) $token,

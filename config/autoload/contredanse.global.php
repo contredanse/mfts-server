@@ -12,6 +12,11 @@ return [
                 \PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES UTF8",
 				\PDO::ATTR_ERRMODE => \PDO::ERRMODE_EXCEPTION
             ],
-        ]
+        ],
+
+		'auth' => [
+			// Token expiry for ApiAuthTokenHandler
+			'token_expiry' => (int) (getenv('JWT_TOKEN_DEFAULT_EXPIRY') ?: 3600)
+		]
     ]
 ];
