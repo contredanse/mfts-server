@@ -111,8 +111,8 @@ class ApiAuthTokenHandler implements RequestHandlerInterface
                 $dbPassword = $user->getDetail('password');
                 if ($dbPassword === $password) {
                     $token = $this->tokenManager->createNewToken([
-                        'user_id'  => $user->getIdentity(),
-                        'email'    => $email
+                        'user_id'  => $user->getIdentity()
+                        //'email'    => $email,
                     ], $authExpiry);
 
                     return (new JsonResponse([
