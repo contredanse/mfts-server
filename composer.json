@@ -83,7 +83,7 @@
         }
     },
     "scripts": {
-        "post-install-cmd": "\\SebastianFeldmann\\CaptainHook\\Composer\\Cmd::install",
+        "post-install-cmd": "\\CaptainHook\\CaptainHook\\Composer\\Cmd::install",
         "development-disable": "zf-development-mode disable",
         "development-enable": "zf-development-mode enable",
         "development-status": "zf-development-mode status",
