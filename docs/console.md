@@ -1,5 +1,11 @@
 # Console
 
+## Db backup
+
+```bash
+$  php ./bin/console.php db:dump -f /tmp/dump.sql
+```
+
 ## Video conversion scripts
 
 ```bash
