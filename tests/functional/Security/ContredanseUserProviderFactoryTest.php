@@ -32,22 +32,15 @@ class ContredanseUserProviderFactoryTest extends TestCase
     public function testMustThrowConnectionException(): void
     {
         self::expectException(ConnectionException::class);
-        $this->container->get('config')
-            ->willReturn([
-                'contredanse' => [
-                    'db' => [
-                        'dsn'      => 'mysql:host=localhost;dbname=mfts-db;port=3306',
-                        'username' => 'cool',
-                        'password' => 'invalid'
-                     ]
-                ]
-            ]);
         $this->container->get(ContredanseDb::class)
             ->willReturn(
                 new ContredanseDb([
-                    'dsn'      => 'mysql:host=localhost;dbname=mfts-db;port=3306',
-                    'username' => 'cool',
-                    'password' => 'invalid'
+                    'driver'      => 'mysql',
+                    'host'        => 'localhost',
+                    'dbname'      => 'mfts-db',
+                    'port'        => '3306',
+                    'username'    => 'cool',
+                    'password'    => 'invalid'
                 ])
             );
 
