@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "761ecf04d4551f325072d9831c19434b",
+    "content-hash": "f7a0040db285f8727b242d55e93d60fb",
     "packages": [
         {
             "name": "cocur/slugify",
@@ -1023,16 +1023,16 @@
         },
         {
             "name": "soluble/mediatools",
-            "version": "0.8.2",
+            "version": "0.8.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/soluble-io/soluble-mediatools.git",
-                "reference": "2b08d8102158028d5f9e49e6a06797f8b69e5e29"
+                "reference": "642a5ac2477429e66de562647283ea1fbbec141b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/soluble-io/soluble-mediatools/zipball/2b08d8102158028d5f9e49e6a06797f8b69e5e29",
-                "reference": "2b08d8102158028d5f9e49e6a06797f8b69e5e29",
+                "url": "https://api.github.com/repos/soluble-io/soluble-mediatools/zipball/642a5ac2477429e66de562647283ea1fbbec141b",
+                "reference": "642a5ac2477429e66de562647283ea1fbbec141b",
                 "shasum": ""
             },
             "require": {
@@ -1045,21 +1045,21 @@
                 "symfony/process": "^4.0"
             },
             "require-dev": {
+                "captainhook/captainhook": "^2.2",
                 "consistence/coding-standard": "^3.5",
                 "fig/http-message-util": "^1.1.2",
                 "friendsofphp/php-cs-fixer": "^2.13",
                 "guzzlehttp/guzzle": "^6.2",
-                "infection/infection": "^0.10",
+                "infection/infection": "^0.11",
                 "jangregor/phpstan-prophecy": "^0.2",
                 "monolog/monolog": "^1.23",
                 "phpspec/prophecy": "^1.8",
                 "phpstan/phpstan": "^0.10",
                 "phpstan/phpstan-phpunit": "^0.10",
                 "phpstan/phpstan-strict-rules": "^0.10",
-                "phpunit/phpunit": "^7.3",
+                "phpunit/phpunit": "^7.4",
                 "psr/http-message": "^1.0.1",
                 "roave/security-advisories": "dev-master",
-                "sebastianfeldmann/captainhook": "^2.1",
                 "slevomat/coding-standard": "^4.8",
                 "squizlabs/php_codesniffer": "^3.3",
                 "zendframework/zend-servicemanager": "^3.3"
@@ -1083,14 +1083,15 @@
                     "homepage": "https://github.com/belgattitude"
                 }
             ],
-            "description": "mediatools",
+            "description": "Media tools with FFMPEG (transcode, thumbnails...)",
             "homepage": "https://github.com/soluble-io/soluble-mediatools",
             "keywords": [
                 "ffmpeg",
+                "thumbnail",
                 "transcode",
                 "video"
             ],
-            "time": "2018-10-25T21:45:15+00:00"
+            "time": "2018-12-03T16:26:21+00:00"
         },
         {
             "name": "spatie/array-to-xml",
@@ -2065,16 +2066,16 @@
         },
         {
             "name": "zendframework/zend-diactoros",
-            "version": "2.0.0",
+            "version": "2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-diactoros.git",
-                "reference": "0bae78192e634774b5584f0210c1232da82cb1ff"
+                "reference": "a22d63fccbf1236903c2dbcd5f927f952667d749"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-diactoros/zipball/0bae78192e634774b5584f0210c1232da82cb1ff",
-                "reference": "0bae78192e634774b5584f0210c1232da82cb1ff",
+                "url": "https://api.github.com/repos/zendframework/zend-diactoros/zipball/a22d63fccbf1236903c2dbcd5f927f952667d749",
+                "reference": "a22d63fccbf1236903c2dbcd5f927f952667d749",
                 "shasum": ""
             },
             "require": {
@@ -2127,7 +2128,7 @@
                 "psr",
                 "psr-7"
             ],
-            "time": "2018-09-27T19:49:04+00:00"
+            "time": "2018-12-03T16:20:17+00:00"
         },
         {
             "name": "zendframework/zend-escaper",
