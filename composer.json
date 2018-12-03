@@ -44,17 +44,17 @@
         "zendframework/zend-stdlib": "^3.1"
     },
     "require-dev": {
+        "captainhook/captainhook": "^2.2",
         "deployer/deployer": "^6.3",
         "deployer/recipes": "^6.1",
         "filp/whoops": "^2.3",
         "friendsofphp/php-cs-fixer": "2.13.1",
         "jangregor/phpstan-prophecy": "^0.2",
-        "phpunit/phpunit": "^7.4",
-        "phpstan/phpstan-strict-rules": "^0.10",
         "phpstan/phpstan": "^0.10",
         "phpstan/phpstan-phpunit": "^0.10",
+        "phpstan/phpstan-strict-rules": "^0.10",
+        "phpunit/phpunit": "^7.4",
         "spatie/array-to-xml": "^2.8",
-        "captainhook/captainhook": "^2.2",
         "zendframework/zend-expressive-tooling": "^1.0",
         "zfcampus/zf-development-mode": "^3.1"
     },
