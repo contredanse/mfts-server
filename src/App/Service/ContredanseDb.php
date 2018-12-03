@@ -39,7 +39,8 @@ class ContredanseDb
      */
     public function createPdoConnection(array $config): \PDO
     {
-        $dsn = $config['dsn'];
+        $dsn = $this->getDsn();
+
         /** @var string[] $options */
         $options = $config['driver_options'] ?? null;
 
@@ -54,5 +55,37 @@ class ContredanseDb
         }
 
         return $pdo;
+    }
+
+    public function getDsn(): string
+    {
+        return sprintf(
+            '%s:host=%s;dbname=%s;port=%s',
+            $this->params['driver'],
+            $this->params['host'],
+            $this->params['dbname'],
+            $this->params['port']
+        );
+    }
+
+    public function getUsername(): string
+    {
+        return $this->params['username'];
+    }
+
+    public function getPassword(): string
+    {
+        return $this->params['password'];
+    }
+
+    public function getConnectionInfo(): array
+    {
+        return [
+            'username' => $this->params['username'],
+            'password' => $this->params['password'],
+            'host'     => $this->params['host'],
+            'dbname'   => $this->params['dbname'],
+            'port'     => $this->params['port'],
+        ];
     }
 }

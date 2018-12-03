@@ -10,6 +10,7 @@ use Symfony\Component\Console\Input\InputDefinition;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
+use Symfony\Component\Process\Process;
 
 class DbDumpCommand extends Command
 {
@@ -34,7 +35,7 @@ class DbDumpCommand extends Command
             ->setDescription('Dump external database')
             ->setDefinition(
                 new InputDefinition([
-                    new InputOption('dir', 'd', InputOption::VALUE_REQUIRED),
+                    new InputOption('file', 'f', InputOption::VALUE_REQUIRED),
                 ])
             );
     }
@@ -44,21 +45,51 @@ class DbDumpCommand extends Command
      */
     protected function execute(InputInterface $input, OutputInterface $output): void
     {
-        if (!$input->hasOption('dir')) {
-            throw new \Exception('Missing dir argument, use <command> <dir>');
+        if (!$input->hasOption('file')) {
+            throw new \Exception('Missing dir argument, use <command> <file>');
         }
-        $dumpDir = $input->hasOption('dir') ? $input->getOption('dir') : '';
-        if (!is_string($dumpDir) || !is_dir($dumpDir)) {
+        $dumpFile = $input->hasOption('file') ? $input->getOption('file') : '';
+
+        if (!is_string($dumpFile) || !is_dir(dirname($dumpFile))) {
             throw new \Exception(sprintf(
-                'Dump directory dir %s does not exists',
-                is_string($dumpDir) ? $dumpDir : ''
+                'Dump directory %s does not exists',
+                is_string($dumpFile) ? dirname($dumpFile) : ''
             ));
         }
 
-        $output->writeln('Starting dump');
+        $output->writeln('Starting dump, it\'s gonna take a while');
 
-        $output->writeln('');
+        $params = $this->db->getConnectionInfo();
 
-        $output->writeln("\nFinished");
+        $command = [
+            file_exists('./bin/mysqldump') ? './bin/mysqldump' : 'mysqldump',
+            '--extended-insert',
+            '--no-create-db',
+            '--compress',
+            sprintf('--user=%s', $params['username']),
+            sprintf('--password=%s', $params['password']),
+            sprintf('--host=%s', $params['host']),
+            $params['dbname'],
+            sprintf('> %s', $dumpFile)
+        ];
+
+        $process = Process::fromShellCommandline(implode(' ', $command));
+        $process->setTimeout(7200);
+        $process->setIdleTimeout(30);
+
+        try {
+            $process->mustRun(function ($type, $buffer) {
+                if (Process::ERR === $type) {
+                    echo 'ERR > ' . $buffer;
+                } else {
+                    echo '.';
+                }
+            });
+        } catch (\Throwable $e) {
+            $msg = str_replace($params['password'], '******', $e->getMessage());
+            throw new \RuntimeException($msg);
+        }
+
+        $output->writeln("\nDump done !");
     }
 }
