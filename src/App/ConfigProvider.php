@@ -37,7 +37,7 @@ class ConfigProvider
             'factories'  => [
                 Handler\HomePageHandler::class                  => Handler\HomePageHandlerFactory::class,
                 Handler\ApiAuthTokenHandler::class              => Handler\ApiAuthTokenHandlerFactory::class,
-                Handler\ApiContredanseStatusHandler::class				  => Handler\ApiContredanseStatusHandlerFactory::class,
+                Handler\ApiContredanseStatusHandler::class		    => Handler\ApiContredanseStatusHandlerFactory::class,
                 Handler\ApiContredanseProfileHandler::class		   => Handler\ApiContredanseProfileHandlerFactory::class,
 
                 // Middleware
