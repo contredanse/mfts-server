@@ -6,8 +6,11 @@ namespace AppTest\Security;
 
 use App\Security\ContredanseProductAccess;
 use App\Security\Exception\NoProductAccessException;
+use App\Security\Exception\ProductAccessExpiredException;
 use App\Security\Exception\ProductPaymentIssueException;
+use App\Security\Exception\UnsupportedExpiryFormatException;
 use App\Security\Exception\UnsupportedProductException;
+use Cake\Chronos\Chronos;
 use Mockery;
 use Mockery\MockInterface;
 use PHPUnit\Framework\TestCase;
@@ -30,11 +33,67 @@ class ContredanseProductAccessTest extends TestCase
         $this->productName = ContredanseProductAccess::PAXTON_PRODUCT;
     }
 
+    public function testEnsureAccessIsValidWithTomorrowExpiry(): void
+    {
+        $tomorrow = (new Chronos())->addDay(1);
+        $this->accessMock->shouldReceive('getProductOrders')->andReturn([
+            0 => [
+                'pay_status' => ContredanseProductAccess::VALID_PAY_STATUS,
+                'expires_at' => $tomorrow->toDateTimeString(),
+                'detail_id'  => 123
+            ]
+        ]);
+        $this->accessMock->ensureAccess($this->productName, 'email');
+        self::assertTrue(true);
+    }
+
+    public function testEnsureAccessIsValidWithFutureExpiry(): void
+    {
+        $future = (new Chronos())->addMonths(11);
+        $this->accessMock->shouldReceive('getProductOrders')->andReturn([
+            0 => [
+                'pay_status' => ContredanseProductAccess::VALID_PAY_STATUS,
+                'expires_at' => $future->toDateTimeString(),
+                'detail_id'  => 123
+            ]
+        ]);
+        $this->accessMock->ensureAccess($this->productName, 'email');
+        self::assertTrue(true);
+    }
+
+    public function testEnsureAccessFailsWithYesterdayExpiry(): void
+    {
+        self::expectException(ProductAccessExpiredException::class);
+        $yesterday = (new Chronos())->subDay(1);
+
+        $this->accessMock->shouldReceive('getProductOrders')->andReturn([
+            0 => [
+                'pay_status' => ContredanseProductAccess::VALID_PAY_STATUS,
+                'expires_at' => $yesterday->toDateTimeString(),
+                'detail_id'  => 123
+            ]
+        ]);
+        $this->accessMock->ensureAccess($this->productName, 'email');
+    }
+
     public function testEnsureAccessPaymentIssue(): void
     {
         self::expectException(ProductPaymentIssueException::class);
         $this->accessMock->shouldReceive('getProductOrders')->andReturn([
-            0 => ['product_id' => 219, 'pay_status' => null, 'expires_at' => '2015-12-31', 'detail_id' => 123]
+            0 => ['pay_status' => null, 'expires_at' => '', 'detail_id' => 123]
+        ]);
+        $this->accessMock->ensureAccess($this->productName, 'email');
+    }
+
+    public function testEnsureAccessInvalidExpiry(): void
+    {
+        self::expectException(UnsupportedExpiryFormatException::class);
+        $this->accessMock->shouldReceive('getProductOrders')->andReturn([
+            0 => [
+                'pay_status' => ContredanseProductAccess::VALID_PAY_STATUS,
+                'expires_at' => '3455',
+                'detail_id'  => 123
+            ]
         ]);
         $this->accessMock->ensureAccess($this->productName, 'email');
     }

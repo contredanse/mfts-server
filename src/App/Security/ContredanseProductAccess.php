@@ -9,10 +9,17 @@ use App\Security\Exception\NoProductAccessException;
 use App\Security\Exception\ProductAccessExpiredException;
 use App\Security\Exception\ProductPaymentIssueException;
 use App\Security\Exception\QueryErrorException;
+use App\Security\Exception\UnsupportedExpiryFormatException;
 use App\Security\Exception\UnsupportedProductException;
+use Cake\Chronos\Chronos;
 
 class ContredanseProductAccess
 {
+    /**
+     * VALID PAY_STATUS CODE AT CONTREDANSE.
+     */
+    public const VALID_PAY_STATUS = 9;
+
     public const PAXTON_PRODUCT = 'product:paxton';
 
     public const SUPPORTED_PRODUCTS = [
@@ -39,17 +46,19 @@ class ContredanseProductAccess
     }
 
     /**
+     * Ensure that a product (paxton) is available to the user.
+     *
      * @param string $productName see constants self::PAXTON_PRODUCT
      *
      * Those exceptions can be considered as system/config errors
      *
+     * @throws QueryErrorException
      * @throws MissingProductConfigException
      * @throws UnsupportedProductException
-     * @throws QueryErrorException
+     * @throws UnsupportedExpiryFormatException
      *
-     * Those exceptions emplements ProductAccessExceptionInterface
-     * and can be used to determine is the user have access to
-     * the product
+     * Those exceptions implements ProductAccessExceptionInterface
+     * and can be used to determine the exact cause of failure
      * @throws NoProductAccessException
      * @throws ProductPaymentIssueException
      * @throws ProductPaymentIssueException
@@ -71,9 +80,7 @@ class ContredanseProductAccess
 
         // Is there a payment issue ?
 
-        // o.pay_status = 9; so all is cool ;)
-
-        if ($order['pay_status'] !== 9) {
+        if ((int) $order['pay_status'] !== self::VALID_PAY_STATUS) {
             throw new ProductPaymentIssueException(sprintf(
                 sprintf(
                     'Look we have a payment issue, pay_status code in order detail %s is %s',
@@ -83,17 +90,31 @@ class ContredanseProductAccess
             ));
         }
 
-        // Is there a validity issue ?
+        // Check expiration if any given
+        if (trim($order['expires_at'] ?? '') !== '') {
+            try {
+                $expiresAt = Chronos::createFromFormat('Y-m-d H:i:s', $order['expires_at']);
+            } catch (\Throwable $e) {
+                throw new UnsupportedExpiryFormatException(
+                    sprintf(
+                        'Unexpected product expiry data (%s) for order detail %s. (%s)',
+                        $order['expires_at'],
+                        $order['detail_id'],
+                        $e->getMessage()
+                    )
+                );
+            }
 
-        $expires_at = $order['expires_at'];
-
-        throw new ProductAccessExpiredException(sprintf(
-            sprintf(
-                'Product access have expired on %s (see order detail_id %s)',
-                $expires_at,
-                $order['detail_id']
-            )
-        ));
+            if ($expiresAt->isPast()) {
+                throw new ProductAccessExpiredException(sprintf(
+                    sprintf(
+                        'Product access have expired on %s (see order detail_id %s)',
+                        $expiresAt->format('Y-m-d'),
+                        $order['detail_id']
+                    )
+                ));
+            }
+        }
     }
 
     /**
