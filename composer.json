@@ -17,6 +17,7 @@
     "require": {
         "php": "^7.2",
         "ext-pdo": "*",
+        "cakephp/chronos": "^1.2",
         "cocur/slugify": "^3.1",
         "lcobucci/jwt": "^3.2",
         "monolog/monolog": "^1.23",
