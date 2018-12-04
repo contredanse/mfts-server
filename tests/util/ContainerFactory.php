@@ -13,4 +13,16 @@ class ContainerFactory
 
         return $container;
     }
+
+    public static function getConfig(?string $key): array
+    {
+        chdir(\dirname(__DIR__, 3));
+        $config = require __DIR__ . '/../../config/config.php';
+
+        if ($key !== null) {
+            return $config[$key];
+        }
+
+        return $config;
+    }
 }
