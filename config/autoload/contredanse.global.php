@@ -31,6 +31,6 @@ return [
 			ContredanseProductAccess::PAXTON_PRODUCT => [
 				explode(',', trim((string) getenv('PAXTON_PRODUCT_IDS')))
 			]
-		]
+		],
     ]
 ];
