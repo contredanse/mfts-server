@@ -1,6 +1,9 @@
 <?php
 
 declare(strict_types=1);
+
+use \App\Security\ContredanseProductAccess;
+
 return [
     'contredanse' => [
         'db' => [
@@ -20,7 +23,14 @@ return [
 
 		'auth' => [
 			// Token expiry for ApiAuthTokenHandler
-			'token_expiry' => (int) (getenv('JWT_TOKEN_DEFAULT_EXPIRY') ?: 3600)
+			'token_expiry' => (int) (getenv('JWT_TOKEN_DEFAULT_EXPIRY') ?: 3600),
+		],
+
+		'products' => [
+			// Here's where we set links between products and product database id's
+			ContredanseProductAccess::PAXTON_PRODUCT => [
+				explode(',', trim((string) getenv('PAXTON_PRODUCT_IDS')))
+			]
 		]
     ]
 ];
