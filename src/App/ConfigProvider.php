@@ -48,6 +48,7 @@ class ConfigProvider
                 Security\UserProviderInterface::class      => Security\ContredanseUserProviderFactory::class,
                 // Explicit
                 Security\ContredanseUserProvider::class    => Security\ContredanseUserProviderFactory::class,
+                Security\ContredanseProductAccess::class   => Security\ContredanseProductAccessFactory::class,
 
                 \Tuupola\Middleware\CorsMiddleware::class  => Security\ApiCorsMiddlewareFactory::class,
 
