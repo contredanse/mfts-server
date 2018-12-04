@@ -98,7 +98,7 @@ class ApiAuthTokenHandler implements RequestHandlerInterface
         //$users  = $this->userProvider->getAllUsers();
         $method = $request->getMethod();
         if ($method !== 'POST') {
-            throw new \RuntimeException('TODO - Handle error your way ;)');
+            throw new \RuntimeException('Unsupported method');
         }
 
         $body     = $request->getParsedBody();
