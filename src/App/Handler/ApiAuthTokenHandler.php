@@ -105,21 +105,20 @@ class ApiAuthTokenHandler implements RequestHandlerInterface
         $email    = trim($body['email'] ?? '');
         $password = trim($body['password'] ?? '');
 
-        if ($email !== '' && $password !== '') {
+        if ($email === 'ilove@contredanse.org' && $password === 'demo') {
+        	// This is for demo only
+            return $this->getResponseWithAccessToken('ilovecontredanse.org', $authExpiry);
+        } elseif ($email !== '' && $password !== '') {
             $user = $this->userProvider->getUserByEmail($email);
             if ($user !== null) {
                 $dbPassword = $user->getDetail('password');
                 if ($dbPassword === $password) {
-                    $token = $this->tokenManager->createNewToken([
-                        'user_id'  => $user->getIdentity()
-                        //'email'    => $email,
-                    ], $authExpiry);
+                    $roles = $user->getRoles();
 
-                    return (new JsonResponse([
-                        'access_token' => (string) $token,
-                        'token_type'   => 'api_auth',
-                        'success'      => true,
-                    ]))->withStatus(StatusCodeInterface::STATUS_OK);
+                    // Only admins for now !
+                    if (in_array('admin', (array) $roles, true)) {
+                        return $this->getResponseWithAccessToken($user->getDetail('user_id'), $authExpiry);
+                    }
                 }
             }
 
@@ -135,5 +134,19 @@ class ApiAuthTokenHandler implements RequestHandlerInterface
             'success' => false,
             'reason'  => 'Missing parameter'
         ]))->withStatus(StatusCodeInterface::STATUS_BAD_REQUEST);
+    }
+
+    public function getResponseWithAccessToken(string $user_id, int $authExpiry): ResponseInterface
+    {
+        $token = $this->tokenManager->createNewToken([
+            'user_id' => $user_id
+            //'email'    => $email,
+        ], $authExpiry);
+
+        return (new JsonResponse([
+            'access_token' => (string) $token,
+            'token_type'   => 'api_auth',
+            'success'      => true,
+        ]))->withStatus(StatusCodeInterface::STATUS_OK);
     }
 }
