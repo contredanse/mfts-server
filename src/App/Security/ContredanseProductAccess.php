@@ -165,6 +165,7 @@ class ContredanseProductAccess
 						'%Y-%m-%d %H:%i:%s') AS order_created_at,
 			    d.detail_id,  
 				d.product_id,
+				d.support_id,
 				d.quantity,
 				DATE_FORMAT(FROM_UNIXTIME(d.cre_dt),
 						'%Y-%m-%d %H:%i:%s') AS line_created_at,
