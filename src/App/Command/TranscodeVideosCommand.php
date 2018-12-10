@@ -339,7 +339,7 @@ class TranscodeVideosCommand extends Command
          * /opt/ffmpeg/ffmpeg -i '/web/material-for-the-spine/latest_sources/goldberg.mov' -vf yadif,hqdn3d -b:v 1024k \
          * -minrate 512k -maxrate 1485k -tile-columns 2 -g 240 -threads 8 \
          * -quality good -crf 32 -auto-alt-ref 1 -lag-in-frames 25 -c:v libvpx-vp9 -c:a libopus \
-         * -pass 2 -passlogfile /tmp/ffmpeg-passlog-goldberg.log -speed 2 -y /tmp/goldberg.multipass.new.webm
+         * -pass 2 -passlogfile /tmp/ffmpeg-passlog-goldberg.log -speed 2 -y /tmp/goldberg.multipass.new.webm.
          */
         $logFile = tempnam(sys_get_temp_dir(), 'ffmpeg-log');
 
