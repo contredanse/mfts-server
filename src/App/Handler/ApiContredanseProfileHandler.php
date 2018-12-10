@@ -46,8 +46,19 @@ class ApiContredanseProfileHandler implements RequestHandlerInterface
         $user_id = $token->getClaim('user_id', '');
 
         try {
-            $userData = $this->userProvider->findUser($user_id);
-            $data     = [
+            // For demo !
+
+            if ($user_id === 'ilove@contredanse.org') {
+                $userData = [
+                    'user_id'   => 'ilovecontredanse.org',
+                    'firstname' => 'Demo',
+                    'name'      => 'Demo',
+                    'email'     => 'ilovecontredanse.org',
+                ];
+            } else {
+                $userData = $this->userProvider->findUser($user_id);
+            }
+            $data = [
                 'success' => true,
                 'data'    => [
                     'user_id'   => $userData['user_id'],
