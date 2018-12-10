@@ -45,7 +45,8 @@
         "zendframework/zend-stdlib": "^3.1"
     },
     "require-dev": {
-        "captainhook/captainhook": "^2.2",
+        "captainhook/captainhook": "^3.0",
+        "captainhook/plugin-composer": "^3.0",
         "deployer/deployer": "^6.3",
         "deployer/recipes": "^6.1",
         "filp/whoops": "^2.3",
@@ -86,7 +87,6 @@
         }
     },
     "scripts": {
-        "post-install-cmd": "\\CaptainHook\\CaptainHook\\Composer\\Cmd::install",
         "development-disable": "zf-development-mode disable",
         "development-enable": "zf-development-mode enable",
         "development-status": "zf-development-mode status",
