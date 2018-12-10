@@ -107,7 +107,7 @@ class ApiAuthTokenHandler implements RequestHandlerInterface
 
         if ($email === 'ilove@contredanse.org' && $password === 'demo') {
             // This is for demo only
-            return $this->getResponseWithAccessToken('ilovecontredanse.org', $authExpiry);
+            return $this->getResponseWithAccessToken('ilove@contredanse.org', $authExpiry);
         } elseif ($email !== '' && $password !== '') {
             $user = $this->userProvider->getUserByEmail($email);
             if ($user !== null) {
