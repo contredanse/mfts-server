@@ -3,7 +3,7 @@
         "enabled": true,
         "actions": [
             {
-                "action": "\\CaptainHook\\CaptainHook\\Hook\\Message\\Action\\Regex",
+                "action": "\\CaptainHook\\App\\Hook\\Message\\Action\\Regex",
                 "options": {
                     "regex": "#.*#"
                 }
