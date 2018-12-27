@@ -65,12 +65,18 @@ class TokenManager
     public function createNewToken(array $customClaims = [], int $expiration = 3600, bool $autoSign = true): Token
     {
         $builder = (new Builder())
-            ->setIssuer($this->issuer) // Configures the issuer (iss claim)
-            ->setAudience($this->audience) // Configures the audience (aud claim)
             ->setId(Uuid::uuid1()->toString(), true) // Configures the id (jti claim), replicating as a header item
             ->setIssuedAt(time()) // Configures the time that the token was issue (iat claim)
             ->setNotBefore(time() + 0) // Configures the time that the token can be used (nbf claim)
             ->setExpiration(time() + $expiration); // Configures the expiration time of the token (exp claim)
+
+        if ($this->audience !== null) {
+            $builder->setAudience($this->audience);
+        }
+
+        if ($this->issuer !== null) {
+            $builder->setIssuer($this->issuer);
+        }
 
         foreach ($customClaims as $key => $value) {
             $builder->set($key, $value);
@@ -148,8 +154,13 @@ class TokenManager
         $this->ensureNotExpired($token);
 
         $data = new ValidationData(); // It will use the current time to validate (iat, nbf and exp)
-        $data->setIssuer($this->issuer);
-        $data->setAudience($this->audience);
+        if ($this->audience !== null) {
+            $data->setAudience($this->audience);
+        }
+
+        if ($this->issuer !== null) {
+            $data->setIssuer($this->issuer);
+        }
 
         // Optionally test for issuer
         if ($this->issuer !== null) {
@@ -161,7 +172,7 @@ class TokenManager
             }
         }
 
-		// Optionally test for audience
+        // Optionally test for audience
         if ($this->audience !== null) {
             $issuer = $token->getClaim('aud', null);
             if ($issuer !== $this->audience) {
