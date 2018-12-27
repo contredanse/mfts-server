@@ -27,11 +27,11 @@ class TokenManager
      */
     private $signer;
     /**
-     * @var string
+     * @var string|null
      */
     private $issuer;
     /**
-     * @var string
+     * @var string|null
      */
     private $audience;
     /**
@@ -47,8 +47,8 @@ class TokenManager
     public function __construct(
         string $privateKey,
                                 int $defaultExpiry = self::DEFAULT_EXPIRY,
-                                string $issuer = '',
-                                string $audience = ''
+                                string $issuer = null,
+                                string $audience = null
     ) {
         $this->signer        = $this->getSigner();
         $this->issuer        = $issuer;
@@ -151,8 +151,9 @@ class TokenManager
         $data->setIssuer($this->issuer);
         $data->setAudience($this->audience);
 
-        if ($token->hasClaim('iss')) {
-            $issuer = $token->getClaim('iss', false);
+        // Optionally test for issuer
+        if ($this->issuer !== null) {
+            $issuer = $token->getClaim('iss', null);
             if ($issuer !== $this->issuer) {
                 throw new TokenIssuerException(sprintf(
                     'Token issuer does not match'
@@ -160,9 +161,10 @@ class TokenManager
             }
         }
 
-        if ($token->hasClaim('aud')) {
-            $issuer = $token->getClaim('aud', false);
-            if ($issuer !== $this->issuer) {
+		// Optionally test for audience
+        if ($this->audience !== null) {
+            $issuer = $token->getClaim('aud', null);
+            if ($issuer !== $this->audience) {
                 throw new TokenAudienceException(sprintf(
                     'Token audience does not match'
                 ));
