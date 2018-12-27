@@ -23,7 +23,7 @@
         "monolog/monolog": "^1.23",
         "ramsey/uuid": "^3.8",
         "roave/security-advisories": "dev-master",
-        "soluble/mediatools": "^0.8.3",
+        "soluble/mediatools": "^0.8.5",
         "symfony/console": "^4.2",
         "symfony/finder": "^4.2",
         "symfony/process": "^4.2",
@@ -32,7 +32,7 @@
         "vlucas/phpdotenv": "^2.5",
         "zendframework/zend-component-installer": "^2.1",
         "zendframework/zend-config-aggregator": "^1.0",
-        "zendframework/zend-diactoros": "^2.0",
+        "zendframework/zend-diactoros": "^2.1",
         "zendframework/zend-expressive": "^3.2",
         "zendframework/zend-expressive-authentication": "^1.0",
         "zendframework/zend-expressive-fastroute": "^3.0",
@@ -41,7 +41,7 @@
         "zendframework/zend-expressive-twigrenderer": "^2.0",
         "zendframework/zend-httphandlerrunner": "^1.0",
         "zendframework/zend-problem-details": "^1.0",
-        "zendframework/zend-servicemanager": "^3.3",
+        "zendframework/zend-servicemanager": "^3.4",
         "zendframework/zend-stdlib": "^3.1"
     },
     "require-dev": {
