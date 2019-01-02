@@ -61,7 +61,7 @@ class ContredanseProductAccess
      * and can be used to determine the exact cause of failure
      * @throws NoProductAccessException
      * @throws ProductPaymentIssueException
-     * @throws ProductPaymentIssueException
+     * @throws ProductAccessExpiredException
      */
     public function ensureAccess(string $productName, string $email): void
     {
@@ -70,7 +70,7 @@ class ContredanseProductAccess
         if (count($orders) === 0) {
             // Cool, he never bought anything
             throw new NoProductAccessException(sprintf(
-                sprintf('No access, product "%s" is present in orders', $productName)
+                sprintf('No access, product "%s" have not yet been ordered', $productName)
             ));
         }
 
