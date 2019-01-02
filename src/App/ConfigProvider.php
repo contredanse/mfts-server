@@ -41,7 +41,8 @@ class ConfigProvider
                 Handler\ApiContredanseProfileHandler::class		   => Handler\ApiContredanseProfileHandlerFactory::class,
 
                 // Middleware
-                Middleware\AuthTokenMiddleware::class   => Middleware\AuthTokenMiddlewareFactory::class,
+                Middleware\AuthTokenMiddleware::class      => Middleware\AuthTokenMiddlewareFactory::class,
+                \Tuupola\Middleware\CorsMiddleware::class  => Middleware\ApiCorsMiddlewareFactory::class,
 
                 // Security
                 // From configured interface
@@ -49,8 +50,6 @@ class ConfigProvider
                 // Explicit
                 Security\ContredanseUserProvider::class    => Security\ContredanseUserProviderFactory::class,
                 Security\ContredanseProductAccess::class   => Security\ContredanseProductAccessFactory::class,
-
-                \Tuupola\Middleware\CorsMiddleware::class  => Security\ApiCorsMiddlewareFactory::class,
 
                 // Service
                 Service\Db\ContredanseDb::class           => Service\Db\ContredanseDbFactory::class,

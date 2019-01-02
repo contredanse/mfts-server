@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Security;
+namespace App\Middleware;
 
 use Psr\Container\ContainerInterface;
 use Tuupola\Middleware\CorsMiddleware;
