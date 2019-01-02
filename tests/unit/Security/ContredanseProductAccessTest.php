@@ -27,9 +27,9 @@ class ContredanseProductAccessTest extends TestCase
      */
     private $productName;
 
-	/**
-	 * @var UserInterface
-	 */
+    /**
+     * @var UserInterface
+     */
     private $testUser;
 
     protected function setUp(): void
@@ -38,12 +38,12 @@ class ContredanseProductAccessTest extends TestCase
         $this->accessMock->makePartial();
 
         $this->productName = ContredanseProductAccess::PAXTON_PRODUCT;
-        $this->testUser = new class extends ContredanseUser {
-        	public function __construct()
-			{
-				parent::__construct('10', [], ['email' => 'test@example.org']);
-			}
-		};
+        $this->testUser    = new class() extends ContredanseUser {
+            public function __construct()
+            {
+                parent::__construct('10', [], ['email' => 'test@example.org']);
+            }
+        };
     }
 
     public function testEnsureAccessIsValidWithTomorrowExpiry(): void

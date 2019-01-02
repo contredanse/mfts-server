@@ -101,7 +101,6 @@ class ApiAuthTokenHandler implements RequestHandlerInterface
             $this->productAccess->ensureAccess(ContredanseProductAccess::PAXTON_PRODUCT, $user);
 
             return $this->getResponseWithAccessToken($user->getDetail('user_id'), $authExpiry);
-
         } catch (AuthExceptionInterface $e) {
             return (new JsonResponse([
                 'success' => false,

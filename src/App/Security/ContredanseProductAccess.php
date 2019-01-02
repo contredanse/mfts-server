@@ -66,12 +66,11 @@ class ContredanseProductAccess
      */
     public function ensureAccess(string $productName, UserInterface $user): void
     {
+        if (in_array('admin', (array) $user->getRoles(), true)) {
+            return;
+        }
 
-		if (in_array('admin', (array) $user->getRoles(), true)) {
-			return;
-		}
-
-		$email = $user->getDetail('email');
+        $email = $user->getDetail('email');
 
         $orders = $this->getProductOrders($productName, $email);
 
