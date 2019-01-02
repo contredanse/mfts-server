@@ -65,6 +65,14 @@ class ContredanseProductAccess
      */
     public function ensureAccess(string $productName, string $email): void
     {
+        // Allow admins !
+        $user = (new ContredanseUserProvider($this->adapter))->getUserByEmail($email);
+        if ($user !== null) {
+            if (in_array('admin', (array) $user->getRoles(), true)) {
+                return;
+            }
+        }
+
         $orders = $this->getProductOrders($productName, $email);
 
         if (count($orders) === 0) {

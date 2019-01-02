@@ -74,6 +74,12 @@ class ApiAuthTokenHandler implements RequestHandlerInterface
         if ($method !== 'POST') {
             throw new \RuntimeException('Unsupported http method');
         }
+        // Authorization...
+        //
+        // Valid users are
+        // - either admins
+        // - or valid paying users
+        //
 
         $body     = $request->getParsedBody();
         $email    = trim($body['email'] ?? '');
@@ -88,20 +94,13 @@ class ApiAuthTokenHandler implements RequestHandlerInterface
         $authenticationManager = new AuthenticationManager($this->userProvider);
 
         try {
+            // Authenticate
             $user = $authenticationManager->getAuthenticatedUser($email, $password);
 
-            // Authorization...
-            //
-            // Valid users are
-            // - either admins
-            // - or valid paying users
-            //
-
-            if (in_array('admin', (array) $user->getRoles(), true)) {
-                return $this->getResponseWithAccessToken($user->getDetail('user_id'), $authExpiry);
-            }
-
+            // Authorize
             $this->productAccess->ensureAccess(ContredanseProductAccess::PAXTON_PRODUCT, $email);
+
+            return $this->getResponseWithAccessToken($user->getDetail('user_id'), $authExpiry);
         } catch (AuthExceptionInterface $e) {
             return (new JsonResponse([
                 'success' => false,
