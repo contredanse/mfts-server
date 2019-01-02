@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace App\Middleware;
 
-use App\Service\Exception\TokenValidationExceptionInterface;
-use App\Service\TokenManager;
+use App\Service\Token\Exception\TokenValidationExceptionInterface;
+use App\Service\Token\TokenManager;
 use Fig\Http\Message\StatusCodeInterface;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;

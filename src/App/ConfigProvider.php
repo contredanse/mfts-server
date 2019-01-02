@@ -54,7 +54,7 @@ class ConfigProvider
 
                 // Service
                 Service\Db\ContredanseDb::class           => Service\Db\ContredanseDbFactory::class,
-                Service\TokenManager::class               => Service\TokenManagerFactory::class,
+                Service\Token\TokenManager::class         => Service\Token\TokenManagerFactory::class,
                 Service\Auth\AuthenticationManager::class => Service\Auth\AuthenticationManagerFactory::class,
             ],
         ];

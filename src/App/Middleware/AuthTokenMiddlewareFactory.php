@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace App\Middleware;
 
 use App\Exception\ConfigException;
-use App\Service\TokenManager;
+use App\Service\Token\TokenManager;
 use Psr\Container\ContainerInterface;
 
 class AuthTokenMiddlewareFactory

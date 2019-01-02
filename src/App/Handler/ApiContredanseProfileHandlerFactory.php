@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Handler;
 
-use App\Service\TokenManager;
+use App\Service\Token\TokenManager;
 use Psr\Container\ContainerInterface;
 
 class ApiContredanseProfileHandlerFactory

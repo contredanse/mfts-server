@@ -6,7 +6,7 @@ namespace App\Handler;
 
 use App\Exception\ConfigException;
 use App\Security\ContredanseProductAccess;
-use App\Service\TokenManager;
+use App\Service\Token\TokenManager;
 use Psr\Container\ContainerInterface;
 
 class ApiAuthTokenHandlerFactory

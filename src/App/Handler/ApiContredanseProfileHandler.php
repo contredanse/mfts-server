@@ -7,7 +7,7 @@ namespace App\Handler;
 use App\Middleware\AuthTokenMiddleware;
 use App\Security\Exception\UserNotFoundException;
 use App\Security\UserProviderInterface;
-use App\Service\TokenManager;
+use App\Service\Token\TokenManager;
 use Fig\Http\Message\StatusCodeInterface;
 use Lcobucci\JWT\Token;
 use Psr\Http\Message\ResponseInterface;
