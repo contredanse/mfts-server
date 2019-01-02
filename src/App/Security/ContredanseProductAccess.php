@@ -12,6 +12,7 @@ use App\Security\Exception\QueryErrorException;
 use App\Security\Exception\UnsupportedExpiryFormatException;
 use App\Security\Exception\UnsupportedProductException;
 use Cake\Chronos\Chronos;
+use Zend\Expressive\Authentication\UserInterface;
 
 class ContredanseProductAccess
 {
@@ -63,15 +64,14 @@ class ContredanseProductAccess
      * @throws ProductPaymentIssueException
      * @throws ProductAccessExpiredException
      */
-    public function ensureAccess(string $productName, string $email): void
+    public function ensureAccess(string $productName, UserInterface $user): void
     {
-        // Allow admins !
-        $user = (new ContredanseUserProvider($this->adapter))->getUserByEmail($email);
-        if ($user !== null) {
-            if (in_array('admin', (array) $user->getRoles(), true)) {
-                return;
-            }
-        }
+
+		if (in_array('admin', (array) $user->getRoles(), true)) {
+			return;
+		}
+
+		$email = $user->getDetail('email');
 
         $orders = $this->getProductOrders($productName, $email);
 

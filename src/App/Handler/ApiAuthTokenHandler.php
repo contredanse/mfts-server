@@ -94,13 +94,14 @@ class ApiAuthTokenHandler implements RequestHandlerInterface
         $authenticationManager = new AuthenticationManager($this->userProvider);
 
         try {
-            // Authenticate
+            // Authenticate, wil throw exception if failed
             $user = $authenticationManager->getAuthenticatedUser($email, $password);
 
-            // Authorize
-            $this->productAccess->ensureAccess(ContredanseProductAccess::PAXTON_PRODUCT, $email);
+            // Ensure authorization
+            $this->productAccess->ensureAccess(ContredanseProductAccess::PAXTON_PRODUCT, $user);
 
             return $this->getResponseWithAccessToken($user->getDetail('user_id'), $authExpiry);
+
         } catch (AuthExceptionInterface $e) {
             return (new JsonResponse([
                 'success' => false,

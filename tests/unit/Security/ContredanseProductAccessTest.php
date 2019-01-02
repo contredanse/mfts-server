@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace AppTest\Security;
 
 use App\Security\ContredanseProductAccess;
+use App\Security\ContredanseUser;
 use App\Security\Exception\NoProductAccessException;
 use App\Security\Exception\ProductAccessExpiredException;
 use App\Security\Exception\ProductPaymentIssueException;
@@ -14,6 +15,7 @@ use Cake\Chronos\Chronos;
 use Mockery;
 use Mockery\MockInterface;
 use PHPUnit\Framework\TestCase;
+use Zend\Expressive\Authentication\UserInterface;
 
 class ContredanseProductAccessTest extends TestCase
 {
@@ -25,12 +27,23 @@ class ContredanseProductAccessTest extends TestCase
      */
     private $productName;
 
+	/**
+	 * @var UserInterface
+	 */
+    private $testUser;
+
     protected function setUp(): void
     {
         $this->accessMock = Mockery::mock(ContredanseProductAccess::class);
         $this->accessMock->makePartial();
 
         $this->productName = ContredanseProductAccess::PAXTON_PRODUCT;
+        $this->testUser = new class extends ContredanseUser {
+        	public function __construct()
+			{
+				parent::__construct('10', [], ['email' => 'test@example.org']);
+			}
+		};
     }
 
     public function testEnsureAccessIsValidWithTomorrowExpiry(): void
@@ -43,7 +56,7 @@ class ContredanseProductAccessTest extends TestCase
                 'detail_id'  => 123
             ]
         ]);
-        $this->accessMock->ensureAccess($this->productName, 'email');
+        $this->accessMock->ensureAccess($this->productName, $this->testUser);
         self::assertTrue(true);
     }
 
@@ -57,7 +70,7 @@ class ContredanseProductAccessTest extends TestCase
                 'detail_id'  => 123
             ]
         ]);
-        $this->accessMock->ensureAccess($this->productName, 'email');
+        $this->accessMock->ensureAccess($this->productName, $this->testUser);
         self::assertTrue(true);
     }
 
@@ -73,7 +86,7 @@ class ContredanseProductAccessTest extends TestCase
                 'detail_id'  => 123
             ]
         ]);
-        $this->accessMock->ensureAccess($this->productName, 'email');
+        $this->accessMock->ensureAccess($this->productName, $this->testUser);
     }
 
     public function testEnsureAccessPaymentIssue(): void
@@ -82,7 +95,7 @@ class ContredanseProductAccessTest extends TestCase
         $this->accessMock->shouldReceive('getProductOrders')->andReturn([
             0 => ['pay_status' => null, 'expires_at' => '', 'detail_id' => 123]
         ]);
-        $this->accessMock->ensureAccess($this->productName, 'email');
+        $this->accessMock->ensureAccess($this->productName, $this->testUser);
     }
 
     public function testEnsureAccessInvalidExpiry(): void
@@ -95,7 +108,7 @@ class ContredanseProductAccessTest extends TestCase
                 'detail_id'  => 123
             ]
         ]);
-        $this->accessMock->ensureAccess($this->productName, 'email');
+        $this->accessMock->ensureAccess($this->productName, $this->testUser);
     }
 
     public function testEnsureAccessNoOrderMadeException(): void
@@ -105,12 +118,12 @@ class ContredanseProductAccessTest extends TestCase
         $this->accessMock->shouldReceive('getProductOrders')->andReturn([
             // no orders !
         ]);
-        $this->accessMock->ensureAccess($this->productName, 'email');
+        $this->accessMock->ensureAccess($this->productName, $this->testUser);
     }
 
     public function testWrongProductThrowsException(): void
     {
         self::expectException(UnsupportedProductException::class);
-        $this->accessMock->ensureAccess('invalidproduct', '');
+        $this->accessMock->ensureAccess('invalidproduct', $this->testUser);
     }
 }
