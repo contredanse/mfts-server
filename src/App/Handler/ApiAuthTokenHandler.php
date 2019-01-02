@@ -4,7 +4,13 @@ declare(strict_types=1);
 
 namespace App\Handler;
 
+use App\Security\ContredanseProductAccess;
+use App\Security\Exception\NoProductAccessException;
+use App\Security\Exception\ProductAccessExpiredException;
+use App\Security\Exception\ProductPaymentIssueException;
 use App\Security\UserProviderInterface;
+use App\Service\Auth\AuthenticationManager;
+use App\Service\Auth\Exception\AuthExceptionInterface;
 use App\Service\Exception\TokenValidationExceptionInterface;
 use App\Service\TokenManager;
 use Fig\Http\Message\StatusCodeInterface;
@@ -31,14 +37,20 @@ class ApiAuthTokenHandler implements RequestHandlerInterface
      */
     private $authParams;
 
+    /*
+     * @var ContredanseProductAccess
+     */
+    private $productAccess;
+
     /**
      * @param array<string, mixed> $authParams
      */
-    public function __construct(UserProviderInterface $userProvider, TokenManager $tokenManager, array $authParams = [])
+    public function __construct(UserProviderInterface $userProvider, TokenManager $tokenManager, ContredanseProductAccess $productAccess, array $authParams = [])
     {
-        $this->userProvider = $userProvider;
-        $this->tokenManager = $tokenManager;
-        $this->authParams   = $authParams;
+        $this->userProvider  = $userProvider;
+        $this->tokenManager  = $tokenManager;
+        $this->authParams    = $authParams;
+        $this->productAccess = $productAccess;
     }
 
     public function handle(ServerRequestInterface $request): ResponseInterface
@@ -51,6 +63,60 @@ class ApiAuthTokenHandler implements RequestHandlerInterface
             default:
                 return (new TextResponse('Not found'))
                     ->withStatus(StatusCodeInterface::STATUS_NOT_FOUND);
+        }
+    }
+
+    public function loginAction(ServerRequestInterface $request): ResponseInterface
+    {
+        $authExpiry = $this->authParams['token_expiry'] ?? TokenManager::DEFAULT_EXPIRY;
+
+        $method = $request->getMethod();
+        if ($method !== 'POST') {
+            throw new \RuntimeException('Unsupported http method');
+        }
+
+        $body     = $request->getParsedBody();
+        $email    = trim($body['email'] ?? '');
+        $password = trim($body['password'] ?? '');
+
+        // @todo Must be removed when production
+        if ($email === 'ilove@contredanse.org' && $password === 'demo') {
+            // This is for demo only
+            return $this->getResponseWithAccessToken('ilove@contredanse.org', $authExpiry);
+        }
+
+        $authenticationManager = new AuthenticationManager($this->userProvider);
+
+        try {
+            $user = $authenticationManager->getAuthenticatedUser($email, $password);
+
+            // Authorization...
+            //
+            // Valid users are
+            // - either admins
+            // - or valid paying users
+            //
+
+            if (in_array('admin', (array) $user->getRoles(), true)) {
+                return $this->getResponseWithAccessToken($user->getDetail('user_id'), $authExpiry);
+            }
+
+            $this->productAccess->ensureAccess(ContredanseProductAccess::PAXTON_PRODUCT, $email);
+        } catch (AuthExceptionInterface $e) {
+            return (new JsonResponse([
+                'success' => false,
+                'reason'  => $e->getReason()
+            ]))->withStatus($e->getStatusCode());
+        } catch (NoProductAccessException | ProductPaymentIssueException | ProductAccessExpiredException $e) {
+            return (new JsonResponse([
+                'success' => false,
+                'reason'  => $e->getMessage(),
+            ]))->withStatus(StatusCodeInterface::STATUS_UNAUTHORIZED);
+        } catch (\Throwable $e) {
+            return (new JsonResponse([
+                'success' => false,
+                'reason'  => $e->getMessage()
+            ]))->withStatus(StatusCodeInterface::STATUS_BAD_REQUEST);
         }
     }
 
@@ -91,52 +157,7 @@ class ApiAuthTokenHandler implements RequestHandlerInterface
         }
     }
 
-    public function loginAction(ServerRequestInterface $request): ResponseInterface
-    {
-        $authExpiry = $this->authParams['token_expiry'] ?? TokenManager::DEFAULT_EXPIRY;
-
-        //$users  = $this->userProvider->getAllUsers();
-        $method = $request->getMethod();
-        if ($method !== 'POST') {
-            throw new \RuntimeException('Unsupported method');
-        }
-
-        $body     = $request->getParsedBody();
-        $email    = trim($body['email'] ?? '');
-        $password = trim($body['password'] ?? '');
-
-        if ($email === 'ilove@contredanse.org' && $password === 'demo') {
-            // This is for demo only
-            return $this->getResponseWithAccessToken('ilove@contredanse.org', $authExpiry);
-        } elseif ($email !== '' && $password !== '') {
-            $user = $this->userProvider->getUserByEmail($email);
-            if ($user !== null) {
-                $dbPassword = $user->getDetail('password');
-                if ($dbPassword === $password) {
-                    $roles = $user->getRoles();
-
-                    // Only admins for now !
-                    if (in_array('admin', (array) $roles, true)) {
-                        return $this->getResponseWithAccessToken($user->getDetail('user_id'), $authExpiry);
-                    }
-                }
-            }
-
-            return (new JsonResponse([
-                'success' => false,
-                'reason'  => $user === null ?
-                    'User does not exists' :
-                    'Password invalid'
-            ]))->withStatus(StatusCodeInterface::STATUS_UNAUTHORIZED);
-        }
-
-        return (new JsonResponse([
-            'success' => false,
-            'reason'  => 'Missing parameter'
-        ]))->withStatus(StatusCodeInterface::STATUS_BAD_REQUEST);
-    }
-
-    public function getResponseWithAccessToken(string $user_id, int $authExpiry): ResponseInterface
+    private function getResponseWithAccessToken(string $user_id, int $authExpiry): ResponseInterface
     {
         $token = $this->tokenManager->createNewToken([
             'user_id' => $user_id

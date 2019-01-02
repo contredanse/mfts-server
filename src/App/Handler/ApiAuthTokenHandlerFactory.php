@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Handler;
 
 use App\Exception\ConfigException;
+use App\Security\ContredanseProductAccess;
 use App\Service\TokenManager;
 use Psr\Container\ContainerInterface;
 
@@ -12,8 +13,9 @@ class ApiAuthTokenHandlerFactory
 {
     public function __invoke(ContainerInterface $container): ApiAuthTokenHandler
     {
-        $userProvider = $container->get(\App\Security\UserProviderInterface::class);
-        $tokenService = $container->get(TokenManager::class);
+        $userProvider  = $container->get(\App\Security\UserProviderInterface::class);
+        $tokenService  = $container->get(TokenManager::class);
+        $productAccess = $container->get(ContredanseProductAccess::class);
 
         $config = $container->get('config')['contredanse'] ?? null;
         if ($config === null) {
@@ -23,6 +25,6 @@ class ApiAuthTokenHandlerFactory
             throw new ConfigException("['contredanse']['auth'] config key is missing.");
         }
 
-        return new ApiAuthTokenHandler($userProvider, $tokenService, $config['auth']);
+        return new ApiAuthTokenHandler($userProvider, $tokenService, $productAccess, $config['auth']);
     }
 }
