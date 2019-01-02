@@ -6,7 +6,7 @@ namespace AppTest\Functional\Security;
 
 use App\Security\ContredanseProductAccess;
 use App\Security\ContredanseProductAccessFactory;
-use App\Service\ContredanseDb;
+use App\Service\Db\ContredanseDb;
 use AppTest\Util\ContainerFactory;
 use PHPUnit\Framework\TestCase;
 use Psr\Container\ContainerInterface;

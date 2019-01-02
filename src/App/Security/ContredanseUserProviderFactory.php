@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace App\Security;
 
 use App\Exception\ConfigException;
-use App\Service\ContredanseDb;
+use App\Service\Db\ContredanseDb;
 use Psr\Container\ContainerInterface;
 
 class ContredanseUserProviderFactory

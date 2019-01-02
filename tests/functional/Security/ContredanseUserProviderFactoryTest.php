@@ -7,7 +7,7 @@ namespace AppTest\Functional\Security;
 use App\Exception\ConnectionException;
 use App\Security\ContredanseUserProvider;
 use App\Security\ContredanseUserProviderFactory;
-use App\Service\ContredanseDb;
+use App\Service\Db\ContredanseDb;
 use AppTest\Util\ContainerFactory;
 use PHPUnit\Framework\TestCase;
 use Psr\Container\ContainerInterface;
