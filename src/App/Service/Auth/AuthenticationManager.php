@@ -46,5 +46,7 @@ class AuthenticationManager
         } catch (\Throwable $e) {
             throw new AuthException($e->getMessage());
         }
+
+		throw new AuthException('Unknown authentication exception');
     }
 }
