@@ -33,6 +33,7 @@ class ContredanseUserProvider implements UserProviderInterface
         );
         $stmt->execute([':email' => $email]);
         $rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
+
         if ($rows === false || count($rows) !== 1) {
             return null;
         }
@@ -59,7 +60,7 @@ class ContredanseUserProvider implements UserProviderInterface
         $stmt->execute();
         $rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
         if ($rows === false) {
-            throw new QueryErrorException('Cannot get users');
+            throw new QueryErrorException('Cannot retrieve users');
         }
 
         return $rows;
