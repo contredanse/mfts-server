@@ -38,6 +38,12 @@ jobs:
       script:
         - composer phpstan
         - composer cs-fix
+    - stage: Test PHP7.3
+      php: 7.3
+      env: IGNORE_PLATFORM_REQS=yes
+      script:
+        - cp .env.example .env
+        - ./vendor/bin/phpunit --testsuite unit -v -c .travis/phpunit.xml --coverage-clover=coverage.xml
     - stage: Test PHP Nightly (unit tests only)
       php: nightly
       env: IGNORE_PLATFORM_REQS=yes
