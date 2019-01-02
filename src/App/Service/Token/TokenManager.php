@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace App\Service;
+namespace App\Service\Token;
 
-use App\Service\Exception\TokenAudienceException;
-use App\Service\Exception\TokenExpiredException;
-use App\Service\Exception\TokenIssuerException;
-use App\Service\Exception\TokenParseException;
-use App\Service\Exception\TokenSignatureException;
-use App\Service\Exception\TokenValidationExceptionInterface;
+use App\Service\Token\Exception\TokenAudienceException;
+use App\Service\Token\Exception\TokenExpiredException;
+use App\Service\Token\Exception\TokenIssuerException;
+use App\Service\Token\Exception\TokenParseException;
+use App\Service\Token\Exception\TokenSignatureException;
+use App\Service\Token\Exception\TokenValidationExceptionInterface;
 use Lcobucci\JWT\Builder;
 use Lcobucci\JWT\Parser;
 use Lcobucci\JWT\Signer\BaseSigner;

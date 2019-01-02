@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace AppTest\Service;
+namespace AppTest\Service\Token;
 
 use App\Exception\ConfigException;
-use App\Service\TokenManagerFactory;
+use App\Service\Token\TokenManagerFactory;
 use PHPUnit\Framework\TestCase;
 use Psr\Container\ContainerInterface;
 

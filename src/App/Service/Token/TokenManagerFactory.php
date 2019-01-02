@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Service;
+namespace App\Service\Token;
 
 use App\Exception\ConfigException;
 use Psr\Container\ContainerInterface;

@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace App\Service\Exception;
+namespace App\Service\Token\Exception;
 
-class TokenIssuerException extends TokenValidationException
+class TokenAudienceException extends TokenValidationException
 {
     public function getReason(): string
     {
-        return 'issuer';
+        return 'audience';
     }
 
     public function getStatusCode(): int
