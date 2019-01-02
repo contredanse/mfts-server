@@ -53,8 +53,9 @@ class ConfigProvider
                 \Tuupola\Middleware\CorsMiddleware::class  => Security\ApiCorsMiddlewareFactory::class,
 
                 // Service
-                Service\ContredanseDb::class => Service\ContredanseDbFactory::class,
-                Service\TokenManager::class  => Service\TokenManagerFactory::class,
+                Service\ContredanseDb::class              => Service\ContredanseDbFactory::class,
+                Service\TokenManager::class               => Service\TokenManagerFactory::class,
+                Service\Auth\AuthenticationManager::class => Service\Auth\AuthenticationManagerFactory::class,
             ],
         ];
     }
