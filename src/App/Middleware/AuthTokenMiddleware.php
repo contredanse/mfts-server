@@ -55,7 +55,7 @@ class AuthTokenMiddleware implements MiddlewareInterface
     }
 
     /*
-     * @return ResponseInterface|RedirectResponse
+     * @return ResponseInterface
      */
     public function process(ServerRequestInterface $request, RequestHandlerInterface $handler): ResponseInterface
     {
