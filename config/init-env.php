@@ -1,5 +1,5 @@
 <?php
 
-$dotenv = new Dotenv\Dotenv(dirname(__DIR__, 1));
+$dotenv = Dotenv\Dotenv::create(dirname(__DIR__, 1));
 $dotenv->load();
 
