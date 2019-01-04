@@ -28,7 +28,7 @@ jobs:
       php: 7.2
       env: XDEBUG=yes
       script:
-        - cp .env.example .env
+        - cp .travis/.env.travis .env
         - ./vendor/bin/phpunit --testsuite unit -v -c .travis/phpunit.xml --coverage-clover=coverage.xml
         - wget https://scrutinizer-ci.com/ocular.phar
         - php ocular.phar code-coverage:upload --format=php-clover coverage.xml
