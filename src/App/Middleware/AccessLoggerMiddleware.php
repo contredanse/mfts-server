@@ -26,13 +26,13 @@ class AccessLoggerMiddleware implements MiddlewareInterface
     {
         $response = $handler->handle($request);
 
-        $ip = $this->getClientIp($request);
+        $ip    = $this->getClientIp($request);
         $email = $this->getEmail($request);
 
         try {
             $this->accessLogger->log(
                 $response->getStatusCode() === 200 ? AccessLogger::TYPE_LOGIN_SUCCESS :
-				AccessLogger::TYPE_LOGIN_FAILURE,
+                AccessLogger::TYPE_LOGIN_FAILURE,
                 $email,
                 $ip
             );
@@ -44,10 +44,12 @@ class AccessLoggerMiddleware implements MiddlewareInterface
         }
     }
 
-    private function getEmail(ServerRequestInterface $request): string {
-		$body = $request->getParsedBody();
-		return trim($body['email'] ?? '');
-	}
+    private function getEmail(ServerRequestInterface $request): string
+    {
+        $body = $request->getParsedBody();
+
+        return trim($body['email'] ?? '');
+    }
 
     private function getClientIp(ServerRequestInterface $request): ?string
     {
@@ -55,6 +57,7 @@ class AccessLoggerMiddleware implements MiddlewareInterface
         if (isset($serverParams['REMOTE_ADDR'])) {
             return $serverParams['REMOTE_ADDR'];
         }
+
         return null;
     }
 }
