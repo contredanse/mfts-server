@@ -54,9 +54,6 @@ class AuthTokenMiddleware implements MiddlewareInterface
         $this->options      = array_merge(self::DEFAULT_OPTIONS, $options);
     }
 
-    /*
-     * @return ResponseInterface
-     */
     public function process(ServerRequestInterface $request, RequestHandlerInterface $handler): ResponseInterface
     {
         // 1. Check for secure scheme (with exception of relaxed_hosts)

@@ -33,5 +33,6 @@ class AccessLogger
     {
         $accessLog = new AccessLog($type, $email, $ip);
         $this->em->persist($accessLog);
+        $this->em->flush();
     }
 }

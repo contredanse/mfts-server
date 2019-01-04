@@ -38,11 +38,12 @@ class ConfigProvider
                 Handler\HomePageHandler::class                      => Handler\HomePageHandlerFactory::class,
                 Handler\ApiTokenLoginHandler::class                 => Handler\ApiTokenLoginHandlerFactory::class,
                 Handler\ApiTokenValidateHandler::class              => Handler\ApiTokenValidateHandlerFactory::class,
-                Handler\ApiContredanseStatusHandler::class		        => Handler\ApiContredanseStatusHandlerFactory::class,
-                Handler\ApiContredanseProfileHandler::class		       => Handler\ApiContredanseProfileHandlerFactory::class,
+                Handler\ApiContredanseStatusHandler::class		    => Handler\ApiContredanseStatusHandlerFactory::class,
+                Handler\ApiContredanseProfileHandler::class		    => Handler\ApiContredanseProfileHandlerFactory::class,
 
                 // Middleware
                 Middleware\AuthTokenMiddleware::class      => Middleware\AuthTokenMiddlewareFactory::class,
+				Middleware\AccessLoggerMiddleware::class   => Middleware\AccessLoggerMiddelwareFactory::class,
                 \Tuupola\Middleware\CorsMiddleware::class  => Middleware\ApiCorsMiddlewareFactory::class,
 
                 // Security
