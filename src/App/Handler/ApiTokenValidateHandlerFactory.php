@@ -11,7 +11,7 @@ class ApiTokenValidateHandlerFactory
 {
     public function __invoke(ContainerInterface $container): ApiTokenValidateHandler
     {
-        $tokenService  = $container->get(TokenManager::class);
+        $tokenService = $container->get(TokenManager::class);
 
         return new ApiTokenValidateHandler($tokenService);
     }

@@ -11,14 +11,12 @@ use App\Security\Exception\ProductPaymentIssueException;
 use App\Security\UserProviderInterface;
 use App\Service\Auth\AuthenticationManager;
 use App\Service\Auth\Exception\AuthExceptionInterface;
-use App\Service\Token\Exception\TokenValidationExceptionInterface;
 use App\Service\Token\TokenManager;
 use Fig\Http\Message\StatusCodeInterface;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\RequestHandlerInterface;
 use Zend\Diactoros\Response\JsonResponse;
-use Zend\Diactoros\Response\TextResponse;
 
 class ApiTokenLoginHandler implements RequestHandlerInterface
 {
@@ -55,57 +53,56 @@ class ApiTokenLoginHandler implements RequestHandlerInterface
 
     public function handle(ServerRequestInterface $request): ResponseInterface
     {
-		$authExpiry = $this->authParams['token_expiry'] ?? TokenManager::DEFAULT_EXPIRY;
+        $authExpiry = $this->authParams['token_expiry'] ?? TokenManager::DEFAULT_EXPIRY;
 
-		$method = $request->getMethod();
-		if ($method !== 'POST') {
-			throw new \RuntimeException('Unsupported http method');
-		}
-		// Authorization...
-		//
-		// Valid users are
-		// - either admins
-		// - or valid paying users
-		//
+        $method = $request->getMethod();
+        if ($method !== 'POST') {
+            throw new \RuntimeException('Unsupported http method');
+        }
+        // Authorization...
+        //
+        // Valid users are
+        // - either admins
+        // - or valid paying users
+        //
 
-		$body     = $request->getParsedBody();
-		$email    = trim($body['email'] ?? '');
-		$password = trim($body['password'] ?? '');
+        $body     = $request->getParsedBody();
+        $email    = trim($body['email'] ?? '');
+        $password = trim($body['password'] ?? '');
 
-		// @todo Must be removed when production
-		if ($email === 'ilove@contredanse.org' && $password === 'demo') {
-			// This is for demo only
-			return $this->getResponseWithAccessToken('ilove@contredanse.org', $authExpiry);
-		}
+        // @todo Must be removed when production
+        if ($email === 'ilove@contredanse.org' && $password === 'demo') {
+            // This is for demo only
+            return $this->getResponseWithAccessToken('ilove@contredanse.org', $authExpiry);
+        }
 
-		$authenticationManager = new AuthenticationManager($this->userProvider);
+        $authenticationManager = new AuthenticationManager($this->userProvider);
 
-		try {
-			// Authenticate, wil throw exception if failed
-			$user = $authenticationManager->getAuthenticatedUser($email, $password);
+        try {
+            // Authenticate, wil throw exception if failed
+            $user = $authenticationManager->getAuthenticatedUser($email, $password);
 
-			// Ensure authorization
-			$this->productAccess->ensureAccess(ContredanseProductAccess::PAXTON_PRODUCT, $user);
+            // Ensure authorization
+            $this->productAccess->ensureAccess(ContredanseProductAccess::PAXTON_PRODUCT, $user);
 
-			return $this->getResponseWithAccessToken($user->getDetail('user_id'), $authExpiry);
-		} catch (AuthExceptionInterface $e) {
-			return (new JsonResponse([
-				'success' => false,
-				'reason'  => $e->getReason()
-			]))->withStatus($e->getStatusCode());
-		} catch (NoProductAccessException | ProductPaymentIssueException | ProductAccessExpiredException $e) {
-			return (new JsonResponse([
-				'success' => false,
-				'reason'  => $e->getMessage(),
-			]))->withStatus(StatusCodeInterface::STATUS_UNAUTHORIZED);
-		} catch (\Throwable $e) {
-			return (new JsonResponse([
-				'success' => false,
-				'reason'  => $e->getMessage()
-			]))->withStatus(StatusCodeInterface::STATUS_BAD_REQUEST);
-		}
+            return $this->getResponseWithAccessToken($user->getDetail('user_id'), $authExpiry);
+        } catch (AuthExceptionInterface $e) {
+            return (new JsonResponse([
+                'success' => false,
+                'reason'  => $e->getReason()
+            ]))->withStatus($e->getStatusCode());
+        } catch (NoProductAccessException | ProductPaymentIssueException | ProductAccessExpiredException $e) {
+            return (new JsonResponse([
+                'success' => false,
+                'reason'  => $e->getMessage(),
+            ]))->withStatus(StatusCodeInterface::STATUS_UNAUTHORIZED);
+        } catch (\Throwable $e) {
+            return (new JsonResponse([
+                'success' => false,
+                'reason'  => $e->getMessage()
+            ]))->withStatus(StatusCodeInterface::STATUS_BAD_REQUEST);
+        }
     }
-
 
     private function getResponseWithAccessToken(string $user_id, int $authExpiry): ResponseInterface
     {
