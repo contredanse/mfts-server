@@ -20,11 +20,18 @@ return function (Application $app, MiddlewareFactory $factory, ContainerInterfac
 
     // Routes for JWT auth and validation
 
-    $app->route('/api/auth/{action:token|validate}',
-        [BodyParamsMiddleware::class, App\Handler\ApiAuthTokenHandler::class],
+    $app->route('/api/auth/token',
+        [BodyParamsMiddleware::class, App\Handler\ApiTokenLoginHandler::class],
         ['POST'],
         'api.auth.token'
     );
+
+	$app->route('/api/auth/validate',
+		[BodyParamsMiddleware::class, App\Handler\ApiTokenValidateHandler::class],
+		['POST'],
+		'api.auth.validate'
+	);
+
 
     // To monitor link with contredanse database
 

@@ -27,7 +27,7 @@ class AccessLog implements \JsonSerializable
     private $type;
 
     /**
-     * @ORM\Column(name="ip_address", type="string", length=32)
+     * @ORM\Column(name="ip_address", type="string", length=32, nullable=true)
      */
     private $ip_address;
 

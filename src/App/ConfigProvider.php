@@ -36,7 +36,8 @@ class ConfigProvider
             ],
             'factories'  => [
                 Handler\HomePageHandler::class                  => Handler\HomePageHandlerFactory::class,
-                Handler\ApiAuthTokenHandler::class              => Handler\ApiAuthTokenHandlerFactory::class,
+                Handler\ApiTokenLoginHandler::class              => Handler\ApiTokenLoginHandlerFactory::class,
+				Handler\ApiTokenValidateHandler::class              => Handler\ApiTokenValidateHandlerFactory::class,
                 Handler\ApiContredanseStatusHandler::class		    => Handler\ApiContredanseStatusHandlerFactory::class,
                 Handler\ApiContredanseProfileHandler::class		   => Handler\ApiContredanseProfileHandlerFactory::class,
 
@@ -55,6 +56,9 @@ class ConfigProvider
                 Service\Db\ContredanseDb::class           => Service\Db\ContredanseDbFactory::class,
                 Service\Token\TokenManager::class         => Service\Token\TokenManagerFactory::class,
                 Service\Auth\AuthenticationManager::class => Service\Auth\AuthenticationManagerFactory::class,
+
+				// Infrastructure
+				Infra\Log\AccessLogger::class => Infra\Log\AccessLoggerFactory::class,
             ],
         ];
     }
