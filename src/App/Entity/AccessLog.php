@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
  * @ORM\Entity
@@ -30,6 +31,12 @@ class AccessLog implements \JsonSerializable
      * @ORM\Column(name="ip_address", type="string", length=32, nullable=true)
      */
     private $ip_address;
+
+	/**
+	 * @Gedmo\Timestampable(on="create")
+	 * @ORM\Column(type="datetime", nullable=true, options={"comment" = "Record creation timestamp"})
+	 */
+	private $created_at;
 
     /**
      * @ORM\Column(name="email", type="string", length=32)

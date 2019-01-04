@@ -10,10 +10,8 @@ use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\MiddlewareInterface;
 use Psr\Http\Server\RequestHandlerInterface;
 
-
 class AccessLoggerMiddleware implements MiddlewareInterface
 {
-
     /**
      * @var AccessLogger
      */
@@ -25,26 +23,32 @@ class AccessLoggerMiddleware implements MiddlewareInterface
     }
 
     public function process(ServerRequestInterface $request, RequestHandlerInterface $handler): ResponseInterface
-    {
-        $response =  $handler->handle($request);
+	{
+		$response = $handler->handle($request);
 
-        $ip = $this->getClientIp($request);
+		$ip = $this->getClientIp($request);
 
-        $this->accessLogger->log(
-        	AccessLogger::TYPE_LOGIN_SUCCESS,
-			'test@example.org',
-			$ip
-		);
-
-        return $response;
+		try {
+			$this->accessLogger->log(
+				AccessLogger::TYPE_LOGIN_SUCCESS,
+				'test@example.org',
+				$ip
+			);
+		} catch (\Throwable $e) {
+			// Discard any error
+			error_log('AccessLoggerMiddleware failure' . $e->getMessage());
+		} finally {
+			return $response;
+		}
     }
 
-    private function getClientIp(ServerRequestInterface $request): ?string {
-		$serverParams = $request->getServerParams();
-		if (isset($serverParams['REMOTE_ADDR'])) {
-			return $serverParams['REMOTE_ADDR'];
-		}
-		return null;
-	}
+    private function getClientIp(ServerRequestInterface $request): ?string
+    {
+        $serverParams = $request->getServerParams();
+        if (isset($serverParams['REMOTE_ADDR'])) {
+            return $serverParams['REMOTE_ADDR'];
+        }
 
+        return null;
+    }
 }

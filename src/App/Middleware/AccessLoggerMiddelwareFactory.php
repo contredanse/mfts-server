@@ -9,7 +9,6 @@ use Psr\Container\ContainerInterface;
 
 class AccessLoggerMiddelwareFactory
 {
-
     public function __invoke(ContainerInterface $container): AccessLoggerMiddleware
     {
         return new AccessLoggerMiddleware(
