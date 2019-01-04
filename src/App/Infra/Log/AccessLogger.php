@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Infra\Log;
 
+use App\Entity\AccessLog;
 use Doctrine\ORM\EntityManager;
 
 class AccessLogger
@@ -28,5 +29,7 @@ class AccessLogger
 
     public function log(string $type, string $email, ?string $ip): void
     {
+        $accessLog = new AccessLog($type, $email, $ip);
+        $this->em->persist($accessLog);
     }
 }

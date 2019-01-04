@@ -22,20 +22,34 @@ class AccessLog implements \JsonSerializable
     private $id;
 
     /**
-     * @ORM\Column(name="name", type="string", length=32)
+     * @ORM\Column(name="type", type="string", length=32)
      */
-    private $name;
+    private $type;
 
-    public function __construct(string $name)
+    /**
+     * @ORM\Column(name="ip_address", type="string", length=32)
+     */
+    private $ip_address;
+
+    /**
+     * @ORM\Column(name="email", type="string", length=32)
+     */
+    private $email;
+
+    public function __construct(string $type, string $email, ?string $ip_address)
     {
-        $this->name = $name;
+        $this->type       = $type;
+        $this->email      = $email;
+        $this->ip_address = $ip_address;
     }
 
     public function jsonSerialize()
     {
         return [
-            'id'   => $this->id,
-            'name' => $this->name
+            'id'         => $this->id,
+            'type'       => $this->type,
+            'email'      => $this->email,
+            'ip_address' => $this->ip_address,
         ];
     }
 }
