@@ -31,7 +31,8 @@ class AccessLogger
 
     public function log(string $type, string $email, ?string $ip): void
     {
-        $accessLog = new AccessLog($type, $email, $ip);
+    	$now = new \DateTime();
+        $accessLog = new AccessLog($type, $now, $email, $ip);
         $this->em->persist($accessLog);
         $this->em->flush();
     }

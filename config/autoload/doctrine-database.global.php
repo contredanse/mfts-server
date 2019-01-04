@@ -65,11 +65,17 @@ return [
                 'configuration' => 'orm_default', // Actually defaults to the entity manager config key, not hard-coded
             ],
         ],
-        'event_manager' => [
-            'orm_default' => [
-                'subscribers' => [],
-            ],
-        ],
+		'eventmanager' => [
+			'orm_default' => [
+				'subscribers' => [
+					Gedmo\Tree\TreeListener::class ,
+					Gedmo\Timestampable\TimestampableListener::class,
+					Gedmo\Sluggable\SluggableListener::class,
+					Gedmo\Loggable\LoggableListener::class,
+					Gedmo\Sortable\SortableListener::class,
+				],
+			],
+		],
 		'driver' => [
 			'orm_default' => [
 				// WARNING THIS HAS TO BE DEFINED !

@@ -23,14 +23,9 @@ class AccessLog implements \JsonSerializable
     private $id;
 
     /**
-     * @ORM\Column(name="type", type="string", length=32)
+     * @ORM\Column(name="log_type", type="string", length=32)
      */
-    private $type;
-
-    /**
-     * @ORM\Column(name="ip_address", type="string", length=32, nullable=true)
-     */
-    private $ip_address;
+    private $log_type;
 
 	/**
 	 * @Gedmo\Timestampable(on="create")
@@ -38,25 +33,33 @@ class AccessLog implements \JsonSerializable
 	 */
 	private $created_at;
 
+
+    /**
+     * @ORM\Column(name="ip_address", type="string", length=32, nullable=true)
+     */
+    private $ip_address;
+
     /**
      * @ORM\Column(name="email", type="string", length=32)
      */
     private $email;
 
-    public function __construct(string $type, string $email, ?string $ip_address)
+    public function __construct(string $type, \DateTime $created_at, string $email, ?string $ip_address)
     {
-        $this->type       = $type;
+        $this->log_type   = $type;
         $this->email      = $email;
         $this->ip_address = $ip_address;
+		$this->created_at = $created_at;
     }
 
     public function jsonSerialize()
     {
         return [
             'id'         => $this->id,
-            'type'       => $this->type,
+            'log_type'   => $this->log_type,
             'email'      => $this->email,
             'ip_address' => $this->ip_address,
+			'created_at' => $this->created_at,
         ];
     }
 }

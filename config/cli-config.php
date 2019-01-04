@@ -7,9 +7,7 @@
 
 require __DIR__ . '/init-env.php';
 
-
 $container = require 'container.php';
-
 
 return new \Symfony\Component\Console\Helper\HelperSet([
 	'em' => new \Doctrine\ORM\Tools\Console\Helper\EntityManagerHelper(
