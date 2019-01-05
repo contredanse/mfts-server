@@ -30,7 +30,7 @@
         "monolog/monolog": "^1.23",
         "ramsey/uuid": "^3.8",
         "roave/security-advisories": "dev-master",
-        "soluble/mediatools": "^0.8.5",
+        "soluble/mediatools": "^0.9",
         "symfony/console": "^4.2",
         "symfony/finder": "^4.2",
         "symfony/process": "^4.2",
