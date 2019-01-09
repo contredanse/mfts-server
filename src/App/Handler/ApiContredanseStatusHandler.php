@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace App\Handler;
 
+use App\Infra\Db\ContredanseDb;
 use App\Security\ContredanseUserProvider;
-use App\Service\Db\ContredanseDb;
 use Fig\Http\Message\StatusCodeInterface;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;

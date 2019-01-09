@@ -7,11 +7,11 @@ namespace App\Service\Auth;
 use App\Security\UserProviderInterface;
 use Psr\Container\ContainerInterface;
 
-class AuthenticationManagerFactory
+class AuthManagerFactory
 {
-    public function __invoke(ContainerInterface $container): AuthenticationManager
+    public function __invoke(ContainerInterface $container): AuthManager
     {
-        return new AuthenticationManager(
+        return new AuthManager(
             $container->get(UserProviderInterface::class)
         );
     }

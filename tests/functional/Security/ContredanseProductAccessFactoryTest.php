@@ -5,9 +5,9 @@ declare(strict_types=1);
 namespace AppTest\Functional\Security;
 
 use App\Exception\ConfigException;
+use App\Infra\Db\ContredanseDb;
 use App\Security\ContredanseProductAccess;
 use App\Security\ContredanseProductAccessFactory;
-use App\Service\Db\ContredanseDb;
 use AppTest\Util\ContainerFactory;
 use PHPUnit\Framework\TestCase;
 use Psr\Container\ContainerInterface;

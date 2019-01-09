@@ -10,7 +10,7 @@ use App\Service\Auth\Exception\BadCredentialException;
 use App\Service\Auth\Exception\MissingCredentialException;
 use Zend\Expressive\Authentication\UserInterface;
 
-class AuthenticationManager
+class AuthManager
 {
     /**
      * @var UserProviderInterface

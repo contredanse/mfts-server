@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Service\Db;
+namespace App\Infra\Db;
 
 use App\Exception\ConfigException;
 use Psr\Container\ContainerInterface;

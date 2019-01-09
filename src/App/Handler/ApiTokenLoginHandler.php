@@ -4,12 +4,13 @@ declare(strict_types=1);
 
 namespace App\Handler;
 
+use App\Infra\Log\AccessLogger;
 use App\Security\ContredanseProductAccess;
 use App\Security\Exception\NoProductAccessException;
 use App\Security\Exception\ProductAccessExpiredException;
 use App\Security\Exception\ProductPaymentIssueException;
 use App\Security\UserProviderInterface;
-use App\Service\Auth\AuthenticationManager;
+use App\Service\Auth\AuthManager;
 use App\Service\Auth\Exception\AuthExceptionInterface;
 use App\Service\Token\TokenManager;
 use Fig\Http\Message\StatusCodeInterface;
@@ -40,15 +41,21 @@ class ApiTokenLoginHandler implements RequestHandlerInterface
      */
     private $productAccess;
 
+    /*
+     * @var AccessLogger
+     */
+    private $accessLogger;
+
     /**
      * @param array<string, mixed> $authParams
      */
-    public function __construct(UserProviderInterface $userProvider, TokenManager $tokenManager, ContredanseProductAccess $productAccess, array $authParams = [])
+    public function __construct(UserProviderInterface $userProvider, TokenManager $tokenManager, ContredanseProductAccess $productAccess, array $authParams, ?AccessLogger $accessLogger)
     {
         $this->userProvider  = $userProvider;
         $this->tokenManager  = $tokenManager;
         $this->authParams    = $authParams;
         $this->productAccess = $productAccess;
+        $this->accessLogger  = $accessLogger;
     }
 
     public function handle(ServerRequestInterface $request): ResponseInterface
@@ -56,6 +63,7 @@ class ApiTokenLoginHandler implements RequestHandlerInterface
         $authExpiry = $this->authParams['token_expiry'] ?? TokenManager::DEFAULT_EXPIRY;
 
         $method = $request->getMethod();
+
         if ($method !== 'POST') {
             throw new \RuntimeException('Unsupported http method');
         }
@@ -73,10 +81,12 @@ class ApiTokenLoginHandler implements RequestHandlerInterface
         // @todo Must be removed when production
         if ($email === 'ilove@contredanse.org' && $password === 'demo') {
             // This is for demo only
-            return $this->getResponseWithAccessToken('ilove@contredanse.org', $authExpiry);
+            $this->logAccess($request, AccessLogger::TYPE_LOGIN_SUCCESS, $email);
+
+            return $this->getResponseWithAccessToken($email, $authExpiry);
         }
 
-        $authenticationManager = new AuthenticationManager($this->userProvider);
+        $authenticationManager = new AuthManager($this->userProvider);
 
         try {
             // Authenticate, wil throw exception if failed
@@ -84,23 +94,56 @@ class ApiTokenLoginHandler implements RequestHandlerInterface
 
             // Ensure authorization
             $this->productAccess->ensureAccess(ContredanseProductAccess::PAXTON_PRODUCT, $user);
+            $this->logAccess($request, AccessLogger::TYPE_LOGIN_SUCCESS, $email);
 
             return $this->getResponseWithAccessToken($user->getDetail('user_id'), $authExpiry);
-        } catch (AuthExceptionInterface $e) {
-            return (new JsonResponse([
-                'success' => false,
-                'reason'  => $e->getReason()
-            ]))->withStatus($e->getStatusCode());
-        } catch (NoProductAccessException | ProductPaymentIssueException | ProductAccessExpiredException $e) {
-            return (new JsonResponse([
-                'success' => false,
-                'reason'  => $e->getMessage(),
-            ]))->withStatus(StatusCodeInterface::STATUS_UNAUTHORIZED);
         } catch (\Throwable $e) {
+            $type = $this->getAccessLoggerTypeFromException($e);
+            $this->logAccess($request, $type, $email);
+
             return (new JsonResponse([
-                'success' => false,
-                'reason'  => $e->getMessage()
-            ]))->withStatus(StatusCodeInterface::STATUS_BAD_REQUEST);
+                'success'    => false,
+                'reason'     => $e->getMessage(),
+                'error_type' => $type,
+            ]))->withStatus(StatusCodeInterface::STATUS_UNAUTHORIZED);
+        }
+    }
+
+    private function getAccessLoggerTypeFromException(\Throwable $e): string
+    {
+        switch (true) {
+            case $e instanceof AuthExceptionInterface:
+                return AccessLogger::TYPE_LOGIN_FAILURE_CREDENTIALS;
+            case $e instanceof NoProductAccessException:
+                return AccessLogger::TYPE_LOGIN_FAILURE_NO_ACCESS;
+            case $e instanceof ProductPaymentIssueException:
+                return AccessLogger::TYPE_LOGIN_FAILURE_PAYMENT_ISSUE;
+            case $e instanceof ProductAccessExpiredException:
+                return AccessLogger::TYPE_LOGIN_FAILURE_EXPIRY;
+            default:
+                return AccessLogger::TYPE_LOGIN_FAILURE;
+        }
+    }
+
+    private function logAccess(ServerRequestInterface $request, string $type, string $email): void
+    {
+        if ($this->accessLogger !== null) {
+            ['REMOTE_ADDR' => $ipAddress, 'HTTP_USER_AGENT' => $userAgent] = $request->getServerParams();
+            $language                                                      = 'en';
+            try {
+                $this->accessLogger->log(
+                    $type,
+                    $email,
+                    $language,
+                    $ipAddress,
+                    $userAgent
+                );
+            } catch (\Throwable $e) {
+                // Discard any error
+                var_dump($e->getMessage());
+                die();
+                error_log('AuthLoggerMiddleware failure' . $e->getMessage());
+            }
         }
     }
 

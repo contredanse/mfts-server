@@ -35,15 +35,14 @@ class ConfigProvider
                 Handler\PingHandler::class => Handler\PingHandler::class,
             ],
             'factories'  => [
-                Handler\HomePageHandler::class                      => Handler\HomePageHandlerFactory::class,
-                Handler\ApiTokenLoginHandler::class                 => Handler\ApiTokenLoginHandlerFactory::class,
-                Handler\ApiTokenValidateHandler::class              => Handler\ApiTokenValidateHandlerFactory::class,
-                Handler\ApiContredanseStatusHandler::class		        => Handler\ApiContredanseStatusHandlerFactory::class,
-                Handler\ApiContredanseProfileHandler::class		       => Handler\ApiContredanseProfileHandlerFactory::class,
+                Handler\HomePageHandler::class               => Handler\HomePageHandlerFactory::class,
+                Handler\ApiTokenLoginHandler::class          => Handler\ApiTokenLoginHandlerFactory::class,
+                Handler\ApiTokenValidateHandler::class       => Handler\ApiTokenValidateHandlerFactory::class,
+                Handler\ApiContredanseStatusHandler::class	  => Handler\ApiContredanseStatusHandlerFactory::class,
+                Handler\ApiContredanseProfileHandler::class	 => Handler\ApiContredanseProfileHandlerFactory::class,
 
                 // Middleware
                 Middleware\AuthTokenMiddleware::class      => Middleware\AuthTokenMiddlewareFactory::class,
-                Middleware\AccessLoggerMiddleware::class   => Middleware\AccessLoggerMiddelwareFactory::class,
                 \Tuupola\Middleware\CorsMiddleware::class  => Middleware\ApiCorsMiddlewareFactory::class,
 
                 // Security
@@ -54,12 +53,12 @@ class ConfigProvider
                 Security\ContredanseProductAccess::class   => Security\ContredanseProductAccessFactory::class,
 
                 // Service
-                Service\Db\ContredanseDb::class           => Service\Db\ContredanseDbFactory::class,
-                Service\Token\TokenManager::class         => Service\Token\TokenManagerFactory::class,
-                Service\Auth\AuthenticationManager::class => Service\Auth\AuthenticationManagerFactory::class,
+                Service\Token\TokenManager::class       => Service\Token\TokenManagerFactory::class,
+                Service\Auth\AuthManager::class 		      => Service\Auth\AuthManagerFactory::class,
 
                 // Infrastructure
-                Infra\Log\AccessLogger::class => Infra\Log\AccessLoggerFactory::class,
+                Infra\Db\ContredanseDb::class           => Infra\Db\ContredanseDbFactory::class,
+                Infra\Log\AccessLogger::class 			       => Infra\Log\AccessLoggerFactory::class,
             ],
         ];
     }

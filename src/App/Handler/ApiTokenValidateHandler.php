@@ -32,6 +32,7 @@ class ApiTokenValidateHandler implements RequestHandlerInterface
         }
         $body        = $request->getParsedBody();
         $tokenString = $body['token'] ?? '';
+
         try {
             $token = $this->tokenManager->getValidatedToken($tokenString);
 

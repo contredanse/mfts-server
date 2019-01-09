@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Command;
 
-use App\Service\Db\ContredanseDb;
+use App\Infra\Db\ContredanseDb;
 use Psr\Container\ContainerInterface;
 
 class DbDumpCommandFactory

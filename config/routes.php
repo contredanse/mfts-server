@@ -21,7 +21,7 @@ return function (Application $app, MiddlewareFactory $factory, ContainerInterfac
     // Routes for JWT auth and validation
 
     $app->route('/api/auth/token',
-        [BodyParamsMiddleware::class, App\Middleware\AccessLoggerMiddleware::class, App\Handler\ApiTokenLoginHandler::class],
+        [BodyParamsMiddleware::class, App\Handler\ApiTokenLoginHandler::class],
         ['POST'],
         'api.auth.token'
     );
