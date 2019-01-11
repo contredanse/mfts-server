@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d14587717cf810fd692a960ed464069f",
+    "content-hash": "d5d3e40e93a119d53e3562cd5759b422",
     "packages": [
         {
             "name": "behat/transliterator",
@@ -3861,16 +3861,16 @@
         },
         {
             "name": "zendframework/zend-problem-details",
-            "version": "1.0.1",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-problem-details.git",
-                "reference": "1401582c7f2107dd32ce7dcc24642085b518085b"
+                "reference": "ce64d5440e307aaa617a0315514175426239527a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-problem-details/zipball/1401582c7f2107dd32ce7dcc24642085b518085b",
-                "reference": "1401582c7f2107dd32ce7dcc24642085b518085b",
+                "url": "https://api.github.com/repos/zendframework/zend-problem-details/zipball/ce64d5440e307aaa617a0315514175426239527a",
+                "reference": "ce64d5440e307aaa617a0315514175426239527a",
                 "shasum": ""
             },
             "require": {
@@ -3914,7 +3914,7 @@
                 "rest",
                 "zf"
             ],
-            "time": "2018-07-25T18:37:27+00:00"
+            "time": "2019-01-09T14:13:40+00:00"
         },
         {
             "name": "zendframework/zend-servicemanager",
@@ -4100,24 +4100,25 @@
     "packages-dev": [
         {
             "name": "captainhook/captainhook",
-            "version": "3.1.0",
+            "version": "4.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/CaptainHookPhp/captainhook.git",
-                "reference": "86c70d4dfe9695ceeaa1332f1bb0e93a892ba780"
+                "reference": "4f216a08b42c9f4ce2df9f5b659e3642a8d6142f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/CaptainHookPhp/captainhook/zipball/86c70d4dfe9695ceeaa1332f1bb0e93a892ba780",
-                "reference": "86c70d4dfe9695ceeaa1332f1bb0e93a892ba780",
+                "url": "https://api.github.com/repos/CaptainHookPhp/captainhook/zipball/4f216a08b42c9f4ce2df9f5b659e3642a8d6142f",
+                "reference": "4f216a08b42c9f4ce2df9f5b659e3642a8d6142f",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
+                "ext-simplexml": "*",
                 "ext-spl": "*",
-                "php": ">=7.0.0",
-                "sebastianfeldmann/cli": "^2.1",
-                "sebastianfeldmann/git": "^1.0.7",
+                "php": ">=7.1.0",
+                "sebastianfeldmann/cli": "^3.0",
+                "sebastianfeldmann/git": "^2.0",
                 "symfony/console": ">=2.7"
             },
             "replace": {
@@ -4125,18 +4126,17 @@
             },
             "require-dev": {
                 "composer/composer": "~1",
-                "phpunit/phpunit": "^6.5"
-            },
-            "suggest": {
-                "your git hooks": "run 'vendor/bin/captainhook configure' to set up your hook configuration"
+                "phpunit/phpunit": "^7.0"
             },
             "bin": [
                 "captainhook"
             ],
             "type": "library",
             "extra": {
+                "captainhook-config": "captainhook.json",
+                "captainhook-git-dir": ".git",
                 "branch-alias": {
-                    "dev-master": "0.9.x-dev"
+                    "dev-master": "4.0.x-dev"
                 }
             },
             "autoload": {
@@ -4161,26 +4161,27 @@
                 "git",
                 "hooks",
                 "pre-commit",
-                "pre-push"
+                "pre-push",
+                "prepare-commit-msg"
             ],
-            "time": "2018-12-21T14:36:05+00:00"
+            "time": "2019-01-10T18:41:37+00:00"
         },
         {
             "name": "captainhook/plugin-composer",
-            "version": "3.0.0",
+            "version": "4.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/CaptainHookPhp/plugin-composer.git",
-                "reference": "f57758cf40a86d56e8917aeea039df588c8e090d"
+                "reference": "61b6c505e0e6855e7ad653f9efe0ae81304340e0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/CaptainHookPhp/plugin-composer/zipball/f57758cf40a86d56e8917aeea039df588c8e090d",
-                "reference": "f57758cf40a86d56e8917aeea039df588c8e090d",
+                "url": "https://api.github.com/repos/CaptainHookPhp/plugin-composer/zipball/61b6c505e0e6855e7ad653f9efe0ae81304340e0",
+                "reference": "61b6c505e0e6855e7ad653f9efe0ae81304340e0",
                 "shasum": ""
             },
             "require": {
-                "captainhook/captainhook": "^3.0",
+                "captainhook/captainhook": "^4.0",
                 "composer-plugin-api": "^1.1",
                 "php": "^7.1"
             },
@@ -4189,7 +4190,10 @@
             },
             "type": "composer-plugin",
             "extra": {
-                "class": "CaptainHook\\Plugin\\Composer\\ComposerPlugin"
+                "class": "CaptainHook\\Plugin\\Composer\\ComposerPlugin",
+                "branch-alias": {
+                    "dev-fluffy_hedgehog": "5.0.x-dev"
+                }
             },
             "autoload": {
                 "psr-4": {
@@ -4204,10 +4208,14 @@
                 {
                     "name": "Andreas Heigl",
                     "email": "andreas@heigl.org"
+                },
+                {
+                    "name": "Sebastian Feldmann",
+                    "email": "sf@sebastian-feldmann.info"
                 }
             ],
             "description": "Composer-Plugin handling your git-hooks",
-            "time": "2018-11-26T16:59:32+00:00"
+            "time": "2019-01-10T19:29:52+00:00"
         },
         {
             "name": "composer/semver",
@@ -7245,17 +7253,23 @@
         },
         {
             "name": "sebastianfeldmann/cli",
-            "version": "2.1.0",
+            "version": "3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianfeldmann/cli.git",
-                "reference": "3645f84732a593e496b8c2d76d10517150912c87"
+                "reference": "240592a309709fdd772e377b6d9b58a436735ac0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianfeldmann/cli/zipball/3645f84732a593e496b8c2d76d10517150912c87",
-                "reference": "3645f84732a593e496b8c2d76d10517150912c87",
+                "url": "https://api.github.com/repos/sebastianfeldmann/cli/zipball/240592a309709fdd772e377b6d9b58a436735ac0",
+                "reference": "240592a309709fdd772e377b6d9b58a436735ac0",
                 "shasum": ""
+            },
+            "require": {
+                "php": "^7.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^7.0"
             },
             "type": "library",
             "autoload": {
@@ -7278,33 +7292,34 @@
             "keywords": [
                 "cli"
             ],
-            "time": "2017-12-01T10:25:42+00:00"
+            "time": "2019-01-04T09:21:36+00:00"
         },
         {
             "name": "sebastianfeldmann/git",
-            "version": "1.2.1",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianfeldmann/git.git",
-                "reference": "65ce815bf542e6e4ca5aa1fc4d062b81e760a6e2"
+                "reference": "266e114515eadba83623a6b01e880e3972a28f48"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianfeldmann/git/zipball/65ce815bf542e6e4ca5aa1fc4d062b81e760a6e2",
-                "reference": "65ce815bf542e6e4ca5aa1fc4d062b81e760a6e2",
+                "url": "https://api.github.com/repos/sebastianfeldmann/git/zipball/266e114515eadba83623a6b01e880e3972a28f48",
+                "reference": "266e114515eadba83623a6b01e880e3972a28f48",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.0.0",
-                "sebastianfeldmann/cli": "^2.0.0"
+                "ext-json": "*",
+                "php": ">=7.1",
+                "sebastianfeldmann/cli": "^3.0.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "^6.5"
+                "phpunit/phpunit": "^7.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "0.9.x-dev"
+                    "dev-master": "2.0.x-dev"
                 }
             },
             "autoload": {
@@ -7327,7 +7342,7 @@
             "keywords": [
                 "git"
             ],
-            "time": "2018-12-19T11:58:45+00:00"
+            "time": "2019-01-04T09:47:28+00:00"
         },
         {
             "name": "symfony/event-dispatcher",
