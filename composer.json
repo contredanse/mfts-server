@@ -54,8 +54,8 @@
     "require-dev": {
         "captainhook/captainhook": "^4.0",
         "captainhook/plugin-composer": "^4.0",
-        "deployer/deployer": "^6.3",
-        "deployer/recipes": "^6.1",
+        "deployer/deployer": "^6.4",
+        "deployer/recipes": "^6.2",
         "filp/whoops": "^2.3",
         "friendsofphp/php-cs-fixer": "^2.14",
         "jangregor/phpstan-prophecy": "^0.2",
