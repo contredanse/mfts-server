@@ -6,6 +6,7 @@ namespace App\Entity;
 
 use DateTime;
 use Doctrine\ORM\Mapping as ORM;
+use Webmozart\Assert\Assert;
 
 /**
  * @ORM\Entity
@@ -24,6 +25,22 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class AccessLog implements \JsonSerializable
 {
+    public const TYPE_LOGIN_SUCCESS               = 'success';
+    public const TYPE_LOGIN_FAILURE               = 'fail';
+    public const TYPE_LOGIN_FAILURE_EXPIRY        = 'fail.expiry';
+    public const TYPE_LOGIN_FAILURE_PAYMENT_ISSUE = 'fail.payment';
+    public const TYPE_LOGIN_FAILURE_CREDENTIALS   = 'fail.credentials';
+    public const TYPE_LOGIN_FAILURE_NO_ACCESS     = 'fail.no_access';
+
+    public const SUPPORTED_TYPES = [
+        self::TYPE_LOGIN_SUCCESS,
+        self::TYPE_LOGIN_FAILURE,
+        self::TYPE_LOGIN_FAILURE_CREDENTIALS,
+        self::TYPE_LOGIN_FAILURE_EXPIRY,
+        self::TYPE_LOGIN_FAILURE_PAYMENT_ISSUE,
+        self::TYPE_LOGIN_FAILURE_NO_ACCESS,
+    ];
+
     /**
      * @ORM\Id
      * @ORM\Column(name="id", type="integer")
@@ -84,7 +101,7 @@ class AccessLog implements \JsonSerializable
     private $created_at;
 
     public function __construct(
-        string $log_type,
+        string $logType,
         ?string $email = null,
         ?string $language = null,
         ?string $ipAddress = null,
@@ -93,9 +110,10 @@ class AccessLog implements \JsonSerializable
         ?string $browserVersion = null,
         ?string $os = null,
         ?string $deviceType = null,
-        ?DateTime $created_at = null
+        ?DateTime $createdAt = null
     ) {
-        $this->log_type        = mb_substr($log_type, 0, 32);
+        Assert::oneOf($logType, self::SUPPORTED_TYPES);
+        $this->log_type        = mb_substr($logType, 0, 32);
         $this->email           = mb_substr($email ?? '', 0, 32);
         $this->language        = mb_substr($language ?? '', 0, 10);
         $this->ip_address      = mb_substr($ipAddress ?? '', 0, 32);
@@ -105,7 +123,7 @@ class AccessLog implements \JsonSerializable
         $this->device_type     = mb_substr($deviceType ?? '', 0, 10);
         $this->os              = mb_substr($os ?? '', 0, 32);
 
-        $this->created_at = $created_at ?? new DateTime();
+        $this->created_at = $createdAt ?? new DateTime();
     }
 
     public function jsonSerialize()

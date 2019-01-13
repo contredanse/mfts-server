@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Handler;
 
+use App\Entity\AccessLog;
 use App\Infra\Log\AccessLogger;
 use App\Security\ContredanseProductAccess;
 use App\Security\Exception\NoProductAccessException;
@@ -81,7 +82,7 @@ class ApiTokenLoginHandler implements RequestHandlerInterface
         // @todo Must be removed when production
         if ($email === 'ilove@contredanse.org' && $password === 'demo') {
             // This is for demo only
-            $this->logAccess($request, AccessLogger::TYPE_LOGIN_SUCCESS, $email);
+            $this->logAccess($request, AccessLog::TYPE_LOGIN_SUCCESS, $email);
 
             return $this->getResponseWithAccessToken($email, $authExpiry);
         }
@@ -94,7 +95,7 @@ class ApiTokenLoginHandler implements RequestHandlerInterface
 
             // Ensure authorization
             $this->productAccess->ensureAccess(ContredanseProductAccess::PAXTON_PRODUCT, $user);
-            $this->logAccess($request, AccessLogger::TYPE_LOGIN_SUCCESS, $email);
+            $this->logAccess($request, AccessLog::TYPE_LOGIN_SUCCESS, $email);
 
             return $this->getResponseWithAccessToken($user->getDetail('user_id'), $authExpiry);
         } catch (\Throwable $e) {
@@ -113,15 +114,15 @@ class ApiTokenLoginHandler implements RequestHandlerInterface
     {
         switch (true) {
             case $e instanceof AuthExceptionInterface:
-                return AccessLogger::TYPE_LOGIN_FAILURE_CREDENTIALS;
+                return AccessLog::TYPE_LOGIN_FAILURE_CREDENTIALS;
             case $e instanceof NoProductAccessException:
-                return AccessLogger::TYPE_LOGIN_FAILURE_NO_ACCESS;
+                return AccessLog::TYPE_LOGIN_FAILURE_NO_ACCESS;
             case $e instanceof ProductPaymentIssueException:
-                return AccessLogger::TYPE_LOGIN_FAILURE_PAYMENT_ISSUE;
+                return AccessLog::TYPE_LOGIN_FAILURE_PAYMENT_ISSUE;
             case $e instanceof ProductAccessExpiredException:
-                return AccessLogger::TYPE_LOGIN_FAILURE_EXPIRY;
+                return AccessLog::TYPE_LOGIN_FAILURE_EXPIRY;
             default:
-                return AccessLogger::TYPE_LOGIN_FAILURE;
+                return AccessLog::TYPE_LOGIN_FAILURE;
         }
     }
 
