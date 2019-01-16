@@ -155,24 +155,28 @@ class ApiTokenLoginHandler implements RequestHandlerInterface
 
     private function getLanguage(ServerRequestInterface $request): ?string
     {
-        $acceptLanguageHeader = trim($request->getHeaderLine('Accept-Language'));
+        try {
+            $acceptLanguageHeader = trim($request->getHeaderLine('Accept-Language'));
 
-        if (trim($acceptLanguageHeader) !== '') {
-            $negotiator = new LanguageNegotiator();
-            /**
-             * @var AcceptLanguage|null $acceptLanguage
-             */
-            $acceptLanguage = $negotiator->getBest($acceptLanguageHeader, ['fr', 'en']);
-            if ($acceptLanguage !== null) {
-                $parts = array_filter([
-                    $acceptLanguage->getBasePart(), // lang
-                    $acceptLanguage->getSubPart() // region
-                ]);
+            if (trim($acceptLanguageHeader) !== '') {
+                $negotiator = new LanguageNegotiator();
+                /**
+                 * @var AcceptLanguage|null $acceptLanguage
+                 */
+                $acceptLanguage = $negotiator->getBest($acceptLanguageHeader, ['fr', 'en']);
+                if ($acceptLanguage !== null) {
+                    $parts = array_filter([
+                        $acceptLanguage->getBasePart(), // lang
+                        $acceptLanguage->getSubPart() // region
+                    ]);
 
-                if (count($parts) > 0) {
-                    return implode('_', $parts);
+                    if (count($parts) > 0) {
+                        return implode('_', $parts);
+                    }
                 }
             }
+        } catch (\Throwable $e) {
+            return null;
         }
 
         return null;
