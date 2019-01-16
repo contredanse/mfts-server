@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace App\Handler;
 
-use App\Entity\AccessLog;
 use App\Infra\Log\AccessLogger;
 use App\Security\ContredanseProductAccess;
 use App\Security\Exception\NoProductAccessException;
@@ -14,6 +13,7 @@ use App\Security\UserProviderInterface;
 use App\Service\Auth\AuthManager;
 use App\Service\Auth\Exception\AuthExceptionInterface;
 use App\Service\Token\TokenManager;
+use DateTime;
 use Fig\Http\Message\StatusCodeInterface;
 use Negotiation\AcceptLanguage;
 use Negotiation\LanguageNegotiator;
@@ -88,7 +88,7 @@ class ApiTokenLoginHandler implements RequestHandlerInterface
         // @todo Must be removed when production
         if ($email === 'ilove@contredanse.org' && $password === 'demo') {
             // This is for demo only
-            $this->logAccess($request, AccessLog::TYPE_LOGIN_SUCCESS, $email, $language);
+            $this->logAccess($request, AccessLogger::TYPE_LOGIN_SUCCESS, $email, $language);
 
             return $this->getResponseWithAccessToken($email, $authExpiry);
         }
@@ -101,18 +101,24 @@ class ApiTokenLoginHandler implements RequestHandlerInterface
 
             // Ensure authorization
             $this->productAccess->ensureAccess(ContredanseProductAccess::PAXTON_PRODUCT, $user);
-            $this->logAccess($request, AccessLog::TYPE_LOGIN_SUCCESS, $email, $language);
+            $this->logAccess($request, AccessLogger::TYPE_LOGIN_SUCCESS, $email, $language);
 
             return $this->getResponseWithAccessToken($user->getDetail('user_id'), $authExpiry);
         } catch (\Throwable $e) {
             $type = $this->getAccessLoggerTypeFromException($e);
             $this->logAccess($request, $type, $email, $language);
 
-            return (new JsonResponse([
+            $responseData = [
                 'success'    => false,
                 'reason'     => $e->getMessage(),
                 'error_type' => $type,
-            ]))->withStatus(StatusCodeInterface::STATUS_UNAUTHORIZED);
+            ];
+
+            if ($e instanceof ProductAccessExpiredException) {
+                $responseData['expired_date'] = $e->getExpiryDate()->format(DateTime::ATOM);
+            }
+
+            return (new JsonResponse($responseData))->withStatus(StatusCodeInterface::STATUS_UNAUTHORIZED);
         }
     }
 
@@ -120,15 +126,15 @@ class ApiTokenLoginHandler implements RequestHandlerInterface
     {
         switch (true) {
             case $e instanceof AuthExceptionInterface:
-                return AccessLog::TYPE_LOGIN_FAILURE_CREDENTIALS;
+                return AccessLogger::TYPE_LOGIN_FAILURE_CREDENTIALS;
             case $e instanceof NoProductAccessException:
-                return AccessLog::TYPE_LOGIN_FAILURE_NO_ACCESS;
+                return AccessLogger::TYPE_LOGIN_FAILURE_NO_ACCESS;
             case $e instanceof ProductPaymentIssueException:
-                return AccessLog::TYPE_LOGIN_FAILURE_PAYMENT_ISSUE;
+                return AccessLogger::TYPE_LOGIN_FAILURE_PAYMENT_ISSUE;
             case $e instanceof ProductAccessExpiredException:
-                return AccessLog::TYPE_LOGIN_FAILURE_EXPIRY;
+                return AccessLogger::TYPE_LOGIN_FAILURE_EXPIRY;
             default:
-                return AccessLog::TYPE_LOGIN_FAILURE;
+                return AccessLogger::TYPE_LOGIN_FAILURE;
         }
     }
 

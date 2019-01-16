@@ -119,7 +119,7 @@ class ContredanseProductAccess
                         $expiresAt->format('Y-m-d'),
                         $order['detail_id']
                     )
-                ));
+                ), $expiresAt);
             }
         }
     }

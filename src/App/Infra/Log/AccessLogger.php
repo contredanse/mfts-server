@@ -11,6 +11,22 @@ use Webmozart\Assert\Assert;
 
 class AccessLogger
 {
+    public const TYPE_LOGIN_SUCCESS               = 'success';
+    public const TYPE_LOGIN_FAILURE               = 'fail';
+    public const TYPE_LOGIN_FAILURE_EXPIRY        = 'fail.expiry';
+    public const TYPE_LOGIN_FAILURE_PAYMENT_ISSUE = 'fail.payment';
+    public const TYPE_LOGIN_FAILURE_CREDENTIALS   = 'fail.credentials';
+    public const TYPE_LOGIN_FAILURE_NO_ACCESS     = 'fail.no_access';
+
+    public const SUPPORTED_TYPES = [
+        self::TYPE_LOGIN_SUCCESS,
+        self::TYPE_LOGIN_FAILURE,
+        self::TYPE_LOGIN_FAILURE_CREDENTIALS,
+        self::TYPE_LOGIN_FAILURE_EXPIRY,
+        self::TYPE_LOGIN_FAILURE_PAYMENT_ISSUE,
+        self::TYPE_LOGIN_FAILURE_NO_ACCESS,
+    ];
+
     /**
      * @var EntityManager
      */
@@ -45,7 +61,7 @@ class AccessLogger
      */
     public function log(string $type, string $email, ?string $language, ?string $ip, ?string $userAgent): void
     {
-        Assert::oneOf($type, AccessLog::SUPPORTED_TYPES);
+        Assert::oneOf($type, self::SUPPORTED_TYPES);
 
         $browserInfo = $this->getBrowserInfo($this->uaDetectionEnabled ? $userAgent : null);
 

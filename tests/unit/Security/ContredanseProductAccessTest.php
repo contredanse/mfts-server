@@ -89,6 +89,24 @@ class ContredanseProductAccessTest extends TestCase
         $this->accessMock->ensureAccess($this->productName, $this->testUser);
     }
 
+    public function testEnsureAccessExpiredFailedWithDate(): void
+    {
+        $yesterday = (new Chronos())->subDay(1);
+        $this->accessMock->shouldReceive('getProductOrders')->andReturn([
+            0 => [
+                'pay_status' => ContredanseProductAccess::VALID_PAY_STATUS,
+                'expires_at' => $yesterday->toDateTimeString(),
+                'detail_id'  => 123
+            ]
+        ]);
+        try {
+            $this->accessMock->ensureAccess($this->productName, $this->testUser);
+        } catch (ProductAccessExpiredException $e) {
+            $expiryDate = $e->getExpiryDate();
+            self::assertEquals($yesterday->format('Y-m-d'), $expiryDate->format('Y-m-d'));
+        }
+    }
+
     public function testEnsureAccessPaymentIssue(): void
     {
         self::expectException(ProductPaymentIssueException::class);
