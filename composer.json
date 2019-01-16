@@ -39,6 +39,7 @@
         "tuupola/cors-middleware": "^0.9.1",
         "vlucas/phpdotenv": "^3.0",
         "webmozart/assert": "^1.4",
+        "willdurand/negotiation": "^2.3",
         "zendframework/zend-component-installer": "^2.1",
         "zendframework/zend-config-aggregator": "^1.0",
         "zendframework/zend-diactoros": "^2.1.1",
