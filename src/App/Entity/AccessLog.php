@@ -51,7 +51,7 @@ class AccessLog implements \JsonSerializable
     private $id;
 
     /**
-     * @ORM\Column(name="log_type", type="string", length=32)
+     * @ORM\Column(name="log_type", type="string", length=16)
      */
     private $log_type;
 
@@ -61,12 +61,12 @@ class AccessLog implements \JsonSerializable
     private $email;
 
     /**
-     * @ORM\Column(name="language", type="string", length=10, nullable=true)
+     * @ORM\Column(name="language", type="string", length=5, nullable=true)
      */
     private $language;
 
     /**
-     * @ORM\Column(name="ip_address", type="string", length=32, nullable=true)
+     * @ORM\Column(name="ip_address", type="string", length=33, nullable=true)
      */
     private $ip_address;
 
@@ -113,15 +113,15 @@ class AccessLog implements \JsonSerializable
         ?DateTime $createdAt = null
     ) {
         Assert::oneOf($logType, self::SUPPORTED_TYPES);
-        $this->log_type        = mb_substr($logType, 0, 32);
-        $this->email           = mb_substr($email ?? '', 0, 32);
-        $this->language        = mb_substr($language ?? '', 0, 10);
+        $this->log_type        = mb_substr($logType, 0, 15);
+        $this->email           = mb_substr($email ?? '', 0, 31);
+        $this->language        = mb_substr($language ?? '', 0, 5);
         $this->ip_address      = mb_substr($ipAddress ?? '', 0, 32);
-        $this->user_agent      = mb_substr($userAgent ?? '', 0, 50);
-        $this->browser         = mb_substr($browser ?? '', 0, 32);
-        $this->browser_version = mb_substr($browserVersion ?? '', 0, 10);
-        $this->device_type     = mb_substr($deviceType ?? '', 0, 10);
-        $this->os              = mb_substr($os ?? '', 0, 32);
+        $this->user_agent      = mb_substr($userAgent ?? '', 0, 49);
+        $this->browser         = mb_substr($browser ?? '', 0, 31);
+        $this->browser_version = mb_substr($browserVersion ?? '', 0, 9);
+        $this->device_type     = mb_substr($deviceType ?? '', 0, 9);
+        $this->os              = mb_substr($os ?? '', 0, 31);
 
         $this->created_at = $createdAt ?? new DateTime();
     }

@@ -15,6 +15,8 @@ use App\Service\Auth\AuthManager;
 use App\Service\Auth\Exception\AuthExceptionInterface;
 use App\Service\Token\TokenManager;
 use Fig\Http\Message\StatusCodeInterface;
+use Negotiation\AcceptLanguage;
+use Negotiation\LanguageNegotiator;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\RequestHandlerInterface;
@@ -78,11 +80,15 @@ class ApiTokenLoginHandler implements RequestHandlerInterface
         $body     = $request->getParsedBody();
         $email    = trim($body['email'] ?? '');
         $password = trim($body['password'] ?? '');
+        $language = trim($body['language'] ?? '');
+        if ($language === '') {
+            $language = $this->getLanguage($request);
+        }
 
         // @todo Must be removed when production
         if ($email === 'ilove@contredanse.org' && $password === 'demo') {
             // This is for demo only
-            $this->logAccess($request, AccessLog::TYPE_LOGIN_SUCCESS, $email);
+            $this->logAccess($request, AccessLog::TYPE_LOGIN_SUCCESS, $email, $language);
 
             return $this->getResponseWithAccessToken($email, $authExpiry);
         }
@@ -95,12 +101,12 @@ class ApiTokenLoginHandler implements RequestHandlerInterface
 
             // Ensure authorization
             $this->productAccess->ensureAccess(ContredanseProductAccess::PAXTON_PRODUCT, $user);
-            $this->logAccess($request, AccessLog::TYPE_LOGIN_SUCCESS, $email);
+            $this->logAccess($request, AccessLog::TYPE_LOGIN_SUCCESS, $email, $language);
 
             return $this->getResponseWithAccessToken($user->getDetail('user_id'), $authExpiry);
         } catch (\Throwable $e) {
             $type = $this->getAccessLoggerTypeFromException($e);
-            $this->logAccess($request, $type, $email);
+            $this->logAccess($request, $type, $email, $language);
 
             return (new JsonResponse([
                 'success'    => false,
@@ -126,11 +132,10 @@ class ApiTokenLoginHandler implements RequestHandlerInterface
         }
     }
 
-    private function logAccess(ServerRequestInterface $request, string $type, string $email): void
+    private function logAccess(ServerRequestInterface $request, string $type, string $email, ?string $language): void
     {
         if ($this->accessLogger !== null) {
             ['REMOTE_ADDR' => $ipAddress, 'HTTP_USER_AGENT' => $userAgent] = $request->getServerParams();
-            $language                                                      = 'en';
             try {
                 $this->accessLogger->log(
                     $type,
@@ -141,11 +146,36 @@ class ApiTokenLoginHandler implements RequestHandlerInterface
                 );
             } catch (\Throwable $e) {
                 // Discard any error
-                var_dump($e->getMessage());
-                die();
+                //var_dump($e->getMessage());
+                //die();
                 error_log('AuthLoggerMiddleware failure' . $e->getMessage());
             }
         }
+    }
+
+    private function getLanguage(ServerRequestInterface $request): ?string
+    {
+        $acceptLanguageHeader = trim($request->getHeaderLine('Accept-Language'));
+
+        if (trim($acceptLanguageHeader) !== '') {
+            $negotiator = new LanguageNegotiator();
+            /**
+             * @var AcceptLanguage|null $acceptLanguage
+             */
+            $acceptLanguage = $negotiator->getBest($acceptLanguageHeader, ['fr', 'en']);
+            if ($acceptLanguage !== null) {
+                $parts = array_filter([
+                    $acceptLanguage->getBasePart(), // lang
+                    $acceptLanguage->getSubPart() // region
+                ]);
+
+                if (count($parts) > 0) {
+                    return implode('_', $parts);
+                }
+            }
+        }
+
+        return null;
     }
 
     private function getResponseWithAccessToken(string $user_id, int $authExpiry): ResponseInterface
