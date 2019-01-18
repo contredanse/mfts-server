@@ -4420,16 +4420,16 @@
         },
         {
             "name": "deployer/deployer",
-            "version": "v6.4.2",
+            "version": "v6.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/deployphp/deployer.git",
-                "reference": "a1c7ac66a0788e7b9cbc71a2bdbbd3eab992c940"
+                "reference": "a7d03f8febc547344c4f205dd2291a6d40a2af44"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/deployphp/deployer/zipball/a1c7ac66a0788e7b9cbc71a2bdbbd3eab992c940",
-                "reference": "a1c7ac66a0788e7b9cbc71a2bdbbd3eab992c940",
+                "url": "https://api.github.com/repos/deployphp/deployer/zipball/a7d03f8febc547344c4f205dd2291a6d40a2af44",
+                "reference": "a7d03f8febc547344c4f205dd2291a6d40a2af44",
                 "shasum": ""
             },
             "require": {
@@ -4468,7 +4468,7 @@
             ],
             "description": "Deployment Tool",
             "homepage": "https://deployer.org",
-            "time": "2019-01-15T05:58:34+00:00"
+            "time": "2019-01-17T13:53:14+00:00"
         },
         {
             "name": "deployer/phar-update",
@@ -4528,16 +4528,16 @@
         },
         {
             "name": "deployer/recipes",
-            "version": "6.2.0",
+            "version": "6.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/deployphp/recipes.git",
-                "reference": "f330fd503b4a277d69f678cd786404ce74b583dd"
+                "reference": "4c2470771249fbff55eb56429c29d74590768fa0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/deployphp/recipes/zipball/f330fd503b4a277d69f678cd786404ce74b583dd",
-                "reference": "f330fd503b4a277d69f678cd786404ce74b583dd",
+                "url": "https://api.github.com/repos/deployphp/recipes/zipball/4c2470771249fbff55eb56429c29d74590768fa0",
+                "reference": "4c2470771249fbff55eb56429c29d74590768fa0",
                 "shasum": ""
             },
             "replace": {
@@ -4578,7 +4578,7 @@
                 "slack",
                 "yarn"
             ],
-            "time": "2019-01-08T11:40:56+00:00"
+            "time": "2019-01-17T06:03:27+00:00"
         },
         {
             "name": "filp/whoops",
