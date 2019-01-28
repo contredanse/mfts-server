@@ -70,9 +70,9 @@ class TranscodeVideosCommand extends Command
     }
 
     /**
-     * Executes the current command.
+     * {@inheritdoc}
      */
-    protected function execute(InputInterface $input, OutputInterface $output): void
+    protected function execute(InputInterface $input, OutputInterface $output)
     {
         if (!$input->hasOption('dir')) {
             throw new \Exception('Missing dir argument, use <command> <dir>');
@@ -164,13 +164,7 @@ class TranscodeVideosCommand extends Command
                     $vp9Output,
                     $extraParams
                 );
-
-                /*
-                $this->convertVP9Multipass(
-                    $videoFile,
-                    $vp9Output,
-                    $extraParams
-                );*/
+                // to allow laptop to cool down
                 sleep(60);
             }
 
@@ -203,29 +197,9 @@ class TranscodeVideosCommand extends Command
         $table->setRows($rows ?? []);
         $table->render();
 
-        /*
-        foreach($commands['mp4'] as $cmd) {
-            $output->writeln($cmd . ";");
-        }*/
-
-        /*
-        $table = new Table($output);
-        $table->setHeaders([
-            'vp9 commands'
-        ]);
-        $table->setRows($commands['vp9']);
-        $table->render();
-
-
-        $table = new Table($output);
-        $table->setHeaders([
-            'mp4 commands'
-        ]);
-        $table->setRows($commands['mp4']);
-        $table->render();
-        */
-
         $output->writeln("\nFinished");
+
+        return 1;
     }
 
     /**

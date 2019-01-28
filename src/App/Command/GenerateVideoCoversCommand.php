@@ -58,9 +58,9 @@ class GenerateVideoCoversCommand extends Command
     }
 
     /**
-     * Executes the current command.
+     * {@inheritdoc}
      */
-    protected function execute(InputInterface $input, OutputInterface $output): void
+    protected function execute(InputInterface $input, OutputInterface $output)
     {
         if (!$input->hasOption('dir')) {
             throw new \Exception('Missing dir argument, use <command> <dir>');
@@ -110,6 +110,8 @@ class GenerateVideoCoversCommand extends Command
         }
 
         $output->writeln("\nFinished");
+
+        return 1;
     }
 
     public function makeCover(string $videoFile, string $outputFile, ?SeekTime $seekTime = null): void

@@ -41,9 +41,9 @@ class DbDumpCommand extends Command
     }
 
     /**
-     * Executes the current command.
+     * {@inheritdoc}
      */
-    protected function execute(InputInterface $input, OutputInterface $output): void
+    protected function execute(InputInterface $input, OutputInterface $output)
     {
         if (!$input->hasOption('file')) {
             throw new \Exception('Missing dir argument, use <command> <file>');
@@ -91,5 +91,7 @@ class DbDumpCommand extends Command
         }
 
         $output->writeln("\nDump done !");
+
+        return 1;
     }
 }
