@@ -13,7 +13,7 @@ parameters:
 	reportUnmatchedIgnoredErrors: true
 	ignoreErrors:
 		- '#Left side of \&\& is always true#'
-		# Those constants are in phpunit, no way phpstan will find them ;)
-		#- '#Constant EXPRESSIVE_SERVER_HOST not found#'
-		#- '#Constant EXPRESSIVE_SERVER_PORT not found#'
+		# Still issues with prophecy in tests
+		- '#Test\:\:\$container contains unresolvable type.#'
+		- '#Test\:\:\$template contains unresolvable type.#'
 
