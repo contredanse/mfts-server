@@ -46,9 +46,9 @@ class TokenManager
 
     public function __construct(
         string $privateKey,
-                                int $defaultExpiry = self::DEFAULT_EXPIRY,
-                                string $issuer = null,
-                                string $audience = null
+        int $defaultExpiry = self::DEFAULT_EXPIRY,
+        string $issuer = null,
+        string $audience = null
     ) {
         $this->signer        = $this->getSigner();
         $this->issuer        = $issuer;

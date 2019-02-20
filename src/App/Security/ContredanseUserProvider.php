@@ -103,8 +103,8 @@ class ContredanseUserProvider implements UserProviderInterface
         // Check query working
         $sql = sprintf(
             "%s\n%s",
-                $this->getBaseSql(),
-                'limit 1'
+            $this->getBaseSql(),
+            'limit 1'
             );
 
         try {

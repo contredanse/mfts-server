@@ -20,7 +20,7 @@ class TokenManagerFactory
         }
 
         if (isset($config['default_expiry']) && (
-                !is_numeric($config['default_expiry']) || $config['default_expiry'] < 0
+            !is_numeric($config['default_expiry']) || $config['default_expiry'] < 0
         )) {
             throw new ConfigException("['tokenManager']['default_expiry'] must be numeric > 0");
         }

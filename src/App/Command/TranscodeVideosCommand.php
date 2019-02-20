@@ -124,7 +124,6 @@ class TranscodeVideosCommand extends Command
 
             $pixFmt = $vStream->getPixFmt();
 
-
             $rows[] = [
                 $video->getBasename(),
                 sprintf('%sx%s', $vStream->getWidth(), $vStream->getHeight()),
