@@ -120,14 +120,17 @@ class TranscodeVideosCommand extends Command
             $interlaceMode = $interlaceGuess->isInterlacedBff(0.4) ? 'BFF' :
                 ($interlaceGuess->isInterlacedTff(0.4) ? 'TFF' : '');
 
-            $pixFmt = $info->getVideoStreamsMetadata()[0]['pix_fmt'];
+            $vStream = $info->getVideoStreams()->getFirst();
+
+            $pixFmt = $vStream->getPixFmt();
+
 
             $rows[] = [
                 $video->getBasename(),
-                sprintf('%sx%s', $info->getWidth(), $info->getHeight()),
+                sprintf('%sx%s', $vStream->getWidth(), $vStream->getHeight()),
                 $info->getDuration(),
-                $info->getVideoBitrate(),
-                $info->getVideoCodecName(),
+                $vStream->getBitRate(),
+                $vStream->getCodecName(),
                 $pixFmt,
                 $interlaceMode,
                 filesize($videoFile)
