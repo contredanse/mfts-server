@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b9df932c4d22e23c88041212aac1955a",
+    "content-hash": "bc8dbc507a51d2bdba9a38776e215d32",
     "packages": [
         {
             "name": "behat/transliterator",
@@ -2164,16 +2164,16 @@
         },
         {
             "name": "soluble/mediatools",
-            "version": "0.9.3",
+            "version": "0.9.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/soluble-io/soluble-mediatools.git",
-                "reference": "a12528101b6db99150624715d604e255106af448"
+                "reference": "ac2628768bd68723234c465e38167728707b26c0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/soluble-io/soluble-mediatools/zipball/a12528101b6db99150624715d604e255106af448",
-                "reference": "a12528101b6db99150624715d604e255106af448",
+                "url": "https://api.github.com/repos/soluble-io/soluble-mediatools/zipball/ac2628768bd68723234c465e38167728707b26c0",
+                "reference": "ac2628768bd68723234c465e38167728707b26c0",
                 "shasum": ""
             },
             "require": {
@@ -2238,7 +2238,7 @@
                 "transcode",
                 "video"
             ],
-            "time": "2019-02-23T15:07:00+00:00"
+            "time": "2019-02-26T13:20:50+00:00"
         },
         {
             "name": "spatie/array-to-xml",
@@ -2699,16 +2699,16 @@
         },
         {
             "name": "tuupola/cors-middleware",
-            "version": "0.9.2",
+            "version": "0.9.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tuupola/cors-middleware.git",
-                "reference": "dc49c39bab2d3de248b80b87858c05e15f1968d1"
+                "reference": "75c76aa9dae47ec37c06c5940d2135c7d668fd93"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tuupola/cors-middleware/zipball/dc49c39bab2d3de248b80b87858c05e15f1968d1",
-                "reference": "dc49c39bab2d3de248b80b87858c05e15f1968d1",
+                "url": "https://api.github.com/repos/tuupola/cors-middleware/zipball/75c76aa9dae47ec37c06c5940d2135c7d668fd93",
+                "reference": "75c76aa9dae47ec37c06c5940d2135c7d668fd93",
                 "shasum": ""
             },
             "require": {
@@ -2752,7 +2752,7 @@
                 "psr-15",
                 "psr-7"
             ],
-            "time": "2019-01-26T05:34:21+00:00"
+            "time": "2019-02-25T13:06:11+00:00"
         },
         {
             "name": "tuupola/http-factory",
