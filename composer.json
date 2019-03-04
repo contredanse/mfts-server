@@ -31,7 +31,7 @@
         "myclabs/php-enum": "^1.6",
         "piwik/device-detector": "^3.11",
         "ramsey/uuid": "^3.8",
-        "soluble/mediatools": "^0.9.6",
+        "soluble/mediatools": "^0.9.7",
         "symfony/console": "^4.2",
         "symfony/finder": "^4.2",
         "symfony/process": "^4.2",
