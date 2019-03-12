@@ -28,9 +28,9 @@ return [
 
 		'products' => [
 			// Here's where we set links between products and product database id's
-			ContredanseProductAccess::PAXTON_PRODUCT => [
+			ContredanseProductAccess::PAXTON_PRODUCT =>
 				explode(',', trim((string) getenv('PAXTON_PRODUCT_IDS')))
-			]
+
 		],
     ]
 ];

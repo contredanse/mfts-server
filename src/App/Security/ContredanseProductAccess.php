@@ -187,14 +187,14 @@ class ContredanseProductAccess
 					INNER JOIN
 				usr_login l ON l.suj_id = s.suj_id
 			WHERE 
-			          l.Login = :email
+			          LOWER(l.Login) = :email
 				  AND d.support_id in (${inParams})	
 			ORDER BY d.expiry_dt desc
 		";
 
         $stmt = $this->adapter->prepare($sql);
         $stmt->execute(array_merge([
-            ':email' => $email,
+            ':email' => mb_strtolower(trim($email)),
         ], $holderValues));
         $rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
         if ($rows === false) {

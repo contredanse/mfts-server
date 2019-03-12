@@ -30,7 +30,7 @@ class ContredanseProductAccessTest extends TestCase
                 [
                     'contredanse' => [
                         'products' => [
-                            ContredanseProductAccess::PAXTON_PRODUCT => [1, 2]
+                            ContredanseProductAccess::PAXTON_PRODUCT => [213]
                         ]
                     ]
                 ]
