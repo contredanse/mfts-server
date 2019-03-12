@@ -188,7 +188,7 @@ class ContredanseProductAccess
 				usr_login l ON l.suj_id = s.suj_id
 			WHERE 
 			          l.Login = :email
-				  AND d.product_id in (${inParams})	
+				  AND d.support_id in (${inParams})	
 			ORDER BY d.expiry_dt desc
 		";
 
