@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a5ad4cf76b0be29011a721ce5ec53234",
+    "content-hash": "6be763c7e6bce2aa688ae7451dcb912f",
     "packages": [
         {
             "name": "behat/transliterator",
@@ -2212,16 +2212,16 @@
         },
         {
             "name": "soluble/mediatools",
-            "version": "0.9.7",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/soluble-io/soluble-mediatools.git",
-                "reference": "9997fa7122188267e3ebeb0d826a04d3c53f61da"
+                "reference": "ebb3f4f9a7ae04bd2c424587022b3e4e68440a01"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/soluble-io/soluble-mediatools/zipball/9997fa7122188267e3ebeb0d826a04d3c53f61da",
-                "reference": "9997fa7122188267e3ebeb0d826a04d3c53f61da",
+                "url": "https://api.github.com/repos/soluble-io/soluble-mediatools/zipball/ebb3f4f9a7ae04bd2c424587022b3e4e68440a01",
+                "reference": "ebb3f4f9a7ae04bd2c424587022b3e4e68440a01",
                 "shasum": ""
             },
             "require": {
@@ -2245,7 +2245,7 @@
                 "mikey179/vfsstream": "^1.6",
                 "monolog/monolog": "^1.23",
                 "phpspec/prophecy": "^1.8",
-                "phpstan/phpstan": "^0.11",
+                "phpstan/phpstan": "^0.11.3",
                 "phpstan/phpstan-phpunit": "^0.11",
                 "phpstan/phpstan-strict-rules": "^0.11",
                 "phpunit/phpunit": "^7.4 || ^8.0",
@@ -2258,6 +2258,7 @@
                 "zendframework/zend-servicemanager": "^3.3"
             },
             "suggest": {
+                "cache/simple-cache-bridge": "Useful if you already have a PSR-6 implementation",
                 "monolog/monolog": "PSR-3 compatible logger",
                 "symfony/cache": "PSR-6/16 compatible cache"
             },
@@ -2288,7 +2289,7 @@
                 "transcode",
                 "video"
             ],
-            "time": "2019-03-04T11:19:03+00:00"
+            "time": "2019-03-12T11:49:07+00:00"
         },
         {
             "name": "spatie/array-to-xml",
