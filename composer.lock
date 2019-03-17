@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6be763c7e6bce2aa688ae7451dcb912f",
+    "content-hash": "60320cf8fc504d896980b6f8453a9a86",
     "packages": [
         {
             "name": "behat/transliterator",
@@ -2212,16 +2212,16 @@
         },
         {
             "name": "soluble/mediatools",
-            "version": "1.0.0",
+            "version": "2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/soluble-io/soluble-mediatools.git",
-                "reference": "ebb3f4f9a7ae04bd2c424587022b3e4e68440a01"
+                "reference": "551a9115d628e2e81c2bf3aa775078f077e73aea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/soluble-io/soluble-mediatools/zipball/ebb3f4f9a7ae04bd2c424587022b3e4e68440a01",
-                "reference": "ebb3f4f9a7ae04bd2c424587022b3e4e68440a01",
+                "url": "https://api.github.com/repos/soluble-io/soluble-mediatools/zipball/551a9115d628e2e81c2bf3aa775078f077e73aea",
+                "reference": "551a9115d628e2e81c2bf3aa775078f077e73aea",
                 "shasum": ""
             },
             "require": {
@@ -2239,22 +2239,20 @@
                 "consistence/coding-standard": "^3.8",
                 "fig/http-message-util": "^1.1.2",
                 "friendsofphp/php-cs-fixer": "^2.14",
-                "guzzlehttp/guzzle": "^6.2",
                 "infection/infection": "^0.12",
                 "jangregor/phpstan-prophecy": "^0.3",
                 "mikey179/vfsstream": "^1.6",
                 "monolog/monolog": "^1.23",
                 "phpspec/prophecy": "^1.8",
-                "phpstan/phpstan": "^0.11.3",
+                "phpstan/phpstan": "^0.11.4",
                 "phpstan/phpstan-phpunit": "^0.11",
                 "phpstan/phpstan-strict-rules": "^0.11",
                 "phpunit/phpunit": "^7.4 || ^8.0",
-                "psr/http-message": "^1.0.1",
                 "roave/security-advisories": "dev-master",
                 "slevomat/coding-standard": "^5.0",
                 "squizlabs/php_codesniffer": "^3.4",
                 "symfony/cache": "^4.2",
-                "vimeo/psalm": "^3.1",
+                "vimeo/psalm": "^3.2",
                 "zendframework/zend-servicemanager": "^3.3"
             },
             "suggest": {
@@ -2289,29 +2287,29 @@
                 "transcode",
                 "video"
             ],
-            "time": "2019-03-12T11:49:07+00:00"
+            "time": "2019-03-15T14:19:25+00:00"
         },
         {
             "name": "spatie/array-to-xml",
-            "version": "2.8.0",
+            "version": "2.8.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/array-to-xml.git",
-                "reference": "c7dc15c460eeaf0fa8f8f2d0606155d48f93a9bd"
+                "reference": "2bf193b3f795d5a42e147c4fa155c288878312e7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/array-to-xml/zipball/c7dc15c460eeaf0fa8f8f2d0606155d48f93a9bd",
-                "reference": "c7dc15c460eeaf0fa8f8f2d0606155d48f93a9bd",
+                "url": "https://api.github.com/repos/spatie/array-to-xml/zipball/2bf193b3f795d5a42e147c4fa155c288878312e7",
+                "reference": "2bf193b3f795d5a42e147c4fa155c288878312e7",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.0"
+                "php": "^7.1"
             },
             "require-dev": {
                 "mockery/mockery": "^1.0",
-                "phpunit/phpunit": "^6.3",
-                "spatie/phpunit-snapshot-assertions": "^1.0"
+                "phpunit/phpunit": "^7.0",
+                "spatie/phpunit-snapshot-assertions": "^2.0"
             },
             "type": "library",
             "autoload": {
@@ -2338,7 +2336,7 @@
                 "convert",
                 "xml"
             ],
-            "time": "2018-11-29T16:24:53+00:00"
+            "time": "2019-03-15T18:43:25+00:00"
         },
         {
             "name": "symfony/console",
@@ -2864,16 +2862,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "v2.6.2",
+            "version": "v2.7.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "7d7342c8a4059fefb9b8d07db0cc14007021f9b7"
+                "reference": "70c59531da43afe598c66135e39cac39475a2f51"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/7d7342c8a4059fefb9b8d07db0cc14007021f9b7",
-                "reference": "7d7342c8a4059fefb9b8d07db0cc14007021f9b7",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/70c59531da43afe598c66135e39cac39475a2f51",
+                "reference": "70c59531da43afe598c66135e39cac39475a2f51",
                 "shasum": ""
             },
             "require": {
@@ -2889,7 +2887,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.6-dev"
+                    "dev-master": "2.7-dev"
                 }
             },
             "autoload": {
@@ -2927,7 +2925,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2019-01-14T15:00:48+00:00"
+            "time": "2019-03-12T18:48:26+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
@@ -3529,16 +3527,16 @@
         },
         {
             "name": "zendframework/zend-expressive-helpers",
-            "version": "5.1.3",
+            "version": "5.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-expressive-helpers.git",
-                "reference": "8c078dd74d75b97a680b036114712dedb35b85b6"
+                "reference": "7027a9a1818e67656e474a0c7894ef96997316d1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-expressive-helpers/zipball/8c078dd74d75b97a680b036114712dedb35b85b6",
-                "reference": "8c078dd74d75b97a680b036114712dedb35b85b6",
+                "url": "https://api.github.com/repos/zendframework/zend-expressive-helpers/zipball/7027a9a1818e67656e474a0c7894ef96997316d1",
+                "reference": "7027a9a1818e67656e474a0c7894ef96997316d1",
                 "shasum": ""
             },
             "require": {
@@ -3558,8 +3556,8 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "5.1.x-dev",
-                    "dev-develop": "5.2.x-dev"
+                    "dev-master": "5.3.x-dev",
+                    "dev-develop": "5.4.x-dev"
                 },
                 "zf": {
                     "config-provider": "Zend\\Expressive\\Helper\\ConfigProvider"
@@ -3585,7 +3583,7 @@
                 "zend-expressive",
                 "zf"
             ],
-            "time": "2019-02-27T16:42:27+00:00"
+            "time": "2019-03-12T20:43:27+00:00"
         },
         {
             "name": "zendframework/zend-expressive-router",
@@ -5910,16 +5908,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "0.11.3",
+            "version": "0.11.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "e4644b4a8fd393c346f1137305fb2f76a7dc20a7"
+                "reference": "ccc4f854748664cc61d1f3d4ecb26810df1f0cd4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/e4644b4a8fd393c346f1137305fb2f76a7dc20a7",
-                "reference": "e4644b4a8fd393c346f1137305fb2f76a7dc20a7",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/ccc4f854748664cc61d1f3d4ecb26810df1f0cd4",
+                "reference": "ccc4f854748664cc61d1f3d4ecb26810df1f0cd4",
                 "shasum": ""
             },
             "require": {
@@ -5979,7 +5977,7 @@
                 "MIT"
             ],
             "description": "PHPStan - PHP Static Analysis Tool",
-            "time": "2019-03-10T16:25:30+00:00"
+            "time": "2019-03-14T14:46:15+00:00"
         },
         {
             "name": "phpstan/phpstan-mockery",
@@ -6381,16 +6379,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "7.5.6",
+            "version": "7.5.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "09c85e14994df92e5ff1f5ec0b481bdb7d3d3df9"
+                "reference": "eb343b86753d26de07ecba7868fa983104361948"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/09c85e14994df92e5ff1f5ec0b481bdb7d3d3df9",
-                "reference": "09c85e14994df92e5ff1f5ec0b481bdb7d3d3df9",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/eb343b86753d26de07ecba7868fa983104361948",
+                "reference": "eb343b86753d26de07ecba7868fa983104361948",
                 "shasum": ""
             },
             "require": {
@@ -6408,7 +6406,7 @@
                 "phpunit/php-code-coverage": "^6.0.7",
                 "phpunit/php-file-iterator": "^2.0.1",
                 "phpunit/php-text-template": "^1.2.1",
-                "phpunit/php-timer": "^2.0",
+                "phpunit/php-timer": "^2.1",
                 "sebastian/comparator": "^3.0",
                 "sebastian/diff": "^3.0",
                 "sebastian/environment": "^4.0",
@@ -6461,7 +6459,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2019-02-18T09:24:50+00:00"
+            "time": "2019-03-16T07:31:17+00:00"
         },
         {
             "name": "pimple/pimple",
@@ -6519,12 +6517,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "4e04718428742618a4bf24dafca45b8645c9320d"
+                "reference": "3521da8036ce31b11490433aaae47f9601774191"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/4e04718428742618a4bf24dafca45b8645c9320d",
-                "reference": "4e04718428742618a4bf24dafca45b8645c9320d",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/3521da8036ce31b11490433aaae47f9601774191",
+                "reference": "3521da8036ce31b11490433aaae47f9601774191",
                 "shasum": ""
             },
             "conflict": {
@@ -6661,7 +6659,7 @@
                 "theonedemon/phpwhois": "<=4.2.5",
                 "titon/framework": ">=0,<9.9.99",
                 "truckersmp/phpwhois": "<=4.3.1",
-                "twig/twig": "<1.20",
+                "twig/twig": "<1.38|>=2,<2.7",
                 "typo3/cms": ">=6.2,<6.2.30|>=7,<7.6.32|>=8,<8.7.23|>=9,<9.5.4",
                 "typo3/cms-core": ">=8,<8.7.23|>=9,<9.5.4",
                 "typo3/flow": ">=1,<1.0.4|>=1.1,<1.1.1|>=2,<2.0.1|>=2.3,<2.3.16|>=3,<3.0.10|>=3.1,<3.1.7|>=3.2,<3.2.7|>=3.3,<3.3.5",
@@ -6715,7 +6713,7 @@
                 }
             ],
             "description": "Prevents installation of composer packages with known security vulnerabilities: no API, simply require it",
-            "time": "2019-02-26T21:14:50+00:00"
+            "time": "2019-03-12T13:04:55+00:00"
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",
