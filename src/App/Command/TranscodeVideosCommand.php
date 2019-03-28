@@ -224,7 +224,7 @@ class TranscodeVideosCommand extends Command
         foreach ($files as $file) {
             // original files ust not be converted, an mkv have been
             // provided
-            if (!preg_match('/\.original\./', $file->getPathname())) {
+            if (preg_match('/\.original\./', $file->getPathname()) !== 0) {
                 $videos[] = $file;
             }
         }
@@ -349,7 +349,7 @@ class TranscodeVideosCommand extends Command
             //die();
             $pass1Process->mustRun();
         } catch (\Throwable $e) {
-            if ($logFile && file_exists($logFile)) {
+            if (is_string($logFile) && file_exists($logFile)) {
                 unlink($logFile);
             }
             throw $e;

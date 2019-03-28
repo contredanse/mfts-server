@@ -35,51 +35,71 @@ class AccessLog implements \JsonSerializable
 
     /**
      * @ORM\Column(name="log_type", type="string", length=16)
+     *
+     * @var string
      */
     private $log_type;
 
     /**
      * @ORM\Column(name="email", type="string", length=32, nullable=true)
+     *
+     * @var string
      */
     private $email;
 
     /**
      * @ORM\Column(name="language", type="string", length=5, nullable=true)
+     *
+     * @var string
      */
     private $language;
 
     /**
      * @ORM\Column(name="ip_address", type="string", length=32, nullable=true)
+     *
+     * @var string
      */
     private $ip_address;
 
     /**
      * @ORM\Column(name="browser", type="string", length=32, nullable=true)
+     *
+     * @var string
      */
     private $browser;
 
     /**
      * @ORM\Column(name="browser_version", type="string", length=10, nullable=true)
+     *
+     * @var string
      */
     private $browser_version;
 
     /**
      * @ORM\Column(name="os", type="string", length=10, nullable=true)
+     *
+     * @var string
      */
     private $os;
 
     /**
      * @ORM\Column(name="device_type", type="string", length=20, nullable=true)
+     *
+     * @var string
      */
     private $device_type;
 
     /**
      * @ORM\Column(name="user_agent", type="string", length=50, nullable=true)
+     *
+     * @var string
      */
     private $user_agent;
 
     /**
      * @ORM\Column(type="datetime", nullable=true, options={"comment" = "Record creation timestamp"})
+     *
+     * @var \DateTime
      */
     private $created_at;
 
@@ -108,7 +128,10 @@ class AccessLog implements \JsonSerializable
         $this->created_at = $createdAt ?? new DateTime();
     }
 
-    public function jsonSerialize()
+    /**
+     * @return array<string, mixed>
+     */
+    public function jsonSerialize(): array
     {
         return [
             'id'              => $this->id,

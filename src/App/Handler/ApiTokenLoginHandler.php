@@ -39,13 +39,13 @@ class ApiTokenLoginHandler implements RequestHandlerInterface
      */
     private $authParams;
 
-    /*
+    /**
      * @var ContredanseProductAccess
      */
     private $productAccess;
 
-    /*
-     * @var AccessLogger
+    /**
+     * @var AccessLogger|null
      */
     private $accessLogger;
 

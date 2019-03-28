@@ -13,6 +13,9 @@ class ContredanseDb
      */
     private $pdo;
 
+    /**
+     * @var array
+     */
     private $params;
 
     public function __construct(array $params)

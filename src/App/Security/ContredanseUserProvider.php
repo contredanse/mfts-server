@@ -71,6 +71,8 @@ class ContredanseUserProvider implements UserProviderInterface
      *
      * @throws QueryErrorException
      * @throws UserNotFoundException
+     *
+     * @return array<int, UserInterface>
      */
     public function findUser(string $user_id): array
     {
