@@ -1,5 +1,6 @@
 includes:
-	#- vendor/phpstan/phpstan-strict-rules/rules.neon
+	- vendor/phpstan/phpstan-strict-rules/rules.neon
+	- vendor/phpstan/phpstan-doctrine/extension.neon
 	- vendor/phpstan/phpstan-phpunit/extension.neon
 	- vendor/phpstan/phpstan-phpunit/rules.neon
 	- vendor/jangregor/phpstan-prophecy/src/extension.neon
@@ -13,8 +14,11 @@ parameters:
 		- */test/server/expressive/*
 	reportUnmatchedIgnoredErrors: true
 	ignoreErrors:
+		# Global for tests
+		- '#Call to static method PHPUnit\\Framework\\Assert\:\:assertTrue\(\) with true will always evaluate to true\.#'
 		- '#Left side of \&\& is always true#'
 		# Still issues with prophecy in tests
+		- '#Property AppTest(.*)\:\:\$container has no typehint specified#'
 		- '#Test\:\:\$container contains unresolvable type.#'
 		- '#Test\:\:\$template contains unresolvable type.#'
 
