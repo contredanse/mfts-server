@@ -24,7 +24,7 @@ jobs:
   allow_failures:
     - php: nightly
   include:
-    - stage: Tests and Coverage (PHP 7.2)
+    - stage: Tests
       php: 7.2
       env: XDEBUG=yes
       script:
@@ -33,19 +33,19 @@ jobs:
         - wget https://scrutinizer-ci.com/ocular.phar
         - php ocular.phar code-coverage:upload --format=php-clover coverage.xml
         - bash <(curl -s https://codecov.io/bash)
+    - stage: Tests
+      php: 7.3
+      script:
+        - cp .env.example .env
+        - ./vendor/bin/phpunit --testsuite unit -v -c .travis/phpunit.xml
+    - stage: Tests
+      php: nightly
+      env: IGNORE_PLATFORM_REQS=yes
+      script:
+        - cp .env.example .env
+        - ./vendor/bin/phpunit --testsuite unit -v -c .travis/phpunit.xml
     - stage: PHPStan
       php: 7.2
       script:
         - composer phpstan
         - composer cs-fix
-    - stage: Test PHP7.3
-      php: 7.3
-      env: IGNORE_PLATFORM_REQS=yes
-      script:
-        - cp .env.example .env
-        - ./vendor/bin/phpunit --testsuite unit -v -c .travis/phpunit.xml --coverage-clover=coverage.xml
-    - stage: Test PHP Nightly (unit tests only)
-      php: nightly
-      env: IGNORE_PLATFORM_REQS=yes
-      script:
-        - ./vendor/bin/phpunit --testsuite unit -v -c .travis/phpunit.xml
