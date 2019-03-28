@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace AppTest\Functional\Security;
+namespace AppTest\E2E\Security;
 
 use App\Security\ContredanseUserProviderFactory;
 use App\Security\UserProviderInterface;
