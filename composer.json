@@ -26,7 +26,7 @@
         "doctrine/dbal": "^2.9.1",
         "doctrine/orm": "^2.6.3",
         "gedmo/doctrine-extensions": "^2.4.36",
-        "lcobucci/jwt": "^3.2",
+        "lcobucci/jwt": "^3.3.1",
         "monolog/monolog": "^1.23",
         "myclabs/php-enum": "^1.6",
         "piwik/device-detector": "^3.11",
@@ -54,12 +54,12 @@
         "zendframework/zend-stdlib": "^3.1"
     },
     "require-dev": {
-        "captainhook/captainhook": "^4.1",
+        "captainhook/captainhook": "^4.3",
         "captainhook/plugin-composer": "^4.0",
         "deployer/deployer": "^6.4",
         "deployer/recipes": "^6.2",
         "filp/whoops": "^2.3",
-        "friendsofphp/php-cs-fixer": "^2.14",
+        "friendsofphp/php-cs-fixer": "^2.15",
         "jangregor/phpstan-prophecy": "^0.3",
         "mockery/mockery": "^1.2",
         "phpstan/phpstan": "^0.11.3",
