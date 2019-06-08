@@ -35,7 +35,7 @@
         "symfony/console": "^4.2",
         "symfony/finder": "^4.2",
         "symfony/process": "^4.2",
-        "tuupola/cors-middleware": "^0.9.1",
+        "tuupola/cors-middleware": "^1.0",
         "vlucas/phpdotenv": "^3.0",
         "webmozart/assert": "^1.4",
         "willdurand/negotiation": "^2.3",
