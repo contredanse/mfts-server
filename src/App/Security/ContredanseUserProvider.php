@@ -107,7 +107,7 @@ class ContredanseUserProvider implements UserProviderInterface
             "%s\n%s",
             $this->getBaseSql(),
             'limit 1'
-            );
+        );
 
         try {
             $stmt = $this->adapter->prepare($sql);
