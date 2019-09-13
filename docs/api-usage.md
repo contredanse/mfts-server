@@ -1,24 +1,24 @@
-# API usage
+# API
 
 ## Endpoints
 
-The following routes are available, the most up-to-date list is located [here]()
+The following routes are available, the most up-to-date list is located [here](../config/routes.php)
 
 ### Auth related
 
-| url                | Method   | Params                    | Return                                    |
-|--------------------|----------|---------------------------|-------------------------------------------|
-| /api/auth/token    | POST     | {email: '', password: ''} | {access_token?: '', success: bool}        |
-| /api/auth/validate | POST     | {token: ''}               | {valid: bool, expires_at, remaining_time} |
+| url                | Method  | Params                    | Example response                          |
+|--------------------|---------|---------------------------|-------------------------------------------|
+| /api/auth/token    | POST    | {email: '', password: ''} | {access_token?: '', success: bool}        |
 
-> `/api/auth/token` can be used to issue a new token. `/api/auth/validate` to validate if a token 
-> is valid (signature, expiration...)
+| url                | Method  | Protected       | Example response                 |
+|--------------------|---------|-----------------|----------------------------------|
+| /api/v1/profile    | GET     | JWTAuth bearer  | {"success":true,"data":{"user_id":"username","firstname":"Test","name":"Demo","email":"username@example.com"}} | 
 
-### Services
 
-| url                | Method   | Auth             | Purpose           |
-|--------------------|----------|------------------|-------------------|
-| /api/v1/profile    | GET      | JWT auth bearer  | Login information |
+> `/api/auth/token` is used to issue a new token. `/api/auth/validate` to validate if a token 
+> is valid (signature, expiration...). `/api/v1/profile` returns user information if token is valid
+> otherwise return a 401 error.
+
 
 ### Monitoring 
 
@@ -29,10 +29,15 @@ The following routes are available, the most up-to-date list is located [here]()
 
 > Can be used to monitor if remote authentication with contredanse is up and running.
 
+### Unused endpoints
+
+| url                | Method  | Params                    | Example response                          |
+| /api/auth/validate | POST    | {token: ''}               | {valid: bool, expires_at, remaining_time} |
+
 
 ## Usage example
 
-### Request a token (login)
+### api/auth/token - request a token (login)
 
 > You mst post a valid login/password
 
@@ -56,15 +61,20 @@ Or a 400 (bad request = missing parameter) / 401 (Unauthorized) status code and 
 {"success": false, "reason": "a message"}
 ```
 
-### Accessing a protected route
+### api/v1/profile - return profile info 
 
 ```bash
 $ curl https://site.org/api/v1/profile \
        -H 'authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1N...' 
        
 ```
+In case of success will return profile data
 
-Could for example return a 401:
+```json
+{"success":true,"data":{"user_id":"username","firstname":"Test","name":"Demo","email":"username@example.com"}}
+```
+
+In case of error, returns a 401:
 
 ```json
 {"valid":false,"reason":"expired"}
