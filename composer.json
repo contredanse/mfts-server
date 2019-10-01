@@ -24,7 +24,7 @@
         "doctrine/common": "^2.11",
         "doctrine/data-fixtures": "^1.2.2",
         "doctrine/dbal": "^2.9.1",
-        "doctrine/orm": "^2.6.3",
+        "doctrine/orm": "^2.6.4",
         "gedmo/doctrine-extensions": "^2.4.36",
         "lcobucci/jwt": "^3.3.1",
         "monolog/monolog": "^1.23",
