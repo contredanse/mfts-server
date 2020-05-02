@@ -8,7 +8,6 @@ use App\Exception\ConfigException;
 use App\Service\Token\TokenManagerFactory;
 use PHPUnit\Framework\TestCase;
 use Psr\Container\ContainerInterface;
-use Zend\Expressive\MiddlewareContainer;
 
 class TokenManagerFactoryTest extends TestCase
 {
@@ -17,7 +16,7 @@ class TokenManagerFactoryTest extends TestCase
 
     protected function setUp(): void
     {
-        $this->container = $this->prophesize(MiddlewareContainer::class)->willImplement(ContainerInterface::class);
+        $this->container = $this->prophesize(ContainerInterface::class);
     }
 
     public function testThrowsExceptionWhenConfigCannotBeLocated(): void

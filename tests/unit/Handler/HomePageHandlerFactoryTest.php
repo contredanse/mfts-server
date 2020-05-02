@@ -8,7 +8,6 @@ use App\Handler\HomePageHandler;
 use App\Handler\HomePageHandlerFactory;
 use PHPUnit\Framework\TestCase;
 use Psr\Container\ContainerInterface;
-use Zend\Expressive\MiddlewareContainer;
 use Zend\Expressive\Twig\TwigRenderer;
 
 class HomePageHandlerFactoryTest extends TestCase
@@ -18,7 +17,7 @@ class HomePageHandlerFactoryTest extends TestCase
 
     protected function setUp(): void
     {
-        $this->container = $this->prophesize(MiddlewareContainer::class)->willImplement(ContainerInterface::class);
+        $this->container = $this->prophesize(ContainerInterface::class);
     }
 
     public function testFactory(): void

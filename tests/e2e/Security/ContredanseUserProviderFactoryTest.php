@@ -11,7 +11,6 @@ use App\Security\ContredanseUserProviderFactory;
 use AppTest\Util\ContainerFactory;
 use PHPUnit\Framework\TestCase;
 use Psr\Container\ContainerInterface;
-use Zend\Expressive\MiddlewareContainer;
 
 class ContredanseUserProviderFactoryTest extends TestCase
 {
@@ -20,7 +19,7 @@ class ContredanseUserProviderFactoryTest extends TestCase
 
     protected function setUp(): void
     {
-        $this->container = $this->prophesize(MiddlewareContainer::class)->willImplement(ContainerInterface::class);
+        $this->container = $this->prophesize(ContainerInterface::class);
     }
 
     public function testShouldWorkWithRegisteredContainer(): void

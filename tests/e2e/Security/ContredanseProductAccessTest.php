@@ -10,7 +10,6 @@ use App\Security\ContredanseProductAccessFactory;
 use AppTest\Util\ContainerFactory;
 use PHPUnit\Framework\TestCase;
 use Psr\Container\ContainerInterface;
-use Zend\Expressive\MiddlewareContainer;
 
 class ContredanseProductAccessTest extends TestCase
 {
@@ -19,7 +18,7 @@ class ContredanseProductAccessTest extends TestCase
 
     protected function setUp(): void
     {
-        $this->container = $this->prophesize(MiddlewareContainer::class)->willImplement(ContainerInterface::class);
+        $this->container = $this->prophesize(ContainerInterface::class);
         $this->container->get(ContredanseDb::class)
             ->willReturn(
                 new ContredanseDb(
