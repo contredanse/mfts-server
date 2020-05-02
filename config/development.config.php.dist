@@ -27,4 +27,7 @@ use Zend\ConfigAggregator\ConfigAggregator;
 return [
     'debug' => true,
     ConfigAggregator::ENABLE_CACHE => false,
+    'twig' => [
+        'cache_dir' => sys_get_temp_dir() . '/mfts-server/cache'
+    ]
 ];

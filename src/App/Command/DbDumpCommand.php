@@ -78,7 +78,7 @@ class DbDumpCommand extends Command
         $process->setIdleTimeout(30);
 
         try {
-            $process->mustRun(function ($type, $buffer) {
+            $process->mustRun(function ($type, $buffer): void {
                 if (Process::ERR === $type) {
                     echo 'ERR > ' . $buffer;
                 } else {

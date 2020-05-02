@@ -12,7 +12,7 @@ use Zend\Expressive\Twig\TwigRenderer;
 
 class HomePageHandlerFactoryTest extends TestCase
 {
-    /** @var \Prophecy\Prophecy\ObjectProphecy<ContainerInterface> */
+    /** @var \Prophecy\Prophecy\ObjectProphecy */
     protected $container;
 
     protected function setUp(): void
@@ -29,6 +29,7 @@ class HomePageHandlerFactoryTest extends TestCase
 
         $factory = new HomePageHandlerFactory();
 
+        /* @phpstan-ignore-next-line */
         $homePage = $factory($this->container->reveal());
 
         self::assertInstanceOf(HomePageHandler::class, $homePage);

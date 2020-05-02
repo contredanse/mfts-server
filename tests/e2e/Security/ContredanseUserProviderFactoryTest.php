@@ -14,7 +14,7 @@ use Psr\Container\ContainerInterface;
 
 class ContredanseUserProviderFactoryTest extends TestCase
 {
-    /** @var \Prophecy\Prophecy\ObjectProphecy<ContainerInterface> */
+    /** @var \Prophecy\Prophecy\ObjectProphecy */
     protected $container;
 
     protected function setUp(): void
@@ -44,6 +44,7 @@ class ContredanseUserProviderFactoryTest extends TestCase
                 ])
             );
 
+        /* @phpstan-ignore-next-line */
         (new ContredanseUserProviderFactory())($this->
         container->reveal());
     }

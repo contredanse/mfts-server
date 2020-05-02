@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Handler;
 
+use App\Exception\HttpException;
 use App\Infra\Log\AccessLogger;
 use App\Security\ContredanseProductAccess;
 use App\Security\Exception\NoProductAccessException;
@@ -77,10 +78,17 @@ class ApiTokenLoginHandler implements RequestHandlerInterface
         // - or valid paying users
         //
 
-        $body     = $request->getParsedBody();
-        $email    = trim($body['email'] ?? '');
-        $password = trim($body['password'] ?? '');
-        $language = trim($body['language'] ?? '');
+        $body = $request->getParsedBody();
+        if ($body === null) {
+            throw new HttpException('Request body is empty');
+        }
+
+        /* @phpstan-ignore-next-line */
+        $email = trim(array_key_exists('email', (array) $body) ? $body['email'] : '');
+        /* @phpstan-ignore-next-line */
+        $password = trim(array_key_exists('password', (array) $body) ? $body['password'] : '');
+        /* @phpstan-ignore-next-line */
+        $language = trim(array_key_exists('language', (array) $body) ? $body['language'] : '');
         if ($language === '') {
             $language = $this->getLanguage($request);
         }

@@ -13,7 +13,7 @@ use Psr\Container\ContainerInterface;
 
 class ContredanseProductAccessTest extends TestCase
 {
-    /** @var \Prophecy\Prophecy\ObjectProphecy<ContainerInterface> */
+    /** @var \Prophecy\Prophecy\ObjectProphecy */
     protected $container;
 
     protected function setUp(): void
@@ -39,6 +39,7 @@ class ContredanseProductAccessTest extends TestCase
 
     public function testNoOrders(): void
     {
+        /* @phpstan-ignore-next-line */
         $access = (new ContredanseProductAccessFactory())->__invoke($this->container->reveal());
 
         $orders = $access->getProductOrders(

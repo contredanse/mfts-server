@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Handler;
 
+use App\Exception\HttpException;
 use App\Service\Token\Exception\TokenValidationExceptionInterface;
 use App\Service\Token\TokenManager;
 use Fig\Http\Message\StatusCodeInterface;
@@ -30,8 +31,12 @@ class ApiTokenValidateHandler implements RequestHandlerInterface
         if ($method !== 'POST') {
             throw new \RuntimeException('TODO - Handle error your way ;)');
         }
-        $body        = $request->getParsedBody();
-        $tokenString = $body['token'] ?? '';
+        $body = $request->getParsedBody();
+        if ($body === null) {
+            throw new HttpException('Empty body');
+        }
+        /* @phpstan-ignore-next-line */
+        $tokenString = array_key_exists('token', $body) ? $body['token'] : '';
 
         try {
             $token = $this->tokenManager->getValidatedToken($tokenString);

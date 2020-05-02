@@ -15,7 +15,7 @@ class TokenManagerFactory
         if ($config === null) {
             throw new ConfigException("['token_manager'] config key is missing.");
         }
-        if (mb_strlen($config['private_key'] ?: '') < 32) {
+        if (mb_strlen($config['private_key'] ?? '') < 32) {
             throw new ConfigException("['tokenManager']['private_key'] config key is must be at least 32 chars long.");
         }
 

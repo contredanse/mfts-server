@@ -196,7 +196,7 @@ class TranscodeVideosCommand extends Command
         $table->setHeaders([
             'file', 'size', 'duration', 'bitrate', 'codec', 'fmt', 'interlace', 'filesize'
         ]);
-        $table->setRows($rows ?? []);
+        $table->setRows($rows);
         $table->render();
 
         $output->writeln("\nFinished");
@@ -336,7 +336,7 @@ class TranscodeVideosCommand extends Command
             ->withOutputFormat('webm')
             ->withSpeed(4)
             ->withPass(1)
-            ->withPassLogFile($logFile ?: '/tmp/ffmpeg-log');
+            ->withPassLogFile(is_string($logFile) ? $logFile : '/tmp/ffmpeg-log');
 
         try {
             $pass1Process = $this->videoConverter->getSymfonyProcess(

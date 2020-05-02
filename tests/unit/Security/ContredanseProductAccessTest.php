@@ -132,7 +132,7 @@ class ContredanseProductAccessTest extends TestCase
     public function testEnsureAccessNoOrderMadeException(): void
     {
         self::expectException(NoProductAccessException::class);
-        self::expectExceptionMessageRegExp('/order/');
+        $this->expectExceptionMessageMatches('/order/');
         $this->accessMock->shouldReceive('getProductOrders')->andReturn([
             // no orders !
         ]);

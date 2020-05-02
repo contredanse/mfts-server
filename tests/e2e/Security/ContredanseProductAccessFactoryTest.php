@@ -14,7 +14,7 @@ use Psr\Container\ContainerInterface;
 
 class ContredanseProductAccessFactoryTest extends TestCase
 {
-    /** @var \Prophecy\Prophecy\ObjectProphecy<ContainerInterface> */
+    /** @var \Prophecy\Prophecy\ObjectProphecy */
     protected $container;
 
     protected function setUp(): void
@@ -48,6 +48,7 @@ class ContredanseProductAccessFactoryTest extends TestCase
                 ]
             );
 
+        /* @phpstan-ignore-next-line */
         (new ContredanseProductAccessFactory())->__invoke($this->container->reveal());
         self::assertTrue(true);
     }
@@ -67,6 +68,7 @@ class ContredanseProductAccessFactoryTest extends TestCase
                 ]
             );
 
+        /* @phpstan-ignore-next-line */
         (new ContredanseProductAccessFactory())($this->container->reveal());
     }
 }
