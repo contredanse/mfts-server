@@ -23,7 +23,7 @@ return [
 
 		'auth' => [
 			// Token expiry for ApiAuthTokenHandler
-			'token_expiry' => (int) (getenv('JWT_TOKEN_DEFAULT_EXPIRY') ?: 3600),
+			'token_expiry' => (int) (is_numeric(getenv('JWT_TOKEN_DEFAULT_EXPIRY')) ? getenv('JWT_TOKEN_DEFAULT_EXPIRY') : 3600),
 		],
 
 		'products' => [

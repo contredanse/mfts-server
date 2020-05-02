@@ -11,15 +11,16 @@ use App\Security\ContredanseProductAccessFactory;
 use AppTest\Util\ContainerFactory;
 use PHPUnit\Framework\TestCase;
 use Psr\Container\ContainerInterface;
+use Zend\Expressive\MiddlewareContainer;
 
 class ContredanseProductAccessFactoryTest extends TestCase
 {
-    /** @var \Prophecy\Prophecy\ObjectProphecy<ContainerInterface> */
+    /** @var \Prophecy\Prophecy\ObjectProphecy */
     protected $container;
 
     protected function setUp(): void
     {
-        $this->container = $this->prophesize(ContainerInterface::class);
+        $this->container = $this->prophesize(MiddlewareContainer::class)->willImplement(ContainerInterface::class);
         $this->container->get(ContredanseDb::class)
             ->willReturn(
                 new ContredanseDb(
@@ -48,6 +49,7 @@ class ContredanseProductAccessFactoryTest extends TestCase
                 ]
             );
 
+        /* @phpstan-ignore-next-line */
         (new ContredanseProductAccessFactory())->__invoke($this->container->reveal());
         self::assertTrue(true);
     }
@@ -67,6 +69,7 @@ class ContredanseProductAccessFactoryTest extends TestCase
                 ]
             );
 
+        /* @phpstan-ignore-next-line */
         (new ContredanseProductAccessFactory())($this->container->reveal());
     }
 }

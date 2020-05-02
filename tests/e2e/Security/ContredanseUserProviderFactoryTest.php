@@ -11,15 +11,16 @@ use App\Security\ContredanseUserProviderFactory;
 use AppTest\Util\ContainerFactory;
 use PHPUnit\Framework\TestCase;
 use Psr\Container\ContainerInterface;
+use Zend\Expressive\MiddlewareContainer;
 
 class ContredanseUserProviderFactoryTest extends TestCase
 {
-    /** @var \Prophecy\Prophecy\ObjectProphecy<ContainerInterface> */
+    /** @var \Prophecy\Prophecy\ObjectProphecy */
     protected $container;
 
     protected function setUp(): void
     {
-        $this->container = $this->prophesize(ContainerInterface::class);
+        $this->container = $this->prophesize(MiddlewareContainer::class)->willImplement(ContainerInterface::class);
     }
 
     public function testShouldWorkWithRegisteredContainer(): void
@@ -44,6 +45,7 @@ class ContredanseUserProviderFactoryTest extends TestCase
                 ])
             );
 
+        /* @phpstan-ignore-next-line */
         (new ContredanseUserProviderFactory())($this->
         container->reveal());
     }

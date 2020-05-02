@@ -8,16 +8,17 @@ use App\Handler\HomePageHandler;
 use App\Handler\HomePageHandlerFactory;
 use PHPUnit\Framework\TestCase;
 use Psr\Container\ContainerInterface;
+use Zend\Expressive\MiddlewareContainer;
 use Zend\Expressive\Twig\TwigRenderer;
 
 class HomePageHandlerFactoryTest extends TestCase
 {
-    /** @var \Prophecy\Prophecy\ObjectProphecy<ContainerInterface> */
+    /** @var \Prophecy\Prophecy\ObjectProphecy */
     protected $container;
 
     protected function setUp(): void
     {
-        $this->container = $this->prophesize(ContainerInterface::class);
+        $this->container = $this->prophesize(MiddlewareContainer::class)->willImplement(ContainerInterface::class);
     }
 
     public function testFactory(): void
@@ -29,6 +30,7 @@ class HomePageHandlerFactoryTest extends TestCase
 
         $factory = new HomePageHandlerFactory();
 
+        /* @phpstan-ignore-next-line */
         $homePage = $factory($this->container->reveal());
 
         self::assertInstanceOf(HomePageHandler::class, $homePage);

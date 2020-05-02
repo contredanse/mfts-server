@@ -13,7 +13,7 @@ use Zend\Expressive\Twig\TwigRenderer;
 
 class HomePageHandlerTest extends TestCase
 {
-    /** @var \Prophecy\Prophecy\ObjectProphecy & TwigRenderer */
+    /** @var \Prophecy\Prophecy\ObjectProphecy */
     protected $template;
 
     protected function setUp(): void
@@ -27,6 +27,7 @@ class HomePageHandlerTest extends TestCase
             ->render('app::static-content', Argument::type('array'))
             ->willReturn('');
 
+        /* @phpstan-ignore-next-line */
         $homePage = new HomePageHandler($this->template->reveal());
 
         $response = $homePage->handle(

@@ -10,15 +10,16 @@ use App\Security\ContredanseProductAccessFactory;
 use AppTest\Util\ContainerFactory;
 use PHPUnit\Framework\TestCase;
 use Psr\Container\ContainerInterface;
+use Zend\Expressive\MiddlewareContainer;
 
 class ContredanseProductAccessTest extends TestCase
 {
-    /** @var \Prophecy\Prophecy\ObjectProphecy<ContainerInterface> */
+    /** @var \Prophecy\Prophecy\ObjectProphecy */
     protected $container;
 
     protected function setUp(): void
     {
-        $this->container = $this->prophesize(ContainerInterface::class);
+        $this->container = $this->prophesize(MiddlewareContainer::class)->willImplement(ContainerInterface::class);
         $this->container->get(ContredanseDb::class)
             ->willReturn(
                 new ContredanseDb(
@@ -39,6 +40,7 @@ class ContredanseProductAccessTest extends TestCase
 
     public function testNoOrders(): void
     {
+        /* @phpstan-ignore-next-line */
         $access = (new ContredanseProductAccessFactory())->__invoke($this->container->reveal());
 
         $orders = $access->getProductOrders(
